@@ -1,0 +1,18 @@
+|counter
+clc => cnt[2].CLK
+clc => cnt[1].CLK
+clc => cnt[0].CLK
+clc => counter_out[2]~reg0.CLK
+clc => counter_out[1]~reg0.CLK
+clc => counter_out[0]~reg0.CLK
+rst => cnt[2].ACLR
+rst => cnt[1].ACLR
+rst => cnt[0].ACLR
+rst => counter_out[2]~reg0.ACLR
+rst => counter_out[1]~reg0.ACLR
+rst => counter_out[0]~reg0.ACLR
+counter_out[0] <= counter_out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter_out[1] <= counter_out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+counter_out[2] <= counter_out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
