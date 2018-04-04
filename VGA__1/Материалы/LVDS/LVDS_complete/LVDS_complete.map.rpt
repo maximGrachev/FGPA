@@ -1,0 +1,852 @@
+Analysis & Synthesis report for LVDS_complete
+Tue Mar 27 19:04:35 2018
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. Registers Removed During Synthesis
+  8. Removed Registers Triggering Further Register Optimizations
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: pll25_175MHz:comp_pll25_175MHz|altpll:altpll_component
+ 12. Parameter Settings for User Entity Instance: VGA_Timer:comp_VGA_Timer
+ 13. Parameter Settings for Inferred Entity Instance: VGA_Video_Generator:comp_VGA_Video_Generator|lpm_divide:Div0
+ 14. altpll Parameter Settings by Entity Instance
+ 15. Port Connectivity Checks: "VGA_Timer:comp_VGA_Timer"
+ 16. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                      ;
++------------------------------------+----------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Mar 27 19:04:35 2018        ;
+; Quartus II Version                 ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
+; Revision Name                      ; LVDS_complete                                ;
+; Top-level Entity Name              ; LVDS_complete                                ;
+; Family                             ; Cyclone II                                   ;
+; Total logic elements               ; 212                                          ;
+;     Total combinational functions  ; 206                                          ;
+;     Dedicated logic registers      ; 81                                           ;
+; Total registers                    ; 81                                           ;
+; Total pins                         ; 7                                            ;
+; Total virtual pins                 ; 0                                            ;
+; Total memory bits                  ; 0                                            ;
+; Embedded Multiplier 9-bit elements ; 0                                            ;
+; Total PLLs                         ; 1                                            ;
++------------------------------------+----------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                          ;
++--------------------------------------------------------------+--------------------+--------------------+
+; Option                                                       ; Setting            ; Default Value      ;
++--------------------------------------------------------------+--------------------+--------------------+
+; Device                                                       ; EP2C20F484C7       ;                    ;
+; Top-level entity name                                        ; LVDS_complete      ; LVDS_complete      ;
+; Family name                                                  ; Cyclone II         ; Stratix II         ;
+; Use Generated Physical Constraints File                      ; Off                ;                    ;
+; Use smart compilation                                        ; Off                ; Off                ;
+; Restructure Multiplexers                                     ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                          ; Off                ; Off                ;
+; Preserve fewer node names                                    ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                    ; Off                ; Off                ;
+; Verilog Version                                              ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                 ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                     ; Auto               ; Auto               ;
+; Safe State Machine                                           ; Off                ; Off                ;
+; Extract Verilog State Machines                               ; On                 ; On                 ;
+; Extract VHDL State Machines                                  ; On                 ; On                 ;
+; Ignore Verilog initial constructs                            ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                   ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops               ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                      ; On                 ; On                 ;
+; Parallel Synthesis                                           ; Off                ; Off                ;
+; DSP Block Balancing                                          ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                           ; On                 ; On                 ;
+; Power-Up Don't Care                                          ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                 ; Off                ; Off                ;
+; Remove Duplicate Registers                                   ; On                 ; On                 ;
+; Ignore CARRY Buffers                                         ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                       ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                    ; Off                ; Off                ;
+; Ignore LCELL Buffers                                         ; Off                ; Off                ;
+; Ignore SOFT Buffers                                          ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                               ; Off                ; Off                ;
+; Optimization Technique                                       ; Balanced           ; Balanced           ;
+; Carry Chain Length                                           ; 70                 ; 70                 ;
+; Auto Carry Chains                                            ; On                 ; On                 ;
+; Auto Open-Drain Pins                                         ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                        ; Off                ; Off                ;
+; Auto ROM Replacement                                         ; On                 ; On                 ;
+; Auto RAM Replacement                                         ; On                 ; On                 ;
+; Auto Shift Register Replacement                              ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                ; On                 ; On                 ;
+; Strict RAM Replacement                                       ; Off                ; Off                ;
+; Allow Synchronous Control Signals                            ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                       ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                            ; Off                ; Off                ;
+; Auto Resource Sharing                                        ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                           ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                           ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing          ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives            ; Off                ; Off                ;
+; Timing-Driven Synthesis                                      ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report           ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                           ; Off                ; Off                ;
+; Synchronization Register Chain Length                        ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                 ; Normal compilation ; Normal compilation ;
+; HDL message level                                            ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages              ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report     ; 100                ; 100                ;
+; Number of Inverted Registers Reported in Synthesis Report    ; 100                ; 100                ;
+; Clock MUX Protection                                         ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                  ; Off                ; Off                ;
+; Block Design Naming                                          ; Auto               ; Auto               ;
+; SDC constraint protection                                    ; Off                ; Off                ;
+; Synthesis Effort                                             ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                           ; Medium             ; Medium             ;
++--------------------------------------------------------------+--------------------+--------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                        ;
++------------------------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------+
+; File Name with User-Entered Path               ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                ;
++------------------------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------+
+; LVDS_complete.vhd                              ; yes             ; User VHDL File               ; C:/Users/Максим/Desktop/Quartus_Projects/2/LVDS/LVDS_complete/LVDS_complete.vhd             ;
+; ../LVDS_Coder/LVDS_Coder.vhd                   ; yes             ; User VHDL File               ; C:/Users/Максим/Desktop/Quartus_Projects/2/LVDS/LVDS_Coder/LVDS_Coder.vhd                   ;
+; ../LVDS_tx/LVDS_tx.vhd                         ; yes             ; User VHDL File               ; C:/Users/Максим/Desktop/Quartus_Projects/2/LVDS/LVDS_tx/LVDS_tx.vhd                         ;
+; ../VGA_Timer/VGA_Timer.vhd                     ; yes             ; User VHDL File               ; C:/Users/Максим/Desktop/Quartus_Projects/2/LVDS/VGA_Timer/VGA_Timer.vhd                     ;
+; ../VGA_Video_Generator/VGA_Video_Generator.vhd ; yes             ; User VHDL File               ; C:/Users/Максим/Desktop/Quartus_Projects/2/LVDS/VGA_Video_Generator/VGA_Video_Generator.vhd ;
+; pll25_175MHz.vhd                               ; yes             ; User Wizard-Generated File   ; C:/Users/Максим/Desktop/Quartus_Projects/2/LVDS/LVDS_complete/pll25_175MHz.vhd              ;
+; altpll.tdf                                     ; yes             ; Megafunction                 ; c:/altera/90sp2/quartus/libraries/megafunctions/altpll.tdf                                  ;
+; aglobal90.inc                                  ; yes             ; Megafunction                 ; c:/altera/90sp2/quartus/libraries/megafunctions/aglobal90.inc                               ;
+; stratix_pll.inc                                ; yes             ; Megafunction                 ; c:/altera/90sp2/quartus/libraries/megafunctions/stratix_pll.inc                             ;
+; stratixii_pll.inc                              ; yes             ; Megafunction                 ; c:/altera/90sp2/quartus/libraries/megafunctions/stratixii_pll.inc                           ;
+; cycloneii_pll.inc                              ; yes             ; Megafunction                 ; c:/altera/90sp2/quartus/libraries/megafunctions/cycloneii_pll.inc                           ;
+; lpm_divide.tdf                                 ; yes             ; Megafunction                 ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_divide.tdf                              ;
+; abs_divider.inc                                ; yes             ; Megafunction                 ; c:/altera/90sp2/quartus/libraries/megafunctions/abs_divider.inc                             ;
+; sign_div_unsign.inc                            ; yes             ; Megafunction                 ; c:/altera/90sp2/quartus/libraries/megafunctions/sign_div_unsign.inc                         ;
+; db/lpm_divide_dem.tdf                          ; yes             ; Auto-Generated Megafunction  ; C:/Users/Максим/Desktop/Quartus_Projects/2/LVDS/LVDS_complete/db/lpm_divide_dem.tdf         ;
+; db/sign_div_unsign_nlh.tdf                     ; yes             ; Auto-Generated Megafunction  ; C:/Users/Максим/Desktop/Quartus_Projects/2/LVDS/LVDS_complete/db/sign_div_unsign_nlh.tdf    ;
+; db/alt_u_div_g2f.tdf                           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Максим/Desktop/Quartus_Projects/2/LVDS/LVDS_complete/db/alt_u_div_g2f.tdf          ;
+; db/add_sub_lkc.tdf                             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Максим/Desktop/Quartus_Projects/2/LVDS/LVDS_complete/db/add_sub_lkc.tdf            ;
+; db/add_sub_mkc.tdf                             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Максим/Desktop/Quartus_Projects/2/LVDS/LVDS_complete/db/add_sub_mkc.tdf            ;
++------------------------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                                ;
++---------------------------------------------+--------------------------------------------------------------+
+; Resource                                    ; Usage                                                        ;
++---------------------------------------------+--------------------------------------------------------------+
+; Estimated Total logic elements              ; 212                                                          ;
+;                                             ;                                                              ;
+; Total combinational functions               ; 206                                                          ;
+; Logic element usage by number of LUT inputs ;                                                              ;
+;     -- 4 input functions                    ; 61                                                           ;
+;     -- 3 input functions                    ; 50                                                           ;
+;     -- <=2 input functions                  ; 95                                                           ;
+;                                             ;                                                              ;
+; Logic elements by mode                      ;                                                              ;
+;     -- normal mode                          ; 131                                                          ;
+;     -- arithmetic mode                      ; 75                                                           ;
+;                                             ;                                                              ;
+; Total registers                             ; 81                                                           ;
+;     -- Dedicated logic registers            ; 81                                                           ;
+;     -- I/O registers                        ; 0                                                            ;
+;                                             ;                                                              ;
+; I/O pins                                    ; 7                                                            ;
+; Total PLLs                                  ; 1                                                            ;
+; Maximum fan-out node                        ; pll25_175MHz:comp_pll25_175MHz|altpll:altpll_component|_clk0 ;
+; Maximum fan-out                             ; 83                                                           ;
+; Total fan-out                               ; 746                                                          ;
+; Average fan-out                             ; 2.53                                                         ;
++---------------------------------------------+--------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                        ;
++---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                        ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                         ; Library Name ;
++---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |LVDS_complete                                    ; 206 (0)           ; 81 (0)       ; 0           ; 0            ; 0       ; 0         ; 7    ; 0            ; |LVDS_complete                                                                                                                                              ; work         ;
+;    |LVDS_Coder:comp_LVDS_Coder|                   ; 0 (0)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LVDS_complete|LVDS_Coder:comp_LVDS_Coder                                                                                                                   ; work         ;
+;    |LVDS_tx:comp_LVDS_tx|                         ; 13 (13)           ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LVDS_complete|LVDS_tx:comp_LVDS_tx                                                                                                                         ; work         ;
+;    |VGA_Timer:comp_VGA_Timer|                     ; 144 (144)         ; 65 (65)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LVDS_complete|VGA_Timer:comp_VGA_Timer                                                                                                                     ; work         ;
+;    |VGA_Video_Generator:comp_VGA_Video_Generator| ; 49 (3)            ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LVDS_complete|VGA_Video_Generator:comp_VGA_Video_Generator                                                                                                 ; work         ;
+;       |lpm_divide:Div0|                           ; 46 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LVDS_complete|VGA_Video_Generator:comp_VGA_Video_Generator|lpm_divide:Div0                                                                                 ; work         ;
+;          |lpm_divide_dem:auto_generated|          ; 46 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LVDS_complete|VGA_Video_Generator:comp_VGA_Video_Generator|lpm_divide:Div0|lpm_divide_dem:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_nlh:divider|         ; 46 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LVDS_complete|VGA_Video_Generator:comp_VGA_Video_Generator|lpm_divide:Div0|lpm_divide_dem:auto_generated|sign_div_unsign_nlh:divider                       ; work         ;
+;                |alt_u_div_g2f:divider|            ; 46 (46)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LVDS_complete|VGA_Video_Generator:comp_VGA_Video_Generator|lpm_divide:Div0|lpm_divide_dem:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_g2f:divider ; work         ;
+;    |pll25_175MHz:comp_pll25_175MHz|               ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LVDS_complete|pll25_175MHz:comp_pll25_175MHz                                                                                                               ; work         ;
+;       |altpll:altpll_component|                   ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |LVDS_complete|pll25_175MHz:comp_pll25_175MHz|altpll:altpll_component                                                                                       ; work         ;
++---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                   ;
++------------------------------------------------------+---------------------------------------------------------------+
+; Register name                                        ; Reason for Removal                                            ;
++------------------------------------------------------+---------------------------------------------------------------+
+; LVDS_Coder:comp_LVDS_Coder|tx3[6]                    ; Stuck at GND due to stuck port data_in                        ;
+; VGA_Video_Generator:comp_VGA_Video_Generator|G[1]    ; Merged with VGA_Video_Generator:comp_VGA_Video_Generator|B[1] ;
+; VGA_Video_Generator:comp_VGA_Video_Generator|R[1]    ; Merged with VGA_Video_Generator:comp_VGA_Video_Generator|B[1] ;
+; VGA_Timer:comp_VGA_Timer|counter_h[9]                ; Merged with VGA_Timer:comp_VGA_Timer|column[9]                ;
+; VGA_Timer:comp_VGA_Timer|counter_h[8]                ; Merged with VGA_Timer:comp_VGA_Timer|column[8]                ;
+; VGA_Timer:comp_VGA_Timer|counter_h[7]                ; Merged with VGA_Timer:comp_VGA_Timer|column[7]                ;
+; VGA_Timer:comp_VGA_Timer|counter_h[6]                ; Merged with VGA_Timer:comp_VGA_Timer|column[6]                ;
+; VGA_Timer:comp_VGA_Timer|counter_h[5]                ; Merged with VGA_Timer:comp_VGA_Timer|column[5]                ;
+; VGA_Timer:comp_VGA_Timer|counter_h[4]                ; Merged with VGA_Timer:comp_VGA_Timer|column[4]                ;
+; VGA_Timer:comp_VGA_Timer|counter_h[3]                ; Merged with VGA_Timer:comp_VGA_Timer|column[3]                ;
+; VGA_Timer:comp_VGA_Timer|counter_h[2]                ; Merged with VGA_Timer:comp_VGA_Timer|column[2]                ;
+; VGA_Timer:comp_VGA_Timer|counter_h[1]                ; Merged with VGA_Timer:comp_VGA_Timer|column[1]                ;
+; VGA_Timer:comp_VGA_Timer|counter_h[0]                ; Merged with VGA_Timer:comp_VGA_Timer|column[0]                ;
+; LVDS_Coder:comp_LVDS_Coder|tx1[6]                    ; Merged with LVDS_Coder:comp_LVDS_Coder|tx1[0]                 ;
+; LVDS_Coder:comp_LVDS_Coder|tx0[1]                    ; Merged with LVDS_Coder:comp_LVDS_Coder|tx1[0]                 ;
+; VGA_Video_Generator:comp_VGA_Video_Generator|B[1]    ; Stuck at GND due to stuck port data_in                        ;
+; LVDS_Coder:comp_LVDS_Coder|tx1[0]                    ; Stuck at GND due to stuck port data_in                        ;
+; VGA_Video_Generator:comp_VGA_Video_Generator|B[3..7] ; Merged with VGA_Video_Generator:comp_VGA_Video_Generator|B[0] ;
+; VGA_Video_Generator:comp_VGA_Video_Generator|G[3..7] ; Merged with VGA_Video_Generator:comp_VGA_Video_Generator|G[2] ;
+; VGA_Video_Generator:comp_VGA_Video_Generator|R[3..7] ; Merged with VGA_Video_Generator:comp_VGA_Video_Generator|R[2] ;
+; LVDS_Coder:comp_LVDS_Coder|tx0[2..5]                 ; Merged with LVDS_Coder:comp_LVDS_Coder|tx3[0]                 ;
+; LVDS_Coder:comp_LVDS_Coder|tx3[1]                    ; Merged with LVDS_Coder:comp_LVDS_Coder|tx3[0]                 ;
+; LVDS_Coder:comp_LVDS_Coder|tx1[1]                    ; Merged with LVDS_Coder:comp_LVDS_Coder|tx3[2]                 ;
+; LVDS_Coder:comp_LVDS_Coder|tx3[3]                    ; Merged with LVDS_Coder:comp_LVDS_Coder|tx3[2]                 ;
+; LVDS_Coder:comp_LVDS_Coder|tx1[2..4]                 ; Merged with LVDS_Coder:comp_LVDS_Coder|tx3[2]                 ;
+; LVDS_Coder:comp_LVDS_Coder|tx1[5]                    ; Merged with LVDS_Coder:comp_LVDS_Coder|tx3[4]                 ;
+; LVDS_Coder:comp_LVDS_Coder|tx2[3]                    ; Merged with LVDS_Coder:comp_LVDS_Coder|tx3[4]                 ;
+; LVDS_Coder:comp_LVDS_Coder|tx3[5]                    ; Merged with LVDS_Coder:comp_LVDS_Coder|tx3[4]                 ;
+; LVDS_Coder:comp_LVDS_Coder|tx2[1..2]                 ; Merged with LVDS_Coder:comp_LVDS_Coder|tx3[4]                 ;
+; VGA_Video_Generator:comp_VGA_Video_Generator|B[0]    ; Merged with VGA_Video_Generator:comp_VGA_Video_Generator|B[2] ;
+; VGA_Video_Generator:comp_VGA_Video_Generator|R[2]    ; Merged with VGA_Video_Generator:comp_VGA_Video_Generator|R[0] ;
+; LVDS_Coder:comp_LVDS_Coder|tx0[0]                    ; Merged with LVDS_Coder:comp_LVDS_Coder|tx3[0]                 ;
+; LVDS_Coder:comp_LVDS_Coder|tx2[0]                    ; Merged with LVDS_Coder:comp_LVDS_Coder|tx3[4]                 ;
+; VGA_Video_Generator:comp_VGA_Video_Generator|G[2]    ; Merged with VGA_Video_Generator:comp_VGA_Video_Generator|G[0] ;
+; LVDS_Coder:comp_LVDS_Coder|tx3[2]                    ; Merged with LVDS_Coder:comp_LVDS_Coder|tx0[6]                 ;
+; Total Number of Removed Registers = 53               ;                                                               ;
++------------------------------------------------------+---------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                            ;
++---------------------------------------------------+---------------------------+----------------------------------------+
+; Register name                                     ; Reason for Removal        ; Registers Removed due to This Register ;
++---------------------------------------------------+---------------------------+----------------------------------------+
+; VGA_Video_Generator:comp_VGA_Video_Generator|B[1] ; Stuck at GND              ; LVDS_Coder:comp_LVDS_Coder|tx1[0]      ;
+;                                                   ; due to stuck port data_in ;                                        ;
++---------------------------------------------------+---------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 81    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 4     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
+; 3:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; No         ; |LVDS_complete|VGA_Timer:comp_VGA_Timer|counter_v~35 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: pll25_175MHz:comp_pll25_175MHz|altpll:altpll_component ;
++-------------------------------+-------------------+-------------------------------------------------+
+; Parameter Name                ; Value             ; Type                                            ;
++-------------------------------+-------------------+-------------------------------------------------+
+; OPERATION_MODE                ; NORMAL            ; Untyped                                         ;
+; PLL_TYPE                      ; AUTO              ; Untyped                                         ;
+; QUALIFY_CONF_DONE             ; OFF               ; Untyped                                         ;
+; COMPENSATE_CLOCK              ; CLK0              ; Untyped                                         ;
+; SCAN_CHAIN                    ; LONG              ; Untyped                                         ;
+; PRIMARY_CLOCK                 ; INCLK0            ; Untyped                                         ;
+; INCLK0_INPUT_FREQUENCY        ; 20000             ; Signed Integer                                  ;
+; INCLK1_INPUT_FREQUENCY        ; 0                 ; Untyped                                         ;
+; GATE_LOCK_SIGNAL              ; NO                ; Untyped                                         ;
+; GATE_LOCK_COUNTER             ; 0                 ; Untyped                                         ;
+; LOCK_HIGH                     ; 1                 ; Untyped                                         ;
+; LOCK_LOW                      ; 1                 ; Untyped                                         ;
+; VALID_LOCK_MULTIPLIER         ; 1                 ; Untyped                                         ;
+; INVALID_LOCK_MULTIPLIER       ; 5                 ; Untyped                                         ;
+; SWITCH_OVER_ON_LOSSCLK        ; OFF               ; Untyped                                         ;
+; SWITCH_OVER_ON_GATED_LOCK     ; OFF               ; Untyped                                         ;
+; ENABLE_SWITCH_OVER_COUNTER    ; OFF               ; Untyped                                         ;
+; SKIP_VCO                      ; OFF               ; Untyped                                         ;
+; SWITCH_OVER_COUNTER           ; 0                 ; Untyped                                         ;
+; SWITCH_OVER_TYPE              ; AUTO              ; Untyped                                         ;
+; FEEDBACK_SOURCE               ; EXTCLK0           ; Untyped                                         ;
+; BANDWIDTH                     ; 0                 ; Untyped                                         ;
+; BANDWIDTH_TYPE                ; AUTO              ; Untyped                                         ;
+; SPREAD_FREQUENCY              ; 0                 ; Untyped                                         ;
+; DOWN_SPREAD                   ; 0                 ; Untyped                                         ;
+; SELF_RESET_ON_GATED_LOSS_LOCK ; OFF               ; Untyped                                         ;
+; SELF_RESET_ON_LOSS_LOCK       ; OFF               ; Untyped                                         ;
+; CLK9_MULTIPLY_BY              ; 0                 ; Untyped                                         ;
+; CLK8_MULTIPLY_BY              ; 0                 ; Untyped                                         ;
+; CLK7_MULTIPLY_BY              ; 0                 ; Untyped                                         ;
+; CLK6_MULTIPLY_BY              ; 0                 ; Untyped                                         ;
+; CLK5_MULTIPLY_BY              ; 1                 ; Untyped                                         ;
+; CLK4_MULTIPLY_BY              ; 1                 ; Untyped                                         ;
+; CLK3_MULTIPLY_BY              ; 1                 ; Untyped                                         ;
+; CLK2_MULTIPLY_BY              ; 1                 ; Untyped                                         ;
+; CLK1_MULTIPLY_BY              ; 7                 ; Signed Integer                                  ;
+; CLK0_MULTIPLY_BY              ; 1                 ; Signed Integer                                  ;
+; CLK9_DIVIDE_BY                ; 0                 ; Untyped                                         ;
+; CLK8_DIVIDE_BY                ; 0                 ; Untyped                                         ;
+; CLK7_DIVIDE_BY                ; 0                 ; Untyped                                         ;
+; CLK6_DIVIDE_BY                ; 0                 ; Untyped                                         ;
+; CLK5_DIVIDE_BY                ; 1                 ; Untyped                                         ;
+; CLK4_DIVIDE_BY                ; 1                 ; Untyped                                         ;
+; CLK3_DIVIDE_BY                ; 1                 ; Untyped                                         ;
+; CLK2_DIVIDE_BY                ; 1                 ; Untyped                                         ;
+; CLK1_DIVIDE_BY                ; 2                 ; Signed Integer                                  ;
+; CLK0_DIVIDE_BY                ; 2                 ; Signed Integer                                  ;
+; CLK9_PHASE_SHIFT              ; 0                 ; Untyped                                         ;
+; CLK8_PHASE_SHIFT              ; 0                 ; Untyped                                         ;
+; CLK7_PHASE_SHIFT              ; 0                 ; Untyped                                         ;
+; CLK6_PHASE_SHIFT              ; 0                 ; Untyped                                         ;
+; CLK5_PHASE_SHIFT              ; 0                 ; Untyped                                         ;
+; CLK4_PHASE_SHIFT              ; 0                 ; Untyped                                         ;
+; CLK3_PHASE_SHIFT              ; 0                 ; Untyped                                         ;
+; CLK2_PHASE_SHIFT              ; 0                 ; Untyped                                         ;
+; CLK1_PHASE_SHIFT              ; 0                 ; Untyped                                         ;
+; CLK0_PHASE_SHIFT              ; 0                 ; Untyped                                         ;
+; CLK5_TIME_DELAY               ; 0                 ; Untyped                                         ;
+; CLK4_TIME_DELAY               ; 0                 ; Untyped                                         ;
+; CLK3_TIME_DELAY               ; 0                 ; Untyped                                         ;
+; CLK2_TIME_DELAY               ; 0                 ; Untyped                                         ;
+; CLK1_TIME_DELAY               ; 0                 ; Untyped                                         ;
+; CLK0_TIME_DELAY               ; 0                 ; Untyped                                         ;
+; CLK9_DUTY_CYCLE               ; 50                ; Untyped                                         ;
+; CLK8_DUTY_CYCLE               ; 50                ; Untyped                                         ;
+; CLK7_DUTY_CYCLE               ; 50                ; Untyped                                         ;
+; CLK6_DUTY_CYCLE               ; 50                ; Untyped                                         ;
+; CLK5_DUTY_CYCLE               ; 50                ; Untyped                                         ;
+; CLK4_DUTY_CYCLE               ; 50                ; Untyped                                         ;
+; CLK3_DUTY_CYCLE               ; 50                ; Untyped                                         ;
+; CLK2_DUTY_CYCLE               ; 50                ; Untyped                                         ;
+; CLK1_DUTY_CYCLE               ; 50                ; Signed Integer                                  ;
+; CLK0_DUTY_CYCLE               ; 50                ; Signed Integer                                  ;
+; CLK9_USE_EVEN_COUNTER_MODE    ; OFF               ; Untyped                                         ;
+; CLK8_USE_EVEN_COUNTER_MODE    ; OFF               ; Untyped                                         ;
+; CLK7_USE_EVEN_COUNTER_MODE    ; OFF               ; Untyped                                         ;
+; CLK6_USE_EVEN_COUNTER_MODE    ; OFF               ; Untyped                                         ;
+; CLK5_USE_EVEN_COUNTER_MODE    ; OFF               ; Untyped                                         ;
+; CLK4_USE_EVEN_COUNTER_MODE    ; OFF               ; Untyped                                         ;
+; CLK3_USE_EVEN_COUNTER_MODE    ; OFF               ; Untyped                                         ;
+; CLK2_USE_EVEN_COUNTER_MODE    ; OFF               ; Untyped                                         ;
+; CLK1_USE_EVEN_COUNTER_MODE    ; OFF               ; Untyped                                         ;
+; CLK0_USE_EVEN_COUNTER_MODE    ; OFF               ; Untyped                                         ;
+; CLK9_USE_EVEN_COUNTER_VALUE   ; OFF               ; Untyped                                         ;
+; CLK8_USE_EVEN_COUNTER_VALUE   ; OFF               ; Untyped                                         ;
+; CLK7_USE_EVEN_COUNTER_VALUE   ; OFF               ; Untyped                                         ;
+; CLK6_USE_EVEN_COUNTER_VALUE   ; OFF               ; Untyped                                         ;
+; CLK5_USE_EVEN_COUNTER_VALUE   ; OFF               ; Untyped                                         ;
+; CLK4_USE_EVEN_COUNTER_VALUE   ; OFF               ; Untyped                                         ;
+; CLK3_USE_EVEN_COUNTER_VALUE   ; OFF               ; Untyped                                         ;
+; CLK2_USE_EVEN_COUNTER_VALUE   ; OFF               ; Untyped                                         ;
+; CLK1_USE_EVEN_COUNTER_VALUE   ; OFF               ; Untyped                                         ;
+; CLK0_USE_EVEN_COUNTER_VALUE   ; OFF               ; Untyped                                         ;
+; LOCK_WINDOW_UI                ;  0.05             ; Untyped                                         ;
+; LOCK_WINDOW_UI_BITS           ; UNUSED            ; Untyped                                         ;
+; VCO_RANGE_DETECTOR_LOW_BITS   ; UNUSED            ; Untyped                                         ;
+; VCO_RANGE_DETECTOR_HIGH_BITS  ; UNUSED            ; Untyped                                         ;
+; DPA_MULTIPLY_BY               ; 0                 ; Untyped                                         ;
+; DPA_DIVIDE_BY                 ; 1                 ; Untyped                                         ;
+; DPA_DIVIDER                   ; 0                 ; Untyped                                         ;
+; EXTCLK3_MULTIPLY_BY           ; 1                 ; Untyped                                         ;
+; EXTCLK2_MULTIPLY_BY           ; 1                 ; Untyped                                         ;
+; EXTCLK1_MULTIPLY_BY           ; 1                 ; Untyped                                         ;
+; EXTCLK0_MULTIPLY_BY           ; 1                 ; Untyped                                         ;
+; EXTCLK3_DIVIDE_BY             ; 1                 ; Untyped                                         ;
+; EXTCLK2_DIVIDE_BY             ; 1                 ; Untyped                                         ;
+; EXTCLK1_DIVIDE_BY             ; 1                 ; Untyped                                         ;
+; EXTCLK0_DIVIDE_BY             ; 1                 ; Untyped                                         ;
+; EXTCLK3_PHASE_SHIFT           ; 0                 ; Untyped                                         ;
+; EXTCLK2_PHASE_SHIFT           ; 0                 ; Untyped                                         ;
+; EXTCLK1_PHASE_SHIFT           ; 0                 ; Untyped                                         ;
+; EXTCLK0_PHASE_SHIFT           ; 0                 ; Untyped                                         ;
+; EXTCLK3_TIME_DELAY            ; 0                 ; Untyped                                         ;
+; EXTCLK2_TIME_DELAY            ; 0                 ; Untyped                                         ;
+; EXTCLK1_TIME_DELAY            ; 0                 ; Untyped                                         ;
+; EXTCLK0_TIME_DELAY            ; 0                 ; Untyped                                         ;
+; EXTCLK3_DUTY_CYCLE            ; 50                ; Untyped                                         ;
+; EXTCLK2_DUTY_CYCLE            ; 50                ; Untyped                                         ;
+; EXTCLK1_DUTY_CYCLE            ; 50                ; Untyped                                         ;
+; EXTCLK0_DUTY_CYCLE            ; 50                ; Untyped                                         ;
+; VCO_MULTIPLY_BY               ; 0                 ; Untyped                                         ;
+; VCO_DIVIDE_BY                 ; 0                 ; Untyped                                         ;
+; SCLKOUT0_PHASE_SHIFT          ; 0                 ; Untyped                                         ;
+; SCLKOUT1_PHASE_SHIFT          ; 0                 ; Untyped                                         ;
+; VCO_MIN                       ; 0                 ; Untyped                                         ;
+; VCO_MAX                       ; 0                 ; Untyped                                         ;
+; VCO_CENTER                    ; 0                 ; Untyped                                         ;
+; PFD_MIN                       ; 0                 ; Untyped                                         ;
+; PFD_MAX                       ; 0                 ; Untyped                                         ;
+; M_INITIAL                     ; 0                 ; Untyped                                         ;
+; M                             ; 0                 ; Untyped                                         ;
+; N                             ; 1                 ; Untyped                                         ;
+; M2                            ; 1                 ; Untyped                                         ;
+; N2                            ; 1                 ; Untyped                                         ;
+; SS                            ; 1                 ; Untyped                                         ;
+; C0_HIGH                       ; 0                 ; Untyped                                         ;
+; C1_HIGH                       ; 0                 ; Untyped                                         ;
+; C2_HIGH                       ; 0                 ; Untyped                                         ;
+; C3_HIGH                       ; 0                 ; Untyped                                         ;
+; C4_HIGH                       ; 0                 ; Untyped                                         ;
+; C5_HIGH                       ; 0                 ; Untyped                                         ;
+; C6_HIGH                       ; 0                 ; Untyped                                         ;
+; C7_HIGH                       ; 0                 ; Untyped                                         ;
+; C8_HIGH                       ; 0                 ; Untyped                                         ;
+; C9_HIGH                       ; 0                 ; Untyped                                         ;
+; C0_LOW                        ; 0                 ; Untyped                                         ;
+; C1_LOW                        ; 0                 ; Untyped                                         ;
+; C2_LOW                        ; 0                 ; Untyped                                         ;
+; C3_LOW                        ; 0                 ; Untyped                                         ;
+; C4_LOW                        ; 0                 ; Untyped                                         ;
+; C5_LOW                        ; 0                 ; Untyped                                         ;
+; C6_LOW                        ; 0                 ; Untyped                                         ;
+; C7_LOW                        ; 0                 ; Untyped                                         ;
+; C8_LOW                        ; 0                 ; Untyped                                         ;
+; C9_LOW                        ; 0                 ; Untyped                                         ;
+; C0_INITIAL                    ; 0                 ; Untyped                                         ;
+; C1_INITIAL                    ; 0                 ; Untyped                                         ;
+; C2_INITIAL                    ; 0                 ; Untyped                                         ;
+; C3_INITIAL                    ; 0                 ; Untyped                                         ;
+; C4_INITIAL                    ; 0                 ; Untyped                                         ;
+; C5_INITIAL                    ; 0                 ; Untyped                                         ;
+; C6_INITIAL                    ; 0                 ; Untyped                                         ;
+; C7_INITIAL                    ; 0                 ; Untyped                                         ;
+; C8_INITIAL                    ; 0                 ; Untyped                                         ;
+; C9_INITIAL                    ; 0                 ; Untyped                                         ;
+; C0_MODE                       ; BYPASS            ; Untyped                                         ;
+; C1_MODE                       ; BYPASS            ; Untyped                                         ;
+; C2_MODE                       ; BYPASS            ; Untyped                                         ;
+; C3_MODE                       ; BYPASS            ; Untyped                                         ;
+; C4_MODE                       ; BYPASS            ; Untyped                                         ;
+; C5_MODE                       ; BYPASS            ; Untyped                                         ;
+; C6_MODE                       ; BYPASS            ; Untyped                                         ;
+; C7_MODE                       ; BYPASS            ; Untyped                                         ;
+; C8_MODE                       ; BYPASS            ; Untyped                                         ;
+; C9_MODE                       ; BYPASS            ; Untyped                                         ;
+; C0_PH                         ; 0                 ; Untyped                                         ;
+; C1_PH                         ; 0                 ; Untyped                                         ;
+; C2_PH                         ; 0                 ; Untyped                                         ;
+; C3_PH                         ; 0                 ; Untyped                                         ;
+; C4_PH                         ; 0                 ; Untyped                                         ;
+; C5_PH                         ; 0                 ; Untyped                                         ;
+; C6_PH                         ; 0                 ; Untyped                                         ;
+; C7_PH                         ; 0                 ; Untyped                                         ;
+; C8_PH                         ; 0                 ; Untyped                                         ;
+; C9_PH                         ; 0                 ; Untyped                                         ;
+; L0_HIGH                       ; 1                 ; Untyped                                         ;
+; L1_HIGH                       ; 1                 ; Untyped                                         ;
+; G0_HIGH                       ; 1                 ; Untyped                                         ;
+; G1_HIGH                       ; 1                 ; Untyped                                         ;
+; G2_HIGH                       ; 1                 ; Untyped                                         ;
+; G3_HIGH                       ; 1                 ; Untyped                                         ;
+; E0_HIGH                       ; 1                 ; Untyped                                         ;
+; E1_HIGH                       ; 1                 ; Untyped                                         ;
+; E2_HIGH                       ; 1                 ; Untyped                                         ;
+; E3_HIGH                       ; 1                 ; Untyped                                         ;
+; L0_LOW                        ; 1                 ; Untyped                                         ;
+; L1_LOW                        ; 1                 ; Untyped                                         ;
+; G0_LOW                        ; 1                 ; Untyped                                         ;
+; G1_LOW                        ; 1                 ; Untyped                                         ;
+; G2_LOW                        ; 1                 ; Untyped                                         ;
+; G3_LOW                        ; 1                 ; Untyped                                         ;
+; E0_LOW                        ; 1                 ; Untyped                                         ;
+; E1_LOW                        ; 1                 ; Untyped                                         ;
+; E2_LOW                        ; 1                 ; Untyped                                         ;
+; E3_LOW                        ; 1                 ; Untyped                                         ;
+; L0_INITIAL                    ; 1                 ; Untyped                                         ;
+; L1_INITIAL                    ; 1                 ; Untyped                                         ;
+; G0_INITIAL                    ; 1                 ; Untyped                                         ;
+; G1_INITIAL                    ; 1                 ; Untyped                                         ;
+; G2_INITIAL                    ; 1                 ; Untyped                                         ;
+; G3_INITIAL                    ; 1                 ; Untyped                                         ;
+; E0_INITIAL                    ; 1                 ; Untyped                                         ;
+; E1_INITIAL                    ; 1                 ; Untyped                                         ;
+; E2_INITIAL                    ; 1                 ; Untyped                                         ;
+; E3_INITIAL                    ; 1                 ; Untyped                                         ;
+; L0_MODE                       ; BYPASS            ; Untyped                                         ;
+; L1_MODE                       ; BYPASS            ; Untyped                                         ;
+; G0_MODE                       ; BYPASS            ; Untyped                                         ;
+; G1_MODE                       ; BYPASS            ; Untyped                                         ;
+; G2_MODE                       ; BYPASS            ; Untyped                                         ;
+; G3_MODE                       ; BYPASS            ; Untyped                                         ;
+; E0_MODE                       ; BYPASS            ; Untyped                                         ;
+; E1_MODE                       ; BYPASS            ; Untyped                                         ;
+; E2_MODE                       ; BYPASS            ; Untyped                                         ;
+; E3_MODE                       ; BYPASS            ; Untyped                                         ;
+; L0_PH                         ; 0                 ; Untyped                                         ;
+; L1_PH                         ; 0                 ; Untyped                                         ;
+; G0_PH                         ; 0                 ; Untyped                                         ;
+; G1_PH                         ; 0                 ; Untyped                                         ;
+; G2_PH                         ; 0                 ; Untyped                                         ;
+; G3_PH                         ; 0                 ; Untyped                                         ;
+; E0_PH                         ; 0                 ; Untyped                                         ;
+; E1_PH                         ; 0                 ; Untyped                                         ;
+; E2_PH                         ; 0                 ; Untyped                                         ;
+; E3_PH                         ; 0                 ; Untyped                                         ;
+; M_PH                          ; 0                 ; Untyped                                         ;
+; C1_USE_CASC_IN                ; OFF               ; Untyped                                         ;
+; C2_USE_CASC_IN                ; OFF               ; Untyped                                         ;
+; C3_USE_CASC_IN                ; OFF               ; Untyped                                         ;
+; C4_USE_CASC_IN                ; OFF               ; Untyped                                         ;
+; C5_USE_CASC_IN                ; OFF               ; Untyped                                         ;
+; C6_USE_CASC_IN                ; OFF               ; Untyped                                         ;
+; C7_USE_CASC_IN                ; OFF               ; Untyped                                         ;
+; C8_USE_CASC_IN                ; OFF               ; Untyped                                         ;
+; C9_USE_CASC_IN                ; OFF               ; Untyped                                         ;
+; CLK0_COUNTER                  ; G0                ; Untyped                                         ;
+; CLK1_COUNTER                  ; G0                ; Untyped                                         ;
+; CLK2_COUNTER                  ; G0                ; Untyped                                         ;
+; CLK3_COUNTER                  ; G0                ; Untyped                                         ;
+; CLK4_COUNTER                  ; G0                ; Untyped                                         ;
+; CLK5_COUNTER                  ; G0                ; Untyped                                         ;
+; CLK6_COUNTER                  ; E0                ; Untyped                                         ;
+; CLK7_COUNTER                  ; E1                ; Untyped                                         ;
+; CLK8_COUNTER                  ; E2                ; Untyped                                         ;
+; CLK9_COUNTER                  ; E3                ; Untyped                                         ;
+; L0_TIME_DELAY                 ; 0                 ; Untyped                                         ;
+; L1_TIME_DELAY                 ; 0                 ; Untyped                                         ;
+; G0_TIME_DELAY                 ; 0                 ; Untyped                                         ;
+; G1_TIME_DELAY                 ; 0                 ; Untyped                                         ;
+; G2_TIME_DELAY                 ; 0                 ; Untyped                                         ;
+; G3_TIME_DELAY                 ; 0                 ; Untyped                                         ;
+; E0_TIME_DELAY                 ; 0                 ; Untyped                                         ;
+; E1_TIME_DELAY                 ; 0                 ; Untyped                                         ;
+; E2_TIME_DELAY                 ; 0                 ; Untyped                                         ;
+; E3_TIME_DELAY                 ; 0                 ; Untyped                                         ;
+; M_TIME_DELAY                  ; 0                 ; Untyped                                         ;
+; N_TIME_DELAY                  ; 0                 ; Untyped                                         ;
+; EXTCLK3_COUNTER               ; E3                ; Untyped                                         ;
+; EXTCLK2_COUNTER               ; E2                ; Untyped                                         ;
+; EXTCLK1_COUNTER               ; E1                ; Untyped                                         ;
+; EXTCLK0_COUNTER               ; E0                ; Untyped                                         ;
+; ENABLE0_COUNTER               ; L0                ; Untyped                                         ;
+; ENABLE1_COUNTER               ; L0                ; Untyped                                         ;
+; CHARGE_PUMP_CURRENT           ; 2                 ; Untyped                                         ;
+; LOOP_FILTER_R                 ;  1.000000         ; Untyped                                         ;
+; LOOP_FILTER_C                 ; 5                 ; Untyped                                         ;
+; CHARGE_PUMP_CURRENT_BITS      ; 9999              ; Untyped                                         ;
+; LOOP_FILTER_R_BITS            ; 9999              ; Untyped                                         ;
+; LOOP_FILTER_C_BITS            ; 9999              ; Untyped                                         ;
+; VCO_POST_SCALE                ; 0                 ; Untyped                                         ;
+; CLK2_OUTPUT_FREQUENCY         ; 0                 ; Untyped                                         ;
+; CLK1_OUTPUT_FREQUENCY         ; 0                 ; Untyped                                         ;
+; CLK0_OUTPUT_FREQUENCY         ; 0                 ; Untyped                                         ;
+; INTENDED_DEVICE_FAMILY        ; Cyclone II        ; Untyped                                         ;
+; PORT_CLKENA0                  ; PORT_UNUSED       ; Untyped                                         ;
+; PORT_CLKENA1                  ; PORT_UNUSED       ; Untyped                                         ;
+; PORT_CLKENA2                  ; PORT_UNUSED       ; Untyped                                         ;
+; PORT_CLKENA3                  ; PORT_UNUSED       ; Untyped                                         ;
+; PORT_CLKENA4                  ; PORT_UNUSED       ; Untyped                                         ;
+; PORT_CLKENA5                  ; PORT_UNUSED       ; Untyped                                         ;
+; PORT_EXTCLKENA0               ; PORT_CONNECTIVITY ; Untyped                                         ;
+; PORT_EXTCLKENA1               ; PORT_CONNECTIVITY ; Untyped                                         ;
+; PORT_EXTCLKENA2               ; PORT_CONNECTIVITY ; Untyped                                         ;
+; PORT_EXTCLKENA3               ; PORT_CONNECTIVITY ; Untyped                                         ;
+; PORT_EXTCLK0                  ; PORT_UNUSED       ; Untyped                                         ;
+; PORT_EXTCLK1                  ; PORT_UNUSED       ; Untyped                                         ;
+; PORT_EXTCLK2                  ; PORT_UNUSED       ; Untyped                                         ;
+; PORT_EXTCLK3                  ; PORT_UNUSED       ; Untyped                                         ;
+; PORT_CLKBAD0                  ; PORT_UNUSED       ; Untyped                                         ;
+; PORT_CLKBAD1                  ; PORT_UNUSED       ; Untyped                                         ;
+; PORT_CLK0                     ; PORT_USED         ; Untyped                                         ;
+; PORT_CLK1                     ; PORT_USED         ; Untyped                                         ;
+; PORT_CLK2                     ; PORT_UNUSED       ; Untyped                                         ;
+; PORT_CLK3                     ; PORT_UNUSED       ; Untyped                                         ;
+; PORT_CLK4                     ; PORT_UNUSED       ; Untyped                                         ;
+; PORT_CLK5                     ; PORT_UNUSED       ; Untyped                                         ;
+; PORT_CLK6                     ; PORT_UNUSED       ; Untyped                                         ;
+; PORT_CLK7                     ; PORT_UNUSED       ; Untyped                                         ;
+; PORT_CLK8                     ; PORT_UNUSED       ; Untyped                                         ;
+; PORT_CLK9                     ; PORT_UNUSED       ; Untyped                                         ;
+; PORT_SCANDATA                 ; PORT_UNUSED       ; Untyped                                         ;
+; PORT_SCANDATAOUT              ; PORT_UNUSED       ; Untyped                                         ;
+; PORT_SCANDONE                 ; PORT_UNUSED       ; Untyped                                         ;
+; PORT_SCLKOUT1                 ; PORT_CONNECTIVITY ; Untyped                                         ;
+; PORT_SCLKOUT0                 ; PORT_CONNECTIVITY ; Untyped                                         ;
+; PORT_ACTIVECLOCK              ; PORT_UNUSED       ; Untyped                                         ;
+; PORT_CLKLOSS                  ; PORT_UNUSED       ; Untyped                                         ;
+; PORT_INCLK1                   ; PORT_UNUSED       ; Untyped                                         ;
+; PORT_INCLK0                   ; PORT_USED         ; Untyped                                         ;
+; PORT_FBIN                     ; PORT_UNUSED       ; Untyped                                         ;
+; PORT_PLLENA                   ; PORT_UNUSED       ; Untyped                                         ;
+; PORT_CLKSWITCH                ; PORT_UNUSED       ; Untyped                                         ;
+; PORT_ARESET                   ; PORT_UNUSED       ; Untyped                                         ;
+; PORT_PFDENA                   ; PORT_UNUSED       ; Untyped                                         ;
+; PORT_SCANCLK                  ; PORT_UNUSED       ; Untyped                                         ;
+; PORT_SCANACLR                 ; PORT_UNUSED       ; Untyped                                         ;
+; PORT_SCANREAD                 ; PORT_UNUSED       ; Untyped                                         ;
+; PORT_SCANWRITE                ; PORT_UNUSED       ; Untyped                                         ;
+; PORT_ENABLE0                  ; PORT_CONNECTIVITY ; Untyped                                         ;
+; PORT_ENABLE1                  ; PORT_CONNECTIVITY ; Untyped                                         ;
+; PORT_LOCKED                   ; PORT_UNUSED       ; Untyped                                         ;
+; PORT_CONFIGUPDATE             ; PORT_UNUSED       ; Untyped                                         ;
+; PORT_FBOUT                    ; PORT_CONNECTIVITY ; Untyped                                         ;
+; PORT_PHASEDONE                ; PORT_UNUSED       ; Untyped                                         ;
+; PORT_PHASESTEP                ; PORT_UNUSED       ; Untyped                                         ;
+; PORT_PHASEUPDOWN              ; PORT_UNUSED       ; Untyped                                         ;
+; PORT_SCANCLKENA               ; PORT_UNUSED       ; Untyped                                         ;
+; PORT_PHASECOUNTERSELECT       ; PORT_UNUSED       ; Untyped                                         ;
+; PORT_VCOOVERRANGE             ; PORT_CONNECTIVITY ; Untyped                                         ;
+; PORT_VCOUNDERRANGE            ; PORT_CONNECTIVITY ; Untyped                                         ;
+; M_TEST_SOURCE                 ; 5                 ; Untyped                                         ;
+; C0_TEST_SOURCE                ; 5                 ; Untyped                                         ;
+; C1_TEST_SOURCE                ; 5                 ; Untyped                                         ;
+; C2_TEST_SOURCE                ; 5                 ; Untyped                                         ;
+; C3_TEST_SOURCE                ; 5                 ; Untyped                                         ;
+; C4_TEST_SOURCE                ; 5                 ; Untyped                                         ;
+; C5_TEST_SOURCE                ; 5                 ; Untyped                                         ;
+; C6_TEST_SOURCE                ; 5                 ; Untyped                                         ;
+; C7_TEST_SOURCE                ; 5                 ; Untyped                                         ;
+; C8_TEST_SOURCE                ; 5                 ; Untyped                                         ;
+; C9_TEST_SOURCE                ; 5                 ; Untyped                                         ;
+; CBXI_PARAMETER                ; NOTHING           ; Untyped                                         ;
+; VCO_FREQUENCY_CONTROL         ; AUTO              ; Untyped                                         ;
+; VCO_PHASE_SHIFT_STEP          ; 0                 ; Untyped                                         ;
+; WIDTH_CLOCK                   ; 6                 ; Untyped                                         ;
+; WIDTH_PHASECOUNTERSELECT      ; 4                 ; Untyped                                         ;
+; USING_FBMIMICBIDIR_PORT       ; OFF               ; Untyped                                         ;
+; DEVICE_FAMILY                 ; Cyclone II        ; Untyped                                         ;
+; SCAN_CHAIN_MIF_FILE           ; UNUSED            ; Untyped                                         ;
+; SIM_GATE_LOCK_DEVICE_BEHAVIOR ; OFF               ; Untyped                                         ;
+; AUTO_CARRY_CHAINS             ; ON                ; AUTO_CARRY                                      ;
+; IGNORE_CARRY_BUFFERS          ; OFF               ; IGNORE_CARRY                                    ;
+; AUTO_CASCADE_CHAINS           ; ON                ; AUTO_CASCADE                                    ;
+; IGNORE_CASCADE_BUFFERS        ; OFF               ; IGNORE_CASCADE                                  ;
++-------------------------------+-------------------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: VGA_Timer:comp_VGA_Timer ;
++----------------+------------------------------------+-----------------+
+; Parameter Name ; Value                              ; Type            ;
++----------------+------------------------------------+-----------------+
+; my_vga_horiz   ; A(D"640",D"16",D"96",D"48",D"800") ; Array/Record    ;
+; my_vga_vert    ; A(D"480",D"10",D"2",D"33",D"525")  ; Array/Record    ;
+; h              ; 800                                ; Signed Integer  ;
+; v              ; 525                                ; Signed Integer  ;
++----------------+------------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: VGA_Video_Generator:comp_VGA_Video_Generator|lpm_divide:Div0 ;
++------------------------+----------------+---------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                ;
++------------------------+----------------+---------------------------------------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                                                             ;
+; LPM_WIDTHD             ; 7              ; Untyped                                                             ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                             ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                             ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                             ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                             ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                             ;
+; CBXI_PARAMETER         ; lpm_divide_dem ; Untyped                                                             ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                             ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                             ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                          ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                        ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                        ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                      ;
++------------------------+----------------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; altpll Parameter Settings by Entity Instance                                           ;
++-------------------------------+--------------------------------------------------------+
+; Name                          ; Value                                                  ;
++-------------------------------+--------------------------------------------------------+
+; Number of entity instances    ; 1                                                      ;
+; Entity Instance               ; pll25_175MHz:comp_pll25_175MHz|altpll:altpll_component ;
+;     -- OPERATION_MODE         ; NORMAL                                                 ;
+;     -- PLL_TYPE               ; AUTO                                                   ;
+;     -- PRIMARY_CLOCK          ; INCLK0                                                 ;
+;     -- INCLK0_INPUT_FREQUENCY ; 20000                                                  ;
+;     -- INCLK1_INPUT_FREQUENCY ; 0                                                      ;
+;     -- VCO_MULTIPLY_BY        ; 0                                                      ;
+;     -- VCO_DIVIDE_BY          ; 0                                                      ;
++-------------------------------+--------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "VGA_Timer:comp_VGA_Timer"                                                                     ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port           ; Type   ; Severity ; Details                                                                             ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; row[30..10]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; column[30..10] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Tue Mar 27 19:04:32 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off LVDS_complete -c LVDS_complete
+Info: Found 2 design units, including 1 entities, in source file LVDS_complete.vhd
+    Info: Found design unit 1: LVDS_complete-behavior
+    Info: Found entity 1: LVDS_complete
+Info: Found 2 design units, including 1 entities, in source file ../LVDS_Coder/LVDS_Coder.vhd
+    Info: Found design unit 1: LVDS_Coder-behavior
+    Info: Found entity 1: LVDS_Coder
+Info: Found 2 design units, including 1 entities, in source file ../LVDS_tx/LVDS_tx.vhd
+    Info: Found design unit 1: LVDS_tx-behavior
+    Info: Found entity 1: LVDS_tx
+Info: Found 3 design units, including 1 entities, in source file ../VGA_Timer/VGA_Timer.vhd
+    Info: Found design unit 1: VGA_params
+    Info: Found design unit 2: VGA_Timer-behavior
+    Info: Found entity 1: VGA_Timer
+Info: Found 2 design units, including 1 entities, in source file ../VGA_Video_Generator/VGA_Video_Generator.vhd
+    Info: Found design unit 1: VGA_Video_Generator-behavior
+    Info: Found entity 1: VGA_Video_Generator
+Info: Found 2 design units, including 1 entities, in source file pll25_175MHz.vhd
+    Info: Found design unit 1: pll25_175mhz-SYN
+    Info: Found entity 1: pll25_175MHz
+Info: Elaborating entity "LVDS_complete" for the top level hierarchy
+Info: Elaborating entity "pll25_175MHz" for hierarchy "pll25_175MHz:comp_pll25_175MHz"
+Info: Elaborating entity "altpll" for hierarchy "pll25_175MHz:comp_pll25_175MHz|altpll:altpll_component"
+Info: Elaborated megafunction instantiation "pll25_175MHz:comp_pll25_175MHz|altpll:altpll_component"
+Info: Instantiated megafunction "pll25_175MHz:comp_pll25_175MHz|altpll:altpll_component" with the following parameter:
+    Info: Parameter "clk0_divide_by" = "2"
+    Info: Parameter "clk0_duty_cycle" = "50"
+    Info: Parameter "clk0_multiply_by" = "1"
+    Info: Parameter "clk0_phase_shift" = "0"
+    Info: Parameter "clk1_divide_by" = "2"
+    Info: Parameter "clk1_duty_cycle" = "50"
+    Info: Parameter "clk1_multiply_by" = "7"
+    Info: Parameter "clk1_phase_shift" = "0"
+    Info: Parameter "compensate_clock" = "CLK0"
+    Info: Parameter "inclk0_input_frequency" = "20000"
+    Info: Parameter "intended_device_family" = "Cyclone II"
+    Info: Parameter "lpm_type" = "altpll"
+    Info: Parameter "operation_mode" = "NORMAL"
+    Info: Parameter "port_activeclock" = "PORT_UNUSED"
+    Info: Parameter "port_areset" = "PORT_UNUSED"
+    Info: Parameter "port_clkbad0" = "PORT_UNUSED"
+    Info: Parameter "port_clkbad1" = "PORT_UNUSED"
+    Info: Parameter "port_clkloss" = "PORT_UNUSED"
+    Info: Parameter "port_clkswitch" = "PORT_UNUSED"
+    Info: Parameter "port_configupdate" = "PORT_UNUSED"
+    Info: Parameter "port_fbin" = "PORT_UNUSED"
+    Info: Parameter "port_inclk0" = "PORT_USED"
+    Info: Parameter "port_inclk1" = "PORT_UNUSED"
+    Info: Parameter "port_locked" = "PORT_UNUSED"
+    Info: Parameter "port_pfdena" = "PORT_UNUSED"
+    Info: Parameter "port_phasecounterselect" = "PORT_UNUSED"
+    Info: Parameter "port_phasedone" = "PORT_UNUSED"
+    Info: Parameter "port_phasestep" = "PORT_UNUSED"
+    Info: Parameter "port_phaseupdown" = "PORT_UNUSED"
+    Info: Parameter "port_pllena" = "PORT_UNUSED"
+    Info: Parameter "port_scanaclr" = "PORT_UNUSED"
+    Info: Parameter "port_scanclk" = "PORT_UNUSED"
+    Info: Parameter "port_scanclkena" = "PORT_UNUSED"
+    Info: Parameter "port_scandata" = "PORT_UNUSED"
+    Info: Parameter "port_scandataout" = "PORT_UNUSED"
+    Info: Parameter "port_scandone" = "PORT_UNUSED"
+    Info: Parameter "port_scanread" = "PORT_UNUSED"
+    Info: Parameter "port_scanwrite" = "PORT_UNUSED"
+    Info: Parameter "port_clk0" = "PORT_USED"
+    Info: Parameter "port_clk1" = "PORT_USED"
+    Info: Parameter "port_clk2" = "PORT_UNUSED"
+    Info: Parameter "port_clk3" = "PORT_UNUSED"
+    Info: Parameter "port_clk4" = "PORT_UNUSED"
+    Info: Parameter "port_clk5" = "PORT_UNUSED"
+    Info: Parameter "port_clkena0" = "PORT_UNUSED"
+    Info: Parameter "port_clkena1" = "PORT_UNUSED"
+    Info: Parameter "port_clkena2" = "PORT_UNUSED"
+    Info: Parameter "port_clkena3" = "PORT_UNUSED"
+    Info: Parameter "port_clkena4" = "PORT_UNUSED"
+    Info: Parameter "port_clkena5" = "PORT_UNUSED"
+    Info: Parameter "port_extclk0" = "PORT_UNUSED"
+    Info: Parameter "port_extclk1" = "PORT_UNUSED"
+    Info: Parameter "port_extclk2" = "PORT_UNUSED"
+    Info: Parameter "port_extclk3" = "PORT_UNUSED"
+Info: Elaborating entity "VGA_Timer" for hierarchy "VGA_Timer:comp_VGA_Timer"
+Info: Elaborating entity "VGA_Video_Generator" for hierarchy "VGA_Video_Generator:comp_VGA_Video_Generator"
+Info: Elaborating entity "LVDS_Coder" for hierarchy "LVDS_Coder:comp_LVDS_Coder"
+Info: Elaborating entity "LVDS_tx" for hierarchy "LVDS_tx:comp_LVDS_tx"
+Info: Inferred 1 megafunctions from design logic
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "VGA_Video_Generator:comp_VGA_Video_Generator|Div0"
+Info: Elaborated megafunction instantiation "VGA_Video_Generator:comp_VGA_Video_Generator|lpm_divide:Div0"
+Info: Instantiated megafunction "VGA_Video_Generator:comp_VGA_Video_Generator|lpm_divide:Div0" with the following parameter:
+    Info: Parameter "LPM_WIDTHN" = "10"
+    Info: Parameter "LPM_WIDTHD" = "7"
+    Info: Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info: Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info: Found 1 design units, including 1 entities, in source file db/lpm_divide_dem.tdf
+    Info: Found entity 1: lpm_divide_dem
+Info: Found 1 design units, including 1 entities, in source file db/sign_div_unsign_nlh.tdf
+    Info: Found entity 1: sign_div_unsign_nlh
+Info: Found 1 design units, including 1 entities, in source file db/alt_u_div_g2f.tdf
+    Info: Found entity 1: alt_u_div_g2f
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_lkc.tdf
+    Info: Found entity 1: add_sub_lkc
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_mkc.tdf
+    Info: Found entity 1: add_sub_mkc
+Info: Implemented 280 device resources after synthesis - the final resource count might be different
+    Info: Implemented 1 input pins
+    Info: Implemented 6 output pins
+    Info: Implemented 272 logic cells
+    Info: Implemented 1 ClockLock PLLs
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 308 megabytes
+    Info: Processing ended: Tue Mar 27 19:04:35 2018
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
+
+

@@ -1,0 +1,96 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>Atmel ATmega Video generator with SDRAM</title>
+</head>
+<body>
+
+
+<!-- Copyright © 2008. Spidersoft Ltd -->
+<style>
+A.applink:hover {border: 2px dotted #DCE6F4;padding:2px;background-color:#ffff00;color:green;text-decoration:none}
+A.applink       {border: 2px dotted #DCE6F4;padding:2px;color:#2F5BFF;background:transparent;text-decoration:none}
+A.info          {color:#2F5BFF;background:transparent;text-decoration:none}
+A.info:hover    {color:green;background:transparent;text-decoration:underline}
+</style>
+<div style='BORDER: 1px solid #DCE6F4; MARGIN-TOP: 20px; MARGIN-BOTTOM: 20px; MARGIN-LEFT: 5px; MARGIN-RIGHT: 5px; PADDING: 5px; BACKGROUND-COLOR: #eef8ff;line-height:180%; COLOR: #000000; font-family: Arial; font-size: 8pt; width=100%; FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr="#FFFFFFFF", EndColorStr="#F2F5FAFF");'>
+This page was saved using <a class="applink" href="http://www.spidersoft.com"><b>WebZIP 7.1.2.1052</b></a> <a class="applink" href="http://www.spidersoft.com"><b>offline browser</b></a>  (Unregistered) on  01/21/14 12:17:45.<br>
+<b>Address:</b> <a class="info" href="http://tinyvga.com/avr-sdram-vga">http://tinyvga.com/avr-sdram-vga</a><br>
+<b>Title:</b> Atmel ATmega Video generator with SDRAM &nbsp;&bull;&nbsp; <b>Size:</b> 3104<br></div>
+<!-- /Copyright © 2008. Spidersoft Ltd -->
+
+
+
+<div id="container">
+ <div id="top">
+ <img src="gfx/icon-chip-wht.gif" width=52 height=52> <span class="header">Tiny<span style="color:red">V</span><span style="color:#00ff00">G</span><span style="color:#8040ff">A</span>.com: VGA Microcontroller projects</span>
+    </div><!-- /top -->
+
+<h1>Atmel ATmega Video generator with SDRAM</h1>
+<p>
+
+<div class="rightbox200">
+<div class="whiteinfobox">
+<a href="http://www.microvga.com/">
+<img src="images/monitorico.jpg" align=left />
+Interested in easy to use VGA solution for embedded applications? Click here!</a><p>
+</div>
+</div>
+
+
+This projects uses 8MByte SDRAM from a 168 pin DIMM SDRAM  and generates videosignal for a VGA monitor with a resolution of 512x480 pixels with 256 colors at 60Hz using mega8515.
+<p>
+The project uses burst mode of SDRAM, which can feed up to 512 bytes without MCU help. This means
+that MCU can do anything (i.e. generate another graphics) during that time. 8MB SDRAM can
+be used to store up to 32 frames, so you can display one frames while generating another one.
+<p>
+
+So far this project works but is not yet complete.<p>
+
+The text demo application shows a text stored in flash memory. Graphics demo receives a BMP image large 512x512 pixels with 256 colors.
+<p>
+
+The data throughput of SDRAM is as fast as the AVR clock, and the CPU load
+is much lower than if DRAM or SRAM is used.
+<p>
+
+<h2>Images</h2>
+<img src="images/avr_sdram_vga1.jpg"><br>
+Here is a test image in the graphics mode. 
+This picture shows the construction of the circuit: Besides the mega8515, SDRAM, the RAM DAC, a 18432MHz clock and a delay line (or just several gates in series) requires no additional components. 
+<p.
+
+<img src="images/avr_sdram_vga2.jpg"><br>
+Text mode (rendered in graphics).
+
+
+<h2>Files</h2>
+<ul>
+<li><a href="files/avr-sdram-vga1.asm">AVR assembler source code (graphics demo)</a>
+<li><a href="files/avr-sdram-vga2.asm">AVR assembler source code (text demo)</a>
+<li><a href="images/avr_sdram_vgasch.jpg">Schematics</a>
+</ul>
+
+ <div id="navbar">
+   <ul>
+	<li><a href="http://www.microvga.com/" style="background:  #92002E;" rel="microvga">&micro;VGA.com</a></li>
+	<li><a href="vga-timing.html" style="background: #1378aa;">VGA Timing</a></li>
+	<li><a href="faq.html" style="background: #F7C41F;">FAQ</a></li>
+	<li><a href="tinyvga.html" style="background: #97C41F;">Home</a></li>
+   </ul> 
+</div><!-- /navbar -->
+
+<div id="foot">
+Copyright(c)2008 SECONS Ltd.
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-4388516-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+</body>
+</html>

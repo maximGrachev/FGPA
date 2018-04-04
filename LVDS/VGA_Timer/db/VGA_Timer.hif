@@ -1,0 +1,73 @@
+Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+11
+980
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+VGA_Timer
+# storage
+db|VGA_Timer.(0).cnf
+db|VGA_Timer.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+VGA_Timer.vhd
+4dad41b27da2f2ef5a322b174ba4996
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+my_VGA_horiz
+A(D"640",D"16",D"96",D"48",D"800")
+PARAMETER_ARRAY
+DEF
+my_VGA_vert
+A(D"480",D"10",D"2",D"33",D"525")
+PARAMETER_ARRAY
+DEF
+H
+800
+PARAMETER_SIGNED_DEC
+DEF
+V
+525
+PARAMETER_SIGNED_DEC
+DEF
+}
+# hierarchies {
+|
+}
+# lmf
+c:|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# complete
+

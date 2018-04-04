@@ -1,0 +1,46 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 5.921 ns
+From           : VGA_Video_Generator:comp_VGA_Video_Generator|R[3]
+To             : R[2]
+From Clock     : clock
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Clock Setup: 'pll108MHz:comp_pll108MHz|altpll:altpll_component|_clk0'
+Slack          : -2.122 ns
+Required Time  : 108.00 MHz ( period = 9.259 ns )
+Actual Time    : 87.87 MHz ( period = 11.381 ns )
+From           : VGA_Timer:comp_VGA_Timer|column[7]
+To             : VGA_Video_Generator:comp_VGA_Video_Generator|B[0]
+From Clock     : pll108MHz:comp_pll108MHz|altpll:altpll_component|_clk0
+To Clock       : pll108MHz:comp_pll108MHz|altpll:altpll_component|_clk0
+Failed Paths   : 10
+
+Type           : Clock Hold: 'pll108MHz:comp_pll108MHz|altpll:altpll_component|_clk0'
+Slack          : 0.445 ns
+Required Time  : 108.00 MHz ( period = 9.259 ns )
+Actual Time    : N/A
+From           : VGA_Video_Generator:comp_VGA_Video_Generator|G[3]
+To             : VGA_Video_Generator:comp_VGA_Video_Generator|G[3]
+From Clock     : pll108MHz:comp_pll108MHz|altpll:altpll_component|_clk0
+To Clock       : pll108MHz:comp_pll108MHz|altpll:altpll_component|_clk0
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 10
+
+--------------------------------------------------------------------------------------
+

@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Mar 06 10:05:29 2018
+Quartus II Version : 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition
+Revision Name : VGA_Timer
+Top-level Entity Name : VGA_Timer
+Family : Cyclone II
+Total logic elements : 222
+    Total combinational functions : 160
+    Dedicated logic registers : 127
+Total registers : 127
+Total pins : 66
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

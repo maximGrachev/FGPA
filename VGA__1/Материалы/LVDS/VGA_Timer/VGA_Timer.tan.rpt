@@ -1,0 +1,461 @@
+Classic Timing Analyzer report for VGA_Timer
+Mon Mar 19 14:42:48 2018
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'clk'
+  7. tco
+  8. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                          ;
++------------------------------+-------+---------------+----------------------------------+-----------------+---------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From            ; To            ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+-----------------+---------------+------------+----------+--------------+
+; Worst-case tco               ; N/A   ; None          ; 8.784 ns                         ; column[27]~reg0 ; column[27]    ; clk        ; --       ; 0            ;
+; Clock Setup: 'clk'           ; N/A   ; None          ; 124.98 MHz ( period = 8.001 ns ) ; counter_v[1]    ; video_on~reg0 ; clk        ; clk      ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                 ;               ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+-----------------+---------------+------------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                           ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                              ; Setting            ; From ; To ; Entity Name ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                         ; EP2C20F484C7       ;      ;    ;             ;
+; Timing Models                                                       ; Final              ;      ;    ;             ;
+; Default hold multicycle                                             ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                           ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                              ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                      ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                    ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                               ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                             ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                    ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                       ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                   ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                   ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node               ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                               ; 10                 ;      ;    ;             ;
+; Number of paths to report                                           ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                        ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                              ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                          ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                        ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis      ; Off                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                          ; Near End           ;      ;    ;             ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clk             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clk'                                                                                                                                                                                                                        ;
++-----------------------------------------+-----------------------------------------------------+---------------+---------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From          ; To            ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+---------------+---------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 124.98 MHz ( period = 8.001 ns )                    ; counter_v[1]  ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 7.766 ns                ;
+; N/A                                     ; 124.98 MHz ( period = 8.001 ns )                    ; counter_v[1]  ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 7.766 ns                ;
+; N/A                                     ; 126.23 MHz ( period = 7.922 ns )                    ; counter_v[2]  ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 7.687 ns                ;
+; N/A                                     ; 126.23 MHz ( period = 7.922 ns )                    ; counter_v[2]  ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 7.687 ns                ;
+; N/A                                     ; 127.58 MHz ( period = 7.838 ns )                    ; counter_v[0]  ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 7.602 ns                ;
+; N/A                                     ; 127.58 MHz ( period = 7.838 ns )                    ; counter_v[0]  ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 7.602 ns                ;
+; N/A                                     ; 128.35 MHz ( period = 7.791 ns )                    ; counter_h[4]  ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 7.548 ns                ;
+; N/A                                     ; 128.35 MHz ( period = 7.791 ns )                    ; counter_h[4]  ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 7.548 ns                ;
+; N/A                                     ; 128.87 MHz ( period = 7.760 ns )                    ; counter_v[4]  ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 7.524 ns                ;
+; N/A                                     ; 128.87 MHz ( period = 7.760 ns )                    ; counter_v[4]  ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 7.524 ns                ;
+; N/A                                     ; 128.88 MHz ( period = 7.759 ns )                    ; counter_h[6]  ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 7.516 ns                ;
+; N/A                                     ; 128.88 MHz ( period = 7.759 ns )                    ; counter_h[6]  ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 7.516 ns                ;
+; N/A                                     ; 130.19 MHz ( period = 7.681 ns )                    ; counter_v[5]  ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 7.445 ns                ;
+; N/A                                     ; 130.19 MHz ( period = 7.681 ns )                    ; counter_v[5]  ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 7.445 ns                ;
+; N/A                                     ; 131.25 MHz ( period = 7.619 ns )                    ; counter_v[8]  ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 7.383 ns                ;
+; N/A                                     ; 131.25 MHz ( period = 7.619 ns )                    ; counter_v[8]  ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 7.383 ns                ;
+; N/A                                     ; 131.58 MHz ( period = 7.600 ns )                    ; counter_v[6]  ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 7.364 ns                ;
+; N/A                                     ; 131.58 MHz ( period = 7.600 ns )                    ; counter_v[6]  ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 7.364 ns                ;
+; N/A                                     ; 131.61 MHz ( period = 7.598 ns )                    ; counter_v[3]  ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 7.362 ns                ;
+; N/A                                     ; 131.61 MHz ( period = 7.598 ns )                    ; counter_v[3]  ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 7.362 ns                ;
+; N/A                                     ; 133.21 MHz ( period = 7.507 ns )                    ; counter_h[8]  ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 7.264 ns                ;
+; N/A                                     ; 133.21 MHz ( period = 7.507 ns )                    ; counter_h[8]  ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 7.264 ns                ;
+; N/A                                     ; 133.30 MHz ( period = 7.502 ns )                    ; counter_h[1]  ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 7.259 ns                ;
+; N/A                                     ; 133.30 MHz ( period = 7.502 ns )                    ; counter_h[1]  ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 7.259 ns                ;
+; N/A                                     ; 133.98 MHz ( period = 7.464 ns )                    ; counter_v[11] ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 7.221 ns                ;
+; N/A                                     ; 133.98 MHz ( period = 7.464 ns )                    ; counter_v[11] ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 7.221 ns                ;
+; N/A                                     ; 134.12 MHz ( period = 7.456 ns )                    ; counter_h[3]  ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 7.213 ns                ;
+; N/A                                     ; 134.12 MHz ( period = 7.456 ns )                    ; counter_h[3]  ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 7.213 ns                ;
+; N/A                                     ; 134.35 MHz ( period = 7.443 ns )                    ; counter_h[0]  ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 7.200 ns                ;
+; N/A                                     ; 134.54 MHz ( period = 7.433 ns )                    ; counter_h[7]  ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 7.190 ns                ;
+; N/A                                     ; 134.54 MHz ( period = 7.433 ns )                    ; counter_h[7]  ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 7.190 ns                ;
+; N/A                                     ; 134.63 MHz ( period = 7.428 ns )                    ; counter_v[7]  ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 7.192 ns                ;
+; N/A                                     ; 134.63 MHz ( period = 7.428 ns )                    ; counter_v[7]  ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 7.192 ns                ;
+; N/A                                     ; 134.68 MHz ( period = 7.425 ns )                    ; counter_v[12] ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 7.182 ns                ;
+; N/A                                     ; 134.68 MHz ( period = 7.425 ns )                    ; counter_v[12] ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 7.182 ns                ;
+; N/A                                     ; 135.12 MHz ( period = 7.401 ns )                    ; counter_h[0]  ; hsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 7.158 ns                ;
+; N/A                                     ; 135.85 MHz ( period = 7.361 ns )                    ; counter_v[13] ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 7.118 ns                ;
+; N/A                                     ; 135.85 MHz ( period = 7.361 ns )                    ; counter_v[13] ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 7.118 ns                ;
+; N/A                                     ; 136.43 MHz ( period = 7.330 ns )                    ; counter_h[2]  ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 7.087 ns                ;
+; N/A                                     ; 136.43 MHz ( period = 7.330 ns )                    ; counter_h[2]  ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 7.087 ns                ;
+; N/A                                     ; 136.50 MHz ( period = 7.326 ns )                    ; counter_h[1]  ; hsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 7.083 ns                ;
+; N/A                                     ; 136.69 MHz ( period = 7.316 ns )                    ; counter_v[17] ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 7.077 ns                ;
+; N/A                                     ; 137.31 MHz ( period = 7.283 ns )                    ; counter_h[2]  ; hsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 7.040 ns                ;
+; N/A                                     ; 137.55 MHz ( period = 7.270 ns )                    ; counter_h[10] ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 7.027 ns                ;
+; N/A                                     ; 137.55 MHz ( period = 7.270 ns )                    ; counter_h[10] ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 7.027 ns                ;
+; N/A                                     ; 137.61 MHz ( period = 7.267 ns )                    ; counter_v[14] ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 7.024 ns                ;
+; N/A                                     ; 137.61 MHz ( period = 7.267 ns )                    ; counter_v[14] ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 7.024 ns                ;
+; N/A                                     ; 137.76 MHz ( period = 7.259 ns )                    ; counter_h[5]  ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 7.016 ns                ;
+; N/A                                     ; 137.91 MHz ( period = 7.251 ns )                    ; counter_h[24] ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 7.010 ns                ;
+; N/A                                     ; 137.91 MHz ( period = 7.251 ns )                    ; counter_h[24] ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 7.010 ns                ;
+; N/A                                     ; 138.03 MHz ( period = 7.245 ns )                    ; counter_h[23] ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 7.004 ns                ;
+; N/A                                     ; 138.03 MHz ( period = 7.245 ns )                    ; counter_h[23] ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 7.004 ns                ;
+; N/A                                     ; 138.18 MHz ( period = 7.237 ns )                    ; counter_h[21] ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 6.996 ns                ;
+; N/A                                     ; 138.18 MHz ( period = 7.237 ns )                    ; counter_v[10] ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 6.998 ns                ;
+; N/A                                     ; 138.18 MHz ( period = 7.237 ns )                    ; counter_h[21] ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 6.996 ns                ;
+; N/A                                     ; 138.18 MHz ( period = 7.237 ns )                    ; counter_v[10] ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 6.998 ns                ;
+; N/A                                     ; 138.27 MHz ( period = 7.232 ns )                    ; counter_h[15] ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 6.991 ns                ;
+; N/A                                     ; 138.27 MHz ( period = 7.232 ns )                    ; counter_h[15] ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 6.991 ns                ;
+; N/A                                     ; 138.33 MHz ( period = 7.229 ns )                    ; counter_h[11] ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 6.986 ns                ;
+; N/A                                     ; 138.33 MHz ( period = 7.229 ns )                    ; counter_h[11] ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 6.986 ns                ;
+; N/A                                     ; 138.56 MHz ( period = 7.217 ns )                    ; counter_h[5]  ; hsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 6.974 ns                ;
+; N/A                                     ; 139.30 MHz ( period = 7.179 ns )                    ; counter_h[19] ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 6.938 ns                ;
+; N/A                                     ; 139.30 MHz ( period = 7.179 ns )                    ; counter_h[19] ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 6.938 ns                ;
+; N/A                                     ; 139.33 MHz ( period = 7.177 ns )                    ; counter_v[17] ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 6.938 ns                ;
+; N/A                                     ; 139.53 MHz ( period = 7.167 ns )                    ; counter_h[3]  ; hsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 6.924 ns                ;
+; N/A                                     ; 139.76 MHz ( period = 7.155 ns )                    ; counter_h[25] ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 6.914 ns                ;
+; N/A                                     ; 139.76 MHz ( period = 7.155 ns )                    ; counter_h[25] ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 6.914 ns                ;
+; N/A                                     ; 139.96 MHz ( period = 7.145 ns )                    ; counter_h[18] ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 6.904 ns                ;
+; N/A                                     ; 139.96 MHz ( period = 7.145 ns )                    ; counter_h[18] ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 6.904 ns                ;
+; N/A                                     ; 140.25 MHz ( period = 7.130 ns )                    ; counter_h[14] ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 6.887 ns                ;
+; N/A                                     ; 140.25 MHz ( period = 7.130 ns )                    ; counter_h[14] ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 6.887 ns                ;
+; N/A                                     ; 140.39 MHz ( period = 7.123 ns )                    ; counter_h[4]  ; hsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 6.880 ns                ;
+; N/A                                     ; 140.41 MHz ( period = 7.122 ns )                    ; counter_h[22] ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 6.881 ns                ;
+; N/A                                     ; 140.41 MHz ( period = 7.122 ns )                    ; counter_h[22] ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 6.881 ns                ;
+; N/A                                     ; 140.59 MHz ( period = 7.113 ns )                    ; counter_h[26] ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 6.872 ns                ;
+; N/A                                     ; 140.59 MHz ( period = 7.113 ns )                    ; counter_h[26] ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 6.872 ns                ;
+; N/A                                     ; 140.79 MHz ( period = 7.103 ns )                    ; counter_h[13] ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 6.860 ns                ;
+; N/A                                     ; 140.79 MHz ( period = 7.103 ns )                    ; counter_h[13] ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 6.860 ns                ;
+; N/A                                     ; 141.56 MHz ( period = 7.064 ns )                    ; counter_v[9]  ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 6.828 ns                ;
+; N/A                                     ; 141.56 MHz ( period = 7.064 ns )                    ; counter_v[9]  ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 6.828 ns                ;
+; N/A                                     ; 142.43 MHz ( period = 7.021 ns )                    ; counter_h[17] ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 6.780 ns                ;
+; N/A                                     ; 142.43 MHz ( period = 7.021 ns )                    ; counter_h[17] ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 6.780 ns                ;
+; N/A                                     ; 143.08 MHz ( period = 6.989 ns )                    ; counter_h[29] ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 6.748 ns                ;
+; N/A                                     ; 143.08 MHz ( period = 6.989 ns )                    ; counter_h[29] ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 6.748 ns                ;
+; N/A                                     ; 143.25 MHz ( period = 6.981 ns )                    ; counter_h[0]  ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 6.738 ns                ;
+; N/A                                     ; 143.51 MHz ( period = 6.968 ns )                    ; counter_h[20] ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 6.727 ns                ;
+; N/A                                     ; 143.51 MHz ( period = 6.968 ns )                    ; counter_h[20] ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 6.727 ns                ;
+; N/A                                     ; 143.64 MHz ( period = 6.962 ns )                    ; counter_v[19] ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 6.719 ns                ;
+; N/A                                     ; 143.84 MHz ( period = 6.952 ns )                    ; counter_h[28] ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 6.711 ns                ;
+; N/A                                     ; 143.84 MHz ( period = 6.952 ns )                    ; counter_h[28] ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 6.711 ns                ;
+; N/A                                     ; 144.22 MHz ( period = 6.934 ns )                    ; counter_h[6]  ; hsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 6.691 ns                ;
+; N/A                                     ; 144.91 MHz ( period = 6.901 ns )                    ; counter_v[29] ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 6.669 ns                ;
+; N/A                                     ; 145.14 MHz ( period = 6.890 ns )                    ; counter_v[22] ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 6.651 ns                ;
+; N/A                                     ; 145.33 MHz ( period = 6.881 ns )                    ; counter_h[16] ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 6.640 ns                ;
+; N/A                                     ; 145.33 MHz ( period = 6.881 ns )                    ; counter_h[16] ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 6.640 ns                ;
+; N/A                                     ; 146.05 MHz ( period = 6.847 ns )                    ; counter_h[9]  ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 6.604 ns                ;
+; N/A                                     ; 146.24 MHz ( period = 6.838 ns )                    ; counter_v[27] ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 6.606 ns                ;
+; N/A                                     ; 146.31 MHz ( period = 6.835 ns )                    ; counter_h[27] ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 6.594 ns                ;
+; N/A                                     ; 146.31 MHz ( period = 6.835 ns )                    ; counter_h[27] ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 6.594 ns                ;
+; N/A                                     ; 146.33 MHz ( period = 6.834 ns )                    ; counter_h[12] ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 6.591 ns                ;
+; N/A                                     ; 146.33 MHz ( period = 6.834 ns )                    ; counter_h[12] ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 6.591 ns                ;
+; N/A                                     ; 146.56 MHz ( period = 6.823 ns )                    ; counter_v[19] ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 6.580 ns                ;
+; N/A                                     ; 146.95 MHz ( period = 6.805 ns )                    ; counter_h[9]  ; hsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 6.562 ns                ;
+; N/A                                     ; 147.32 MHz ( period = 6.788 ns )                    ; counter_h[7]  ; hsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 6.545 ns                ;
+; N/A                                     ; 147.41 MHz ( period = 6.784 ns )                    ; counter_h[30] ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 6.543 ns                ;
+; N/A                                     ; 147.41 MHz ( period = 6.784 ns )                    ; counter_h[30] ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 6.543 ns                ;
+; N/A                                     ; 147.89 MHz ( period = 6.762 ns )                    ; counter_v[29] ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 6.530 ns                ;
+; N/A                                     ; 148.13 MHz ( period = 6.751 ns )                    ; counter_v[22] ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 6.512 ns                ;
+; N/A                                     ; 148.19 MHz ( period = 6.748 ns )                    ; counter_h[5]  ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 6.505 ns                ;
+; N/A                                     ; 148.21 MHz ( period = 6.747 ns )                    ; counter_v[25] ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 6.515 ns                ;
+; N/A                                     ; 148.57 MHz ( period = 6.731 ns )                    ; counter_v[15] ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 6.500 ns                ;
+; N/A                                     ; 148.57 MHz ( period = 6.731 ns )                    ; counter_v[15] ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 6.500 ns                ;
+; N/A                                     ; 149.28 MHz ( period = 6.699 ns )                    ; counter_v[27] ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 6.467 ns                ;
+; N/A                                     ; 149.97 MHz ( period = 6.668 ns )                    ; counter_h[8]  ; hsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 6.425 ns                ;
+; N/A                                     ; 150.26 MHz ( period = 6.655 ns )                    ; counter_v[16] ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 6.424 ns                ;
+; N/A                                     ; 150.26 MHz ( period = 6.655 ns )                    ; counter_v[16] ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 6.424 ns                ;
+; N/A                                     ; 151.33 MHz ( period = 6.608 ns )                    ; counter_v[25] ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 6.376 ns                ;
+; N/A                                     ; 151.81 MHz ( period = 6.587 ns )                    ; counter_v[1]  ; counter_v[26] ; clk        ; clk      ; None                        ; None                      ; 6.344 ns                ;
+; N/A                                     ; 151.86 MHz ( period = 6.585 ns )                    ; counter_v[1]  ; row[26]~reg0  ; clk        ; clk      ; None                        ; None                      ; 6.342 ns                ;
+; N/A                                     ; 152.37 MHz ( period = 6.563 ns )                    ; counter_h[9]  ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 6.320 ns                ;
+; N/A                                     ; 152.44 MHz ( period = 6.560 ns )                    ; counter_v[1]  ; counter_v[27] ; clk        ; clk      ; None                        ; None                      ; 6.318 ns                ;
+; N/A                                     ; 152.98 MHz ( period = 6.537 ns )                    ; counter_h[4]  ; row[20]~reg0  ; clk        ; clk      ; None                        ; None                      ; 6.292 ns                ;
+; N/A                                     ; 153.05 MHz ( period = 6.534 ns )                    ; counter_v[23] ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 6.303 ns                ;
+; N/A                                     ; 153.07 MHz ( period = 6.533 ns )                    ; counter_v[26] ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 6.302 ns                ;
+; N/A                                     ; 153.14 MHz ( period = 6.530 ns )                    ; counter_h[13] ; hsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 6.287 ns                ;
+; N/A                                     ; 153.66 MHz ( period = 6.508 ns )                    ; counter_v[2]  ; counter_v[26] ; clk        ; clk      ; None                        ; None                      ; 6.265 ns                ;
+; N/A                                     ; 153.68 MHz ( period = 6.507 ns )                    ; counter_h[10] ; hsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 6.264 ns                ;
+; N/A                                     ; 153.70 MHz ( period = 6.506 ns )                    ; counter_v[2]  ; row[26]~reg0  ; clk        ; clk      ; None                        ; None                      ; 6.263 ns                ;
+; N/A                                     ; 153.73 MHz ( period = 6.505 ns )                    ; counter_h[6]  ; row[20]~reg0  ; clk        ; clk      ; None                        ; None                      ; 6.260 ns                ;
+; N/A                                     ; 154.30 MHz ( period = 6.481 ns )                    ; counter_v[2]  ; counter_v[27] ; clk        ; clk      ; None                        ; None                      ; 6.239 ns                ;
+; N/A                                     ; 154.58 MHz ( period = 6.469 ns )                    ; counter_h[11] ; hsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 6.226 ns                ;
+; N/A                                     ; 154.68 MHz ( period = 6.465 ns )                    ; counter_h[4]  ; row[21]~reg0  ; clk        ; clk      ; None                        ; None                      ; 6.224 ns                ;
+; N/A                                     ; 154.68 MHz ( period = 6.465 ns )                    ; counter_v[1]  ; row[30]~reg0  ; clk        ; clk      ; None                        ; None                      ; 6.226 ns                ;
+; N/A                                     ; 155.09 MHz ( period = 6.448 ns )                    ; counter_v[17] ; counter_v[9]  ; clk        ; clk      ; None                        ; None                      ; 6.206 ns                ;
+; N/A                                     ; 155.35 MHz ( period = 6.437 ns )                    ; counter_v[18] ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 6.206 ns                ;
+; N/A                                     ; 155.35 MHz ( period = 6.437 ns )                    ; counter_v[18] ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 6.206 ns                ;
+; N/A                                     ; 155.45 MHz ( period = 6.433 ns )                    ; counter_h[6]  ; row[21]~reg0  ; clk        ; clk      ; None                        ; None                      ; 6.192 ns                ;
+; N/A                                     ; 155.67 MHz ( period = 6.424 ns )                    ; counter_v[0]  ; counter_v[26] ; clk        ; clk      ; None                        ; None                      ; 6.180 ns                ;
+; N/A                                     ; 155.71 MHz ( period = 6.422 ns )                    ; counter_v[1]  ; counter_v[28] ; clk        ; clk      ; None                        ; None                      ; 6.183 ns                ;
+; N/A                                     ; 155.71 MHz ( period = 6.422 ns )                    ; counter_v[0]  ; row[26]~reg0  ; clk        ; clk      ; None                        ; None                      ; 6.178 ns                ;
+; N/A                                     ; 156.32 MHz ( period = 6.397 ns )                    ; counter_v[0]  ; counter_v[27] ; clk        ; clk      ; None                        ; None                      ; 6.154 ns                ;
+; N/A                                     ; 156.37 MHz ( period = 6.395 ns )                    ; counter_v[23] ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 6.164 ns                ;
+; N/A                                     ; 156.40 MHz ( period = 6.394 ns )                    ; counter_v[26] ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 6.163 ns                ;
+; N/A                                     ; 156.59 MHz ( period = 6.386 ns )                    ; counter_v[2]  ; row[30]~reg0  ; clk        ; clk      ; None                        ; None                      ; 6.147 ns                ;
+; N/A                                     ; 157.04 MHz ( period = 6.368 ns )                    ; counter_v[21] ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 6.137 ns                ;
+; N/A                                     ; 157.04 MHz ( period = 6.368 ns )                    ; counter_v[21] ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 6.137 ns                ;
+; N/A                                     ; 157.41 MHz ( period = 6.353 ns )                    ; counter_h[12] ; hsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 6.110 ns                ;
+; N/A                                     ; 157.58 MHz ( period = 6.346 ns )                    ; counter_v[4]  ; counter_v[26] ; clk        ; clk      ; None                        ; None                      ; 6.102 ns                ;
+; N/A                                     ; 157.63 MHz ( period = 6.344 ns )                    ; counter_v[4]  ; row[26]~reg0  ; clk        ; clk      ; None                        ; None                      ; 6.100 ns                ;
+; N/A                                     ; 157.65 MHz ( period = 6.343 ns )                    ; counter_v[2]  ; counter_v[28] ; clk        ; clk      ; None                        ; None                      ; 6.104 ns                ;
+; N/A                                     ; 158.25 MHz ( period = 6.319 ns )                    ; counter_v[4]  ; counter_v[27] ; clk        ; clk      ; None                        ; None                      ; 6.076 ns                ;
+; N/A                                     ; 158.68 MHz ( period = 6.302 ns )                    ; counter_v[0]  ; row[30]~reg0  ; clk        ; clk      ; None                        ; None                      ; 6.062 ns                ;
+; N/A                                     ; 158.70 MHz ( period = 6.301 ns )                    ; counter_v[17] ; row[2]~reg0   ; clk        ; clk      ; None                        ; None                      ; 6.062 ns                ;
+; N/A                                     ; 158.73 MHz ( period = 6.300 ns )                    ; counter_v[20] ; vsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 6.069 ns                ;
+; N/A                                     ; 158.73 MHz ( period = 6.300 ns )                    ; counter_v[20] ; video_on~reg0 ; clk        ; clk      ; None                        ; None                      ; 6.069 ns                ;
+; N/A                                     ; 158.88 MHz ( period = 6.294 ns )                    ; counter_v[4]  ; counter_v[9]  ; clk        ; clk      ; None                        ; None                      ; 6.055 ns                ;
+; N/A                                     ; 159.57 MHz ( period = 6.267 ns )                    ; counter_v[5]  ; counter_v[26] ; clk        ; clk      ; None                        ; None                      ; 6.023 ns                ;
+; N/A                                     ; 159.62 MHz ( period = 6.265 ns )                    ; counter_v[5]  ; row[26]~reg0  ; clk        ; clk      ; None                        ; None                      ; 6.021 ns                ;
+; N/A                                     ; 159.77 MHz ( period = 6.259 ns )                    ; counter_v[0]  ; counter_v[28] ; clk        ; clk      ; None                        ; None                      ; 6.019 ns                ;
+; N/A                                     ; 159.92 MHz ( period = 6.253 ns )                    ; counter_h[8]  ; row[20]~reg0  ; clk        ; clk      ; None                        ; None                      ; 6.008 ns                ;
+; N/A                                     ; 160.05 MHz ( period = 6.248 ns )                    ; counter_h[1]  ; row[20]~reg0  ; clk        ; clk      ; None                        ; None                      ; 6.003 ns                ;
+; N/A                                     ; 160.26 MHz ( period = 6.240 ns )                    ; counter_v[5]  ; counter_v[27] ; clk        ; clk      ; None                        ; None                      ; 5.997 ns                ;
+; N/A                                     ; 160.67 MHz ( period = 6.224 ns )                    ; counter_v[4]  ; row[30]~reg0  ; clk        ; clk      ; None                        ; None                      ; 5.984 ns                ;
+; N/A                                     ; 160.93 MHz ( period = 6.214 ns )                    ; counter_v[5]  ; counter_v[9]  ; clk        ; clk      ; None                        ; None                      ; 5.975 ns                ;
+; N/A                                     ; 160.98 MHz ( period = 6.212 ns )                    ; counter_h[14] ; hsync~reg0    ; clk        ; clk      ; None                        ; None                      ; 5.969 ns                ;
+; N/A                                     ; 161.16 MHz ( period = 6.205 ns )                    ; counter_v[8]  ; counter_v[26] ; clk        ; clk      ; None                        ; None                      ; 5.961 ns                ;
+; N/A                                     ; 161.21 MHz ( period = 6.203 ns )                    ; counter_v[8]  ; row[26]~reg0  ; clk        ; clk      ; None                        ; None                      ; 5.959 ns                ;
+; N/A                                     ; 161.24 MHz ( period = 6.202 ns )                    ; counter_h[3]  ; row[20]~reg0  ; clk        ; clk      ; None                        ; None                      ; 5.957 ns                ;
+; N/A                                     ; 161.66 MHz ( period = 6.186 ns )                    ; counter_v[6]  ; counter_v[26] ; clk        ; clk      ; None                        ; None                      ; 5.942 ns                ;
+; N/A                                     ; 161.71 MHz ( period = 6.184 ns )                    ; counter_v[3]  ; counter_v[26] ; clk        ; clk      ; None                        ; None                      ; 5.940 ns                ;
+; N/A                                     ; 161.71 MHz ( period = 6.184 ns )                    ; counter_v[6]  ; row[26]~reg0  ; clk        ; clk      ; None                        ; None                      ; 5.940 ns                ;
+; N/A                                     ; 161.76 MHz ( period = 6.182 ns )                    ; counter_v[3]  ; row[26]~reg0  ; clk        ; clk      ; None                        ; None                      ; 5.938 ns                ;
+; N/A                                     ; 161.79 MHz ( period = 6.181 ns )                    ; counter_v[4]  ; counter_v[28] ; clk        ; clk      ; None                        ; None                      ; 5.941 ns                ;
+; N/A                                     ; 161.79 MHz ( period = 6.181 ns )                    ; counter_h[8]  ; row[21]~reg0  ; clk        ; clk      ; None                        ; None                      ; 5.940 ns                ;
+; N/A                                     ; 161.84 MHz ( period = 6.179 ns )                    ; counter_h[7]  ; row[20]~reg0  ; clk        ; clk      ; None                        ; None                      ; 5.934 ns                ;
+; N/A                                     ; 161.86 MHz ( period = 6.178 ns )                    ; counter_v[8]  ; counter_v[27] ; clk        ; clk      ; None                        ; None                      ; 5.935 ns                ;
+; N/A                                     ; 161.89 MHz ( period = 6.177 ns )                    ; counter_v[1]  ; row[23]~reg0  ; clk        ; clk      ; None                        ; None                      ; 5.928 ns                ;
+; N/A                                     ; 161.92 MHz ( period = 6.176 ns )                    ; counter_h[1]  ; row[21]~reg0  ; clk        ; clk      ; None                        ; None                      ; 5.935 ns                ;
+; N/A                                     ; 162.36 MHz ( period = 6.159 ns )                    ; counter_v[6]  ; counter_v[27] ; clk        ; clk      ; None                        ; None                      ; 5.916 ns                ;
+; N/A                                     ; 162.42 MHz ( period = 6.157 ns )                    ; counter_v[3]  ; counter_v[27] ; clk        ; clk      ; None                        ; None                      ; 5.914 ns                ;
+; N/A                                     ; 162.47 MHz ( period = 6.155 ns )                    ; counter_h[4]  ; row[4]~reg0   ; clk        ; clk      ; None                        ; None                      ; 5.912 ns                ;
+; N/A                                     ; 162.68 MHz ( period = 6.147 ns )                    ; counter_v[4]  ; row[2]~reg0   ; clk        ; clk      ; None                        ; None                      ; 5.911 ns                ;
+; N/A                                     ; 162.73 MHz ( period = 6.145 ns )                    ; counter_v[5]  ; row[30]~reg0  ; clk        ; clk      ; None                        ; None                      ; 5.905 ns                ;
+; N/A                                     ; 162.79 MHz ( period = 6.143 ns )                    ; counter_h[4]  ; row[15]~reg0  ; clk        ; clk      ; None                        ; None                      ; 5.892 ns                ;
+; N/A                                     ; 162.89 MHz ( period = 6.139 ns )                    ; counter_h[4]  ; counter_v[15] ; clk        ; clk      ; None                        ; None                      ; 5.888 ns                ;
+; N/A                                     ; 163.03 MHz ( period = 6.134 ns )                    ; counter_v[1]  ; counter_v[29] ; clk        ; clk      ; None                        ; None                      ; 5.892 ns                ;
+; N/A                                     ; 163.13 MHz ( period = 6.130 ns )                    ; counter_h[3]  ; row[21]~reg0  ; clk        ; clk      ; None                        ; None                      ; 5.889 ns                ;
+; N/A                                     ; 163.29 MHz ( period = 6.124 ns )                    ; counter_v[1]  ; row[21]~reg0  ; clk        ; clk      ; None                        ; None                      ; 5.891 ns                ;
+; N/A                                     ; 163.32 MHz ( period = 6.123 ns )                    ; counter_h[6]  ; row[4]~reg0   ; clk        ; clk      ; None                        ; None                      ; 5.880 ns                ;
+; N/A                                     ; 163.64 MHz ( period = 6.111 ns )                    ; counter_h[6]  ; row[15]~reg0  ; clk        ; clk      ; None                        ; None                      ; 5.860 ns                ;
+; N/A                                     ; 163.75 MHz ( period = 6.107 ns )                    ; counter_h[6]  ; counter_v[15] ; clk        ; clk      ; None                        ; None                      ; 5.856 ns                ;
+; N/A                                     ; 163.75 MHz ( period = 6.107 ns )                    ; counter_h[7]  ; row[21]~reg0  ; clk        ; clk      ; None                        ; None                      ; 5.866 ns                ;
+; N/A                                     ; 163.88 MHz ( period = 6.102 ns )                    ; counter_v[5]  ; counter_v[28] ; clk        ; clk      ; None                        ; None                      ; 5.862 ns                ;
+; N/A                                     ; 163.99 MHz ( period = 6.098 ns )                    ; counter_v[2]  ; row[23]~reg0  ; clk        ; clk      ; None                        ; None                      ; 5.849 ns                ;
+; N/A                                     ; 164.10 MHz ( period = 6.094 ns )                    ; counter_v[19] ; counter_v[9]  ; clk        ; clk      ; None                        ; None                      ; 5.848 ns                ;
+; N/A                                     ; 164.34 MHz ( period = 6.085 ns )                    ; counter_h[4]  ; row[2]~reg0   ; clk        ; clk      ; None                        ; None                      ; 5.842 ns                ;
+; N/A                                     ; 164.39 MHz ( period = 6.083 ns )                    ; counter_v[8]  ; row[30]~reg0  ; clk        ; clk      ; None                        ; None                      ; 5.843 ns                ;
+; N/A                                     ; 164.58 MHz ( period = 6.076 ns )                    ; counter_h[2]  ; row[20]~reg0  ; clk        ; clk      ; None                        ; None                      ; 5.831 ns                ;
+; N/A                                     ; 164.58 MHz ( period = 6.076 ns )                    ; counter_v[1]  ; row[20]~reg0  ; clk        ; clk      ; None                        ; None                      ; 5.839 ns                ;
+; N/A                                     ; 164.69 MHz ( period = 6.072 ns )                    ; counter_h[4]  ; counter_v[29] ; clk        ; clk      ; None                        ; None                      ; 5.822 ns                ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;               ;               ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+---------------+---------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++-------------------------------------------------------------------------------+
+; tco                                                                           ;
++-------+--------------+------------+-----------------+------------+------------+
+; Slack ; Required tco ; Actual tco ; From            ; To         ; From Clock ;
++-------+--------------+------------+-----------------+------------+------------+
+; N/A   ; None         ; 8.784 ns   ; column[27]~reg0 ; column[27] ; clk        ;
+; N/A   ; None         ; 8.732 ns   ; row[5]~reg0     ; row[5]     ; clk        ;
+; N/A   ; None         ; 8.523 ns   ; row[19]~reg0    ; row[19]    ; clk        ;
+; N/A   ; None         ; 8.521 ns   ; row[14]~reg0    ; row[14]    ; clk        ;
+; N/A   ; None         ; 8.456 ns   ; column[12]~reg0 ; column[12] ; clk        ;
+; N/A   ; None         ; 8.402 ns   ; row[15]~reg0    ; row[15]    ; clk        ;
+; N/A   ; None         ; 8.383 ns   ; column[9]~reg0  ; column[9]  ; clk        ;
+; N/A   ; None         ; 8.352 ns   ; column[23]~reg0 ; column[23] ; clk        ;
+; N/A   ; None         ; 8.351 ns   ; row[21]~reg0    ; row[21]    ; clk        ;
+; N/A   ; None         ; 8.339 ns   ; row[8]~reg0     ; row[8]     ; clk        ;
+; N/A   ; None         ; 8.336 ns   ; row[30]~reg0    ; row[30]    ; clk        ;
+; N/A   ; None         ; 8.329 ns   ; column[24]~reg0 ; column[24] ; clk        ;
+; N/A   ; None         ; 8.312 ns   ; row[22]~reg0    ; row[22]    ; clk        ;
+; N/A   ; None         ; 8.265 ns   ; row[17]~reg0    ; row[17]    ; clk        ;
+; N/A   ; None         ; 8.250 ns   ; column[10]~reg0 ; column[10] ; clk        ;
+; N/A   ; None         ; 8.247 ns   ; column[7]~reg0  ; column[7]  ; clk        ;
+; N/A   ; None         ; 8.241 ns   ; row[28]~reg0    ; row[28]    ; clk        ;
+; N/A   ; None         ; 8.237 ns   ; row[4]~reg0     ; row[4]     ; clk        ;
+; N/A   ; None         ; 8.236 ns   ; column[20]~reg0 ; column[20] ; clk        ;
+; N/A   ; None         ; 8.228 ns   ; column[5]~reg0  ; column[5]  ; clk        ;
+; N/A   ; None         ; 8.223 ns   ; row[6]~reg0     ; row[6]     ; clk        ;
+; N/A   ; None         ; 8.222 ns   ; column[4]~reg0  ; column[4]  ; clk        ;
+; N/A   ; None         ; 8.217 ns   ; vsync~reg0      ; vsync      ; clk        ;
+; N/A   ; None         ; 8.206 ns   ; row[0]~reg0     ; row[0]     ; clk        ;
+; N/A   ; None         ; 8.186 ns   ; row[9]~reg0     ; row[9]     ; clk        ;
+; N/A   ; None         ; 8.051 ns   ; column[16]~reg0 ; column[16] ; clk        ;
+; N/A   ; None         ; 8.033 ns   ; hsync~reg0      ; hsync      ; clk        ;
+; N/A   ; None         ; 8.019 ns   ; row[13]~reg0    ; row[13]    ; clk        ;
+; N/A   ; None         ; 8.012 ns   ; row[10]~reg0    ; row[10]    ; clk        ;
+; N/A   ; None         ; 8.009 ns   ; column[14]~reg0 ; column[14] ; clk        ;
+; N/A   ; None         ; 7.990 ns   ; column[13]~reg0 ; column[13] ; clk        ;
+; N/A   ; None         ; 7.984 ns   ; row[29]~reg0    ; row[29]    ; clk        ;
+; N/A   ; None         ; 7.983 ns   ; row[18]~reg0    ; row[18]    ; clk        ;
+; N/A   ; None         ; 7.981 ns   ; column[19]~reg0 ; column[19] ; clk        ;
+; N/A   ; None         ; 7.969 ns   ; column[11]~reg0 ; column[11] ; clk        ;
+; N/A   ; None         ; 7.961 ns   ; column[0]~reg0  ; column[0]  ; clk        ;
+; N/A   ; None         ; 7.959 ns   ; column[22]~reg0 ; column[22] ; clk        ;
+; N/A   ; None         ; 7.952 ns   ; column[15]~reg0 ; column[15] ; clk        ;
+; N/A   ; None         ; 7.951 ns   ; video_on~reg0   ; video_on   ; clk        ;
+; N/A   ; None         ; 7.939 ns   ; row[25]~reg0    ; row[25]    ; clk        ;
+; N/A   ; None         ; 7.934 ns   ; column[29]~reg0 ; column[29] ; clk        ;
+; N/A   ; None         ; 7.931 ns   ; column[6]~reg0  ; column[6]  ; clk        ;
+; N/A   ; None         ; 7.931 ns   ; column[2]~reg0  ; column[2]  ; clk        ;
+; N/A   ; None         ; 7.930 ns   ; row[24]~reg0    ; row[24]    ; clk        ;
+; N/A   ; None         ; 7.928 ns   ; column[17]~reg0 ; column[17] ; clk        ;
+; N/A   ; None         ; 7.927 ns   ; column[28]~reg0 ; column[28] ; clk        ;
+; N/A   ; None         ; 7.920 ns   ; column[26]~reg0 ; column[26] ; clk        ;
+; N/A   ; None         ; 7.912 ns   ; row[7]~reg0     ; row[7]     ; clk        ;
+; N/A   ; None         ; 7.671 ns   ; column[21]~reg0 ; column[21] ; clk        ;
+; N/A   ; None         ; 7.666 ns   ; row[2]~reg0     ; row[2]     ; clk        ;
+; N/A   ; None         ; 7.660 ns   ; column[30]~reg0 ; column[30] ; clk        ;
+; N/A   ; None         ; 7.660 ns   ; column[25]~reg0 ; column[25] ; clk        ;
+; N/A   ; None         ; 7.654 ns   ; row[20]~reg0    ; row[20]    ; clk        ;
+; N/A   ; None         ; 7.651 ns   ; column[8]~reg0  ; column[8]  ; clk        ;
+; N/A   ; None         ; 7.649 ns   ; row[11]~reg0    ; row[11]    ; clk        ;
+; N/A   ; None         ; 7.634 ns   ; row[16]~reg0    ; row[16]    ; clk        ;
+; N/A   ; None         ; 7.633 ns   ; column[18]~reg0 ; column[18] ; clk        ;
+; N/A   ; None         ; 7.619 ns   ; row[23]~reg0    ; row[23]    ; clk        ;
+; N/A   ; None         ; 7.618 ns   ; row[12]~reg0    ; row[12]    ; clk        ;
+; N/A   ; None         ; 7.613 ns   ; row[26]~reg0    ; row[26]    ; clk        ;
+; N/A   ; None         ; 7.610 ns   ; row[1]~reg0     ; row[1]     ; clk        ;
+; N/A   ; None         ; 7.603 ns   ; row[3]~reg0     ; row[3]     ; clk        ;
+; N/A   ; None         ; 7.597 ns   ; column[1]~reg0  ; column[1]  ; clk        ;
+; N/A   ; None         ; 7.563 ns   ; row[27]~reg0    ; row[27]    ; clk        ;
+; N/A   ; None         ; 7.400 ns   ; column[3]~reg0  ; column[3]  ; clk        ;
++-------+--------------+------------+-----------------+------------+------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Mon Mar 19 14:42:48 2018
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off VGA_Timer -c VGA_Timer --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clk" is an undefined clock
+Info: Clock "clk" has Internal fmax of 124.98 MHz between source register "counter_v[1]" and destination register "vsync~reg0" (period= 8.001 ns)
+    Info: + Longest register to register delay is 7.766 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X20_Y10_N19; Fanout = 4; REG Node = 'counter_v[1]'
+        Info: 2: + IC(0.604 ns) + CELL(0.495 ns) = 1.099 ns; Loc. = LCCOMB_X21_Y10_N4; Fanout = 2; COMB Node = 'Add0~3'
+        Info: 3: + IC(0.000 ns) + CELL(0.080 ns) = 1.179 ns; Loc. = LCCOMB_X21_Y10_N6; Fanout = 2; COMB Node = 'Add0~5'
+        Info: 4: + IC(0.000 ns) + CELL(0.080 ns) = 1.259 ns; Loc. = LCCOMB_X21_Y10_N8; Fanout = 2; COMB Node = 'Add0~7'
+        Info: 5: + IC(0.000 ns) + CELL(0.080 ns) = 1.339 ns; Loc. = LCCOMB_X21_Y10_N10; Fanout = 2; COMB Node = 'Add0~9'
+        Info: 6: + IC(0.000 ns) + CELL(0.080 ns) = 1.419 ns; Loc. = LCCOMB_X21_Y10_N12; Fanout = 2; COMB Node = 'Add0~11'
+        Info: 7: + IC(0.000 ns) + CELL(0.174 ns) = 1.593 ns; Loc. = LCCOMB_X21_Y10_N14; Fanout = 2; COMB Node = 'Add0~13'
+        Info: 8: + IC(0.000 ns) + CELL(0.080 ns) = 1.673 ns; Loc. = LCCOMB_X21_Y10_N16; Fanout = 2; COMB Node = 'Add0~15'
+        Info: 9: + IC(0.000 ns) + CELL(0.080 ns) = 1.753 ns; Loc. = LCCOMB_X21_Y10_N18; Fanout = 2; COMB Node = 'Add0~17'
+        Info: 10: + IC(0.000 ns) + CELL(0.080 ns) = 1.833 ns; Loc. = LCCOMB_X21_Y10_N20; Fanout = 2; COMB Node = 'Add0~19'
+        Info: 11: + IC(0.000 ns) + CELL(0.080 ns) = 1.913 ns; Loc. = LCCOMB_X21_Y10_N22; Fanout = 2; COMB Node = 'Add0~21'
+        Info: 12: + IC(0.000 ns) + CELL(0.080 ns) = 1.993 ns; Loc. = LCCOMB_X21_Y10_N24; Fanout = 2; COMB Node = 'Add0~23'
+        Info: 13: + IC(0.000 ns) + CELL(0.080 ns) = 2.073 ns; Loc. = LCCOMB_X21_Y10_N26; Fanout = 2; COMB Node = 'Add0~25'
+        Info: 14: + IC(0.000 ns) + CELL(0.080 ns) = 2.153 ns; Loc. = LCCOMB_X21_Y10_N28; Fanout = 2; COMB Node = 'Add0~27'
+        Info: 15: + IC(0.000 ns) + CELL(0.161 ns) = 2.314 ns; Loc. = LCCOMB_X21_Y10_N30; Fanout = 2; COMB Node = 'Add0~29'
+        Info: 16: + IC(0.000 ns) + CELL(0.080 ns) = 2.394 ns; Loc. = LCCOMB_X21_Y9_N0; Fanout = 2; COMB Node = 'Add0~31'
+        Info: 17: + IC(0.000 ns) + CELL(0.080 ns) = 2.474 ns; Loc. = LCCOMB_X21_Y9_N2; Fanout = 2; COMB Node = 'Add0~33'
+        Info: 18: + IC(0.000 ns) + CELL(0.080 ns) = 2.554 ns; Loc. = LCCOMB_X21_Y9_N4; Fanout = 2; COMB Node = 'Add0~35'
+        Info: 19: + IC(0.000 ns) + CELL(0.080 ns) = 2.634 ns; Loc. = LCCOMB_X21_Y9_N6; Fanout = 2; COMB Node = 'Add0~37'
+        Info: 20: + IC(0.000 ns) + CELL(0.080 ns) = 2.714 ns; Loc. = LCCOMB_X21_Y9_N8; Fanout = 2; COMB Node = 'Add0~39'
+        Info: 21: + IC(0.000 ns) + CELL(0.080 ns) = 2.794 ns; Loc. = LCCOMB_X21_Y9_N10; Fanout = 2; COMB Node = 'Add0~41'
+        Info: 22: + IC(0.000 ns) + CELL(0.080 ns) = 2.874 ns; Loc. = LCCOMB_X21_Y9_N12; Fanout = 2; COMB Node = 'Add0~43'
+        Info: 23: + IC(0.000 ns) + CELL(0.174 ns) = 3.048 ns; Loc. = LCCOMB_X21_Y9_N14; Fanout = 2; COMB Node = 'Add0~45'
+        Info: 24: + IC(0.000 ns) + CELL(0.458 ns) = 3.506 ns; Loc. = LCCOMB_X21_Y9_N16; Fanout = 1; COMB Node = 'Add0~46'
+        Info: 25: + IC(1.146 ns) + CELL(0.178 ns) = 4.830 ns; Loc. = LCCOMB_X20_Y9_N6; Fanout = 3; COMB Node = 'counter_v~75'
+        Info: 26: + IC(0.900 ns) + CELL(0.455 ns) = 6.185 ns; Loc. = LCCOMB_X20_Y11_N30; Fanout = 1; COMB Node = 'process_0~12'
+        Info: 27: + IC(0.497 ns) + CELL(0.512 ns) = 7.194 ns; Loc. = LCCOMB_X20_Y11_N28; Fanout = 2; COMB Node = 'process_0~16'
+        Info: 28: + IC(0.298 ns) + CELL(0.178 ns) = 7.670 ns; Loc. = LCCOMB_X20_Y11_N16; Fanout = 1; COMB Node = 'process_0~17'
+        Info: 29: + IC(0.000 ns) + CELL(0.096 ns) = 7.766 ns; Loc. = LCFF_X20_Y11_N17; Fanout = 1; REG Node = 'vsync~reg0'
+        Info: Total cell delay = 4.321 ns ( 55.64 % )
+        Info: Total interconnect delay = 3.445 ns ( 44.36 % )
+    Info: - Smallest clock skew is 0.004 ns
+        Info: + Shortest clock path from clock "clk" to destination register is 2.858 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.026 ns) = 1.026 ns; Loc. = PIN_M1; Fanout = 1; CLK Node = 'clk'
+            Info: 2: + IC(0.238 ns) + CELL(0.000 ns) = 1.264 ns; Loc. = CLKCTRL_G3; Fanout = 127; COMB Node = 'clk~clkctrl'
+            Info: 3: + IC(0.992 ns) + CELL(0.602 ns) = 2.858 ns; Loc. = LCFF_X20_Y11_N17; Fanout = 1; REG Node = 'vsync~reg0'
+            Info: Total cell delay = 1.628 ns ( 56.96 % )
+            Info: Total interconnect delay = 1.230 ns ( 43.04 % )
+        Info: - Longest clock path from clock "clk" to source register is 2.854 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.026 ns) = 1.026 ns; Loc. = PIN_M1; Fanout = 1; CLK Node = 'clk'
+            Info: 2: + IC(0.238 ns) + CELL(0.000 ns) = 1.264 ns; Loc. = CLKCTRL_G3; Fanout = 127; COMB Node = 'clk~clkctrl'
+            Info: 3: + IC(0.988 ns) + CELL(0.602 ns) = 2.854 ns; Loc. = LCFF_X20_Y10_N19; Fanout = 4; REG Node = 'counter_v[1]'
+            Info: Total cell delay = 1.628 ns ( 57.04 % )
+            Info: Total interconnect delay = 1.226 ns ( 42.96 % )
+    Info: + Micro clock to output delay of source is 0.277 ns
+    Info: + Micro setup delay of destination is -0.038 ns
+Info: tco from clock "clk" to destination pin "column[27]" through register "column[27]~reg0" is 8.784 ns
+    Info: + Longest clock path from clock "clk" to source register is 2.859 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.026 ns) = 1.026 ns; Loc. = PIN_M1; Fanout = 1; CLK Node = 'clk'
+        Info: 2: + IC(0.238 ns) + CELL(0.000 ns) = 1.264 ns; Loc. = CLKCTRL_G3; Fanout = 127; COMB Node = 'clk~clkctrl'
+        Info: 3: + IC(0.993 ns) + CELL(0.602 ns) = 2.859 ns; Loc. = LCFF_X19_Y12_N21; Fanout = 1; REG Node = 'column[27]~reg0'
+        Info: Total cell delay = 1.628 ns ( 56.94 % )
+        Info: Total interconnect delay = 1.231 ns ( 43.06 % )
+    Info: + Micro clock to output delay of source is 0.277 ns
+    Info: + Longest register to pin delay is 5.648 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X19_Y12_N21; Fanout = 1; REG Node = 'column[27]~reg0'
+        Info: 2: + IC(2.808 ns) + CELL(2.840 ns) = 5.648 ns; Loc. = PIN_N21; Fanout = 0; PIN Node = 'column[27]'
+        Info: Total cell delay = 2.840 ns ( 50.28 % )
+        Info: Total interconnect delay = 2.808 ns ( 49.72 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 249 megabytes
+    Info: Processing ended: Mon Mar 19 14:42:48 2018
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

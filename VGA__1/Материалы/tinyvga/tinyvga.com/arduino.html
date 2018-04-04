@@ -1,0 +1,99 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="stylesheet" type="text/css" href="featurebox.css" />
+
+<title>MicroVGA Arduino support</title>
+</head>
+<body>
+
+
+<!-- Copyright © 2008. Spidersoft Ltd -->
+<style>
+A.applink:hover {border: 2px dotted #DCE6F4;padding:2px;background-color:#ffff00;color:green;text-decoration:none}
+A.applink       {border: 2px dotted #DCE6F4;padding:2px;color:#2F5BFF;background:transparent;text-decoration:none}
+A.info          {color:#2F5BFF;background:transparent;text-decoration:none}
+A.info:hover    {color:green;background:transparent;text-decoration:underline}
+</style>
+<div style='BORDER: 1px solid #DCE6F4; MARGIN-TOP: 20px; MARGIN-BOTTOM: 20px; MARGIN-LEFT: 5px; MARGIN-RIGHT: 5px; PADDING: 5px; BACKGROUND-COLOR: #eef8ff;line-height:180%; COLOR: #000000; font-family: Arial; font-size: 8pt; width=100%; FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr="#FFFFFFFF", EndColorStr="#F2F5FAFF");'>
+This page was saved using <a class="applink" href="http://www.spidersoft.com"><b>WebZIP 7.1.2.1052</b></a> <a class="applink" href="http://www.spidersoft.com"><b>offline browser</b></a>  (Unregistered) on  01/21/14 12:17:46.<br>
+<b>Address:</b> <a class="info" href="http://tinyvga.com/arduino">http://tinyvga.com/arduino</a><br>
+<b>Title:</b> MicroVGA Arduino support &nbsp;&bull;&nbsp; <b>Size:</b> 3040<br></div>
+<!-- /Copyright © 2008. Spidersoft Ltd -->
+
+
+
+<div id="container">
+ <div id="top">
+ <img alt="" src="gfx/icon-chip-wht.gif" width=52 height=52> <span class="header">&micro;<span style="color:red">V</span><span style="color:#00ff00">G</span><span style="color:#8040ff">A</span>.com: VGA Microcontroller interface</span>
+    </div><!-- /top -->
+<h1>MicroVGA Arduino support</h1>
+<p>
+
+
+<h2>Arduino support</h2>
+MicroVGA-TEXT module supports Arduino since firmware version 0.5. Free
+Arduino MicroVGA library is available for download (tested with Arduino version 0017).
+<p>
+The MicroVGA communicates with the Arduino in SPI mode, which means that you can use serial port for other purposes (bootloader,etc).
+
+<h2>Arduino hardware connection</h2>
+<a href="images/uvga_module.jpg"><img src="images/uvga_module_resize.jpg" width=300 align=right></a>
+Connect MicroVGA-TEXT to you Arduino as follows:
+
+<table border=1 style="border-collapse: collapse">
+<tr><th>MicroVGA-TEXT pin<th>Symbol<th>Arduino connection
+<tr><td>1<td> GND<td>Arduino GND
+<tr><td>2<td> +5V<td>Arduino 5V
+<tr><td>3<td> +3V3 output<td> NOT CONNECTED
+<tr><td>4<td> CS#<td>Arduino Digital 8
+<tr><td>5<td> SCK<td>Arduino Digital 13
+<tr><td>6<td> RDY#<td>Arduino Digital 9
+<tr><td>7<td> MISO<td>Arduino Digital 12
+<tr><td>8<td> MOSI<td>Arduino Digital 11
+</table>
+
+Important notice: You must select SPI communication mode in MicroVGA setup (short-circuit "SEUP pad" with power applied) and turn off and back on power supply.
+
+<h2>Troubleshooting connection</h2>
+In case of any problems with the library or MicroVGA module you might find
+these debug sketches useful:
+
+<ul>
+<li><a href="arduino-uvga-test1.pde">arduino-uvga-test1</a>
+<li><a href="arduino-uvga-test2.pde">arduino-uvga-test2</a>
+</ul>
+
+<h2>Library download</h2>
+<uL>
+<li><a href="MicroVGA-arduino.zip">&micro;VGA Arduino library</a> (including tetris demo code)</li>
+</ul>
+
+ <div id="navbar">
+   <ul>
+        <li><i>
+	Cart is empty.</i></li>
+	<li><a href="tinyvga.html" style="background: #F7C41F;">Home</a></li>
+	<li><a href="order.html" style="background: #880000;">Order</a></li>
+	<li><a href="docs.html" style="background: #008800;">Documentation</a></li>
+	<li><a href="faq.html" style="background: #F7C41F;">FAQ</a></li>
+	<li><a href="contact.html" style="background: #000088;">Contact us</a></li>
+   </ul> 
+</div><!-- /navbar -->
+
+<div id="foot">
+Copyright(c)2008-2012 SECONS Ltd.
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-4388516-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+</body>
+</html>
+

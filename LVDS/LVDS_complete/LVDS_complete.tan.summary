@@ -1,0 +1,66 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 5.744 ns
+From           : LVDS_tx:comp_LVDS_tx|tx2_out
+To             : tx2
+From Clock     : clock
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Clock Setup: 'pll25_175MHz:comp_pll25_175MHz|altpll:altpll_component|_clk1'
+Slack          : 2.912 ns
+Required Time  : 175.01 MHz ( period = 5.714 ns )
+Actual Time    : N/A
+From           : VGA_Timer:comp_VGA_Timer|vsync
+To             : LVDS_Coder:comp_LVDS_Coder|tx2[5]
+From Clock     : pll25_175MHz:comp_pll25_175MHz|altpll:altpll_component|_clk0
+To Clock       : pll25_175MHz:comp_pll25_175MHz|altpll:altpll_component|_clk1
+Failed Paths   : 0
+
+Type           : Clock Setup: 'pll25_175MHz:comp_pll25_175MHz|altpll:altpll_component|_clk0'
+Slack          : 27.667 ns
+Required Time  : 25.00 MHz ( period = 40.000 ns )
+Actual Time    : 81.08 MHz ( period = 12.333 ns )
+From           : VGA_Timer:comp_VGA_Timer|column[7]
+To             : VGA_Video_Generator:comp_VGA_Video_Generator|B[2]
+From Clock     : pll25_175MHz:comp_pll25_175MHz|altpll:altpll_component|_clk0
+To Clock       : pll25_175MHz:comp_pll25_175MHz|altpll:altpll_component|_clk0
+Failed Paths   : 0
+
+Type           : Clock Hold: 'pll25_175MHz:comp_pll25_175MHz|altpll:altpll_component|_clk0'
+Slack          : 0.445 ns
+Required Time  : 25.00 MHz ( period = 40.000 ns )
+Actual Time    : N/A
+From           : VGA_Video_Generator:comp_VGA_Video_Generator|B[2]
+To             : VGA_Video_Generator:comp_VGA_Video_Generator|B[2]
+From Clock     : pll25_175MHz:comp_pll25_175MHz|altpll:altpll_component|_clk0
+To Clock       : pll25_175MHz:comp_pll25_175MHz|altpll:altpll_component|_clk0
+Failed Paths   : 0
+
+Type           : Clock Hold: 'pll25_175MHz:comp_pll25_175MHz|altpll:altpll_component|_clk1'
+Slack          : 0.445 ns
+Required Time  : 175.01 MHz ( period = 5.714 ns )
+Actual Time    : N/A
+From           : LVDS_tx:comp_LVDS_tx|counter[2]
+To             : LVDS_tx:comp_LVDS_tx|counter[2]
+From Clock     : pll25_175MHz:comp_pll25_175MHz|altpll:altpll_component|_clk1
+To Clock       : pll25_175MHz:comp_pll25_175MHz|altpll:altpll_component|_clk1
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

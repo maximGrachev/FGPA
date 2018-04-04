@@ -1,0 +1,288 @@
+Simulator report for VGA_Video_Generator
+Tue Mar 06 11:46:49 2018
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 27.0 s       ;
+; Simulation Netlist Size     ; 111 nodes    ;
+; Simulation Coverage         ;      96.46 % ;
+; Total Number of Transitions ; 5406489      ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C20F484C7 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      96.46 % ;
+; Total nodes checked                                 ; 111          ;
+; Total output ports checked                          ; 113          ;
+; Total output ports with complete 1/0-value coverage ; 109          ;
+; Total output ports with no 1/0-value coverage       ; 4            ;
+; Total output ports with no 1-value coverage         ; 4            ;
+; Total output ports with no 0-value coverage         ; 4            ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                                                                                                                                                            ;
++--------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                                                                        ; Output Port Name                                                                                                                                 ; Output Port Type ;
++--------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+------------------+
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_7_result_int[3]~0   ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_7_result_int[3]~0   ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_7_result_int[3]~0   ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_7_result_int[3]~1   ; cout             ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_7_result_int[4]~2   ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_7_result_int[4]~2   ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_7_result_int[4]~2   ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_7_result_int[4]~3   ; cout             ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_7_result_int[5]~4   ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_7_result_int[5]~4   ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_7_result_int[5]~4   ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_7_result_int[5]~5   ; cout             ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_7_result_int[6]~6   ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_7_result_int[6]~6   ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_7_result_int[6]~6   ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_7_result_int[6]~7   ; cout             ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_7_result_int[7]~8   ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_7_result_int[7]~8   ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_7_result_int[7]~8   ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_7_result_int[7]~9   ; cout             ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_7_result_int[8]~10  ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_7_result_int[8]~10  ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_8_result_int[3]~0   ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_8_result_int[3]~0   ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_8_result_int[3]~0   ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_8_result_int[3]~1   ; cout             ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_8_result_int[4]~2   ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_8_result_int[4]~2   ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_8_result_int[4]~2   ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_8_result_int[4]~3   ; cout             ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_8_result_int[5]~4   ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_8_result_int[5]~4   ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_8_result_int[5]~4   ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_8_result_int[5]~5   ; cout             ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_8_result_int[6]~6   ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_8_result_int[6]~6   ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_8_result_int[6]~6   ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_8_result_int[6]~7   ; cout             ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_8_result_int[7]~8   ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_8_result_int[7]~8   ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_8_result_int[7]~8   ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_8_result_int[7]~9   ; cout             ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_8_result_int[8]~11  ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_8_result_int[8]~11  ; cout             ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_8_result_int[9]~12  ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_8_result_int[9]~12  ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_9_result_int[3]~0   ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_9_result_int[3]~0   ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_9_result_int[3]~0   ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_9_result_int[3]~1   ; cout             ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_9_result_int[4]~2   ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_9_result_int[4]~2   ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_9_result_int[4]~2   ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_9_result_int[4]~3   ; cout             ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_9_result_int[5]~4   ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_9_result_int[5]~4   ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_9_result_int[5]~4   ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_9_result_int[5]~5   ; cout             ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_9_result_int[6]~6   ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_9_result_int[6]~6   ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_9_result_int[6]~6   ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_9_result_int[6]~7   ; cout             ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_9_result_int[7]~8   ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_9_result_int[7]~8   ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_9_result_int[7]~8   ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_9_result_int[7]~9   ; cout             ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_9_result_int[8]~11  ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_9_result_int[8]~11  ; cout             ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_9_result_int[9]~12  ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_9_result_int[9]~12  ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_8_result_int[1]~14  ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_8_result_int[1]~14  ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_10_result_int[3]~1  ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_10_result_int[3]~1  ; cout             ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_10_result_int[4]~3  ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_10_result_int[4]~3  ; cout             ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_10_result_int[5]~5  ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_10_result_int[5]~5  ; cout             ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_10_result_int[6]~7  ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_10_result_int[6]~7  ; cout             ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_10_result_int[7]~9  ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_10_result_int[7]~9  ; cout             ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_10_result_int[8]~11 ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_10_result_int[8]~11 ; cout             ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_10_result_int[9]~12 ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|add_sub_10_result_int[9]~12 ; combout          ;
+; |VGA_Video_Generator|R[3]~reg0                                                                                                                   ; |VGA_Video_Generator|R[3]~reg0                                                                                                                   ; regout           ;
+; |VGA_Video_Generator|G[3]~reg0                                                                                                                   ; |VGA_Video_Generator|G[3]~reg0                                                                                                                   ; regout           ;
+; |VGA_Video_Generator|B[0]~reg0                                                                                                                   ; |VGA_Video_Generator|B[0]~reg0                                                                                                                   ; regout           ;
+; |VGA_Video_Generator|B[3]~reg0                                                                                                                   ; |VGA_Video_Generator|B[3]~reg0                                                                                                                   ; regout           ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[70]~55             ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[70]~55             ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[69]~56             ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[69]~56             ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[69]~65             ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[69]~65             ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[68]~57             ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[68]~57             ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[68]~66             ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[68]~66             ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[67]~58             ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[67]~58             ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[67]~67             ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[67]~67             ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[66]~59             ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[66]~59             ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[66]~68             ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[66]~68             ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[65]~60             ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[65]~60             ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[65]~69             ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[65]~69             ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[79]~46             ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[79]~46             ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[78]~47             ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[78]~47             ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[77]~48             ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[77]~48             ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[76]~49             ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[76]~49             ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[75]~41             ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[75]~41             ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[75]~50             ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[75]~50             ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[74]~42             ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[74]~42             ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[74]~51             ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[74]~51             ; combout          ;
+; |VGA_Video_Generator|Selector0~0                                                                                                                 ; |VGA_Video_Generator|Selector0~0                                                                                                                 ; combout          ;
+; |VGA_Video_Generator|Selector3~0                                                                                                                 ; |VGA_Video_Generator|Selector3~0                                                                                                                 ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[88]~28             ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[88]~28             ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[87]~29             ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[87]~29             ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[86]~30             ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[86]~30             ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[85]~31             ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[85]~31             ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[84]~32             ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[84]~32             ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[63]~62             ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[63]~62             ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[63]~71             ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[63]~71             ; combout          ;
+; |VGA_Video_Generator|WideOr4~0                                                                                                                   ; |VGA_Video_Generator|WideOr4~0                                                                                                                   ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[88]~268            ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[88]~268            ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[87]~269            ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[87]~269            ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[86]~270            ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[86]~270            ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[79]~271            ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[79]~271            ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[78]~272            ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[78]~272            ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[77]~273            ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[77]~273            ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[76]~274            ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[76]~274            ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[85]~275            ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[85]~275            ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[84]~276            ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[84]~276            ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[83]~277            ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[83]~277            ; combout          ;
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[83]~33             ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[83]~33             ; combout          ;
+; |VGA_Video_Generator|R[0]                                                                                                                        ; |VGA_Video_Generator|R[0]                                                                                                                        ; padio            ;
+; |VGA_Video_Generator|R[2]                                                                                                                        ; |VGA_Video_Generator|R[2]                                                                                                                        ; padio            ;
+; |VGA_Video_Generator|R[3]                                                                                                                        ; |VGA_Video_Generator|R[3]                                                                                                                        ; padio            ;
+; |VGA_Video_Generator|G[0]                                                                                                                        ; |VGA_Video_Generator|G[0]                                                                                                                        ; padio            ;
+; |VGA_Video_Generator|G[2]                                                                                                                        ; |VGA_Video_Generator|G[2]                                                                                                                        ; padio            ;
+; |VGA_Video_Generator|G[3]                                                                                                                        ; |VGA_Video_Generator|G[3]                                                                                                                        ; padio            ;
+; |VGA_Video_Generator|B[0]                                                                                                                        ; |VGA_Video_Generator|B[0]                                                                                                                        ; padio            ;
+; |VGA_Video_Generator|B[2]                                                                                                                        ; |VGA_Video_Generator|B[2]                                                                                                                        ; padio            ;
+; |VGA_Video_Generator|B[3]                                                                                                                        ; |VGA_Video_Generator|B[3]                                                                                                                        ; padio            ;
+; |VGA_Video_Generator|column[10]                                                                                                                  ; |VGA_Video_Generator|column[10]~corein                                                                                                           ; combout          ;
+; |VGA_Video_Generator|column[9]                                                                                                                   ; |VGA_Video_Generator|column[9]~corein                                                                                                            ; combout          ;
+; |VGA_Video_Generator|column[8]                                                                                                                   ; |VGA_Video_Generator|column[8]~corein                                                                                                            ; combout          ;
+; |VGA_Video_Generator|column[7]                                                                                                                   ; |VGA_Video_Generator|column[7]~corein                                                                                                            ; combout          ;
+; |VGA_Video_Generator|column[6]                                                                                                                   ; |VGA_Video_Generator|column[6]~corein                                                                                                            ; combout          ;
+; |VGA_Video_Generator|column[5]                                                                                                                   ; |VGA_Video_Generator|column[5]~corein                                                                                                            ; combout          ;
+; |VGA_Video_Generator|column[4]                                                                                                                   ; |VGA_Video_Generator|column[4]~corein                                                                                                            ; combout          ;
+; |VGA_Video_Generator|clk                                                                                                                         ; |VGA_Video_Generator|clk~corein                                                                                                                  ; combout          ;
+; |VGA_Video_Generator|video_on                                                                                                                    ; |VGA_Video_Generator|video_on~corein                                                                                                             ; combout          ;
+; |VGA_Video_Generator|column[3]                                                                                                                   ; |VGA_Video_Generator|column[3]~corein                                                                                                            ; combout          ;
+; |VGA_Video_Generator|clk~clkctrl                                                                                                                 ; |VGA_Video_Generator|clk~clkctrl                                                                                                                 ; outclk           ;
+; |VGA_Video_Generator|video_on~clkctrl                                                                                                            ; |VGA_Video_Generator|video_on~clkctrl                                                                                                            ; outclk           ;
+; |VGA_Video_Generator|B[3]~reg0feeder                                                                                                             ; |VGA_Video_Generator|B[3]~reg0feeder                                                                                                             ; combout          ;
++--------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                                                                                                                                                       ;
++--------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                                                            ; Output Port Name                                                                                                                     ; Output Port Type ;
++--------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+------------------+
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[70]~64 ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[70]~64 ; combout          ;
+; |VGA_Video_Generator|R[1]                                                                                                            ; |VGA_Video_Generator|R[1]                                                                                                            ; padio            ;
+; |VGA_Video_Generator|G[1]                                                                                                            ; |VGA_Video_Generator|G[1]                                                                                                            ; padio            ;
+; |VGA_Video_Generator|B[1]                                                                                                            ; |VGA_Video_Generator|B[1]                                                                                                            ; padio            ;
++--------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                                                                                                                                       ;
++--------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                                                            ; Output Port Name                                                                                                                     ; Output Port Type ;
++--------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+------------------+
+; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[70]~64 ; |VGA_Video_Generator|lpm_divide:Div0|lpm_divide_fem:auto_generated|sign_div_unsign_plh:divider|alt_u_div_k2f:divider|StageOut[70]~64 ; combout          ;
+; |VGA_Video_Generator|R[1]                                                                                                            ; |VGA_Video_Generator|R[1]                                                                                                            ; padio            ;
+; |VGA_Video_Generator|G[1]                                                                                                            ; |VGA_Video_Generator|G[1]                                                                                                            ; padio            ;
+; |VGA_Video_Generator|B[1]                                                                                                            ; |VGA_Video_Generator|B[1]                                                                                                            ; padio            ;
++--------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Tue Mar 06 11:45:34 2018
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off VGA_Video_Generator -c VGA_Video_Generator
+Info: Using vector source file "C:/Users/Максим/Desktop/Quartus_Projects/2/VGA_Video_Generator/VGA_Video_Generator.vwf"
+Warning: Can't find signal in vector source file for input pin "|VGA_Video_Generator|row[0]"
+Warning: Can't find signal in vector source file for input pin "|VGA_Video_Generator|row[1]"
+Warning: Can't find signal in vector source file for input pin "|VGA_Video_Generator|row[2]"
+Warning: Can't find signal in vector source file for input pin "|VGA_Video_Generator|row[3]"
+Warning: Can't find signal in vector source file for input pin "|VGA_Video_Generator|row[4]"
+Warning: Can't find signal in vector source file for input pin "|VGA_Video_Generator|row[5]"
+Warning: Can't find signal in vector source file for input pin "|VGA_Video_Generator|row[6]"
+Warning: Can't find signal in vector source file for input pin "|VGA_Video_Generator|row[7]"
+Warning: Can't find signal in vector source file for input pin "|VGA_Video_Generator|row[8]"
+Warning: Can't find signal in vector source file for input pin "|VGA_Video_Generator|row[9]"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      96.46 %
+Info: Number of transitions in simulation is 5406489
+Info: Quartus II Simulator was successful. 0 errors, 10 warnings
+    Info: Peak virtual memory: 215 megabytes
+    Info: Processing ended: Tue Mar 06 11:46:49 2018
+    Info: Elapsed time: 00:01:15
+    Info: Total CPU time (on all processors): 00:01:14
+
+

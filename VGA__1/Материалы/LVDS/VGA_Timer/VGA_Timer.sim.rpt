@@ -1,0 +1,894 @@
+Simulator report for VGA_Timer
+Tue Mar 06 10:24:11 2018
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 60.0 s       ;
+; Simulation Netlist Size     ; 389 nodes    ;
+; Simulation Coverage         ;      36.75 % ;
+; Total Number of Transitions ; 69081642     ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C20F484C7 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      36.75 % ;
+; Total nodes checked                                 ; 389          ;
+; Total output ports checked                          ; 449          ;
+; Total output ports with complete 1/0-value coverage ; 165          ;
+; Total output ports with no 1/0-value coverage       ; 284          ;
+; Total output ports with no 1-value coverage         ; 284          ;
+; Total output ports with no 0-value coverage         ; 284          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                          ;
++---------------------------------+---------------------------------+------------------+
+; Node Name                       ; Output Port Name                ; Output Port Type ;
++---------------------------------+---------------------------------+------------------+
+; |VGA_Timer|Add1~0               ; |VGA_Timer|Add1~0               ; combout          ;
+; |VGA_Timer|Add1~0               ; |VGA_Timer|Add1~1               ; cout             ;
+; |VGA_Timer|Add1~2               ; |VGA_Timer|Add1~2               ; combout          ;
+; |VGA_Timer|Add1~2               ; |VGA_Timer|Add1~3               ; cout             ;
+; |VGA_Timer|Add1~4               ; |VGA_Timer|Add1~4               ; combout          ;
+; |VGA_Timer|Add1~4               ; |VGA_Timer|Add1~5               ; cout             ;
+; |VGA_Timer|Add1~6               ; |VGA_Timer|Add1~6               ; combout          ;
+; |VGA_Timer|Add1~6               ; |VGA_Timer|Add1~7               ; cout             ;
+; |VGA_Timer|Add1~8               ; |VGA_Timer|Add1~8               ; combout          ;
+; |VGA_Timer|Add1~8               ; |VGA_Timer|Add1~9               ; cout             ;
+; |VGA_Timer|Add1~10              ; |VGA_Timer|Add1~10              ; combout          ;
+; |VGA_Timer|Add1~10              ; |VGA_Timer|Add1~11              ; cout             ;
+; |VGA_Timer|Add1~12              ; |VGA_Timer|Add1~12              ; combout          ;
+; |VGA_Timer|Add1~12              ; |VGA_Timer|Add1~13              ; cout             ;
+; |VGA_Timer|Add1~14              ; |VGA_Timer|Add1~14              ; combout          ;
+; |VGA_Timer|Add1~14              ; |VGA_Timer|Add1~15              ; cout             ;
+; |VGA_Timer|Add1~16              ; |VGA_Timer|Add1~16              ; combout          ;
+; |VGA_Timer|Add1~16              ; |VGA_Timer|Add1~17              ; cout             ;
+; |VGA_Timer|Add1~18              ; |VGA_Timer|Add1~18              ; combout          ;
+; |VGA_Timer|Add1~18              ; |VGA_Timer|Add1~19              ; cout             ;
+; |VGA_Timer|Add1~20              ; |VGA_Timer|Add1~20              ; combout          ;
+; |VGA_Timer|Add0~0               ; |VGA_Timer|Add0~0               ; combout          ;
+; |VGA_Timer|Add0~0               ; |VGA_Timer|Add0~1               ; cout             ;
+; |VGA_Timer|Add0~2               ; |VGA_Timer|Add0~2               ; combout          ;
+; |VGA_Timer|Add0~2               ; |VGA_Timer|Add0~3               ; cout             ;
+; |VGA_Timer|Add0~4               ; |VGA_Timer|Add0~4               ; combout          ;
+; |VGA_Timer|Add0~4               ; |VGA_Timer|Add0~5               ; cout             ;
+; |VGA_Timer|Add0~6               ; |VGA_Timer|Add0~6               ; combout          ;
+; |VGA_Timer|Add0~6               ; |VGA_Timer|Add0~7               ; cout             ;
+; |VGA_Timer|Add0~8               ; |VGA_Timer|Add0~8               ; combout          ;
+; |VGA_Timer|Add0~8               ; |VGA_Timer|Add0~9               ; cout             ;
+; |VGA_Timer|Add0~10              ; |VGA_Timer|Add0~10              ; combout          ;
+; |VGA_Timer|Add0~10              ; |VGA_Timer|Add0~11              ; cout             ;
+; |VGA_Timer|Add0~12              ; |VGA_Timer|Add0~12              ; combout          ;
+; |VGA_Timer|Add0~12              ; |VGA_Timer|Add0~13              ; cout             ;
+; |VGA_Timer|Add0~14              ; |VGA_Timer|Add0~14              ; combout          ;
+; |VGA_Timer|Add0~14              ; |VGA_Timer|Add0~15              ; cout             ;
+; |VGA_Timer|Add0~16              ; |VGA_Timer|Add0~16              ; combout          ;
+; |VGA_Timer|Add0~16              ; |VGA_Timer|Add0~17              ; cout             ;
+; |VGA_Timer|Add0~18              ; |VGA_Timer|Add0~18              ; combout          ;
+; |VGA_Timer|hsync~reg0           ; |VGA_Timer|hsync~reg0           ; regout           ;
+; |VGA_Timer|vsync~reg0           ; |VGA_Timer|vsync~reg0           ; regout           ;
+; |VGA_Timer|row[0]~reg0          ; |VGA_Timer|row[0]~reg0          ; regout           ;
+; |VGA_Timer|row[1]~reg0          ; |VGA_Timer|row[1]~reg0          ; regout           ;
+; |VGA_Timer|row[2]~reg0          ; |VGA_Timer|row[2]~reg0          ; regout           ;
+; |VGA_Timer|row[3]~reg0          ; |VGA_Timer|row[3]~reg0          ; regout           ;
+; |VGA_Timer|row[4]~reg0          ; |VGA_Timer|row[4]~reg0          ; regout           ;
+; |VGA_Timer|row[5]~reg0          ; |VGA_Timer|row[5]~reg0          ; regout           ;
+; |VGA_Timer|row[6]~reg0          ; |VGA_Timer|row[6]~reg0          ; regout           ;
+; |VGA_Timer|row[7]~reg0          ; |VGA_Timer|row[7]~reg0          ; regout           ;
+; |VGA_Timer|row[8]~reg0          ; |VGA_Timer|row[8]~reg0          ; regout           ;
+; |VGA_Timer|row[9]~reg0          ; |VGA_Timer|row[9]~reg0          ; regout           ;
+; |VGA_Timer|column[0]~reg0       ; |VGA_Timer|column[0]~reg0       ; regout           ;
+; |VGA_Timer|column[1]~reg0       ; |VGA_Timer|column[1]~reg0       ; regout           ;
+; |VGA_Timer|column[2]~reg0       ; |VGA_Timer|column[2]~reg0       ; regout           ;
+; |VGA_Timer|column[3]~reg0       ; |VGA_Timer|column[3]~reg0       ; regout           ;
+; |VGA_Timer|column[4]~reg0       ; |VGA_Timer|column[4]~reg0       ; regout           ;
+; |VGA_Timer|column[5]~reg0       ; |VGA_Timer|column[5]~reg0       ; regout           ;
+; |VGA_Timer|column[6]~reg0       ; |VGA_Timer|column[6]~reg0       ; regout           ;
+; |VGA_Timer|column[7]~reg0       ; |VGA_Timer|column[7]~reg0       ; regout           ;
+; |VGA_Timer|column[8]~reg0       ; |VGA_Timer|column[8]~reg0       ; regout           ;
+; |VGA_Timer|column[9]~reg0       ; |VGA_Timer|column[9]~reg0       ; regout           ;
+; |VGA_Timer|column[10]~reg0      ; |VGA_Timer|column[10]~reg0      ; regout           ;
+; |VGA_Timer|video_on~reg0        ; |VGA_Timer|video_on~reg0        ; regout           ;
+; |VGA_Timer|counter_h[0]         ; |VGA_Timer|counter_h[0]         ; regout           ;
+; |VGA_Timer|counter_h[1]         ; |VGA_Timer|counter_h[1]         ; regout           ;
+; |VGA_Timer|counter_h[2]         ; |VGA_Timer|counter_h[2]         ; regout           ;
+; |VGA_Timer|counter_h[3]         ; |VGA_Timer|counter_h[3]         ; regout           ;
+; |VGA_Timer|counter_h[4]         ; |VGA_Timer|counter_h[4]         ; regout           ;
+; |VGA_Timer|counter_h[5]         ; |VGA_Timer|counter_h[5]         ; regout           ;
+; |VGA_Timer|LessThan0~0          ; |VGA_Timer|LessThan0~0          ; combout          ;
+; |VGA_Timer|counter_h[9]         ; |VGA_Timer|counter_h[9]         ; regout           ;
+; |VGA_Timer|counter_h[7]         ; |VGA_Timer|counter_h[7]         ; regout           ;
+; |VGA_Timer|counter_h[6]         ; |VGA_Timer|counter_h[6]         ; regout           ;
+; |VGA_Timer|counter_h[8]         ; |VGA_Timer|counter_h[8]         ; regout           ;
+; |VGA_Timer|Equal0~0             ; |VGA_Timer|Equal0~0             ; combout          ;
+; |VGA_Timer|Equal0~1             ; |VGA_Timer|Equal0~1             ; combout          ;
+; |VGA_Timer|counter_h[10]        ; |VGA_Timer|counter_h[10]        ; regout           ;
+; |VGA_Timer|Equal0~2             ; |VGA_Timer|Equal0~2             ; combout          ;
+; |VGA_Timer|Equal0~4             ; |VGA_Timer|Equal0~4             ; combout          ;
+; |VGA_Timer|Equal0~9             ; |VGA_Timer|Equal0~9             ; combout          ;
+; |VGA_Timer|LessThan0~1          ; |VGA_Timer|LessThan0~1          ; combout          ;
+; |VGA_Timer|counter_h~31         ; |VGA_Timer|counter_h~31         ; combout          ;
+; |VGA_Timer|process_0~3          ; |VGA_Timer|process_0~3          ; combout          ;
+; |VGA_Timer|process_0~4          ; |VGA_Timer|process_0~4          ; combout          ;
+; |VGA_Timer|process_0~8          ; |VGA_Timer|process_0~8          ; combout          ;
+; |VGA_Timer|counter_h~32         ; |VGA_Timer|counter_h~32         ; combout          ;
+; |VGA_Timer|process_0~11         ; |VGA_Timer|process_0~11         ; combout          ;
+; |VGA_Timer|counter_v[2]         ; |VGA_Timer|counter_v[2]         ; regout           ;
+; |VGA_Timer|counter_v[1]         ; |VGA_Timer|counter_v[1]         ; regout           ;
+; |VGA_Timer|counter_v[0]         ; |VGA_Timer|counter_v[0]         ; regout           ;
+; |VGA_Timer|counter_v[9]         ; |VGA_Timer|counter_v[9]         ; regout           ;
+; |VGA_Timer|counter_v[8]         ; |VGA_Timer|counter_v[8]         ; regout           ;
+; |VGA_Timer|counter_v[7]         ; |VGA_Timer|counter_v[7]         ; regout           ;
+; |VGA_Timer|Equal1~6             ; |VGA_Timer|Equal1~6             ; combout          ;
+; |VGA_Timer|counter_v[6]         ; |VGA_Timer|counter_v[6]         ; regout           ;
+; |VGA_Timer|counter_v[5]         ; |VGA_Timer|counter_v[5]         ; regout           ;
+; |VGA_Timer|counter_v[4]         ; |VGA_Timer|counter_v[4]         ; regout           ;
+; |VGA_Timer|counter_v[3]         ; |VGA_Timer|counter_v[3]         ; regout           ;
+; |VGA_Timer|Equal1~7             ; |VGA_Timer|Equal1~7             ; combout          ;
+; |VGA_Timer|Equal1~8             ; |VGA_Timer|Equal1~8             ; combout          ;
+; |VGA_Timer|Equal1~9             ; |VGA_Timer|Equal1~9             ; combout          ;
+; |VGA_Timer|counter_v~62         ; |VGA_Timer|counter_v~62         ; combout          ;
+; |VGA_Timer|counter_v~63         ; |VGA_Timer|counter_v~63         ; combout          ;
+; |VGA_Timer|counter_v~64         ; |VGA_Timer|counter_v~64         ; combout          ;
+; |VGA_Timer|counter_v~65         ; |VGA_Timer|counter_v~65         ; combout          ;
+; |VGA_Timer|process_0~12         ; |VGA_Timer|process_0~12         ; combout          ;
+; |VGA_Timer|process_0~13         ; |VGA_Timer|process_0~13         ; combout          ;
+; |VGA_Timer|counter_v~66         ; |VGA_Timer|counter_v~66         ; combout          ;
+; |VGA_Timer|counter_v~67         ; |VGA_Timer|counter_v~67         ; combout          ;
+; |VGA_Timer|process_0~14         ; |VGA_Timer|process_0~14         ; combout          ;
+; |VGA_Timer|counter_v~68         ; |VGA_Timer|counter_v~68         ; combout          ;
+; |VGA_Timer|counter_v~69         ; |VGA_Timer|counter_v~69         ; combout          ;
+; |VGA_Timer|LessThan5~0          ; |VGA_Timer|LessThan5~0          ; combout          ;
+; |VGA_Timer|process_0~15         ; |VGA_Timer|process_0~15         ; combout          ;
+; |VGA_Timer|LessThan5~1          ; |VGA_Timer|LessThan5~1          ; combout          ;
+; |VGA_Timer|process_0~26         ; |VGA_Timer|process_0~26         ; combout          ;
+; |VGA_Timer|counter_v~85         ; |VGA_Timer|counter_v~85         ; combout          ;
+; |VGA_Timer|counter_v~86         ; |VGA_Timer|counter_v~86         ; combout          ;
+; |VGA_Timer|counter_h~33         ; |VGA_Timer|counter_h~33         ; combout          ;
+; |VGA_Timer|LessThan5~2          ; |VGA_Timer|LessThan5~2          ; combout          ;
+; |VGA_Timer|process_0~31         ; |VGA_Timer|process_0~31         ; combout          ;
+; |VGA_Timer|process_0~32         ; |VGA_Timer|process_0~32         ; combout          ;
+; |VGA_Timer|process_0~33         ; |VGA_Timer|process_0~33         ; combout          ;
+; |VGA_Timer|process_0~40         ; |VGA_Timer|process_0~40         ; combout          ;
+; |VGA_Timer|process_0~41         ; |VGA_Timer|process_0~41         ; combout          ;
+; |VGA_Timer|hsync                ; |VGA_Timer|hsync                ; padio            ;
+; |VGA_Timer|vsync                ; |VGA_Timer|vsync                ; padio            ;
+; |VGA_Timer|row[0]               ; |VGA_Timer|row[0]               ; padio            ;
+; |VGA_Timer|row[1]               ; |VGA_Timer|row[1]               ; padio            ;
+; |VGA_Timer|row[2]               ; |VGA_Timer|row[2]               ; padio            ;
+; |VGA_Timer|row[3]               ; |VGA_Timer|row[3]               ; padio            ;
+; |VGA_Timer|row[4]               ; |VGA_Timer|row[4]               ; padio            ;
+; |VGA_Timer|row[5]               ; |VGA_Timer|row[5]               ; padio            ;
+; |VGA_Timer|row[6]               ; |VGA_Timer|row[6]               ; padio            ;
+; |VGA_Timer|row[7]               ; |VGA_Timer|row[7]               ; padio            ;
+; |VGA_Timer|row[8]               ; |VGA_Timer|row[8]               ; padio            ;
+; |VGA_Timer|row[9]               ; |VGA_Timer|row[9]               ; padio            ;
+; |VGA_Timer|column[0]            ; |VGA_Timer|column[0]            ; padio            ;
+; |VGA_Timer|column[1]            ; |VGA_Timer|column[1]            ; padio            ;
+; |VGA_Timer|column[2]            ; |VGA_Timer|column[2]            ; padio            ;
+; |VGA_Timer|column[3]            ; |VGA_Timer|column[3]            ; padio            ;
+; |VGA_Timer|column[4]            ; |VGA_Timer|column[4]            ; padio            ;
+; |VGA_Timer|column[5]            ; |VGA_Timer|column[5]            ; padio            ;
+; |VGA_Timer|column[6]            ; |VGA_Timer|column[6]            ; padio            ;
+; |VGA_Timer|column[7]            ; |VGA_Timer|column[7]            ; padio            ;
+; |VGA_Timer|column[8]            ; |VGA_Timer|column[8]            ; padio            ;
+; |VGA_Timer|column[9]            ; |VGA_Timer|column[9]            ; padio            ;
+; |VGA_Timer|column[10]           ; |VGA_Timer|column[10]           ; padio            ;
+; |VGA_Timer|video_on             ; |VGA_Timer|video_on             ; padio            ;
+; |VGA_Timer|clk                  ; |VGA_Timer|clk~corein           ; combout          ;
+; |VGA_Timer|clk~clkctrl          ; |VGA_Timer|clk~clkctrl          ; outclk           ;
+; |VGA_Timer|column[0]~reg0feeder ; |VGA_Timer|column[0]~reg0feeder ; combout          ;
+; |VGA_Timer|column[1]~reg0feeder ; |VGA_Timer|column[1]~reg0feeder ; combout          ;
+; |VGA_Timer|column[2]~reg0feeder ; |VGA_Timer|column[2]~reg0feeder ; combout          ;
+; |VGA_Timer|column[3]~reg0feeder ; |VGA_Timer|column[3]~reg0feeder ; combout          ;
+; |VGA_Timer|column[4]~reg0feeder ; |VGA_Timer|column[4]~reg0feeder ; combout          ;
+; |VGA_Timer|column[7]~reg0feeder ; |VGA_Timer|column[7]~reg0feeder ; combout          ;
+; |VGA_Timer|column[8]~reg0feeder ; |VGA_Timer|column[8]~reg0feeder ; combout          ;
+; |VGA_Timer|row[1]~reg0feeder    ; |VGA_Timer|row[1]~reg0feeder    ; combout          ;
+; |VGA_Timer|row[3]~reg0feeder    ; |VGA_Timer|row[3]~reg0feeder    ; combout          ;
+; |VGA_Timer|row[5]~reg0feeder    ; |VGA_Timer|row[5]~reg0feeder    ; combout          ;
+; |VGA_Timer|row[9]~reg0feeder    ; |VGA_Timer|row[9]~reg0feeder    ; combout          ;
+; |VGA_Timer|row[8]~reg0feeder    ; |VGA_Timer|row[8]~reg0feeder    ; combout          ;
+; |VGA_Timer|column[9]~reg0feeder ; |VGA_Timer|column[9]~reg0feeder ; combout          ;
++---------------------------------+---------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                               ;
++----------------------------------+----------------------------------+------------------+
+; Node Name                        ; Output Port Name                 ; Output Port Type ;
++----------------------------------+----------------------------------+------------------+
+; |VGA_Timer|Add1~20               ; |VGA_Timer|Add1~21               ; cout             ;
+; |VGA_Timer|Add1~22               ; |VGA_Timer|Add1~22               ; combout          ;
+; |VGA_Timer|Add1~22               ; |VGA_Timer|Add1~23               ; cout             ;
+; |VGA_Timer|Add1~24               ; |VGA_Timer|Add1~24               ; combout          ;
+; |VGA_Timer|Add1~24               ; |VGA_Timer|Add1~25               ; cout             ;
+; |VGA_Timer|Add1~26               ; |VGA_Timer|Add1~26               ; combout          ;
+; |VGA_Timer|Add1~26               ; |VGA_Timer|Add1~27               ; cout             ;
+; |VGA_Timer|Add1~28               ; |VGA_Timer|Add1~28               ; combout          ;
+; |VGA_Timer|Add1~28               ; |VGA_Timer|Add1~29               ; cout             ;
+; |VGA_Timer|Add1~30               ; |VGA_Timer|Add1~30               ; combout          ;
+; |VGA_Timer|Add1~30               ; |VGA_Timer|Add1~31               ; cout             ;
+; |VGA_Timer|Add1~32               ; |VGA_Timer|Add1~32               ; combout          ;
+; |VGA_Timer|Add1~32               ; |VGA_Timer|Add1~33               ; cout             ;
+; |VGA_Timer|Add1~34               ; |VGA_Timer|Add1~34               ; combout          ;
+; |VGA_Timer|Add1~34               ; |VGA_Timer|Add1~35               ; cout             ;
+; |VGA_Timer|Add1~36               ; |VGA_Timer|Add1~36               ; combout          ;
+; |VGA_Timer|Add1~36               ; |VGA_Timer|Add1~37               ; cout             ;
+; |VGA_Timer|Add1~38               ; |VGA_Timer|Add1~38               ; combout          ;
+; |VGA_Timer|Add1~38               ; |VGA_Timer|Add1~39               ; cout             ;
+; |VGA_Timer|Add1~40               ; |VGA_Timer|Add1~40               ; combout          ;
+; |VGA_Timer|Add1~40               ; |VGA_Timer|Add1~41               ; cout             ;
+; |VGA_Timer|Add1~42               ; |VGA_Timer|Add1~42               ; combout          ;
+; |VGA_Timer|Add1~42               ; |VGA_Timer|Add1~43               ; cout             ;
+; |VGA_Timer|Add1~44               ; |VGA_Timer|Add1~44               ; combout          ;
+; |VGA_Timer|Add1~44               ; |VGA_Timer|Add1~45               ; cout             ;
+; |VGA_Timer|Add1~46               ; |VGA_Timer|Add1~46               ; combout          ;
+; |VGA_Timer|Add1~46               ; |VGA_Timer|Add1~47               ; cout             ;
+; |VGA_Timer|Add1~48               ; |VGA_Timer|Add1~48               ; combout          ;
+; |VGA_Timer|Add1~48               ; |VGA_Timer|Add1~49               ; cout             ;
+; |VGA_Timer|Add1~50               ; |VGA_Timer|Add1~50               ; combout          ;
+; |VGA_Timer|Add1~50               ; |VGA_Timer|Add1~51               ; cout             ;
+; |VGA_Timer|Add1~52               ; |VGA_Timer|Add1~52               ; combout          ;
+; |VGA_Timer|Add1~52               ; |VGA_Timer|Add1~53               ; cout             ;
+; |VGA_Timer|Add1~54               ; |VGA_Timer|Add1~54               ; combout          ;
+; |VGA_Timer|Add1~54               ; |VGA_Timer|Add1~55               ; cout             ;
+; |VGA_Timer|Add1~56               ; |VGA_Timer|Add1~56               ; combout          ;
+; |VGA_Timer|Add1~56               ; |VGA_Timer|Add1~57               ; cout             ;
+; |VGA_Timer|Add1~58               ; |VGA_Timer|Add1~58               ; combout          ;
+; |VGA_Timer|Add1~58               ; |VGA_Timer|Add1~59               ; cout             ;
+; |VGA_Timer|Add1~60               ; |VGA_Timer|Add1~60               ; combout          ;
+; |VGA_Timer|Add0~18               ; |VGA_Timer|Add0~19               ; cout             ;
+; |VGA_Timer|Add0~20               ; |VGA_Timer|Add0~20               ; combout          ;
+; |VGA_Timer|Add0~20               ; |VGA_Timer|Add0~21               ; cout             ;
+; |VGA_Timer|Add0~22               ; |VGA_Timer|Add0~22               ; combout          ;
+; |VGA_Timer|Add0~22               ; |VGA_Timer|Add0~23               ; cout             ;
+; |VGA_Timer|Add0~24               ; |VGA_Timer|Add0~24               ; combout          ;
+; |VGA_Timer|Add0~24               ; |VGA_Timer|Add0~25               ; cout             ;
+; |VGA_Timer|Add0~26               ; |VGA_Timer|Add0~26               ; combout          ;
+; |VGA_Timer|Add0~26               ; |VGA_Timer|Add0~27               ; cout             ;
+; |VGA_Timer|Add0~28               ; |VGA_Timer|Add0~28               ; combout          ;
+; |VGA_Timer|Add0~28               ; |VGA_Timer|Add0~29               ; cout             ;
+; |VGA_Timer|Add0~30               ; |VGA_Timer|Add0~30               ; combout          ;
+; |VGA_Timer|Add0~30               ; |VGA_Timer|Add0~31               ; cout             ;
+; |VGA_Timer|Add0~32               ; |VGA_Timer|Add0~32               ; combout          ;
+; |VGA_Timer|Add0~32               ; |VGA_Timer|Add0~33               ; cout             ;
+; |VGA_Timer|Add0~34               ; |VGA_Timer|Add0~34               ; combout          ;
+; |VGA_Timer|Add0~34               ; |VGA_Timer|Add0~35               ; cout             ;
+; |VGA_Timer|Add0~36               ; |VGA_Timer|Add0~36               ; combout          ;
+; |VGA_Timer|Add0~36               ; |VGA_Timer|Add0~37               ; cout             ;
+; |VGA_Timer|Add0~38               ; |VGA_Timer|Add0~38               ; combout          ;
+; |VGA_Timer|Add0~38               ; |VGA_Timer|Add0~39               ; cout             ;
+; |VGA_Timer|Add0~40               ; |VGA_Timer|Add0~40               ; combout          ;
+; |VGA_Timer|Add0~40               ; |VGA_Timer|Add0~41               ; cout             ;
+; |VGA_Timer|Add0~42               ; |VGA_Timer|Add0~42               ; combout          ;
+; |VGA_Timer|Add0~42               ; |VGA_Timer|Add0~43               ; cout             ;
+; |VGA_Timer|Add0~44               ; |VGA_Timer|Add0~44               ; combout          ;
+; |VGA_Timer|Add0~44               ; |VGA_Timer|Add0~45               ; cout             ;
+; |VGA_Timer|Add0~46               ; |VGA_Timer|Add0~46               ; combout          ;
+; |VGA_Timer|Add0~46               ; |VGA_Timer|Add0~47               ; cout             ;
+; |VGA_Timer|Add0~48               ; |VGA_Timer|Add0~48               ; combout          ;
+; |VGA_Timer|Add0~48               ; |VGA_Timer|Add0~49               ; cout             ;
+; |VGA_Timer|Add0~50               ; |VGA_Timer|Add0~50               ; combout          ;
+; |VGA_Timer|Add0~50               ; |VGA_Timer|Add0~51               ; cout             ;
+; |VGA_Timer|Add0~52               ; |VGA_Timer|Add0~52               ; combout          ;
+; |VGA_Timer|Add0~52               ; |VGA_Timer|Add0~53               ; cout             ;
+; |VGA_Timer|Add0~54               ; |VGA_Timer|Add0~54               ; combout          ;
+; |VGA_Timer|Add0~54               ; |VGA_Timer|Add0~55               ; cout             ;
+; |VGA_Timer|Add0~56               ; |VGA_Timer|Add0~56               ; combout          ;
+; |VGA_Timer|Add0~56               ; |VGA_Timer|Add0~57               ; cout             ;
+; |VGA_Timer|Add0~58               ; |VGA_Timer|Add0~58               ; combout          ;
+; |VGA_Timer|Add0~58               ; |VGA_Timer|Add0~59               ; cout             ;
+; |VGA_Timer|Add0~60               ; |VGA_Timer|Add0~60               ; combout          ;
+; |VGA_Timer|row[10]~reg0          ; |VGA_Timer|row[10]~reg0          ; regout           ;
+; |VGA_Timer|row[11]~reg0          ; |VGA_Timer|row[11]~reg0          ; regout           ;
+; |VGA_Timer|row[12]~reg0          ; |VGA_Timer|row[12]~reg0          ; regout           ;
+; |VGA_Timer|row[13]~reg0          ; |VGA_Timer|row[13]~reg0          ; regout           ;
+; |VGA_Timer|row[14]~reg0          ; |VGA_Timer|row[14]~reg0          ; regout           ;
+; |VGA_Timer|row[15]~reg0          ; |VGA_Timer|row[15]~reg0          ; regout           ;
+; |VGA_Timer|row[16]~reg0          ; |VGA_Timer|row[16]~reg0          ; regout           ;
+; |VGA_Timer|row[17]~reg0          ; |VGA_Timer|row[17]~reg0          ; regout           ;
+; |VGA_Timer|row[18]~reg0          ; |VGA_Timer|row[18]~reg0          ; regout           ;
+; |VGA_Timer|row[19]~reg0          ; |VGA_Timer|row[19]~reg0          ; regout           ;
+; |VGA_Timer|row[20]~reg0          ; |VGA_Timer|row[20]~reg0          ; regout           ;
+; |VGA_Timer|row[21]~reg0          ; |VGA_Timer|row[21]~reg0          ; regout           ;
+; |VGA_Timer|row[22]~reg0          ; |VGA_Timer|row[22]~reg0          ; regout           ;
+; |VGA_Timer|row[23]~reg0          ; |VGA_Timer|row[23]~reg0          ; regout           ;
+; |VGA_Timer|row[24]~reg0          ; |VGA_Timer|row[24]~reg0          ; regout           ;
+; |VGA_Timer|row[25]~reg0          ; |VGA_Timer|row[25]~reg0          ; regout           ;
+; |VGA_Timer|row[26]~reg0          ; |VGA_Timer|row[26]~reg0          ; regout           ;
+; |VGA_Timer|row[27]~reg0          ; |VGA_Timer|row[27]~reg0          ; regout           ;
+; |VGA_Timer|row[28]~reg0          ; |VGA_Timer|row[28]~reg0          ; regout           ;
+; |VGA_Timer|row[29]~reg0          ; |VGA_Timer|row[29]~reg0          ; regout           ;
+; |VGA_Timer|row[30]~reg0          ; |VGA_Timer|row[30]~reg0          ; regout           ;
+; |VGA_Timer|column[11]~reg0       ; |VGA_Timer|column[11]~reg0       ; regout           ;
+; |VGA_Timer|column[12]~reg0       ; |VGA_Timer|column[12]~reg0       ; regout           ;
+; |VGA_Timer|column[13]~reg0       ; |VGA_Timer|column[13]~reg0       ; regout           ;
+; |VGA_Timer|column[14]~reg0       ; |VGA_Timer|column[14]~reg0       ; regout           ;
+; |VGA_Timer|column[15]~reg0       ; |VGA_Timer|column[15]~reg0       ; regout           ;
+; |VGA_Timer|column[16]~reg0       ; |VGA_Timer|column[16]~reg0       ; regout           ;
+; |VGA_Timer|column[17]~reg0       ; |VGA_Timer|column[17]~reg0       ; regout           ;
+; |VGA_Timer|column[18]~reg0       ; |VGA_Timer|column[18]~reg0       ; regout           ;
+; |VGA_Timer|column[19]~reg0       ; |VGA_Timer|column[19]~reg0       ; regout           ;
+; |VGA_Timer|column[20]~reg0       ; |VGA_Timer|column[20]~reg0       ; regout           ;
+; |VGA_Timer|column[21]~reg0       ; |VGA_Timer|column[21]~reg0       ; regout           ;
+; |VGA_Timer|column[22]~reg0       ; |VGA_Timer|column[22]~reg0       ; regout           ;
+; |VGA_Timer|column[23]~reg0       ; |VGA_Timer|column[23]~reg0       ; regout           ;
+; |VGA_Timer|column[24]~reg0       ; |VGA_Timer|column[24]~reg0       ; regout           ;
+; |VGA_Timer|column[25]~reg0       ; |VGA_Timer|column[25]~reg0       ; regout           ;
+; |VGA_Timer|column[26]~reg0       ; |VGA_Timer|column[26]~reg0       ; regout           ;
+; |VGA_Timer|column[27]~reg0       ; |VGA_Timer|column[27]~reg0       ; regout           ;
+; |VGA_Timer|column[28]~reg0       ; |VGA_Timer|column[28]~reg0       ; regout           ;
+; |VGA_Timer|column[29]~reg0       ; |VGA_Timer|column[29]~reg0       ; regout           ;
+; |VGA_Timer|column[30]~reg0       ; |VGA_Timer|column[30]~reg0       ; regout           ;
+; |VGA_Timer|counter_h[11]         ; |VGA_Timer|counter_h[11]         ; regout           ;
+; |VGA_Timer|counter_h[12]         ; |VGA_Timer|counter_h[12]         ; regout           ;
+; |VGA_Timer|counter_h[13]         ; |VGA_Timer|counter_h[13]         ; regout           ;
+; |VGA_Timer|counter_h[14]         ; |VGA_Timer|counter_h[14]         ; regout           ;
+; |VGA_Timer|counter_h[15]         ; |VGA_Timer|counter_h[15]         ; regout           ;
+; |VGA_Timer|Equal0~3              ; |VGA_Timer|Equal0~3              ; combout          ;
+; |VGA_Timer|counter_h[16]         ; |VGA_Timer|counter_h[16]         ; regout           ;
+; |VGA_Timer|counter_h[17]         ; |VGA_Timer|counter_h[17]         ; regout           ;
+; |VGA_Timer|counter_h[18]         ; |VGA_Timer|counter_h[18]         ; regout           ;
+; |VGA_Timer|counter_h[19]         ; |VGA_Timer|counter_h[19]         ; regout           ;
+; |VGA_Timer|Equal0~5              ; |VGA_Timer|Equal0~5              ; combout          ;
+; |VGA_Timer|counter_h[20]         ; |VGA_Timer|counter_h[20]         ; regout           ;
+; |VGA_Timer|counter_h[21]         ; |VGA_Timer|counter_h[21]         ; regout           ;
+; |VGA_Timer|counter_h[22]         ; |VGA_Timer|counter_h[22]         ; regout           ;
+; |VGA_Timer|counter_h[23]         ; |VGA_Timer|counter_h[23]         ; regout           ;
+; |VGA_Timer|Equal0~6              ; |VGA_Timer|Equal0~6              ; combout          ;
+; |VGA_Timer|counter_h[24]         ; |VGA_Timer|counter_h[24]         ; regout           ;
+; |VGA_Timer|counter_h[25]         ; |VGA_Timer|counter_h[25]         ; regout           ;
+; |VGA_Timer|counter_h[26]         ; |VGA_Timer|counter_h[26]         ; regout           ;
+; |VGA_Timer|counter_h[27]         ; |VGA_Timer|counter_h[27]         ; regout           ;
+; |VGA_Timer|Equal0~7              ; |VGA_Timer|Equal0~7              ; combout          ;
+; |VGA_Timer|counter_h[28]         ; |VGA_Timer|counter_h[28]         ; regout           ;
+; |VGA_Timer|counter_h[29]         ; |VGA_Timer|counter_h[29]         ; regout           ;
+; |VGA_Timer|counter_h[30]         ; |VGA_Timer|counter_h[30]         ; regout           ;
+; |VGA_Timer|Equal0~8              ; |VGA_Timer|Equal0~8              ; combout          ;
+; |VGA_Timer|process_0~5           ; |VGA_Timer|process_0~5           ; combout          ;
+; |VGA_Timer|process_0~6           ; |VGA_Timer|process_0~6           ; combout          ;
+; |VGA_Timer|process_0~7           ; |VGA_Timer|process_0~7           ; combout          ;
+; |VGA_Timer|process_0~9           ; |VGA_Timer|process_0~9           ; combout          ;
+; |VGA_Timer|process_0~10          ; |VGA_Timer|process_0~10          ; combout          ;
+; |VGA_Timer|counter_v[30]         ; |VGA_Timer|counter_v[30]         ; regout           ;
+; |VGA_Timer|counter_v[29]         ; |VGA_Timer|counter_v[29]         ; regout           ;
+; |VGA_Timer|counter_v[28]         ; |VGA_Timer|counter_v[28]         ; regout           ;
+; |VGA_Timer|counter_v[27]         ; |VGA_Timer|counter_v[27]         ; regout           ;
+; |VGA_Timer|Equal1~0              ; |VGA_Timer|Equal1~0              ; combout          ;
+; |VGA_Timer|counter_v[26]         ; |VGA_Timer|counter_v[26]         ; regout           ;
+; |VGA_Timer|counter_v[25]         ; |VGA_Timer|counter_v[25]         ; regout           ;
+; |VGA_Timer|counter_v[24]         ; |VGA_Timer|counter_v[24]         ; regout           ;
+; |VGA_Timer|counter_v[23]         ; |VGA_Timer|counter_v[23]         ; regout           ;
+; |VGA_Timer|Equal1~1              ; |VGA_Timer|Equal1~1              ; combout          ;
+; |VGA_Timer|counter_v[22]         ; |VGA_Timer|counter_v[22]         ; regout           ;
+; |VGA_Timer|counter_v[21]         ; |VGA_Timer|counter_v[21]         ; regout           ;
+; |VGA_Timer|counter_v[20]         ; |VGA_Timer|counter_v[20]         ; regout           ;
+; |VGA_Timer|counter_v[19]         ; |VGA_Timer|counter_v[19]         ; regout           ;
+; |VGA_Timer|Equal1~2              ; |VGA_Timer|Equal1~2              ; combout          ;
+; |VGA_Timer|counter_v[18]         ; |VGA_Timer|counter_v[18]         ; regout           ;
+; |VGA_Timer|counter_v[17]         ; |VGA_Timer|counter_v[17]         ; regout           ;
+; |VGA_Timer|counter_v[16]         ; |VGA_Timer|counter_v[16]         ; regout           ;
+; |VGA_Timer|counter_v[15]         ; |VGA_Timer|counter_v[15]         ; regout           ;
+; |VGA_Timer|Equal1~3              ; |VGA_Timer|Equal1~3              ; combout          ;
+; |VGA_Timer|Equal1~4              ; |VGA_Timer|Equal1~4              ; combout          ;
+; |VGA_Timer|counter_v[14]         ; |VGA_Timer|counter_v[14]         ; regout           ;
+; |VGA_Timer|counter_v[13]         ; |VGA_Timer|counter_v[13]         ; regout           ;
+; |VGA_Timer|counter_v[12]         ; |VGA_Timer|counter_v[12]         ; regout           ;
+; |VGA_Timer|counter_v[11]         ; |VGA_Timer|counter_v[11]         ; regout           ;
+; |VGA_Timer|Equal1~5              ; |VGA_Timer|Equal1~5              ; combout          ;
+; |VGA_Timer|counter_v[10]         ; |VGA_Timer|counter_v[10]         ; regout           ;
+; |VGA_Timer|counter_v~70          ; |VGA_Timer|counter_v~70          ; combout          ;
+; |VGA_Timer|counter_v~71          ; |VGA_Timer|counter_v~71          ; combout          ;
+; |VGA_Timer|counter_v~72          ; |VGA_Timer|counter_v~72          ; combout          ;
+; |VGA_Timer|counter_v~73          ; |VGA_Timer|counter_v~73          ; combout          ;
+; |VGA_Timer|process_0~16          ; |VGA_Timer|process_0~16          ; combout          ;
+; |VGA_Timer|counter_v~74          ; |VGA_Timer|counter_v~74          ; combout          ;
+; |VGA_Timer|counter_v~75          ; |VGA_Timer|counter_v~75          ; combout          ;
+; |VGA_Timer|counter_v~76          ; |VGA_Timer|counter_v~76          ; combout          ;
+; |VGA_Timer|counter_v~77          ; |VGA_Timer|counter_v~77          ; combout          ;
+; |VGA_Timer|process_0~17          ; |VGA_Timer|process_0~17          ; combout          ;
+; |VGA_Timer|counter_v~78          ; |VGA_Timer|counter_v~78          ; combout          ;
+; |VGA_Timer|process_0~18          ; |VGA_Timer|process_0~18          ; combout          ;
+; |VGA_Timer|process_0~19          ; |VGA_Timer|process_0~19          ; combout          ;
+; |VGA_Timer|process_0~20          ; |VGA_Timer|process_0~20          ; combout          ;
+; |VGA_Timer|process_0~21          ; |VGA_Timer|process_0~21          ; combout          ;
+; |VGA_Timer|counter_v~79          ; |VGA_Timer|counter_v~79          ; combout          ;
+; |VGA_Timer|counter_v~80          ; |VGA_Timer|counter_v~80          ; combout          ;
+; |VGA_Timer|process_0~22          ; |VGA_Timer|process_0~22          ; combout          ;
+; |VGA_Timer|counter_v~81          ; |VGA_Timer|counter_v~81          ; combout          ;
+; |VGA_Timer|process_0~23          ; |VGA_Timer|process_0~23          ; combout          ;
+; |VGA_Timer|counter_v~82          ; |VGA_Timer|counter_v~82          ; combout          ;
+; |VGA_Timer|counter_v~83          ; |VGA_Timer|counter_v~83          ; combout          ;
+; |VGA_Timer|counter_v~84          ; |VGA_Timer|counter_v~84          ; combout          ;
+; |VGA_Timer|process_0~24          ; |VGA_Timer|process_0~24          ; combout          ;
+; |VGA_Timer|process_0~25          ; |VGA_Timer|process_0~25          ; combout          ;
+; |VGA_Timer|counter_v~87          ; |VGA_Timer|counter_v~87          ; combout          ;
+; |VGA_Timer|counter_v~88          ; |VGA_Timer|counter_v~88          ; combout          ;
+; |VGA_Timer|counter_v~89          ; |VGA_Timer|counter_v~89          ; combout          ;
+; |VGA_Timer|counter_v~90          ; |VGA_Timer|counter_v~90          ; combout          ;
+; |VGA_Timer|counter_v~91          ; |VGA_Timer|counter_v~91          ; combout          ;
+; |VGA_Timer|counter_v~92          ; |VGA_Timer|counter_v~92          ; combout          ;
+; |VGA_Timer|process_0~27          ; |VGA_Timer|process_0~27          ; combout          ;
+; |VGA_Timer|process_0~28          ; |VGA_Timer|process_0~28          ; combout          ;
+; |VGA_Timer|process_0~29          ; |VGA_Timer|process_0~29          ; combout          ;
+; |VGA_Timer|process_0~30          ; |VGA_Timer|process_0~30          ; combout          ;
+; |VGA_Timer|process_0~34          ; |VGA_Timer|process_0~34          ; combout          ;
+; |VGA_Timer|process_0~35          ; |VGA_Timer|process_0~35          ; combout          ;
+; |VGA_Timer|process_0~36          ; |VGA_Timer|process_0~36          ; combout          ;
+; |VGA_Timer|process_0~37          ; |VGA_Timer|process_0~37          ; combout          ;
+; |VGA_Timer|process_0~38          ; |VGA_Timer|process_0~38          ; combout          ;
+; |VGA_Timer|process_0~39          ; |VGA_Timer|process_0~39          ; combout          ;
+; |VGA_Timer|row[10]               ; |VGA_Timer|row[10]               ; padio            ;
+; |VGA_Timer|row[11]               ; |VGA_Timer|row[11]               ; padio            ;
+; |VGA_Timer|row[12]               ; |VGA_Timer|row[12]               ; padio            ;
+; |VGA_Timer|row[13]               ; |VGA_Timer|row[13]               ; padio            ;
+; |VGA_Timer|row[14]               ; |VGA_Timer|row[14]               ; padio            ;
+; |VGA_Timer|row[15]               ; |VGA_Timer|row[15]               ; padio            ;
+; |VGA_Timer|row[16]               ; |VGA_Timer|row[16]               ; padio            ;
+; |VGA_Timer|row[17]               ; |VGA_Timer|row[17]               ; padio            ;
+; |VGA_Timer|row[18]               ; |VGA_Timer|row[18]               ; padio            ;
+; |VGA_Timer|row[19]               ; |VGA_Timer|row[19]               ; padio            ;
+; |VGA_Timer|row[20]               ; |VGA_Timer|row[20]               ; padio            ;
+; |VGA_Timer|row[21]               ; |VGA_Timer|row[21]               ; padio            ;
+; |VGA_Timer|row[22]               ; |VGA_Timer|row[22]               ; padio            ;
+; |VGA_Timer|row[23]               ; |VGA_Timer|row[23]               ; padio            ;
+; |VGA_Timer|row[24]               ; |VGA_Timer|row[24]               ; padio            ;
+; |VGA_Timer|row[25]               ; |VGA_Timer|row[25]               ; padio            ;
+; |VGA_Timer|row[26]               ; |VGA_Timer|row[26]               ; padio            ;
+; |VGA_Timer|row[27]               ; |VGA_Timer|row[27]               ; padio            ;
+; |VGA_Timer|row[28]               ; |VGA_Timer|row[28]               ; padio            ;
+; |VGA_Timer|row[29]               ; |VGA_Timer|row[29]               ; padio            ;
+; |VGA_Timer|row[30]               ; |VGA_Timer|row[30]               ; padio            ;
+; |VGA_Timer|column[11]            ; |VGA_Timer|column[11]            ; padio            ;
+; |VGA_Timer|column[12]            ; |VGA_Timer|column[12]            ; padio            ;
+; |VGA_Timer|column[13]            ; |VGA_Timer|column[13]            ; padio            ;
+; |VGA_Timer|column[14]            ; |VGA_Timer|column[14]            ; padio            ;
+; |VGA_Timer|column[15]            ; |VGA_Timer|column[15]            ; padio            ;
+; |VGA_Timer|column[16]            ; |VGA_Timer|column[16]            ; padio            ;
+; |VGA_Timer|column[17]            ; |VGA_Timer|column[17]            ; padio            ;
+; |VGA_Timer|column[18]            ; |VGA_Timer|column[18]            ; padio            ;
+; |VGA_Timer|column[19]            ; |VGA_Timer|column[19]            ; padio            ;
+; |VGA_Timer|column[20]            ; |VGA_Timer|column[20]            ; padio            ;
+; |VGA_Timer|column[21]            ; |VGA_Timer|column[21]            ; padio            ;
+; |VGA_Timer|column[22]            ; |VGA_Timer|column[22]            ; padio            ;
+; |VGA_Timer|column[23]            ; |VGA_Timer|column[23]            ; padio            ;
+; |VGA_Timer|column[24]            ; |VGA_Timer|column[24]            ; padio            ;
+; |VGA_Timer|column[25]            ; |VGA_Timer|column[25]            ; padio            ;
+; |VGA_Timer|column[26]            ; |VGA_Timer|column[26]            ; padio            ;
+; |VGA_Timer|column[27]            ; |VGA_Timer|column[27]            ; padio            ;
+; |VGA_Timer|column[28]            ; |VGA_Timer|column[28]            ; padio            ;
+; |VGA_Timer|column[29]            ; |VGA_Timer|column[29]            ; padio            ;
+; |VGA_Timer|column[30]            ; |VGA_Timer|column[30]            ; padio            ;
+; |VGA_Timer|column[12]~reg0feeder ; |VGA_Timer|column[12]~reg0feeder ; combout          ;
+; |VGA_Timer|column[13]~reg0feeder ; |VGA_Timer|column[13]~reg0feeder ; combout          ;
+; |VGA_Timer|column[15]~reg0feeder ; |VGA_Timer|column[15]~reg0feeder ; combout          ;
+; |VGA_Timer|column[16]~reg0feeder ; |VGA_Timer|column[16]~reg0feeder ; combout          ;
+; |VGA_Timer|column[17]~reg0feeder ; |VGA_Timer|column[17]~reg0feeder ; combout          ;
+; |VGA_Timer|column[20]~reg0feeder ; |VGA_Timer|column[20]~reg0feeder ; combout          ;
+; |VGA_Timer|column[21]~reg0feeder ; |VGA_Timer|column[21]~reg0feeder ; combout          ;
+; |VGA_Timer|column[22]~reg0feeder ; |VGA_Timer|column[22]~reg0feeder ; combout          ;
+; |VGA_Timer|column[23]~reg0feeder ; |VGA_Timer|column[23]~reg0feeder ; combout          ;
+; |VGA_Timer|column[24]~reg0feeder ; |VGA_Timer|column[24]~reg0feeder ; combout          ;
+; |VGA_Timer|column[25]~reg0feeder ; |VGA_Timer|column[25]~reg0feeder ; combout          ;
+; |VGA_Timer|column[26]~reg0feeder ; |VGA_Timer|column[26]~reg0feeder ; combout          ;
+; |VGA_Timer|column[27]~reg0feeder ; |VGA_Timer|column[27]~reg0feeder ; combout          ;
+; |VGA_Timer|column[28]~reg0feeder ; |VGA_Timer|column[28]~reg0feeder ; combout          ;
+; |VGA_Timer|column[29]~reg0feeder ; |VGA_Timer|column[29]~reg0feeder ; combout          ;
+; |VGA_Timer|row[25]~reg0feeder    ; |VGA_Timer|row[25]~reg0feeder    ; combout          ;
+; |VGA_Timer|row[29]~reg0feeder    ; |VGA_Timer|row[29]~reg0feeder    ; combout          ;
+; |VGA_Timer|row[18]~reg0feeder    ; |VGA_Timer|row[18]~reg0feeder    ; combout          ;
+; |VGA_Timer|counter_v[27]~feeder  ; |VGA_Timer|counter_v[27]~feeder  ; combout          ;
+; |VGA_Timer|row[27]~reg0feeder    ; |VGA_Timer|row[27]~reg0feeder    ; combout          ;
+; |VGA_Timer|row[24]~reg0feeder    ; |VGA_Timer|row[24]~reg0feeder    ; combout          ;
+; |VGA_Timer|counter_v[12]~feeder  ; |VGA_Timer|counter_v[12]~feeder  ; combout          ;
++----------------------------------+----------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                               ;
++----------------------------------+----------------------------------+------------------+
+; Node Name                        ; Output Port Name                 ; Output Port Type ;
++----------------------------------+----------------------------------+------------------+
+; |VGA_Timer|Add1~20               ; |VGA_Timer|Add1~21               ; cout             ;
+; |VGA_Timer|Add1~22               ; |VGA_Timer|Add1~22               ; combout          ;
+; |VGA_Timer|Add1~22               ; |VGA_Timer|Add1~23               ; cout             ;
+; |VGA_Timer|Add1~24               ; |VGA_Timer|Add1~24               ; combout          ;
+; |VGA_Timer|Add1~24               ; |VGA_Timer|Add1~25               ; cout             ;
+; |VGA_Timer|Add1~26               ; |VGA_Timer|Add1~26               ; combout          ;
+; |VGA_Timer|Add1~26               ; |VGA_Timer|Add1~27               ; cout             ;
+; |VGA_Timer|Add1~28               ; |VGA_Timer|Add1~28               ; combout          ;
+; |VGA_Timer|Add1~28               ; |VGA_Timer|Add1~29               ; cout             ;
+; |VGA_Timer|Add1~30               ; |VGA_Timer|Add1~30               ; combout          ;
+; |VGA_Timer|Add1~30               ; |VGA_Timer|Add1~31               ; cout             ;
+; |VGA_Timer|Add1~32               ; |VGA_Timer|Add1~32               ; combout          ;
+; |VGA_Timer|Add1~32               ; |VGA_Timer|Add1~33               ; cout             ;
+; |VGA_Timer|Add1~34               ; |VGA_Timer|Add1~34               ; combout          ;
+; |VGA_Timer|Add1~34               ; |VGA_Timer|Add1~35               ; cout             ;
+; |VGA_Timer|Add1~36               ; |VGA_Timer|Add1~36               ; combout          ;
+; |VGA_Timer|Add1~36               ; |VGA_Timer|Add1~37               ; cout             ;
+; |VGA_Timer|Add1~38               ; |VGA_Timer|Add1~38               ; combout          ;
+; |VGA_Timer|Add1~38               ; |VGA_Timer|Add1~39               ; cout             ;
+; |VGA_Timer|Add1~40               ; |VGA_Timer|Add1~40               ; combout          ;
+; |VGA_Timer|Add1~40               ; |VGA_Timer|Add1~41               ; cout             ;
+; |VGA_Timer|Add1~42               ; |VGA_Timer|Add1~42               ; combout          ;
+; |VGA_Timer|Add1~42               ; |VGA_Timer|Add1~43               ; cout             ;
+; |VGA_Timer|Add1~44               ; |VGA_Timer|Add1~44               ; combout          ;
+; |VGA_Timer|Add1~44               ; |VGA_Timer|Add1~45               ; cout             ;
+; |VGA_Timer|Add1~46               ; |VGA_Timer|Add1~46               ; combout          ;
+; |VGA_Timer|Add1~46               ; |VGA_Timer|Add1~47               ; cout             ;
+; |VGA_Timer|Add1~48               ; |VGA_Timer|Add1~48               ; combout          ;
+; |VGA_Timer|Add1~48               ; |VGA_Timer|Add1~49               ; cout             ;
+; |VGA_Timer|Add1~50               ; |VGA_Timer|Add1~50               ; combout          ;
+; |VGA_Timer|Add1~50               ; |VGA_Timer|Add1~51               ; cout             ;
+; |VGA_Timer|Add1~52               ; |VGA_Timer|Add1~52               ; combout          ;
+; |VGA_Timer|Add1~52               ; |VGA_Timer|Add1~53               ; cout             ;
+; |VGA_Timer|Add1~54               ; |VGA_Timer|Add1~54               ; combout          ;
+; |VGA_Timer|Add1~54               ; |VGA_Timer|Add1~55               ; cout             ;
+; |VGA_Timer|Add1~56               ; |VGA_Timer|Add1~56               ; combout          ;
+; |VGA_Timer|Add1~56               ; |VGA_Timer|Add1~57               ; cout             ;
+; |VGA_Timer|Add1~58               ; |VGA_Timer|Add1~58               ; combout          ;
+; |VGA_Timer|Add1~58               ; |VGA_Timer|Add1~59               ; cout             ;
+; |VGA_Timer|Add1~60               ; |VGA_Timer|Add1~60               ; combout          ;
+; |VGA_Timer|Add0~18               ; |VGA_Timer|Add0~19               ; cout             ;
+; |VGA_Timer|Add0~20               ; |VGA_Timer|Add0~20               ; combout          ;
+; |VGA_Timer|Add0~20               ; |VGA_Timer|Add0~21               ; cout             ;
+; |VGA_Timer|Add0~22               ; |VGA_Timer|Add0~22               ; combout          ;
+; |VGA_Timer|Add0~22               ; |VGA_Timer|Add0~23               ; cout             ;
+; |VGA_Timer|Add0~24               ; |VGA_Timer|Add0~24               ; combout          ;
+; |VGA_Timer|Add0~24               ; |VGA_Timer|Add0~25               ; cout             ;
+; |VGA_Timer|Add0~26               ; |VGA_Timer|Add0~26               ; combout          ;
+; |VGA_Timer|Add0~26               ; |VGA_Timer|Add0~27               ; cout             ;
+; |VGA_Timer|Add0~28               ; |VGA_Timer|Add0~28               ; combout          ;
+; |VGA_Timer|Add0~28               ; |VGA_Timer|Add0~29               ; cout             ;
+; |VGA_Timer|Add0~30               ; |VGA_Timer|Add0~30               ; combout          ;
+; |VGA_Timer|Add0~30               ; |VGA_Timer|Add0~31               ; cout             ;
+; |VGA_Timer|Add0~32               ; |VGA_Timer|Add0~32               ; combout          ;
+; |VGA_Timer|Add0~32               ; |VGA_Timer|Add0~33               ; cout             ;
+; |VGA_Timer|Add0~34               ; |VGA_Timer|Add0~34               ; combout          ;
+; |VGA_Timer|Add0~34               ; |VGA_Timer|Add0~35               ; cout             ;
+; |VGA_Timer|Add0~36               ; |VGA_Timer|Add0~36               ; combout          ;
+; |VGA_Timer|Add0~36               ; |VGA_Timer|Add0~37               ; cout             ;
+; |VGA_Timer|Add0~38               ; |VGA_Timer|Add0~38               ; combout          ;
+; |VGA_Timer|Add0~38               ; |VGA_Timer|Add0~39               ; cout             ;
+; |VGA_Timer|Add0~40               ; |VGA_Timer|Add0~40               ; combout          ;
+; |VGA_Timer|Add0~40               ; |VGA_Timer|Add0~41               ; cout             ;
+; |VGA_Timer|Add0~42               ; |VGA_Timer|Add0~42               ; combout          ;
+; |VGA_Timer|Add0~42               ; |VGA_Timer|Add0~43               ; cout             ;
+; |VGA_Timer|Add0~44               ; |VGA_Timer|Add0~44               ; combout          ;
+; |VGA_Timer|Add0~44               ; |VGA_Timer|Add0~45               ; cout             ;
+; |VGA_Timer|Add0~46               ; |VGA_Timer|Add0~46               ; combout          ;
+; |VGA_Timer|Add0~46               ; |VGA_Timer|Add0~47               ; cout             ;
+; |VGA_Timer|Add0~48               ; |VGA_Timer|Add0~48               ; combout          ;
+; |VGA_Timer|Add0~48               ; |VGA_Timer|Add0~49               ; cout             ;
+; |VGA_Timer|Add0~50               ; |VGA_Timer|Add0~50               ; combout          ;
+; |VGA_Timer|Add0~50               ; |VGA_Timer|Add0~51               ; cout             ;
+; |VGA_Timer|Add0~52               ; |VGA_Timer|Add0~52               ; combout          ;
+; |VGA_Timer|Add0~52               ; |VGA_Timer|Add0~53               ; cout             ;
+; |VGA_Timer|Add0~54               ; |VGA_Timer|Add0~54               ; combout          ;
+; |VGA_Timer|Add0~54               ; |VGA_Timer|Add0~55               ; cout             ;
+; |VGA_Timer|Add0~56               ; |VGA_Timer|Add0~56               ; combout          ;
+; |VGA_Timer|Add0~56               ; |VGA_Timer|Add0~57               ; cout             ;
+; |VGA_Timer|Add0~58               ; |VGA_Timer|Add0~58               ; combout          ;
+; |VGA_Timer|Add0~58               ; |VGA_Timer|Add0~59               ; cout             ;
+; |VGA_Timer|Add0~60               ; |VGA_Timer|Add0~60               ; combout          ;
+; |VGA_Timer|row[10]~reg0          ; |VGA_Timer|row[10]~reg0          ; regout           ;
+; |VGA_Timer|row[11]~reg0          ; |VGA_Timer|row[11]~reg0          ; regout           ;
+; |VGA_Timer|row[12]~reg0          ; |VGA_Timer|row[12]~reg0          ; regout           ;
+; |VGA_Timer|row[13]~reg0          ; |VGA_Timer|row[13]~reg0          ; regout           ;
+; |VGA_Timer|row[14]~reg0          ; |VGA_Timer|row[14]~reg0          ; regout           ;
+; |VGA_Timer|row[15]~reg0          ; |VGA_Timer|row[15]~reg0          ; regout           ;
+; |VGA_Timer|row[16]~reg0          ; |VGA_Timer|row[16]~reg0          ; regout           ;
+; |VGA_Timer|row[17]~reg0          ; |VGA_Timer|row[17]~reg0          ; regout           ;
+; |VGA_Timer|row[18]~reg0          ; |VGA_Timer|row[18]~reg0          ; regout           ;
+; |VGA_Timer|row[19]~reg0          ; |VGA_Timer|row[19]~reg0          ; regout           ;
+; |VGA_Timer|row[20]~reg0          ; |VGA_Timer|row[20]~reg0          ; regout           ;
+; |VGA_Timer|row[21]~reg0          ; |VGA_Timer|row[21]~reg0          ; regout           ;
+; |VGA_Timer|row[22]~reg0          ; |VGA_Timer|row[22]~reg0          ; regout           ;
+; |VGA_Timer|row[23]~reg0          ; |VGA_Timer|row[23]~reg0          ; regout           ;
+; |VGA_Timer|row[24]~reg0          ; |VGA_Timer|row[24]~reg0          ; regout           ;
+; |VGA_Timer|row[25]~reg0          ; |VGA_Timer|row[25]~reg0          ; regout           ;
+; |VGA_Timer|row[26]~reg0          ; |VGA_Timer|row[26]~reg0          ; regout           ;
+; |VGA_Timer|row[27]~reg0          ; |VGA_Timer|row[27]~reg0          ; regout           ;
+; |VGA_Timer|row[28]~reg0          ; |VGA_Timer|row[28]~reg0          ; regout           ;
+; |VGA_Timer|row[29]~reg0          ; |VGA_Timer|row[29]~reg0          ; regout           ;
+; |VGA_Timer|row[30]~reg0          ; |VGA_Timer|row[30]~reg0          ; regout           ;
+; |VGA_Timer|column[11]~reg0       ; |VGA_Timer|column[11]~reg0       ; regout           ;
+; |VGA_Timer|column[12]~reg0       ; |VGA_Timer|column[12]~reg0       ; regout           ;
+; |VGA_Timer|column[13]~reg0       ; |VGA_Timer|column[13]~reg0       ; regout           ;
+; |VGA_Timer|column[14]~reg0       ; |VGA_Timer|column[14]~reg0       ; regout           ;
+; |VGA_Timer|column[15]~reg0       ; |VGA_Timer|column[15]~reg0       ; regout           ;
+; |VGA_Timer|column[16]~reg0       ; |VGA_Timer|column[16]~reg0       ; regout           ;
+; |VGA_Timer|column[17]~reg0       ; |VGA_Timer|column[17]~reg0       ; regout           ;
+; |VGA_Timer|column[18]~reg0       ; |VGA_Timer|column[18]~reg0       ; regout           ;
+; |VGA_Timer|column[19]~reg0       ; |VGA_Timer|column[19]~reg0       ; regout           ;
+; |VGA_Timer|column[20]~reg0       ; |VGA_Timer|column[20]~reg0       ; regout           ;
+; |VGA_Timer|column[21]~reg0       ; |VGA_Timer|column[21]~reg0       ; regout           ;
+; |VGA_Timer|column[22]~reg0       ; |VGA_Timer|column[22]~reg0       ; regout           ;
+; |VGA_Timer|column[23]~reg0       ; |VGA_Timer|column[23]~reg0       ; regout           ;
+; |VGA_Timer|column[24]~reg0       ; |VGA_Timer|column[24]~reg0       ; regout           ;
+; |VGA_Timer|column[25]~reg0       ; |VGA_Timer|column[25]~reg0       ; regout           ;
+; |VGA_Timer|column[26]~reg0       ; |VGA_Timer|column[26]~reg0       ; regout           ;
+; |VGA_Timer|column[27]~reg0       ; |VGA_Timer|column[27]~reg0       ; regout           ;
+; |VGA_Timer|column[28]~reg0       ; |VGA_Timer|column[28]~reg0       ; regout           ;
+; |VGA_Timer|column[29]~reg0       ; |VGA_Timer|column[29]~reg0       ; regout           ;
+; |VGA_Timer|column[30]~reg0       ; |VGA_Timer|column[30]~reg0       ; regout           ;
+; |VGA_Timer|counter_h[11]         ; |VGA_Timer|counter_h[11]         ; regout           ;
+; |VGA_Timer|counter_h[12]         ; |VGA_Timer|counter_h[12]         ; regout           ;
+; |VGA_Timer|counter_h[13]         ; |VGA_Timer|counter_h[13]         ; regout           ;
+; |VGA_Timer|counter_h[14]         ; |VGA_Timer|counter_h[14]         ; regout           ;
+; |VGA_Timer|counter_h[15]         ; |VGA_Timer|counter_h[15]         ; regout           ;
+; |VGA_Timer|Equal0~3              ; |VGA_Timer|Equal0~3              ; combout          ;
+; |VGA_Timer|counter_h[16]         ; |VGA_Timer|counter_h[16]         ; regout           ;
+; |VGA_Timer|counter_h[17]         ; |VGA_Timer|counter_h[17]         ; regout           ;
+; |VGA_Timer|counter_h[18]         ; |VGA_Timer|counter_h[18]         ; regout           ;
+; |VGA_Timer|counter_h[19]         ; |VGA_Timer|counter_h[19]         ; regout           ;
+; |VGA_Timer|Equal0~5              ; |VGA_Timer|Equal0~5              ; combout          ;
+; |VGA_Timer|counter_h[20]         ; |VGA_Timer|counter_h[20]         ; regout           ;
+; |VGA_Timer|counter_h[21]         ; |VGA_Timer|counter_h[21]         ; regout           ;
+; |VGA_Timer|counter_h[22]         ; |VGA_Timer|counter_h[22]         ; regout           ;
+; |VGA_Timer|counter_h[23]         ; |VGA_Timer|counter_h[23]         ; regout           ;
+; |VGA_Timer|Equal0~6              ; |VGA_Timer|Equal0~6              ; combout          ;
+; |VGA_Timer|counter_h[24]         ; |VGA_Timer|counter_h[24]         ; regout           ;
+; |VGA_Timer|counter_h[25]         ; |VGA_Timer|counter_h[25]         ; regout           ;
+; |VGA_Timer|counter_h[26]         ; |VGA_Timer|counter_h[26]         ; regout           ;
+; |VGA_Timer|counter_h[27]         ; |VGA_Timer|counter_h[27]         ; regout           ;
+; |VGA_Timer|Equal0~7              ; |VGA_Timer|Equal0~7              ; combout          ;
+; |VGA_Timer|counter_h[28]         ; |VGA_Timer|counter_h[28]         ; regout           ;
+; |VGA_Timer|counter_h[29]         ; |VGA_Timer|counter_h[29]         ; regout           ;
+; |VGA_Timer|counter_h[30]         ; |VGA_Timer|counter_h[30]         ; regout           ;
+; |VGA_Timer|Equal0~8              ; |VGA_Timer|Equal0~8              ; combout          ;
+; |VGA_Timer|process_0~5           ; |VGA_Timer|process_0~5           ; combout          ;
+; |VGA_Timer|process_0~6           ; |VGA_Timer|process_0~6           ; combout          ;
+; |VGA_Timer|process_0~7           ; |VGA_Timer|process_0~7           ; combout          ;
+; |VGA_Timer|process_0~9           ; |VGA_Timer|process_0~9           ; combout          ;
+; |VGA_Timer|process_0~10          ; |VGA_Timer|process_0~10          ; combout          ;
+; |VGA_Timer|counter_v[30]         ; |VGA_Timer|counter_v[30]         ; regout           ;
+; |VGA_Timer|counter_v[29]         ; |VGA_Timer|counter_v[29]         ; regout           ;
+; |VGA_Timer|counter_v[28]         ; |VGA_Timer|counter_v[28]         ; regout           ;
+; |VGA_Timer|counter_v[27]         ; |VGA_Timer|counter_v[27]         ; regout           ;
+; |VGA_Timer|Equal1~0              ; |VGA_Timer|Equal1~0              ; combout          ;
+; |VGA_Timer|counter_v[26]         ; |VGA_Timer|counter_v[26]         ; regout           ;
+; |VGA_Timer|counter_v[25]         ; |VGA_Timer|counter_v[25]         ; regout           ;
+; |VGA_Timer|counter_v[24]         ; |VGA_Timer|counter_v[24]         ; regout           ;
+; |VGA_Timer|counter_v[23]         ; |VGA_Timer|counter_v[23]         ; regout           ;
+; |VGA_Timer|Equal1~1              ; |VGA_Timer|Equal1~1              ; combout          ;
+; |VGA_Timer|counter_v[22]         ; |VGA_Timer|counter_v[22]         ; regout           ;
+; |VGA_Timer|counter_v[21]         ; |VGA_Timer|counter_v[21]         ; regout           ;
+; |VGA_Timer|counter_v[20]         ; |VGA_Timer|counter_v[20]         ; regout           ;
+; |VGA_Timer|counter_v[19]         ; |VGA_Timer|counter_v[19]         ; regout           ;
+; |VGA_Timer|Equal1~2              ; |VGA_Timer|Equal1~2              ; combout          ;
+; |VGA_Timer|counter_v[18]         ; |VGA_Timer|counter_v[18]         ; regout           ;
+; |VGA_Timer|counter_v[17]         ; |VGA_Timer|counter_v[17]         ; regout           ;
+; |VGA_Timer|counter_v[16]         ; |VGA_Timer|counter_v[16]         ; regout           ;
+; |VGA_Timer|counter_v[15]         ; |VGA_Timer|counter_v[15]         ; regout           ;
+; |VGA_Timer|Equal1~3              ; |VGA_Timer|Equal1~3              ; combout          ;
+; |VGA_Timer|Equal1~4              ; |VGA_Timer|Equal1~4              ; combout          ;
+; |VGA_Timer|counter_v[14]         ; |VGA_Timer|counter_v[14]         ; regout           ;
+; |VGA_Timer|counter_v[13]         ; |VGA_Timer|counter_v[13]         ; regout           ;
+; |VGA_Timer|counter_v[12]         ; |VGA_Timer|counter_v[12]         ; regout           ;
+; |VGA_Timer|counter_v[11]         ; |VGA_Timer|counter_v[11]         ; regout           ;
+; |VGA_Timer|Equal1~5              ; |VGA_Timer|Equal1~5              ; combout          ;
+; |VGA_Timer|counter_v[10]         ; |VGA_Timer|counter_v[10]         ; regout           ;
+; |VGA_Timer|counter_v~70          ; |VGA_Timer|counter_v~70          ; combout          ;
+; |VGA_Timer|counter_v~71          ; |VGA_Timer|counter_v~71          ; combout          ;
+; |VGA_Timer|counter_v~72          ; |VGA_Timer|counter_v~72          ; combout          ;
+; |VGA_Timer|counter_v~73          ; |VGA_Timer|counter_v~73          ; combout          ;
+; |VGA_Timer|process_0~16          ; |VGA_Timer|process_0~16          ; combout          ;
+; |VGA_Timer|counter_v~74          ; |VGA_Timer|counter_v~74          ; combout          ;
+; |VGA_Timer|counter_v~75          ; |VGA_Timer|counter_v~75          ; combout          ;
+; |VGA_Timer|counter_v~76          ; |VGA_Timer|counter_v~76          ; combout          ;
+; |VGA_Timer|counter_v~77          ; |VGA_Timer|counter_v~77          ; combout          ;
+; |VGA_Timer|process_0~17          ; |VGA_Timer|process_0~17          ; combout          ;
+; |VGA_Timer|counter_v~78          ; |VGA_Timer|counter_v~78          ; combout          ;
+; |VGA_Timer|process_0~18          ; |VGA_Timer|process_0~18          ; combout          ;
+; |VGA_Timer|process_0~19          ; |VGA_Timer|process_0~19          ; combout          ;
+; |VGA_Timer|process_0~20          ; |VGA_Timer|process_0~20          ; combout          ;
+; |VGA_Timer|process_0~21          ; |VGA_Timer|process_0~21          ; combout          ;
+; |VGA_Timer|counter_v~79          ; |VGA_Timer|counter_v~79          ; combout          ;
+; |VGA_Timer|counter_v~80          ; |VGA_Timer|counter_v~80          ; combout          ;
+; |VGA_Timer|process_0~22          ; |VGA_Timer|process_0~22          ; combout          ;
+; |VGA_Timer|counter_v~81          ; |VGA_Timer|counter_v~81          ; combout          ;
+; |VGA_Timer|process_0~23          ; |VGA_Timer|process_0~23          ; combout          ;
+; |VGA_Timer|counter_v~82          ; |VGA_Timer|counter_v~82          ; combout          ;
+; |VGA_Timer|counter_v~83          ; |VGA_Timer|counter_v~83          ; combout          ;
+; |VGA_Timer|counter_v~84          ; |VGA_Timer|counter_v~84          ; combout          ;
+; |VGA_Timer|process_0~24          ; |VGA_Timer|process_0~24          ; combout          ;
+; |VGA_Timer|process_0~25          ; |VGA_Timer|process_0~25          ; combout          ;
+; |VGA_Timer|counter_v~87          ; |VGA_Timer|counter_v~87          ; combout          ;
+; |VGA_Timer|counter_v~88          ; |VGA_Timer|counter_v~88          ; combout          ;
+; |VGA_Timer|counter_v~89          ; |VGA_Timer|counter_v~89          ; combout          ;
+; |VGA_Timer|counter_v~90          ; |VGA_Timer|counter_v~90          ; combout          ;
+; |VGA_Timer|counter_v~91          ; |VGA_Timer|counter_v~91          ; combout          ;
+; |VGA_Timer|counter_v~92          ; |VGA_Timer|counter_v~92          ; combout          ;
+; |VGA_Timer|process_0~27          ; |VGA_Timer|process_0~27          ; combout          ;
+; |VGA_Timer|process_0~28          ; |VGA_Timer|process_0~28          ; combout          ;
+; |VGA_Timer|process_0~29          ; |VGA_Timer|process_0~29          ; combout          ;
+; |VGA_Timer|process_0~30          ; |VGA_Timer|process_0~30          ; combout          ;
+; |VGA_Timer|process_0~34          ; |VGA_Timer|process_0~34          ; combout          ;
+; |VGA_Timer|process_0~35          ; |VGA_Timer|process_0~35          ; combout          ;
+; |VGA_Timer|process_0~36          ; |VGA_Timer|process_0~36          ; combout          ;
+; |VGA_Timer|process_0~37          ; |VGA_Timer|process_0~37          ; combout          ;
+; |VGA_Timer|process_0~38          ; |VGA_Timer|process_0~38          ; combout          ;
+; |VGA_Timer|process_0~39          ; |VGA_Timer|process_0~39          ; combout          ;
+; |VGA_Timer|row[10]               ; |VGA_Timer|row[10]               ; padio            ;
+; |VGA_Timer|row[11]               ; |VGA_Timer|row[11]               ; padio            ;
+; |VGA_Timer|row[12]               ; |VGA_Timer|row[12]               ; padio            ;
+; |VGA_Timer|row[13]               ; |VGA_Timer|row[13]               ; padio            ;
+; |VGA_Timer|row[14]               ; |VGA_Timer|row[14]               ; padio            ;
+; |VGA_Timer|row[15]               ; |VGA_Timer|row[15]               ; padio            ;
+; |VGA_Timer|row[16]               ; |VGA_Timer|row[16]               ; padio            ;
+; |VGA_Timer|row[17]               ; |VGA_Timer|row[17]               ; padio            ;
+; |VGA_Timer|row[18]               ; |VGA_Timer|row[18]               ; padio            ;
+; |VGA_Timer|row[19]               ; |VGA_Timer|row[19]               ; padio            ;
+; |VGA_Timer|row[20]               ; |VGA_Timer|row[20]               ; padio            ;
+; |VGA_Timer|row[21]               ; |VGA_Timer|row[21]               ; padio            ;
+; |VGA_Timer|row[22]               ; |VGA_Timer|row[22]               ; padio            ;
+; |VGA_Timer|row[23]               ; |VGA_Timer|row[23]               ; padio            ;
+; |VGA_Timer|row[24]               ; |VGA_Timer|row[24]               ; padio            ;
+; |VGA_Timer|row[25]               ; |VGA_Timer|row[25]               ; padio            ;
+; |VGA_Timer|row[26]               ; |VGA_Timer|row[26]               ; padio            ;
+; |VGA_Timer|row[27]               ; |VGA_Timer|row[27]               ; padio            ;
+; |VGA_Timer|row[28]               ; |VGA_Timer|row[28]               ; padio            ;
+; |VGA_Timer|row[29]               ; |VGA_Timer|row[29]               ; padio            ;
+; |VGA_Timer|row[30]               ; |VGA_Timer|row[30]               ; padio            ;
+; |VGA_Timer|column[11]            ; |VGA_Timer|column[11]            ; padio            ;
+; |VGA_Timer|column[12]            ; |VGA_Timer|column[12]            ; padio            ;
+; |VGA_Timer|column[13]            ; |VGA_Timer|column[13]            ; padio            ;
+; |VGA_Timer|column[14]            ; |VGA_Timer|column[14]            ; padio            ;
+; |VGA_Timer|column[15]            ; |VGA_Timer|column[15]            ; padio            ;
+; |VGA_Timer|column[16]            ; |VGA_Timer|column[16]            ; padio            ;
+; |VGA_Timer|column[17]            ; |VGA_Timer|column[17]            ; padio            ;
+; |VGA_Timer|column[18]            ; |VGA_Timer|column[18]            ; padio            ;
+; |VGA_Timer|column[19]            ; |VGA_Timer|column[19]            ; padio            ;
+; |VGA_Timer|column[20]            ; |VGA_Timer|column[20]            ; padio            ;
+; |VGA_Timer|column[21]            ; |VGA_Timer|column[21]            ; padio            ;
+; |VGA_Timer|column[22]            ; |VGA_Timer|column[22]            ; padio            ;
+; |VGA_Timer|column[23]            ; |VGA_Timer|column[23]            ; padio            ;
+; |VGA_Timer|column[24]            ; |VGA_Timer|column[24]            ; padio            ;
+; |VGA_Timer|column[25]            ; |VGA_Timer|column[25]            ; padio            ;
+; |VGA_Timer|column[26]            ; |VGA_Timer|column[26]            ; padio            ;
+; |VGA_Timer|column[27]            ; |VGA_Timer|column[27]            ; padio            ;
+; |VGA_Timer|column[28]            ; |VGA_Timer|column[28]            ; padio            ;
+; |VGA_Timer|column[29]            ; |VGA_Timer|column[29]            ; padio            ;
+; |VGA_Timer|column[30]            ; |VGA_Timer|column[30]            ; padio            ;
+; |VGA_Timer|column[12]~reg0feeder ; |VGA_Timer|column[12]~reg0feeder ; combout          ;
+; |VGA_Timer|column[13]~reg0feeder ; |VGA_Timer|column[13]~reg0feeder ; combout          ;
+; |VGA_Timer|column[15]~reg0feeder ; |VGA_Timer|column[15]~reg0feeder ; combout          ;
+; |VGA_Timer|column[16]~reg0feeder ; |VGA_Timer|column[16]~reg0feeder ; combout          ;
+; |VGA_Timer|column[17]~reg0feeder ; |VGA_Timer|column[17]~reg0feeder ; combout          ;
+; |VGA_Timer|column[20]~reg0feeder ; |VGA_Timer|column[20]~reg0feeder ; combout          ;
+; |VGA_Timer|column[21]~reg0feeder ; |VGA_Timer|column[21]~reg0feeder ; combout          ;
+; |VGA_Timer|column[22]~reg0feeder ; |VGA_Timer|column[22]~reg0feeder ; combout          ;
+; |VGA_Timer|column[23]~reg0feeder ; |VGA_Timer|column[23]~reg0feeder ; combout          ;
+; |VGA_Timer|column[24]~reg0feeder ; |VGA_Timer|column[24]~reg0feeder ; combout          ;
+; |VGA_Timer|column[25]~reg0feeder ; |VGA_Timer|column[25]~reg0feeder ; combout          ;
+; |VGA_Timer|column[26]~reg0feeder ; |VGA_Timer|column[26]~reg0feeder ; combout          ;
+; |VGA_Timer|column[27]~reg0feeder ; |VGA_Timer|column[27]~reg0feeder ; combout          ;
+; |VGA_Timer|column[28]~reg0feeder ; |VGA_Timer|column[28]~reg0feeder ; combout          ;
+; |VGA_Timer|column[29]~reg0feeder ; |VGA_Timer|column[29]~reg0feeder ; combout          ;
+; |VGA_Timer|row[25]~reg0feeder    ; |VGA_Timer|row[25]~reg0feeder    ; combout          ;
+; |VGA_Timer|row[29]~reg0feeder    ; |VGA_Timer|row[29]~reg0feeder    ; combout          ;
+; |VGA_Timer|row[18]~reg0feeder    ; |VGA_Timer|row[18]~reg0feeder    ; combout          ;
+; |VGA_Timer|counter_v[27]~feeder  ; |VGA_Timer|counter_v[27]~feeder  ; combout          ;
+; |VGA_Timer|row[27]~reg0feeder    ; |VGA_Timer|row[27]~reg0feeder    ; combout          ;
+; |VGA_Timer|row[24]~reg0feeder    ; |VGA_Timer|row[24]~reg0feeder    ; combout          ;
+; |VGA_Timer|counter_v[12]~feeder  ; |VGA_Timer|counter_v[12]~feeder  ; combout          ;
++----------------------------------+----------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Tue Mar 06 10:16:09 2018
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off VGA_Timer -c VGA_Timer
+Info: Using vector source file "C:/Users/Максим/Desktop/Quartus_Projects/2/VGA_Timer/VGA_Timer.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 2 sub-simulations
+Info: Simulation coverage is      36.75 %
+Info: Number of transitions in simulation is 69081642
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 216 megabytes
+    Info: Processing ended: Tue Mar 06 10:24:12 2018
+    Info: Elapsed time: 00:08:03
+    Info: Total CPU time (on all processors): 00:07:56
+
+

@@ -1,0 +1,377 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>Atmel ATmega Microcontroller VGA/PAL adapter</title>
+</head>
+<body>
+
+
+<!-- Copyright © 2008. Spidersoft Ltd -->
+<style>
+A.applink:hover {border: 2px dotted #DCE6F4;padding:2px;background-color:#ffff00;color:green;text-decoration:none}
+A.applink       {border: 2px dotted #DCE6F4;padding:2px;color:#2F5BFF;background:transparent;text-decoration:none}
+A.info          {color:#2F5BFF;background:transparent;text-decoration:none}
+A.info:hover    {color:green;background:transparent;text-decoration:underline}
+</style>
+<div style='BORDER: 1px solid #DCE6F4; MARGIN-TOP: 20px; MARGIN-BOTTOM: 20px; MARGIN-LEFT: 5px; MARGIN-RIGHT: 5px; PADDING: 5px; BACKGROUND-COLOR: #eef8ff;line-height:180%; COLOR: #000000; font-family: Arial; font-size: 8pt; width=100%; FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr="#FFFFFFFF", EndColorStr="#F2F5FAFF");'>
+This page was saved using <a class="applink" href="http://www.spidersoft.com"><b>WebZIP 7.1.2.1052</b></a> <a class="applink" href="http://www.spidersoft.com"><b>offline browser</b></a>  (Unregistered) on  01/21/14 12:17:45.<br>
+<b>Address:</b> <a class="info" href="http://tinyvga.com/avr-vga">http://tinyvga.com/avr-vga</a><br>
+<b>Title:</b> Atmel ATmega Microcontroller VGA/PAL adapter &nbsp;&bull;&nbsp; <b>Size:</b> 23532<br></div>
+<!-- /Copyright © 2008. Spidersoft Ltd -->
+
+
+
+<div id="container">
+ <div id="top">
+ <img src="gfx/icon-chip-wht.gif" width=52 height=52> <span class="header">Tiny<span style="color:red">V</span><span style="color:#00ff00">G</span><span style="color:#8040ff">A</span>.com: VGA Microcontroller projects</span>
+    </div><!-- /top -->
+
+<h1>Atmel ATmega Microcontroller VGA/PAL adapter</h1>
+<p>
+
+<div class="rightbox200">
+<div class="whiteinfobox">
+<a href="http://www.microvga.com/">
+<img src="images/monitorico.jpg" align=left />
+Interested in easy to use VGA solution for embedded applications? Click here!</a><p>
+</div>
+</div>
+
+
+               <img src="images/image004.jpg" height="292" width="389"><p>
+                <p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;" align="left"><b><span class="MsoNormal" style="line-height:100%;">&nbsp;&nbsp;</span></b><span class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><b>&gt;</b></span><b><span class="MsoNormal" style="line-height:100%;">&gt; The prototype of VGA video adapter</span></b></p>
+                <p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;" align="left">&nbsp;</p>
+
+    <table cellpadding="0" cellspacing="0" width="1207">
+        <tr>
+            <td width="401">
+
+                <p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;" align="left"><span lang="EN-US"><img src="images/image006.jpg" v:shapes="_x0000_i1028" border="1" height="292" width="389"></span></p>
+                <p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;" align="left"><b><span class="MsoNormal" style="line-height:100%;">&nbsp;&nbsp;</span></b><span class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><b>&gt;</b></span><b><span class="MsoNormal" style="line-height:100%;">&gt; </span><span lang="EN-US">This is what it looks like on a VGA monitor...</span></b></p>
+            </td>
+            <td width="396">
+
+                <p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;" align="left"><span lang="EN-US"><img src="images/image008.jpg" v:shapes="_x0000_i1029" border="0" height="292" width="389"></span></p>
+                <p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;" align="left"><b><span class="MsoNormal" style="line-height:100%;">&nbsp;&nbsp;&nbsp;</span></b><span class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><b>&gt;</b></span><b><span class="MsoNormal" style="line-height:100%;">&gt; ... and output on a TV set.</span></b></p>
+                <p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;" align="left">&nbsp;</p>
+            </td>
+        </tr>
+    </table>
+    <p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</p>
+    <p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</p>
+    <p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</p>
+    <p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><b><u><span lang="EN-US">Background of the project.</span></u></b></p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</p>
+
+<p class="MsoNormal" style="text-align:justify; line-height:100%; margin-top:0; margin-bottom:0;"><span lang="EN-US">Several months ago I tried to connect a microcontroller system to a
+VGA monitor to output data in the form of text. I was surprised to find little
+on this subject on the internet, to assist me in achieving this goal. Certainly
+nothing simple a beginner could find useful.</span></p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</p>
+
+<p class="MsoNormal" style="text-align:justify; line-height:100%; margin-top:0; margin-bottom:0;"><span lang="EN-US">There are examples out there that utilise standards such as PC-104
+or complex FGPA implementations found at <a href="http://www.opencores.org/">www.opencores.org</a>.
+Other solutions include graphic controllers from Fujitsu or even one local
+Russian person who was offering for sale a project for $5000 on ACEX. These are
+fine but are little help to most hobbyists etc out there who wish to display
+text on a VGA or similar screen.</span></p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><span lang="EN-US">What
+I desired was a ‚Äúquick and dirty‚Äù solution that did not cost too much.</span></p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</p>
+
+<p class="MsoNormal" style="text-align:justify; line-height:100%; margin-top:0; margin-bottom:0;"><span lang="EN-US">Initial calculations showed that the the AVR 8-bit microcontroller
+from ATMEL, with its 16Mhz clock speed providing approximately 16 MIPS was a
+good candidate for further research. Also note that newer AVRs such as the
+Mega48, Mega88 and Mega168 will officially support clock rates upto 20
+Mhz.<span style="">&nbsp; </span>Therefore I concluded that with a
+clock of 16 Mhz I could achieve something in the order of 8 Mhz speed of data
+being transferred out of a port.<span style="">&nbsp; </span>I also
+chose the AVR as I had already built up quite a body of experience with it and
+so I began work of the project.</span></p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><span lang="EN-US">After
+approximately two to three months of research, I present you the fruits of my
+labour!</span></p>
+
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><b><u><span lang="EN-US"></span></u></b></p>
+    <p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</p>
+    <p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><b style=""><u><span style="" lang="EN-US">The goal of the project:</span></u></b></p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><span lang="EN-US"></span></p>
+
+<p class="MsoNormal" style="text-align:justify; line-height:100%; margin-top:0; margin-bottom:0;"><span lang="EN-US">The problem which I have set myself is simple enough to
+enumerate.<span style="">&nbsp; </span>With commonly available
+microcontrollers like the Mega8, Mega16 and similar, and with a minimum of
+external components I wanted a design that would be capable of displaying at
+least 15x15 characters on a VGA monitor using standard VGA frequencies.<span style="">&nbsp; </span>The data itself is to be received by the
+microcontroller via its USART port.<span style="">&nbsp; </span>All
+using a 16 Mhz clock for the AVR.</span></p>
+
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><span lang="EN-US">The
+given problem at present is solved successfully.</span></p>
+
+<p class="MsoNormal" style="text-align:justify; line-height:100%; margin-top:0; margin-bottom:0;"><span lang="EN-US">Moreover - the project is a little bit expanded and added by
+introduction of formation usual</span></p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><span lang="EN-US">Video
+monochrome (PAL/SECAM) a signal. I.e. depending on position of a jumper type of
+formed video of signal VGA or Composite Video.<span style="">&nbsp;&nbsp; </span></span></p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</p>
+
+<p class="MsoNormal" style="text-align:justify; line-height:100%; margin-top:0; margin-bottom:0;"><span lang="EN-US">The initial goal has been achieved.<span style="">&nbsp;
+</span>The project has expanded to include Monochomatic Video singal
+(PAL/SECAM). In my test set up a mere jumper determines whether the output is
+VGA or Composite Video.</span></p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</p>
+
+<p style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</p>
+
+
+
+
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><b><u><span lang="EN-US"></span></u></b></p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;" align="left">&nbsp;</p>
+    <table cellpadding="0" cellspacing="0" width="636">
+        <tr>
+            <td width="636">
+                <p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;" align="center"><b><span lang="EN-US"><img src="images/image002.jpg" v:shapes="_x0000_i1026" border="1" height="441" width="623"></span></b></p>
+                <p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;" align="left"><b>&gt;&gt; The schematic of VGA video adapter</b></p>
+            </td>
+        </tr>
+    </table>
+
+
+
+
+
+
+
+    <p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</p>
+    <p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><b><u><span lang="EN-US">Characteristics of the project:</span></u></b></p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><b><u><span lang="EN-US"></span></u></b></p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><b style=""><span lang="EN-US">VGA-terminal:</span></b></p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><span lang="EN-US">Quantity
+of symbols: 20 lines by 20 characters.</span></p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><span lang="EN-US">The
+resolution of a character matrix: 8x12 points</span></p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><span lang="EN-US">Supported
+code page: WIN 1251</span></p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><span lang="EN-US">Formed
+signal: VGA</span></p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><span lang="EN-US">The
+resolution: 640x480</span></p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><span lang="EN-US">Frequency
+of vertical synchronization: 60Hz</span></p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><span lang="EN-US">Speed
+of exchange UART 19200 bps</span></p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><b style=""><span lang="EN-US">Video terminal:</span></b></p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><span lang="EN-US">Quantity
+of symbols: 20 lines by 38 characters.</span></p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><span lang="EN-US">The
+resolution of an individual character matrix: 8x12 points</span></p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><span lang="EN-US">Supported
+code page: WIN 1251</span></p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><span lang="EN-US">Formed
+signal: Composite Video (PAL/SECAM)</span></p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><span lang="EN-US">Resolution:
+625 lines (interlaced)</span></p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><span lang="EN-US">Frequency
+of vertical synchronization: 50Hz</span></p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><span lang="EN-US">Speed
+of exchange UART 19200 bps</span></p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><span lang="EN-US">Type
+of the used microcontroller: Mega8, Mega16, Mega32, Mega8535, etc.</span></p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><span lang="EN-US">Clock
+frequency of the microcontroller standard - 16Mhz.</span></p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><b><u><span lang="EN-US">Notes:</span></u></b></p>
+
+<p class="MsoNormal" style="text-align:justify; text-indent:-18pt; line-height:100%; margin-top:0; margin-bottom:0; margin-left:36pt;"><span lang="EN-US">1. <span style="">&nbsp; </span>To avoid distortion of the image, when
+receiving data through the UART, for VGA, it is recommended to make the data
+exchange with the terminal in approximately 300-600 us after a signal of
+vertical synchronization (VSYNC).</span></p>
+
+<p class="MsoNormal" style="text-align:justify; text-indent:-18pt; line-height:100%; margin-top:0; margin-bottom:0; margin-left:36pt;"><span lang="EN-US">2.<span style="">&nbsp;&nbsp; </span>The available internal RAM of the Mega8535
+(only 512 bytes) is not enough for the formation of a Video signal with a
+resolution of 38x20 symbols.</span></p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</p>
+    <p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><b style=""><u><span style="" lang="EN-US">The program's algorithm:</span></u></b></p>
+
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><span style="" lang="EN-US"><img src="images/image010.jpg" v:shapes="_x0000_i1025" border="1" height="420" width="623"></span></p>
+
+<p style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</p>
+
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><b><u><span lang="EN-US">Explanations on work of the program:</span></u></b></p>
+
+<p class="MsoNormal" style="text-align:justify; line-height:100%; margin-top:0; margin-bottom:0;"><span lang="EN-US">The algorithm of rendering the image is traditional enough, the main
+know-how of the project is the bit-by-bit shifting of the image, utilising the
+SPI shift register SPDR via the MOSI pin. Thus two jobs are performed at the
+same time, when the subsequent byte for rendering is sent, the previous byte is
+shifted out through the shift register (SPI SPDR MOSI). The differences between
+figures 2 &amp; 3 demonstrate this.</span></p>
+    <p class="MsoNormal" style="text-align:justify; line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</p>
+
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><span lang="EN-US"><img src="images/image012.jpg" v:shapes="_x0000_i1030" border="1" height="337" width="623"></span></p>
+
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</p>
+    <p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><span lang="EN-US"><img src="images/image014.jpg" v:shapes="_x0000_i1031" border="1" height="340" width="623"></span></p>
+    <p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</p>
+    <p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</p>
+    <p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><span lang="EN-US"><b><u>Conclusion:</u></b></span></p>
+
+<p class="MsoNormal" style="text-align:justify; line-height:100%; margin-top:0; margin-bottom:0;"><span lang="EN-US">Given the project was written with WinAVR (GCC), it is relatively
+easy to increase the resolution and/or frequencies used in creating the display
+images.<span style="">&nbsp; </span>With the forthcoming
+availability of AVR microcontrollers such as the Mega48, Mega88 and Mega168
+officially supporting clock speeds of 20Mhz it is possible to achieve
+resolutions of 20 lines by 25-30 characters. This is possible using exactly the
+same circuitry.</span></p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</p>
+
+<p class="MsoNormal" style="text-align:justify; line-height:100%; margin-top:0; margin-bottom:0;"><span lang="EN-US">If need be, the code can be ported to other families of modern RISC
+microcontrollers with only minimal changes to the code. The main limitations
+are the need for at least 16 MIPS and a throughput via the SPI of not less than
+8 megabits per second.</span></p>
+
+<p class="MsoNormal" style="text-align:justify; line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</p>
+    <p class="MsoNormal" style="text-align:justify; line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><b style=""><u><span style="font-family: &quot;Times New Roman CYR&quot;;" lang="EN-US">Applications of the adapter:</span></u></b></p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><span style="" lang="EN-US">Applications of the project are not limited to only
+one terminal variant (look demo in a folder examples) - d</span><span style="font-size: 10pt; font-family: Arial;" lang="EN-US">espite </span><span style="" lang="EN-US">on serious congestion of the processor regeneration of
+the display</span></p>
+
+<p class="MsoNormal" style="text-align:justify; line-height:100%; margin-top:0; margin-bottom:0;"><span style="" lang="EN-US">the remained capacity has enough for the organization
+of processing for example several digital and analog signals and reaction to
+them, and also delivery of results of their measurements on the display in
+real-time (Security systems, </span><span style="font-size: 10pt; font-family: Arial;" lang="EN-US">Industrial automatics</span><span style="" lang="EN-US">
+etc.). The author has the improved variants of similar systems with the
+resolution of the symbolical display 40x24 symbols in mode VGA, working in
+commercial products.</span></p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</p>
+
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</p>
+
+<p class="MsoNormal" style="text-align:justify; line-height:100%; margin-top:0; margin-bottom:0;"><b><span style="font-size: 10pt;" lang="EN-US">You can freely use materials of this
+project for educational and noncommercial purposes. All rights of this project
+are reserved by the author. Any reprinting, publication, including on the
+Internet, or use in commercial projects or similar, of materials in this<span style="">&nbsp; </span>project is expressly prohibited and only
+available with the express written consent of the author.</span></b></p>
+
+
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</p>
+    <p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</p>
+    <p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><b><u>Files:</u></b></p>
+    <p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><a href="files/VGA_PAL_src.zip">Sources of the project, examples</a></p>
+    <p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><a href="http://www.vga-avr.narod.ru/download/VGA_Video.pdf">This article on &quot;PDF&quot; format</a></p>
+    <p style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</p>
+    <p style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</p>
+
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><b><u><span lang="EN-US">Useful references:</span></u></b></p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><span lang="EN-US"><a href="http://www.rickard.gunee.com/projects/video/pic/howto.php">Theory Video
+signal</a></span></p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><span lang="EN-US"><a href="http://instruct1.cit.cornell.edu/courses/ee476/video/">Cornell University
+Electrical Engineering 476 - Generation of video signal on AVR</a></span></p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><span lang="EN-US"><a href="http://www.epanorama.net/documents/pc/vga_timing.html">Theory VGA signal</a><u><span style="color: blue;">  </span></u></span></p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><span lang="EN-US"><a href="http://yusoft.kulichki.com/english/pic/my_proj.htm">Generation VGA signal
+on PIC</a></span></p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><u><span style="color: blue;" lang="EN-US"></span></u>&nbsp;</p>
+    <p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;">&nbsp;</p>
+
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><span style="color: black;" lang="EN-US">The further development of the project watch on </span><span lang="EN-US"><a href="http://www.vga-avr.narod.ru/">http://www.vga-avr.narod.ru/</a></span></p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><span lang="EN-US"><a href="mailto:%20simple-vga@rambler.ru">Contact with author at the e-mail :
+simple-vga@rambler.ru</a></span></p>
+
+<p class="MsoNormal" style="line-height:100%; margin-top:0; margin-bottom:0;"><span style="font-size: 12pt; color: black;" lang="EN-US">Author<span style="">&nbsp; </span>Ibragimov Maxim Rafikovich <span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="">&nbsp;</span>Russia, Tolyatti <span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="">&nbsp;</span>10/20/2005</span></p>
+ <div id="navbar">
+   <ul>
+	<li><a href="http://www.microvga.com/" style="background:  #92002E;" rel="microvga">&micro;VGA.com</a></li>
+	<li><a href="vga-timing.html" style="background: #1378aa;">VGA Timing</a></li>
+	<li><a href="faq.html" style="background: #F7C41F;">FAQ</a></li>
+	<li><a href="tinyvga.html" style="background: #97C41F;">Home</a></li>
+   </ul> 
+</div><!-- /navbar -->
+
+<div id="foot">
+Copyright(c)2008 SECONS Ltd.
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-4388516-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+</body>
+</html>

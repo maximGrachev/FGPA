@@ -1,0 +1,44 @@
+|LVDS_tx
+tx0_in[0] => Mux0.IN7
+tx0_in[1] => Mux0.IN6
+tx0_in[2] => Mux0.IN5
+tx0_in[3] => Mux0.IN4
+tx0_in[4] => Mux0.IN3
+tx0_in[5] => Mux0.IN2
+tx0_in[6] => Mux0.IN1
+tx1_in[0] => Mux1.IN7
+tx1_in[1] => Mux1.IN6
+tx1_in[2] => Mux1.IN5
+tx1_in[3] => Mux1.IN4
+tx1_in[4] => Mux1.IN3
+tx1_in[5] => Mux1.IN2
+tx1_in[6] => Mux1.IN1
+tx2_in[0] => Mux2.IN7
+tx2_in[1] => Mux2.IN6
+tx2_in[2] => Mux2.IN5
+tx2_in[3] => Mux2.IN4
+tx2_in[4] => Mux2.IN3
+tx2_in[5] => Mux2.IN2
+tx2_in[6] => Mux2.IN1
+tx3_in[0] => Mux3.IN7
+tx3_in[1] => Mux3.IN6
+tx3_in[2] => Mux3.IN5
+tx3_in[3] => Mux3.IN4
+tx3_in[4] => Mux3.IN3
+tx3_in[5] => Mux3.IN2
+tx3_in[6] => Mux3.IN1
+clk7 => counter[2].CLK
+clk7 => counter[1].CLK
+clk7 => counter[0].CLK
+clk7 => tx0_out~reg0.CLK
+clk7 => tx1_out~reg0.CLK
+clk7 => tx2_out~reg0.CLK
+clk7 => tx3_out~reg0.CLK
+clk7 => txc.DATAIN
+tx0_out <= tx0_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+tx1_out <= tx1_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+tx2_out <= tx2_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+tx3_out <= tx3_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+txc <= clk7.DB_MAX_OUTPUT_PORT_TYPE
+
+
