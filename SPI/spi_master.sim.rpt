@@ -1,0 +1,298 @@
+Simulator report for spi_master
+Wed Apr 11 08:56:25 2018
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 20.0 us      ;
+; Simulation Netlist Size     ; 105 nodes    ;
+; Simulation Coverage         ;      78.26 % ;
+; Total Number of Transitions ; 22022        ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C20F484C7 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      78.26 % ;
+; Total nodes checked                                 ; 105          ;
+; Total output ports checked                          ; 115          ;
+; Total output ports with complete 1/0-value coverage ; 90           ;
+; Total output ports with no 1/0-value coverage       ; 22           ;
+; Total output ports with no 1-value coverage         ; 22           ;
+; Total output ports with no 0-value coverage         ; 25           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                      ;
++-----------------------------------------------+-----------------------------------------------+------------------+
+; Node Name                                     ; Output Port Name                              ; Output Port Type ;
++-----------------------------------------------+-----------------------------------------------+------------------+
+; |spi_master|n_bit[1]                          ; |spi_master|n_bit[1]                          ; regout           ;
+; |spi_master|n_bit[2]                          ; |spi_master|n_bit[2]                          ; regout           ;
+; |spi_master|n_bit[3]                          ; |spi_master|n_bit[3]                          ; regout           ;
+; |spi_master|n_bit[4]                          ; |spi_master|n_bit[4]                          ; regout           ;
+; |spi_master|n_bit[1]~4                        ; |spi_master|n_bit[1]~4                        ; combout          ;
+; |spi_master|n_bit[1]~4                        ; |spi_master|n_bit[1]~5                        ; cout             ;
+; |spi_master|n_bit[2]~6                        ; |spi_master|n_bit[2]~6                        ; combout          ;
+; |spi_master|n_bit[2]~6                        ; |spi_master|n_bit[2]~7                        ; cout             ;
+; |spi_master|n_bit[3]~8                        ; |spi_master|n_bit[3]~8                        ; combout          ;
+; |spi_master|n_bit[3]~8                        ; |spi_master|n_bit[3]~9                        ; cout             ;
+; |spi_master|n_bit[4]~10                       ; |spi_master|n_bit[4]~10                       ; combout          ;
+; |spi_master|Add1~0                            ; |spi_master|Add1~0                            ; combout          ;
+; |spi_master|Add1~0                            ; |spi_master|Add1~1                            ; cout             ;
+; |spi_master|Add1~2                            ; |spi_master|Add1~2                            ; combout          ;
+; |spi_master|Add1~2                            ; |spi_master|Add1~3                            ; cout             ;
+; |spi_master|Add1~4                            ; |spi_master|Add1~4                            ; combout          ;
+; |spi_master|Add1~4                            ; |spi_master|Add1~5                            ; cout             ;
+; |spi_master|Add1~6                            ; |spi_master|Add1~6                            ; combout          ;
+; |spi_master|Add1~6                            ; |spi_master|Add1~7                            ; cout             ;
+; |spi_master|Add1~8                            ; |spi_master|Add1~8                            ; combout          ;
+; |spi_master|Add1~8                            ; |spi_master|Add1~9                            ; cout             ;
+; |spi_master|Add1~10                           ; |spi_master|Add1~10                           ; combout          ;
+; |spi_master|Add1~10                           ; |spi_master|Add1~11                           ; cout             ;
+; |spi_master|Add1~12                           ; |spi_master|Add1~12                           ; combout          ;
+; |spi_master|Add1~12                           ; |spi_master|Add1~13                           ; cout             ;
+; |spi_master|Add1~14                           ; |spi_master|Add1~14                           ; combout          ;
+; |spi_master|cs~reg0                           ; |spi_master|cs~reg0                           ; regout           ;
+; |spi_master|divider:M_divider|dvd_out         ; |spi_master|divider:M_divider|dvd_out         ; regout           ;
+; |spi_master|sclk_ena                          ; |spi_master|sclk_ena                          ; regout           ;
+; |spi_master|sclk~1                            ; |spi_master|sclk~1                            ; combout          ;
+; |spi_master|sdi~reg0                          ; |spi_master|sdi~reg0                          ; regout           ;
+; |spi_master|state.sleep                       ; |spi_master|state.sleep                       ; regout           ;
+; |spi_master|divider:M_divider|cnt             ; |spi_master|divider:M_divider|cnt             ; regout           ;
+; |spi_master|n_bit[0]                          ; |spi_master|n_bit[0]                          ; regout           ;
+; |spi_master|state.int_status                  ; |spi_master|state.int_status                  ; regout           ;
+; |spi_master|Selector4~1                       ; |spi_master|Selector4~1                       ; combout          ;
+; |spi_master|state.init                        ; |spi_master|state.init                        ; regout           ;
+; |spi_master|num_init[0]                       ; |spi_master|num_init[0]                       ; regout           ;
+; |spi_master|Mux4~0                            ; |spi_master|Mux4~0                            ; combout          ;
+; |spi_master|Mux4~1                            ; |spi_master|Mux4~1                            ; combout          ;
+; |spi_master|Mux4~2                            ; |spi_master|Mux4~2                            ; combout          ;
+; |spi_master|Mux4~3                            ; |spi_master|Mux4~3                            ; combout          ;
+; |spi_master|Mux4~4                            ; |spi_master|Mux4~4                            ; combout          ;
+; |spi_master|Selector4~2                       ; |spi_master|Selector4~2                       ; combout          ;
+; |spi_master|Mux4~5                            ; |spi_master|Mux4~5                            ; combout          ;
+; |spi_master|Selector0~2                       ; |spi_master|Selector0~2                       ; combout          ;
+; |spi_master|Selector0~3                       ; |spi_master|Selector0~3                       ; combout          ;
+; |spi_master|Selector2~0                       ; |spi_master|Selector2~0                       ; combout          ;
+; |spi_master|wd                                ; |spi_master|wd                                ; regout           ;
+; |spi_master|state.d_ready                     ; |spi_master|state.d_ready                     ; regout           ;
+; |spi_master|Equal1~0                          ; |spi_master|Equal1~0                          ; combout          ;
+; |spi_master|cnt                               ; |spi_master|cnt                               ; regout           ;
+; |spi_master|Equal0~0                          ; |spi_master|Equal0~0                          ; combout          ;
+; |spi_master|Selector2~1                       ; |spi_master|Selector2~1                       ; combout          ;
+; |spi_master|Selector2~2                       ; |spi_master|Selector2~2                       ; combout          ;
+; |spi_master|Selector1~0                       ; |spi_master|Selector1~0                       ; combout          ;
+; |spi_master|num_init[1]~6                     ; |spi_master|num_init[1]~6                     ; combout          ;
+; |spi_master|num_init[0]~7                     ; |spi_master|num_init[0]~7                     ; combout          ;
+; |spi_master|init_ready~1                      ; |spi_master|init_ready~1                      ; combout          ;
+; |spi_master|cycle[5]                          ; |spi_master|cycle[5]                          ; regout           ;
+; |spi_master|cycle[4]                          ; |spi_master|cycle[4]                          ; regout           ;
+; |spi_master|cycle[3]                          ; |spi_master|cycle[3]                          ; regout           ;
+; |spi_master|Equal2~0                          ; |spi_master|Equal2~0                          ; combout          ;
+; |spi_master|cycle[6]                          ; |spi_master|cycle[6]                          ; regout           ;
+; |spi_master|cycle[2]                          ; |spi_master|cycle[2]                          ; regout           ;
+; |spi_master|cycle[1]                          ; |spi_master|cycle[1]                          ; regout           ;
+; |spi_master|cycle[0]                          ; |spi_master|cycle[0]                          ; regout           ;
+; |spi_master|Equal2~1                          ; |spi_master|Equal2~1                          ; combout          ;
+; |spi_master|cycle[7]                          ; |spi_master|cycle[7]                          ; regout           ;
+; |spi_master|Equal2~2                          ; |spi_master|Equal2~2                          ; combout          ;
+; |spi_master|next_state.d_ready~0              ; |spi_master|next_state.d_ready~0              ; combout          ;
+; |spi_master|Selector5~1                       ; |spi_master|Selector5~1                       ; combout          ;
+; |spi_master|Selector5~2                       ; |spi_master|Selector5~2                       ; combout          ;
+; |spi_master|sdi~0                             ; |spi_master|sdi~0                             ; combout          ;
+; |spi_master|Equal3~0                          ; |spi_master|Equal3~0                          ; combout          ;
+; |spi_master|cycle~8                           ; |spi_master|cycle~8                           ; combout          ;
+; |spi_master|cycle~9                           ; |spi_master|cycle~9                           ; combout          ;
+; |spi_master|cycle~10                          ; |spi_master|cycle~10                          ; combout          ;
+; |spi_master|Selector0~4                       ; |spi_master|Selector0~4                       ; combout          ;
+; |spi_master|cs~1                              ; |spi_master|cs~1                              ; combout          ;
+; |spi_master|divider:M_divider|cnt~1           ; |spi_master|divider:M_divider|cnt~1           ; combout          ;
+; |spi_master|n_bit[0]~12                       ; |spi_master|n_bit[0]~12                       ; combout          ;
+; |spi_master|cs                                ; |spi_master|cs                                ; padio            ;
+; |spi_master|sclk                              ; |spi_master|sclk                              ; padio            ;
+; |spi_master|sdi                               ; |spi_master|sdi                               ; padio            ;
+; |spi_master|clock                             ; |spi_master|clock~corein                      ; combout          ;
+; |spi_master|clock~clkctrl                     ; |spi_master|clock~clkctrl                     ; outclk           ;
+; |spi_master|cnt~clkctrl                       ; |spi_master|cnt~clkctrl                       ; outclk           ;
+; |spi_master|divider:M_divider|dvd_out~clkctrl ; |spi_master|divider:M_divider|dvd_out~clkctrl ; outclk           ;
+; |spi_master|divider:M_divider|dvd_out~feeder  ; |spi_master|divider:M_divider|dvd_out~feeder  ; combout          ;
++-----------------------------------------------+-----------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                       ;
++------------------------------+------------------------------+------------------+
+; Node Name                    ; Output Port Name             ; Output Port Type ;
++------------------------------+------------------------------+------------------+
+; |spi_master|state.read_data  ; |spi_master|state.read_data  ; regout           ;
+; |spi_master|Selector4~0      ; |spi_master|Selector4~0      ; combout          ;
+; |spi_master|new_data         ; |spi_master|new_data         ; regout           ;
+; |spi_master|Selector3~0      ; |spi_master|Selector3~0      ; combout          ;
+; |spi_master|Selector5~3      ; |spi_master|Selector5~3      ; combout          ;
+; |spi_master|acceleration[0]  ; |spi_master|acceleration[0]  ; padio            ;
+; |spi_master|acceleration[1]  ; |spi_master|acceleration[1]  ; padio            ;
+; |spi_master|acceleration[2]  ; |spi_master|acceleration[2]  ; padio            ;
+; |spi_master|acceleration[3]  ; |spi_master|acceleration[3]  ; padio            ;
+; |spi_master|acceleration[4]  ; |spi_master|acceleration[4]  ; padio            ;
+; |spi_master|acceleration[5]  ; |spi_master|acceleration[5]  ; padio            ;
+; |spi_master|acceleration[6]  ; |spi_master|acceleration[6]  ; padio            ;
+; |spi_master|acceleration[7]  ; |spi_master|acceleration[7]  ; padio            ;
+; |spi_master|acceleration[8]  ; |spi_master|acceleration[8]  ; padio            ;
+; |spi_master|acceleration[9]  ; |spi_master|acceleration[9]  ; padio            ;
+; |spi_master|acceleration[10] ; |spi_master|acceleration[10] ; padio            ;
+; |spi_master|acceleration[11] ; |spi_master|acceleration[11] ; padio            ;
+; |spi_master|acceleration[12] ; |spi_master|acceleration[12] ; padio            ;
+; |spi_master|acceleration[13] ; |spi_master|acceleration[13] ; padio            ;
+; |spi_master|acceleration[14] ; |spi_master|acceleration[14] ; padio            ;
+; |spi_master|acceleration[15] ; |spi_master|acceleration[15] ; padio            ;
+; |spi_master|sdo              ; |spi_master|sdo~corein       ; combout          ;
++------------------------------+------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                       ;
++------------------------------+------------------------------+------------------+
+; Node Name                    ; Output Port Name             ; Output Port Type ;
++------------------------------+------------------------------+------------------+
+; |spi_master|state.read_data  ; |spi_master|state.read_data  ; regout           ;
+; |spi_master|Selector4~0      ; |spi_master|Selector4~0      ; combout          ;
+; |spi_master|num_init[1]      ; |spi_master|num_init[1]      ; regout           ;
+; |spi_master|init_ready       ; |spi_master|init_ready       ; regout           ;
+; |spi_master|new_data         ; |spi_master|new_data         ; regout           ;
+; |spi_master|Selector3~0      ; |spi_master|Selector3~0      ; combout          ;
+; |spi_master|init_ready~2     ; |spi_master|init_ready~2     ; combout          ;
+; |spi_master|Selector5~3      ; |spi_master|Selector5~3      ; combout          ;
+; |spi_master|acceleration[0]  ; |spi_master|acceleration[0]  ; padio            ;
+; |spi_master|acceleration[1]  ; |spi_master|acceleration[1]  ; padio            ;
+; |spi_master|acceleration[2]  ; |spi_master|acceleration[2]  ; padio            ;
+; |spi_master|acceleration[3]  ; |spi_master|acceleration[3]  ; padio            ;
+; |spi_master|acceleration[4]  ; |spi_master|acceleration[4]  ; padio            ;
+; |spi_master|acceleration[5]  ; |spi_master|acceleration[5]  ; padio            ;
+; |spi_master|acceleration[6]  ; |spi_master|acceleration[6]  ; padio            ;
+; |spi_master|acceleration[7]  ; |spi_master|acceleration[7]  ; padio            ;
+; |spi_master|acceleration[8]  ; |spi_master|acceleration[8]  ; padio            ;
+; |spi_master|acceleration[9]  ; |spi_master|acceleration[9]  ; padio            ;
+; |spi_master|acceleration[10] ; |spi_master|acceleration[10] ; padio            ;
+; |spi_master|acceleration[11] ; |spi_master|acceleration[11] ; padio            ;
+; |spi_master|acceleration[12] ; |spi_master|acceleration[12] ; padio            ;
+; |spi_master|acceleration[13] ; |spi_master|acceleration[13] ; padio            ;
+; |spi_master|acceleration[14] ; |spi_master|acceleration[14] ; padio            ;
+; |spi_master|acceleration[15] ; |spi_master|acceleration[15] ; padio            ;
+; |spi_master|sdo              ; |spi_master|sdo~corein       ; combout          ;
++------------------------------+------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Wed Apr 11 08:56:24 2018
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off spi_master -c spi_master
+Info: Using vector source file "C:/Users/Максим/Desktop/Quartus_Projects/labs_git/SPI/spi_master.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      78.26 %
+Info: Number of transitions in simulation is 22022
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 215 megabytes
+    Info: Processing ended: Wed Apr 11 08:56:25 2018
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

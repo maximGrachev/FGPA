@@ -20,7 +20,7 @@ package SPI_params is
 	
 	constant ALL_INIT_REGS: byte:=4;
 	constant ALL_READ_REGS: byte:=3;
-	constant DATA0: byte:=50;
+	constant DATA0: byte:=52;
 	
 	constant DISCRETE: natural:=200;
 	
@@ -40,14 +40,30 @@ entity spi_master is
 		sclk: out std_logic;
 		sdi: out std_logic;
 		sdo: in std_logic;
-		acceleration: out std_logic_vector(15 downto 0);
+		acceleration: out std_logic_vector(15 downto 0)
 	);
 
 end spi_master;
 
 architecture behavior of spi_master is
+	
+	component divider is
+	
+	generic (
+		N: natural:=8
+	);
+	
+	port(
+		clc: in std_logic;
+		dvd_out: out std_logic
+	);
 
-	type adxl_regs 
+	end component;
+
+	type adxl_regs is array (0 to ALL_INIT_REGS-1) of byte;  
+	type data_regs is array (0 to ALL_READ_REGS-1) of std_logic_vector(7 downto 0);
+	constant INIT_ADDRESES: adxl_regs := (BW_Rate, POWER_CTRL, INT_ENABLE, DATA_FORMAT);
+	constant CTRL_DATA: adxl_regs := (WORD_BW_Rate, WORD_POWER_CTRL, WORD_INT_ENABLE, WORD_DATA_FORMAT);
 	
 	signal new_data: std_logic; -- признак готовности новых данных в датчике
 	signal init_ready: std_logic; -- признак окончания инициализации
@@ -61,40 +77,50 @@ architecture behavior of spi_master is
 	signal num_read: natural range 0 to ALL_READ_REGS; -- число прочитанных регистров
 	
 	begin	
+	
+	M_divider: divider generic map ( N => 2)
+			port map
+				(
+				clc => clock,
+				dvd_out => clk
+				);
 			
-		-- формирование сигнала в линии SCLK
-	sclk <= <лог. уровень> when sclk_ena = '0' else clk;
+	-- формирование сигнала в линии SCLK
+	sclk <= '1' when sclk_ena = '0' else clk;
+	
 	-- процесс определения следующего состояния ЦКА
 		process (state, wd, init_ready, n_bit, new_data, num_read)
-
+		
 		begin
+		
+			
 		
 			case (state) is
 			
 				when sleep => 
-					if (init_ready = '0') then next_state <= <ninoiyiea>;
-					elsif (wd = '1') then next_state <= <ninoiyiea>;
-					else next_state <= <ninoiyiea>;
+					if (init_ready = '0') then next_state <= init;
+					elsif (wd = '1') then next_state <= int_status;
+					else next_state <= sleep;
 					end if;
 					
 				when init => 
-					if (n_bit = 15) then next_state <= <ninoiyiea>;
-					else next_state <= <ninoiyiea>;
+					if (n_bit = 15) then next_state <= sleep;
+					else next_state <= init;
 					end if;
 					
 				when int_status => 
-					if (n_bit = 15) then next_state <= <ninoiyiea>;
-					else next_state <= <ninoiyiea>;
+					if (n_bit = 15) then next_state <= d_ready;
+					else next_state <= int_status;
 					end if;
 					
 				when d_ready => 
-					if (new_data = '0') then next_state <= <ninoiyiea>;
-					else next_state <= <ninoiyiea>;
+					if (new_data = '0') then next_state <= int_status;
+					else next_state <= read_data;
 					end if;
 					
 				when read_data => 
-					if (n_bit = (8*(ALL_READ_REGS + 1) - 1)) then next_state <= <ninoiyiea>;
-					else next_state <= <ninoiyiea>;
+					if (n_bit = (8*(ALL_READ_REGS + 1) - 1)) then next_state <= sleep;
+					else next_state <= read_data;
 					end if;
 					
 				when others => null;
@@ -105,12 +131,20 @@ architecture behavior of spi_master is
 
 	-- описание счетчика бит по заднему фронту clk с асинхронным
 	-- сбросом по низкому логическому уровню сигнала cnt
-			process (<список чувствительности>)
-			<операторы для реализации счетчика>;
-			-- процесс формирования сигнала разрешения счета бит
+			process (clk, cnt)
+				
+				begin
+				
+					if (cnt = '0') then
+						n_bit <= 0;
+					elsif (clk'event and clk = '0') then
+							n_bit <= n_bit+1;
+					end if;
+				
 			end process;
-
-			process (<список чувствительности>)
+					
+			-- процесс формирования сигнала разрешения счета бит
+			process (clk, state)
 				
 				begin
 				
@@ -123,9 +157,9 @@ architecture behavior of spi_master is
 						when init => 
 							cnt <= '1';
 						when int_status => 
-							cnt <= <лог. уровень>;
+							cnt <= '1';
 						when read_data => 
-							cnt <= <лог. уровень>;
+							cnt <= '1';
 						when d_ready => 
 							cnt <= '0';
 						when others => null;
@@ -137,7 +171,7 @@ architecture behavior of spi_master is
 			end process;
 
 	-- внутренний таймер и смена состояний ЦКА
-			process (<список чувствительности>)
+			process (clk, next_state)
 				
 				variable cycle: natural range 0 to DISCRETE;
 				
@@ -174,31 +208,32 @@ architecture behavior of spi_master is
 						case (state) is
 				
 							when sleep => 
-								sdi <= '0'; cs <= '1'; 
+								sdi <= '0'; 
+								cs <= '1'; 
 								sclk_ena <= '0';
 								
 							when init => 
 								cs <= '0'; 
 								sclk_ena <= '1';
-								buf_16 := <биты R/W и M/S> & conv_std_logic_vector(INIT_ADDRESES(num_init), 6)&conv_std_logic_vector(CTRL_DATA(num_init), 8);
+								buf_16 := "00" & conv_std_logic_vector(INIT_ADDRESES(num_init), 6)&conv_std_logic_vector(CTRL_DATA(num_init), 8);
 								sdi <= buf_16(15 - n_bit);
 								
 							when int_status =>
-								cs <= <лог. уровень>; 
-								sclk_ena <= <лог. уровень>;
-								buf_8 := <биты R/W и M/S> &	conv_std_logic_vector(<адрес>, 6);
+								cs <= '0'; 
+								sclk_ena <= '1';
+								buf_8 := "10" &	conv_std_logic_vector(DATA0, 6);
 								sdi <= buf_8(7 - n_bit);
 							
 							when read_data =>
-								cs <= <лог. уровень>; 
-								sclk_ena <= <лог. уровень>;
-								buf_8 := <биты R/W и M/S> & conv_std_logic_vector(<адрес>, 6);
+								cs <= '0'; 
+								sclk_ena <= '1';
+								buf_8 := "11" & conv_std_logic_vector(DATA0, 6);
 								sdi <= buf_8(7 - n_bit);
 								
 							when d_ready => 
 								sdi <= '0';
-								cs <= <лог. уровень>; 
-								sclk_ena <= <лог. уровень>;
+								cs <= '0'; 
+								sclk_ena <= '1';
 								
 							when others => null;
 							
@@ -210,7 +245,7 @@ architecture behavior of spi_master is
 
 	-- процесс, выполняющий чтение данных с линии SDO Slave
 	-- и формирование управляющих сигналов
-			process (<список чувствительности>)
+			process (clk, state, n_bit, num_init)
 				
 				variable data: data_regs;
 				
@@ -223,33 +258,31 @@ architecture behavior of spi_master is
 							when sleep => 
 								num_read <= 0;
 								new_data <= '0';
-								<выход> <= <старший байт> & <младший байт>;
+								--acceleration <= <старший байт> & <младший байт>;
 							
 							when init => 
 								if (n_bit = 15) then
 									if (num_init = ALL_INIT_REGS - 1) then
-										init_ready <= <лог. уровень>;
-									else init_ready <= <лог. уровень>;
+										init_ready <= '1';
+									else init_ready <= '0';
 										 num_init <= num_init + 1;
 									end if;
 								end if;
 				
 							when int_status => 
-									if (n_bit = <номер бита>) then
+									if (n_bit = 8) then
 										new_data <= sdo;
 									end if;
 									
 							when read_data => 
-									if (n_bit > <номер бита>) then
+									if (n_bit > 7) then
 										data(num_read)(7 - (n_bit rem 8)) := sdo;
 										if (n_bit rem 8 = 7) then
 											num_read <= num_read + 1;
 										end if;
 									end if;
 							when others => null;
-						if (n_bit = (8*(ALL_READ_REGS + 1) - 1)) then next_state <= <ninoiyiea>;
-									else next_state <= <ninoiyiea>;
-								  end if;	
+						
 						end case;
 						
 					end if;

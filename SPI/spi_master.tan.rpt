@@ -1,0 +1,387 @@
+Classic Timing Analyzer report for spi_master
+Tue Apr 10 20:04:37 2018
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'clock'
+  7. tsu
+  8. tco
+  9. th
+ 10. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                              ;
++------------------------------+-------+---------------+----------------------------------+----------+----------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From     ; To       ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+----------+----------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 1.713 ns                         ; sdo      ; new_data ; --         ; clock    ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 7.982 ns                         ; sdi~reg0 ; sdi      ; clock      ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -1.465 ns                        ; sdo      ; new_data ; --         ; clock    ; 0            ;
+; Clock Setup: 'clock'         ; N/A   ; None          ; 93.91 MHz ( period = 10.648 ns ) ; n_bit[0] ; sdi~reg0 ; clock      ; clock    ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;          ;          ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+----------+----------+------------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                           ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                              ; Setting            ; From ; To ; Entity Name ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                         ; EP2C20F484C7       ;      ;    ;             ;
+; Timing Models                                                       ; Final              ;      ;    ;             ;
+; Default hold multicycle                                             ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                           ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                              ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                      ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                    ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                               ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                             ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                    ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                       ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                   ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                   ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node               ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                               ; 10                 ;      ;    ;             ;
+; Number of paths to report                                           ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                        ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                              ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                          ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                        ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis      ; Off                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                          ; Near End           ;      ;    ;             ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clock           ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clock'                                                                                                                                                                                                   ;
++-------+------------------------------------------------+-----------------------+---------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                  ; To                        ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+-----------------------+---------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; 93.91 MHz ( period = 10.648 ns )               ; n_bit[0]              ; sdi~reg0                  ; clock      ; clock    ; None                        ; None                      ; 2.807 ns                ;
+; N/A   ; 97.92 MHz ( period = 10.212 ns )               ; n_bit[1]              ; sdi~reg0                  ; clock      ; clock    ; None                        ; None                      ; 2.589 ns                ;
+; N/A   ; 101.69 MHz ( period = 9.834 ns )               ; n_bit[3]              ; sdi~reg0                  ; clock      ; clock    ; None                        ; None                      ; 2.400 ns                ;
+; N/A   ; 105.02 MHz ( period = 9.522 ns )               ; n_bit[2]              ; sdi~reg0                  ; clock      ; clock    ; None                        ; None                      ; 2.244 ns                ;
+; N/A   ; 147.32 MHz ( period = 6.788 ns )               ; n_bit[3]              ; new_data                  ; clock      ; clock    ; None                        ; None                      ; 3.154 ns                ;
+; N/A   ; 147.93 MHz ( period = 6.760 ns )               ; n_bit[1]              ; new_data                  ; clock      ; clock    ; None                        ; None                      ; 3.140 ns                ;
+; N/A   ; 150.78 MHz ( period = 6.632 ns )               ; n_bit[1]              ; state.sleep               ; clock      ; clock    ; None                        ; None                      ; 3.076 ns                ;
+; N/A   ; 150.88 MHz ( period = 6.628 ns )               ; n_bit[1]              ; init_ready                ; clock      ; clock    ; None                        ; None                      ; 3.074 ns                ;
+; N/A   ; 150.92 MHz ( period = 6.626 ns )               ; n_bit[1]              ; state.d_ready             ; clock      ; clock    ; None                        ; None                      ; 3.073 ns                ;
+; N/A   ; 150.97 MHz ( period = 6.624 ns )               ; n_bit[1]              ; state.int_status          ; clock      ; clock    ; None                        ; None                      ; 3.072 ns                ;
+; N/A   ; 150.97 MHz ( period = 6.624 ns )               ; n_bit[1]              ; state.init                ; clock      ; clock    ; None                        ; None                      ; 3.072 ns                ;
+; N/A   ; 150.97 MHz ( period = 6.624 ns )               ; n_bit[1]              ; num_init[0]               ; clock      ; clock    ; None                        ; None                      ; 3.072 ns                ;
+; N/A   ; 150.97 MHz ( period = 6.624 ns )               ; n_bit[1]              ; num_init[1]               ; clock      ; clock    ; None                        ; None                      ; 3.072 ns                ;
+; N/A   ; 154.89 MHz ( period = 6.456 ns )               ; n_bit[2]              ; new_data                  ; clock      ; clock    ; None                        ; None                      ; 2.988 ns                ;
+; N/A   ; 157.43 MHz ( period = 6.352 ns )               ; n_bit[1]              ; state.read_data           ; clock      ; clock    ; None                        ; None                      ; 2.936 ns                ;
+; N/A   ; 176.06 MHz ( period = 5.680 ns )               ; n_bit[4]              ; new_data                  ; clock      ; clock    ; None                        ; None                      ; 2.600 ns                ;
+; N/A   ; 178.00 MHz ( period = 5.618 ns )               ; num_init[1]           ; sdi~reg0                  ; clock      ; clock    ; None                        ; None                      ; 3.102 ns                ;
+; N/A   ; 179.40 MHz ( period = 5.574 ns )               ; num_init[0]           ; sdi~reg0                  ; clock      ; clock    ; None                        ; None                      ; 3.058 ns                ;
+; N/A   ; 184.43 MHz ( period = 5.422 ns )               ; n_bit[4]              ; state.sleep               ; clock      ; clock    ; None                        ; None                      ; 2.471 ns                ;
+; N/A   ; 198.73 MHz ( period = 5.032 ns )               ; n_bit[0]              ; new_data                  ; clock      ; clock    ; None                        ; None                      ; 2.276 ns                ;
+; N/A   ; 213.22 MHz ( period = 4.690 ns )               ; n_bit[0]              ; state.sleep               ; clock      ; clock    ; None                        ; None                      ; 2.105 ns                ;
+; N/A   ; 213.40 MHz ( period = 4.686 ns )               ; n_bit[0]              ; init_ready                ; clock      ; clock    ; None                        ; None                      ; 2.103 ns                ;
+; N/A   ; 213.49 MHz ( period = 4.684 ns )               ; n_bit[0]              ; state.d_ready             ; clock      ; clock    ; None                        ; None                      ; 2.102 ns                ;
+; N/A   ; 213.58 MHz ( period = 4.682 ns )               ; n_bit[0]              ; state.int_status          ; clock      ; clock    ; None                        ; None                      ; 2.101 ns                ;
+; N/A   ; 213.58 MHz ( period = 4.682 ns )               ; n_bit[0]              ; state.init                ; clock      ; clock    ; None                        ; None                      ; 2.101 ns                ;
+; N/A   ; 213.58 MHz ( period = 4.682 ns )               ; n_bit[0]              ; num_init[0]               ; clock      ; clock    ; None                        ; None                      ; 2.101 ns                ;
+; N/A   ; 213.58 MHz ( period = 4.682 ns )               ; n_bit[0]              ; num_init[1]               ; clock      ; clock    ; None                        ; None                      ; 2.101 ns                ;
+; N/A   ; 218.72 MHz ( period = 4.572 ns )               ; n_bit[3]              ; init_ready                ; clock      ; clock    ; None                        ; None                      ; 2.046 ns                ;
+; N/A   ; 218.82 MHz ( period = 4.570 ns )               ; n_bit[3]              ; state.d_ready             ; clock      ; clock    ; None                        ; None                      ; 2.045 ns                ;
+; N/A   ; 218.91 MHz ( period = 4.568 ns )               ; n_bit[3]              ; state.int_status          ; clock      ; clock    ; None                        ; None                      ; 2.044 ns                ;
+; N/A   ; 218.91 MHz ( period = 4.568 ns )               ; n_bit[3]              ; state.init                ; clock      ; clock    ; None                        ; None                      ; 2.044 ns                ;
+; N/A   ; 218.91 MHz ( period = 4.568 ns )               ; n_bit[3]              ; num_init[0]               ; clock      ; clock    ; None                        ; None                      ; 2.044 ns                ;
+; N/A   ; 218.91 MHz ( period = 4.568 ns )               ; n_bit[3]              ; num_init[1]               ; clock      ; clock    ; None                        ; None                      ; 2.044 ns                ;
+; N/A   ; 219.35 MHz ( period = 4.559 ns )               ; state.int_status      ; sdi~reg0                  ; clock      ; clock    ; None                        ; None                      ; 2.043 ns                ;
+; N/A   ; 219.97 MHz ( period = 4.546 ns )               ; n_bit[2]              ; state.sleep               ; clock      ; clock    ; None                        ; None                      ; 2.033 ns                ;
+; N/A   ; 220.36 MHz ( period = 4.538 ns )               ; n_bit[2]              ; init_ready                ; clock      ; clock    ; None                        ; None                      ; 2.029 ns                ;
+; N/A   ; 220.46 MHz ( period = 4.536 ns )               ; n_bit[2]              ; state.d_ready             ; clock      ; clock    ; None                        ; None                      ; 2.028 ns                ;
+; N/A   ; 220.56 MHz ( period = 4.534 ns )               ; n_bit[2]              ; state.int_status          ; clock      ; clock    ; None                        ; None                      ; 2.027 ns                ;
+; N/A   ; 220.56 MHz ( period = 4.534 ns )               ; n_bit[2]              ; state.init                ; clock      ; clock    ; None                        ; None                      ; 2.027 ns                ;
+; N/A   ; 220.56 MHz ( period = 4.534 ns )               ; n_bit[2]              ; num_init[0]               ; clock      ; clock    ; None                        ; None                      ; 2.027 ns                ;
+; N/A   ; 220.56 MHz ( period = 4.534 ns )               ; n_bit[2]              ; num_init[1]               ; clock      ; clock    ; None                        ; None                      ; 2.027 ns                ;
+; N/A   ; 223.96 MHz ( period = 4.465 ns )               ; state.read_data       ; sdi~reg0                  ; clock      ; clock    ; None                        ; None                      ; 1.949 ns                ;
+; N/A   ; 226.76 MHz ( period = 4.410 ns )               ; n_bit[0]              ; state.read_data           ; clock      ; clock    ; None                        ; None                      ; 1.965 ns                ;
+; N/A   ; 247.28 MHz ( period = 4.044 ns )               ; n_bit[3]              ; state.read_data           ; clock      ; clock    ; None                        ; None                      ; 1.782 ns                ;
+; N/A   ; 254.07 MHz ( period = 3.936 ns )               ; n_bit[2]              ; state.read_data           ; clock      ; clock    ; None                        ; None                      ; 1.728 ns                ;
+; N/A   ; 258.67 MHz ( period = 3.866 ns )               ; state.sleep           ; state.int_status          ; clock      ; clock    ; None                        ; None                      ; 3.627 ns                ;
+; N/A   ; 260.69 MHz ( period = 3.836 ns )               ; n_bit[3]              ; state.sleep               ; clock      ; clock    ; None                        ; None                      ; 1.678 ns                ;
+; N/A   ; 260.76 MHz ( period = 3.835 ns )               ; state.sleep           ; cs~reg0                   ; clock      ; clock    ; None                        ; None                      ; 1.316 ns                ;
+; N/A   ; 261.30 MHz ( period = 3.827 ns )               ; state.sleep           ; sclk_ena                  ; clock      ; clock    ; None                        ; None                      ; 1.308 ns                ;
+; N/A   ; 268.74 MHz ( period = 3.721 ns )               ; state.init            ; sdi~reg0                  ; clock      ; clock    ; None                        ; None                      ; 1.205 ns                ;
+; N/A   ; 271.15 MHz ( period = 3.688 ns )               ; init_ready            ; state.int_status          ; clock      ; clock    ; None                        ; None                      ; 3.449 ns                ;
+; N/A   ; 297.09 MHz ( period = 3.366 ns )               ; n_bit[4]              ; init_ready                ; clock      ; clock    ; None                        ; None                      ; 1.443 ns                ;
+; N/A   ; 297.27 MHz ( period = 3.364 ns )               ; n_bit[4]              ; state.d_ready             ; clock      ; clock    ; None                        ; None                      ; 1.442 ns                ;
+; N/A   ; 297.44 MHz ( period = 3.362 ns )               ; n_bit[4]              ; state.int_status          ; clock      ; clock    ; None                        ; None                      ; 1.441 ns                ;
+; N/A   ; 297.44 MHz ( period = 3.362 ns )               ; n_bit[4]              ; state.init                ; clock      ; clock    ; None                        ; None                      ; 1.441 ns                ;
+; N/A   ; 297.44 MHz ( period = 3.362 ns )               ; n_bit[4]              ; num_init[0]               ; clock      ; clock    ; None                        ; None                      ; 1.441 ns                ;
+; N/A   ; 297.44 MHz ( period = 3.362 ns )               ; n_bit[4]              ; num_init[1]               ; clock      ; clock    ; None                        ; None                      ; 1.441 ns                ;
+; N/A   ; 299.67 MHz ( period = 3.337 ns )               ; state.init            ; state.sleep               ; clock      ; clock    ; None                        ; None                      ; 3.098 ns                ;
+; N/A   ; 304.32 MHz ( period = 3.286 ns )               ; state.read_data       ; state.sleep               ; clock      ; clock    ; None                        ; None                      ; 3.047 ns                ;
+; N/A   ; 313.28 MHz ( period = 3.192 ns )               ; n_bit[4]              ; state.read_data           ; clock      ; clock    ; None                        ; None                      ; 1.356 ns                ;
+; N/A   ; 318.27 MHz ( period = 3.142 ns )               ; cycle[0]              ; cycle[6]                  ; clock      ; clock    ; None                        ; None                      ; 2.904 ns                ;
+; N/A   ; 319.49 MHz ( period = 3.130 ns )               ; cycle[3]              ; cycle[6]                  ; clock      ; clock    ; None                        ; None                      ; 2.891 ns                ;
+; N/A   ; 320.82 MHz ( period = 3.117 ns )               ; new_data              ; state.int_status          ; clock      ; clock    ; None                        ; None                      ; 2.878 ns                ;
+; N/A   ; 327.23 MHz ( period = 3.056 ns )               ; cycle[1]              ; cycle[6]                  ; clock      ; clock    ; None                        ; None                      ; 2.818 ns                ;
+; N/A   ; 333.33 MHz ( period = 3.000 ns )               ; n_bit[0]              ; n_bit[0]                  ; clock      ; clock    ; None                        ; None                      ; 2.761 ns                ;
+; N/A   ; 334.00 MHz ( period = 2.994 ns )               ; cycle[2]              ; cycle[6]                  ; clock      ; clock    ; None                        ; None                      ; 2.756 ns                ;
+; N/A   ; 337.04 MHz ( period = 2.967 ns )               ; cycle[0]              ; cycle[7]                  ; clock      ; clock    ; None                        ; None                      ; 2.728 ns                ;
+; N/A   ; 338.41 MHz ( period = 2.955 ns )               ; cycle[3]              ; cycle[7]                  ; clock      ; clock    ; None                        ; None                      ; 2.715 ns                ;
+; N/A   ; 344.35 MHz ( period = 2.904 ns )               ; wd                    ; state.int_status          ; clock      ; clock    ; None                        ; None                      ; 2.665 ns                ;
+; N/A   ; 347.10 MHz ( period = 2.881 ns )               ; cycle[1]              ; cycle[7]                  ; clock      ; clock    ; None                        ; None                      ; 2.642 ns                ;
+; N/A   ; 353.11 MHz ( period = 2.832 ns )               ; cycle[4]              ; cycle[6]                  ; clock      ; clock    ; None                        ; None                      ; 2.594 ns                ;
+; N/A   ; 354.74 MHz ( period = 2.819 ns )               ; cycle[2]              ; cycle[7]                  ; clock      ; clock    ; None                        ; None                      ; 2.580 ns                ;
+; N/A   ; 360.23 MHz ( period = 2.776 ns )               ; cycle[5]              ; cycle[6]                  ; clock      ; clock    ; None                        ; None                      ; 2.538 ns                ;
+; N/A   ; 366.03 MHz ( period = 2.732 ns )               ; state.d_ready         ; state.int_status          ; clock      ; clock    ; None                        ; None                      ; 2.493 ns                ;
+; N/A   ; 368.60 MHz ( period = 2.713 ns )               ; state.int_status      ; new_data                  ; clock      ; clock    ; None                        ; None                      ; 2.474 ns                ;
+; N/A   ; 369.96 MHz ( period = 2.703 ns )               ; state.sleep           ; new_data                  ; clock      ; clock    ; None                        ; None                      ; 2.464 ns                ;
+; N/A   ; 373.55 MHz ( period = 2.677 ns )               ; cycle[6]              ; cycle[7]                  ; clock      ; clock    ; None                        ; None                      ; 2.437 ns                ;
+; N/A   ; 376.36 MHz ( period = 2.657 ns )               ; cycle[4]              ; cycle[7]                  ; clock      ; clock    ; None                        ; None                      ; 2.418 ns                ;
+; N/A   ; 376.36 MHz ( period = 2.657 ns )               ; cycle[0]              ; cycle[3]                  ; clock      ; clock    ; None                        ; None                      ; 2.419 ns                ;
+; N/A   ; 378.64 MHz ( period = 2.641 ns )               ; n_bit[1]              ; n_bit[4]                  ; clock      ; clock    ; None                        ; None                      ; 2.402 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; cycle[5]              ; cycle[7]                  ; clock      ; clock    ; None                        ; None                      ; 2.362 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; cycle[1]              ; cycle[3]                  ; clock      ; clock    ; None                        ; None                      ; 2.333 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; n_bit[1]              ; n_bit[3]                  ; clock      ; clock    ; None                        ; None                      ; 2.322 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; cycle[1]              ; wd                        ; clock      ; clock    ; None                        ; None                      ; 2.294 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; cycle[2]              ; cycle[3]                  ; clock      ; clock    ; None                        ; None                      ; 2.271 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; cycle[6]              ; cycle[6]                  ; clock      ; clock    ; None                        ; None                      ; 2.261 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; n_bit[1]              ; n_bit[2]                  ; clock      ; clock    ; None                        ; None                      ; 2.242 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; state.d_ready         ; cnt                       ; clock      ; clock    ; None                        ; None                      ; 0.946 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; n_bit[0]              ; n_bit[4]                  ; clock      ; clock    ; None                        ; None                      ; 2.100 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; num_init[0]           ; init_ready                ; clock      ; clock    ; None                        ; None                      ; 2.084 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; cycle[3]              ; cycle[3]                  ; clock      ; clock    ; None                        ; None                      ; 2.054 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; cycle[5]              ; wd                        ; clock      ; clock    ; None                        ; None                      ; 2.042 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; cycle[0]              ; wd                        ; clock      ; clock    ; None                        ; None                      ; 2.037 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; cycle[5]              ; cycle[3]                  ; clock      ; clock    ; None                        ; None                      ; 2.034 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; n_bit[0]              ; n_bit[3]                  ; clock      ; clock    ; None                        ; None                      ; 2.020 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; cycle[3]              ; wd                        ; clock      ; clock    ; None                        ; None                      ; 1.970 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; cycle[6]              ; wd                        ; clock      ; clock    ; None                        ; None                      ; 1.945 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; n_bit[0]              ; n_bit[2]                  ; clock      ; clock    ; None                        ; None                      ; 1.940 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; cycle[2]              ; wd                        ; clock      ; clock    ; None                        ; None                      ; 1.925 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; cycle[4]              ; wd                        ; clock      ; clock    ; None                        ; None                      ; 1.912 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; cycle[4]              ; cycle[3]                  ; clock      ; clock    ; None                        ; None                      ; 1.904 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; num_init[1]           ; init_ready                ; clock      ; clock    ; None                        ; None                      ; 1.884 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; cycle[6]              ; cycle[3]                  ; clock      ; clock    ; None                        ; None                      ; 1.875 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; n_bit[1]              ; n_bit[1]                  ; clock      ; clock    ; None                        ; None                      ; 1.811 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; n_bit[2]              ; n_bit[4]                  ; clock      ; clock    ; None                        ; None                      ; 1.764 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; cycle[0]              ; cycle[5]                  ; clock      ; clock    ; None                        ; None                      ; 1.735 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; cycle[3]              ; cycle[5]                  ; clock      ; clock    ; None                        ; None                      ; 1.722 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; n_bit[2]              ; n_bit[3]                  ; clock      ; clock    ; None                        ; None                      ; 1.684 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; n_bit[3]              ; n_bit[4]                  ; clock      ; clock    ; None                        ; None                      ; 1.663 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; cycle[0]              ; cycle[4]                  ; clock      ; clock    ; None                        ; None                      ; 1.655 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; cycle[1]              ; cycle[5]                  ; clock      ; clock    ; None                        ; None                      ; 1.649 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; cycle[3]              ; cycle[4]                  ; clock      ; clock    ; None                        ; None                      ; 1.642 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; cycle[2]              ; cycle[5]                  ; clock      ; clock    ; None                        ; None                      ; 1.587 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; cycle[1]              ; cycle[4]                  ; clock      ; clock    ; None                        ; None                      ; 1.569 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; state.sleep           ; cnt                       ; clock      ; clock    ; None                        ; None                      ; 0.655 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; n_bit[0]              ; n_bit[1]                  ; clock      ; clock    ; None                        ; None                      ; 1.508 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; cycle[2]              ; cycle[4]                  ; clock      ; clock    ; None                        ; None                      ; 1.507 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; cycle[0]              ; cycle[2]                  ; clock      ; clock    ; None                        ; None                      ; 1.495 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; cycle[7]              ; cycle[7]                  ; clock      ; clock    ; None                        ; None                      ; 1.468 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; cycle[4]              ; cycle[5]                  ; clock      ; clock    ; None                        ; None                      ; 1.425 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; cycle[0]              ; cycle[1]                  ; clock      ; clock    ; None                        ; None                      ; 1.415 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; cycle[1]              ; cycle[2]                  ; clock      ; clock    ; None                        ; None                      ; 1.409 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; n_bit[2]              ; n_bit[2]                  ; clock      ; clock    ; None                        ; None                      ; 1.252 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; n_bit[3]              ; n_bit[3]                  ; clock      ; clock    ; None                        ; None                      ; 1.231 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; state.init            ; num_init[1]               ; clock      ; clock    ; None                        ; None                      ; 1.212 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; divider:M_divider|cnt ; divider:M_divider|dvd_out ; clock      ; clock    ; None                        ; None                      ; 0.628 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; init_ready            ; state.init                ; clock      ; clock    ; None                        ; None                      ; 1.041 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; state.d_ready         ; state.read_data           ; clock      ; clock    ; None                        ; None                      ; 1.040 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; num_init[1]           ; num_init[0]               ; clock      ; clock    ; None                        ; None                      ; 1.027 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; cycle[5]              ; cycle[5]                  ; clock      ; clock    ; None                        ; None                      ; 1.016 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; state.init            ; init_ready                ; clock      ; clock    ; None                        ; None                      ; 1.004 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; state.init            ; num_init[0]               ; clock      ; clock    ; None                        ; None                      ; 1.004 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; state.sleep           ; state.init                ; clock      ; clock    ; None                        ; None                      ; 1.000 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; cycle[2]              ; cycle[2]                  ; clock      ; clock    ; None                        ; None                      ; 0.995 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; cycle[4]              ; cycle[4]                  ; clock      ; clock    ; None                        ; None                      ; 0.993 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; new_data              ; state.read_data           ; clock      ; clock    ; None                        ; None                      ; 0.990 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; num_init[0]           ; num_init[1]               ; clock      ; clock    ; None                        ; None                      ; 0.988 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; wd                    ; state.sleep               ; clock      ; clock    ; None                        ; None                      ; 0.986 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; cycle[0]              ; cycle[0]                  ; clock      ; clock    ; None                        ; None                      ; 0.983 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; cycle[1]              ; cycle[1]                  ; clock      ; clock    ; None                        ; None                      ; 0.977 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; state.int_status      ; state.d_ready             ; clock      ; clock    ; None                        ; None                      ; 0.966 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; cycle[7]              ; wd                        ; clock      ; clock    ; None                        ; None                      ; 0.895 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; cycle[7]              ; cycle[3]                  ; clock      ; clock    ; None                        ; None                      ; 0.895 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; cycle[7]              ; cycle[6]                  ; clock      ; clock    ; None                        ; None                      ; 0.895 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; n_bit[4]              ; n_bit[4]                  ; clock      ; clock    ; None                        ; None                      ; 0.667 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; init_ready            ; state.sleep               ; clock      ; clock    ; None                        ; None                      ; 0.650 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; divider:M_divider|cnt ; divider:M_divider|cnt     ; clock      ; clock    ; None                        ; None                      ; 0.454 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; state.sleep           ; state.sleep               ; clock      ; clock    ; None                        ; None                      ; 0.454 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; state.int_status      ; state.int_status          ; clock      ; clock    ; None                        ; None                      ; 0.454 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; init_ready            ; init_ready                ; clock      ; clock    ; None                        ; None                      ; 0.454 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; state.read_data       ; state.read_data           ; clock      ; clock    ; None                        ; None                      ; 0.454 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; state.init            ; state.init                ; clock      ; clock    ; None                        ; None                      ; 0.454 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; new_data              ; new_data                  ; clock      ; clock    ; None                        ; None                      ; 0.454 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; num_init[0]           ; num_init[0]               ; clock      ; clock    ; None                        ; None                      ; 0.454 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; num_init[1]           ; num_init[1]               ; clock      ; clock    ; None                        ; None                      ; 0.454 ns                ;
++-------+------------------------------------------------+-----------------------+---------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++----------------------------------------------------------------+
+; tsu                                                            ;
++-------+--------------+------------+------+----------+----------+
+; Slack ; Required tsu ; Actual tsu ; From ; To       ; To Clock ;
++-------+--------------+------------+------+----------+----------+
+; N/A   ; None         ; 1.713 ns   ; sdo  ; new_data ; clock    ;
++-------+--------------+------------+------+----------+----------+
+
+
++-----------------------------------------------------------------------------------+
+; tco                                                                               ;
++-------+--------------+------------+---------------------------+------+------------+
+; Slack ; Required tco ; Actual tco ; From                      ; To   ; From Clock ;
++-------+--------------+------------+---------------------------+------+------------+
+; N/A   ; None         ; 7.982 ns   ; sdi~reg0                  ; sdi  ; clock      ;
+; N/A   ; None         ; 7.422 ns   ; cs~reg0                   ; cs   ; clock      ;
+; N/A   ; None         ; 7.421 ns   ; sclk_ena                  ; sclk ; clock      ;
+; N/A   ; None         ; 7.035 ns   ; divider:M_divider|dvd_out ; sclk ; clock      ;
++-------+--------------+------------+---------------------------+------+------------+
+
+
++----------------------------------------------------------------------+
+; th                                                                   ;
++---------------+-------------+-----------+------+----------+----------+
+; Minimum Slack ; Required th ; Actual th ; From ; To       ; To Clock ;
++---------------+-------------+-----------+------+----------+----------+
+; N/A           ; None        ; -1.465 ns ; sdo  ; new_data ; clock    ;
++---------------+-------------+-----------+------+----------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Tue Apr 10 20:04:37 2018
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off spi_master -c spi_master --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clock" is an undefined clock
+Warning: Found 1 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "divider:M_divider|dvd_out" as buffer
+Info: Clock "clock" has Internal fmax of 93.91 MHz between source register "n_bit[0]" and destination register "sdi~reg0" (period= 10.648 ns)
+    Info: + Longest register to register delay is 2.807 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X6_Y13_N11; Fanout = 9; REG Node = 'n_bit[0]'
+        Info: 2: + IC(0.419 ns) + CELL(0.545 ns) = 0.964 ns; Loc. = LCCOMB_X6_Y13_N24; Fanout = 2; COMB Node = 'Mux4~0'
+        Info: 3: + IC(0.306 ns) + CELL(0.322 ns) = 1.592 ns; Loc. = LCCOMB_X6_Y13_N12; Fanout = 1; COMB Node = 'Mux4~2'
+        Info: 4: + IC(0.318 ns) + CELL(0.178 ns) = 2.088 ns; Loc. = LCCOMB_X6_Y13_N16; Fanout = 1; COMB Node = 'Mux4~4'
+        Info: 5: + IC(0.304 ns) + CELL(0.319 ns) = 2.711 ns; Loc. = LCCOMB_X6_Y13_N8; Fanout = 1; COMB Node = 'Selector4~2'
+        Info: 6: + IC(0.000 ns) + CELL(0.096 ns) = 2.807 ns; Loc. = LCFF_X6_Y13_N9; Fanout = 1; REG Node = 'sdi~reg0'
+        Info: Total cell delay = 1.460 ns ( 52.01 % )
+        Info: Total interconnect delay = 1.347 ns ( 47.99 % )
+    Info: - Smallest clock skew is -2.278 ns
+        Info: + Shortest clock path from clock "clock" to destination register is 2.867 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.026 ns) = 1.026 ns; Loc. = PIN_M1; Fanout = 2; CLK Node = 'clock'
+            Info: 2: + IC(0.238 ns) + CELL(0.000 ns) = 1.264 ns; Loc. = CLKCTRL_G3; Fanout = 4; COMB Node = 'clock~clkctrl'
+            Info: 3: + IC(1.001 ns) + CELL(0.602 ns) = 2.867 ns; Loc. = LCFF_X6_Y13_N9; Fanout = 1; REG Node = 'sdi~reg0'
+            Info: Total cell delay = 1.628 ns ( 56.78 % )
+            Info: Total interconnect delay = 1.239 ns ( 43.22 % )
+        Info: - Longest clock path from clock "clock" to source register is 5.145 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.026 ns) = 1.026 ns; Loc. = PIN_M1; Fanout = 2; CLK Node = 'clock'
+            Info: 2: + IC(0.675 ns) + CELL(0.879 ns) = 2.580 ns; Loc. = LCFF_X3_Y13_N11; Fanout = 2; REG Node = 'divider:M_divider|dvd_out'
+            Info: 3: + IC(0.961 ns) + CELL(0.000 ns) = 3.541 ns; Loc. = CLKCTRL_G1; Fanout = 24; COMB Node = 'divider:M_divider|dvd_out~clkctrl'
+            Info: 4: + IC(1.002 ns) + CELL(0.602 ns) = 5.145 ns; Loc. = LCFF_X6_Y13_N11; Fanout = 9; REG Node = 'n_bit[0]'
+            Info: Total cell delay = 2.507 ns ( 48.73 % )
+            Info: Total interconnect delay = 2.638 ns ( 51.27 % )
+    Info: + Micro clock to output delay of source is 0.277 ns
+    Info: + Micro setup delay of destination is -0.038 ns
+    Info: Delay path is controlled by inverted clocks -- if clock duty cycle is 50%, fmax is divided by two
+Info: tsu for register "new_data" (data pin = "sdo", clock pin = "clock") is 1.713 ns
+    Info: + Longest pin to register delay is 6.895 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.864 ns) = 0.864 ns; Loc. = PIN_N1; Fanout = 1; PIN Node = 'sdo'
+        Info: 2: + IC(5.391 ns) + CELL(0.544 ns) = 6.799 ns; Loc. = LCCOMB_X5_Y13_N4; Fanout = 1; COMB Node = 'Selector5~3'
+        Info: 3: + IC(0.000 ns) + CELL(0.096 ns) = 6.895 ns; Loc. = LCFF_X5_Y13_N5; Fanout = 3; REG Node = 'new_data'
+        Info: Total cell delay = 1.504 ns ( 21.81 % )
+        Info: Total interconnect delay = 5.391 ns ( 78.19 % )
+    Info: + Micro setup delay of destination is -0.038 ns
+    Info: - Shortest clock path from clock "clock" to destination register is 5.144 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.026 ns) = 1.026 ns; Loc. = PIN_M1; Fanout = 2; CLK Node = 'clock'
+        Info: 2: + IC(0.675 ns) + CELL(0.879 ns) = 2.580 ns; Loc. = LCFF_X3_Y13_N11; Fanout = 2; REG Node = 'divider:M_divider|dvd_out'
+        Info: 3: + IC(0.961 ns) + CELL(0.000 ns) = 3.541 ns; Loc. = CLKCTRL_G1; Fanout = 24; COMB Node = 'divider:M_divider|dvd_out~clkctrl'
+        Info: 4: + IC(1.001 ns) + CELL(0.602 ns) = 5.144 ns; Loc. = LCFF_X5_Y13_N5; Fanout = 3; REG Node = 'new_data'
+        Info: Total cell delay = 2.507 ns ( 48.74 % )
+        Info: Total interconnect delay = 2.637 ns ( 51.26 % )
+Info: tco from clock "clock" to destination pin "sdi" through register "sdi~reg0" is 7.982 ns
+    Info: + Longest clock path from clock "clock" to source register is 2.867 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.026 ns) = 1.026 ns; Loc. = PIN_M1; Fanout = 2; CLK Node = 'clock'
+        Info: 2: + IC(0.238 ns) + CELL(0.000 ns) = 1.264 ns; Loc. = CLKCTRL_G3; Fanout = 4; COMB Node = 'clock~clkctrl'
+        Info: 3: + IC(1.001 ns) + CELL(0.602 ns) = 2.867 ns; Loc. = LCFF_X6_Y13_N9; Fanout = 1; REG Node = 'sdi~reg0'
+        Info: Total cell delay = 1.628 ns ( 56.78 % )
+        Info: Total interconnect delay = 1.239 ns ( 43.22 % )
+    Info: + Micro clock to output delay of source is 0.277 ns
+    Info: + Longest register to pin delay is 4.838 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X6_Y13_N9; Fanout = 1; REG Node = 'sdi~reg0'
+        Info: 2: + IC(1.842 ns) + CELL(2.996 ns) = 4.838 ns; Loc. = PIN_G7; Fanout = 0; PIN Node = 'sdi'
+        Info: Total cell delay = 2.996 ns ( 61.93 % )
+        Info: Total interconnect delay = 1.842 ns ( 38.07 % )
+Info: th for register "new_data" (data pin = "sdo", clock pin = "clock") is -1.465 ns
+    Info: + Longest clock path from clock "clock" to destination register is 5.144 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.026 ns) = 1.026 ns; Loc. = PIN_M1; Fanout = 2; CLK Node = 'clock'
+        Info: 2: + IC(0.675 ns) + CELL(0.879 ns) = 2.580 ns; Loc. = LCFF_X3_Y13_N11; Fanout = 2; REG Node = 'divider:M_divider|dvd_out'
+        Info: 3: + IC(0.961 ns) + CELL(0.000 ns) = 3.541 ns; Loc. = CLKCTRL_G1; Fanout = 24; COMB Node = 'divider:M_divider|dvd_out~clkctrl'
+        Info: 4: + IC(1.001 ns) + CELL(0.602 ns) = 5.144 ns; Loc. = LCFF_X5_Y13_N5; Fanout = 3; REG Node = 'new_data'
+        Info: Total cell delay = 2.507 ns ( 48.74 % )
+        Info: Total interconnect delay = 2.637 ns ( 51.26 % )
+    Info: + Micro hold delay of destination is 0.286 ns
+    Info: - Shortest pin to register delay is 6.895 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.864 ns) = 0.864 ns; Loc. = PIN_N1; Fanout = 1; PIN Node = 'sdo'
+        Info: 2: + IC(5.391 ns) + CELL(0.544 ns) = 6.799 ns; Loc. = LCCOMB_X5_Y13_N4; Fanout = 1; COMB Node = 'Selector5~3'
+        Info: 3: + IC(0.000 ns) + CELL(0.096 ns) = 6.895 ns; Loc. = LCFF_X5_Y13_N5; Fanout = 3; REG Node = 'new_data'
+        Info: Total cell delay = 1.504 ns ( 21.81 % )
+        Info: Total interconnect delay = 5.391 ns ( 78.19 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 174 megabytes
+    Info: Processing ended: Tue Apr 10 20:04:37 2018
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+
