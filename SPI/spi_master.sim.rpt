@@ -1,5 +1,5 @@
 Simulator report for spi_master
-Wed Apr 11 08:56:25 2018
+Tue Apr 17 11:00:32 2018
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -44,10 +44,10 @@ applicable agreement for further details.
 ; Type                        ; Value        ;
 +-----------------------------+--------------+
 ; Simulation Start Time       ; 0 ps         ;
-; Simulation End Time         ; 20.0 us      ;
+; Simulation End Time         ; 100.0 us     ;
 ; Simulation Netlist Size     ; 105 nodes    ;
-; Simulation Coverage         ;      78.26 % ;
-; Total Number of Transitions ; 22022        ;
+; Simulation Coverage         ;      80.00 % ;
+; Total Number of Transitions ; 59163        ;
 ; Simulation Breakpoints      ; 0            ;
 ; Family                      ; Cyclone II   ;
 ; Device                      ; EP2C20F484C7 ;
@@ -94,13 +94,13 @@ Please use Quartus II to view the waveform report data.
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;      78.26 % ;
+; Total coverage as a percentage                      ;      80.00 % ;
 ; Total nodes checked                                 ; 105          ;
 ; Total output ports checked                          ; 115          ;
-; Total output ports with complete 1/0-value coverage ; 90           ;
-; Total output ports with no 1/0-value coverage       ; 22           ;
-; Total output ports with no 1-value coverage         ; 22           ;
-; Total output ports with no 0-value coverage         ; 25           ;
+; Total output ports with complete 1/0-value coverage ; 92           ;
+; Total output ports with no 1/0-value coverage       ; 20           ;
+; Total output ports with no 1-value coverage         ; 20           ;
+; Total output ports with no 0-value coverage         ; 23           ;
 +-----------------------------------------------------+--------------+
 
 
@@ -183,6 +183,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |spi_master|next_state.d_ready~0              ; |spi_master|next_state.d_ready~0              ; combout          ;
 ; |spi_master|Selector5~1                       ; |spi_master|Selector5~1                       ; combout          ;
 ; |spi_master|Selector5~2                       ; |spi_master|Selector5~2                       ; combout          ;
+; |spi_master|Selector5~3                       ; |spi_master|Selector5~3                       ; combout          ;
 ; |spi_master|sdi~0                             ; |spi_master|sdi~0                             ; combout          ;
 ; |spi_master|Equal3~0                          ; |spi_master|Equal3~0                          ; combout          ;
 ; |spi_master|cycle~8                           ; |spi_master|cycle~8                           ; combout          ;
@@ -196,6 +197,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |spi_master|sclk                              ; |spi_master|sclk                              ; padio            ;
 ; |spi_master|sdi                               ; |spi_master|sdi                               ; padio            ;
 ; |spi_master|clock                             ; |spi_master|clock~corein                      ; combout          ;
+; |spi_master|sdo                               ; |spi_master|sdo~corein                        ; combout          ;
 ; |spi_master|clock~clkctrl                     ; |spi_master|clock~clkctrl                     ; outclk           ;
 ; |spi_master|cnt~clkctrl                       ; |spi_master|cnt~clkctrl                       ; outclk           ;
 ; |spi_master|divider:M_divider|dvd_out~clkctrl ; |spi_master|divider:M_divider|dvd_out~clkctrl ; outclk           ;
@@ -213,7 +215,6 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |spi_master|Selector4~0      ; |spi_master|Selector4~0      ; combout          ;
 ; |spi_master|new_data         ; |spi_master|new_data         ; regout           ;
 ; |spi_master|Selector3~0      ; |spi_master|Selector3~0      ; combout          ;
-; |spi_master|Selector5~3      ; |spi_master|Selector5~3      ; combout          ;
 ; |spi_master|acceleration[0]  ; |spi_master|acceleration[0]  ; padio            ;
 ; |spi_master|acceleration[1]  ; |spi_master|acceleration[1]  ; padio            ;
 ; |spi_master|acceleration[2]  ; |spi_master|acceleration[2]  ; padio            ;
@@ -230,7 +231,6 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |spi_master|acceleration[13] ; |spi_master|acceleration[13] ; padio            ;
 ; |spi_master|acceleration[14] ; |spi_master|acceleration[14] ; padio            ;
 ; |spi_master|acceleration[15] ; |spi_master|acceleration[15] ; padio            ;
-; |spi_master|sdo              ; |spi_master|sdo~corein       ; combout          ;
 +------------------------------+------------------------------+------------------+
 
 
@@ -247,7 +247,6 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |spi_master|new_data         ; |spi_master|new_data         ; regout           ;
 ; |spi_master|Selector3~0      ; |spi_master|Selector3~0      ; combout          ;
 ; |spi_master|init_ready~2     ; |spi_master|init_ready~2     ; combout          ;
-; |spi_master|Selector5~3      ; |spi_master|Selector5~3      ; combout          ;
 ; |spi_master|acceleration[0]  ; |spi_master|acceleration[0]  ; padio            ;
 ; |spi_master|acceleration[1]  ; |spi_master|acceleration[1]  ; padio            ;
 ; |spi_master|acceleration[2]  ; |spi_master|acceleration[2]  ; padio            ;
@@ -264,7 +263,6 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |spi_master|acceleration[13] ; |spi_master|acceleration[13] ; padio            ;
 ; |spi_master|acceleration[14] ; |spi_master|acceleration[14] ; padio            ;
 ; |spi_master|acceleration[15] ; |spi_master|acceleration[15] ; padio            ;
-; |spi_master|sdo              ; |spi_master|sdo~corein       ; combout          ;
 +------------------------------+------------------------------+------------------+
 
 
@@ -281,18 +279,18 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II Simulator
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Wed Apr 11 08:56:24 2018
+    Info: Processing started: Tue Apr 17 11:00:32 2018
 Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off spi_master -c spi_master
-Info: Using vector source file "C:/Users/Максим/Desktop/Quartus_Projects/labs_git/SPI/spi_master.vwf"
+Info: Using vector source file "C:/Users/Максим/Desktop/Quartus_Projects/3/SPI/spi_master.vwf"
 Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info: Simulation partitioned into 1 sub-simulations
-Info: Simulation coverage is      78.26 %
-Info: Number of transitions in simulation is 22022
+Info: Simulation coverage is      80.00 %
+Info: Number of transitions in simulation is 59163
 Info: Quartus II Simulator was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 215 megabytes
-    Info: Processing ended: Wed Apr 11 08:56:25 2018
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Processing ended: Tue Apr 17 11:00:32 2018
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
 
 

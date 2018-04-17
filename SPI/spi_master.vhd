@@ -78,6 +78,7 @@ architecture behavior of spi_master is
 	
 	begin	
 	
+	--делитель частоты
 	M_divider: divider generic map ( N => 2)
 			port map
 				(

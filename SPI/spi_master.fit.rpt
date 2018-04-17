@@ -1,5 +1,5 @@
 Fitter report for spi_master
-Tue Apr 10 20:04:34 2018
+Tue Apr 17 10:02:33 2018
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -35,7 +35,11 @@ Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
  27. Fitter Device Options
  28. Operating Settings and Conditions
  29. Estimated Delay Added for Hold Timing
- 30. Fitter Messages
+ 30. Advanced Data - General
+ 31. Advanced Data - Placement Preparation
+ 32. Advanced Data - Placement
+ 33. Advanced Data - Routing
+ 34. Fitter Messages
 
 
 
@@ -61,7 +65,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                    ;
 +------------------------------------+----------------------------------------------+
-; Fitter Status                      ; Successful - Tue Apr 10 20:04:34 2018        ;
+; Fitter Status                      ; Successful - Tue Apr 17 10:02:33 2018        ;
 ; Quartus II Version                 ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name                      ; spi_master                                   ;
 ; Top-level Entity Name              ; spi_master                                   ;
@@ -177,7 +181,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in D:/711M/3/SPI/spi_master.pin.
+The pin-out file can be found in C:/Users/Максим/Desktop/Quartus_Projects/3/SPI/spi_master.pin.
 
 
 +---------------------------------------------------------------------------------+
@@ -1119,13 +1123,101 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+----------------------+-------------------+
 
 
++----------------------------+
+; Advanced Data - General    ;
++--------------------+-------+
+; Name               ; Value ;
++--------------------+-------+
+; Status Code        ; 0     ;
+; Desired User Slack ; 0     ;
+; Fit Attempts       ; 1     ;
++--------------------+-------+
+
+
++------------------------------------------------------------------------------------+
+; Advanced Data - Placement Preparation                                              ;
++------------------------------------------------------------------+-----------------+
+; Name                                                             ; Value           ;
++------------------------------------------------------------------+-----------------+
+; Auto Fit Point 1 - Fit Attempt 1                                 ; ff              ;
+; Mid Wire Use - Fit Attempt 1                                     ; 0               ;
+; Mid Slack - Fit Attempt 1                                        ; -10398          ;
+; Internal Atom Count - Fit Attempt 1                              ; 81              ;
+; LE/ALM Count - Fit Attempt 1                                     ; 53              ;
+; LAB Count - Fit Attempt 1                                        ; 5               ;
+; Outputs per Lab - Fit Attempt 1                                  ; 6.800           ;
+; Inputs per LAB - Fit Attempt 1                                   ; 6.600           ;
+; Global Inputs per LAB - Fit Attempt 1                            ; 1.400           ;
+; LAB Constraint 'non-global clock + sync load' - Fit Attempt 1    ; 0:4;1:1         ;
+; LAB Constraint 'non-global controls' - Fit Attempt 1             ; 0:4;1:1         ;
+; LAB Constraint 'non-global + aclr' - Fit Attempt 1               ; 0:3;1:2         ;
+; LAB Constraint 'global non-clock non-aclr' - Fit Attempt 1       ; 0:5             ;
+; LAB Constraint 'global controls' - Fit Attempt 1                 ; 0:1;1:2;2:1;3:1 ;
+; LAB Constraint 'deterministic LABSMUXA/LABXMUXB' - Fit Attempt 1 ; 0:4;1:1         ;
+; LAB Constraint 'deterministic LABSMUXC/LABXMUXD' - Fit Attempt 1 ; 0:4;1:1         ;
+; LAB Constraint 'clock / ce pair constraint' - Fit Attempt 1      ; 0:1;1:1;2:3     ;
+; LAB Constraint 'aclr constraint' - Fit Attempt 1                 ; 0:1;1:3;2:1     ;
+; LAB Constraint 'true sload_sclear pair' - Fit Attempt 1          ; 0:3;1:2         ;
+; LAB Constraint 'constant sload_sclear pair' - Fit Attempt 1      ; 0:5             ;
+; LAB Constraint 'has placement constraint' - Fit Attempt 1        ; 0:5             ;
+; LAB Constraint 'group hierarchy constraint' - Fit Attempt 1      ; 0:1;1:3;2:1     ;
+; LEs in Chains - Fit Attempt 1                                    ; 12              ;
+; LEs in Long Chains - Fit Attempt 1                               ; 0               ;
+; LABs with Chains - Fit Attempt 1                                 ; 2               ;
+; LABs with Multiple Chains - Fit Attempt 1                        ; 0               ;
+; Time - Fit Attempt 1                                             ; 0               ;
++------------------------------------------------------------------+-----------------+
+
+
++--------------------------------------------+
+; Advanced Data - Placement                  ;
++------------------------------------+-------+
+; Name                               ; Value ;
++------------------------------------+-------+
+; Auto Fit Point 2 - Fit Attempt 1   ; ff    ;
+; Auto Fit Point 5 - Fit Attempt 1   ; ff    ;
+; Mid Wire Use - Fit Attempt 1       ; 0     ;
+; Mid Slack - Fit Attempt 1          ; -5637 ;
+; Auto Fit Point 6 - Fit Attempt 1   ; ff    ;
+; Auto Fit Point 6 - Fit Attempt 1   ; ff    ;
+; Auto Fit Point 6 - Fit Attempt 1   ; ff    ;
+; Auto Fit Point 5 - Fit Attempt 1   ; ff    ;
+; Mid Wire Use - Fit Attempt 1       ; 0     ;
+; Mid Slack - Fit Attempt 1          ; -5637 ;
+; Auto Fit Point 6 - Fit Attempt 1   ; ff    ;
+; Auto Fit Point 6 - Fit Attempt 1   ; ff    ;
+; Auto Fit Point 6 - Fit Attempt 1   ; ff    ;
+; Late Wire Use - Fit Attempt 1      ; 0     ;
+; Late Slack - Fit Attempt 1         ; -5637 ;
+; Peak Regional Wire - Fit Attempt 1 ; 0.000 ;
+; Auto Fit Point 7 - Fit Attempt 1   ; ff    ;
+; Time - Fit Attempt 1               ; 0     ;
++------------------------------------+-------+
+
+
++---------------------------------------------------+
+; Advanced Data - Routing                           ;
++-------------------------------------+-------------+
+; Name                                ; Value       ;
++-------------------------------------+-------------+
+; Early Slack - Fit Attempt 1         ; -4441       ;
+; Early Wire Use - Fit Attempt 1      ; 0           ;
+; Peak Regional Wire - Fit Attempt 1  ; 0           ;
+; Mid Slack - Fit Attempt 1           ; -5004       ;
+; Late Slack - Fit Attempt 1          ; -2147483648 ;
+; Late Wire Use - Fit Attempt 1       ; 0           ;
+; Time - Fit Attempt 1                ; 0           ;
+; Time in tsm_tan.dll - Fit Attempt 1 ; 0.016       ;
++-------------------------------------+-------------+
+
+
 +-----------------+
 ; Fitter Messages ;
 +-----------------+
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Tue Apr 10 20:04:31 2018
+    Info: Processing started: Tue Apr 17 10:02:30 2018
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off spi_master -c spi_master
 Info: Selected device EP2C20F484C7 for design "spi_master"
 Info: Low junction temperature is 0 degrees C
@@ -1196,7 +1288,7 @@ Info: I/O bank details before I/O pin placement
         Info: I/O bank number 6 does not use VREF pins and has undetermined VCCIO pins. 1 total pin(s) used --  35 pins available
         Info: I/O bank number 7 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  40 pins available
         Info: I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  43 pins available
-Info: Fitter preparation operations ending: elapsed time is 00:00:01
+Info: Fitter preparation operations ending: elapsed time is 00:00:00
 Info: Fitter placement preparation operations beginning
 Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info: Fitter placement operations beginning
@@ -1259,8 +1351,8 @@ Warning: Following 16 pins have nothing, GND, or VCC driving datain port -- chan
     Info: Pin acceleration[15] has GND driving its datain port
 Warning: The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info: Quartus II Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 244 megabytes
-    Info: Processing ended: Tue Apr 10 20:04:34 2018
+    Info: Peak virtual memory: 339 megabytes
+    Info: Processing ended: Tue Apr 17 10:02:33 2018
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
 

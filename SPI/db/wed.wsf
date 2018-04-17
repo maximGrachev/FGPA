@@ -522,13 +522,13 @@ VECTOR("D:/711M/3/SPI/spi_master.vwf")
 	}
 }
 
-VECTOR("C:/Users/Максим/Desktop/Quartus_Projects/labs_git/SPI/db/spi_master.sim.cvwf")
+VECTOR("C:/Users/Максим/Desktop/Quartus_Projects/3/SPI/db/spi_master.sim.cvwf")
 {
 	ZOOM{
-		ZBEGIN = 0;
-		ZEND = 16473906;
-		NUMERATOR = 864;
-		DENOMINATOR = 16473906;
+		ZBEGIN = 17482369;
+		ZEND = 22482369;
+		NUMERATOR = 1418;
+		DENOMINATOR = 5000000;
 		TOP_INDEX = 0;
 	}
 	CLOCK{
@@ -580,7 +580,7 @@ VECTOR("C:/Users/Максим/Desktop/Quartus_Projects/labs_git/SPI/db/spi_master.sim.
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "acceleration";
+		SIGNAL = "n_bit";
 		INDEX = 5;
 		FORMAT = T;
 		SCALE = 1;
@@ -588,7 +588,7 @@ VECTOR("C:/Users/Максим/Desktop/Quartus_Projects/labs_git/SPI/db/spi_master.sim.
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "acceleration[15]";
+		SIGNAL = "n_bit[4]";
 		INDEX = 6;
 		FORMAT = E;
 		SCALE = 1;
@@ -596,7 +596,7 @@ VECTOR("C:/Users/Максим/Desktop/Quartus_Projects/labs_git/SPI/db/spi_master.sim.
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "acceleration[14]";
+		SIGNAL = "n_bit[3]";
 		INDEX = 7;
 		FORMAT = E;
 		SCALE = 1;
@@ -604,7 +604,7 @@ VECTOR("C:/Users/Максим/Desktop/Quartus_Projects/labs_git/SPI/db/spi_master.sim.
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "acceleration[13]";
+		SIGNAL = "n_bit[2]";
 		INDEX = 8;
 		FORMAT = E;
 		SCALE = 1;
@@ -612,7 +612,7 @@ VECTOR("C:/Users/Максим/Desktop/Quartus_Projects/labs_git/SPI/db/spi_master.sim.
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "acceleration[12]";
+		SIGNAL = "n_bit[1]";
 		INDEX = 9;
 		FORMAT = E;
 		SCALE = 1;
@@ -620,7 +620,7 @@ VECTOR("C:/Users/Максим/Desktop/Quartus_Projects/labs_git/SPI/db/spi_master.sim.
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "acceleration[11]";
+		SIGNAL = "n_bit[0]";
 		INDEX = 10;
 		FORMAT = E;
 		SCALE = 1;
@@ -628,7 +628,7 @@ VECTOR("C:/Users/Максим/Desktop/Quartus_Projects/labs_git/SPI/db/spi_master.sim.
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "acceleration[10]";
+		SIGNAL = "state";
 		INDEX = 11;
 		FORMAT = E;
 		SCALE = 1;
@@ -636,15 +636,15 @@ VECTOR("C:/Users/Максим/Desktop/Quartus_Projects/labs_git/SPI/db/spi_master.sim.
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "acceleration[9]";
+		SIGNAL = "acceleration";
 		INDEX = 12;
-		FORMAT = E;
+		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "acceleration[8]";
+		SIGNAL = "acceleration[15]";
 		INDEX = 13;
 		FORMAT = E;
 		SCALE = 1;
@@ -652,7 +652,7 @@ VECTOR("C:/Users/Максим/Desktop/Quartus_Projects/labs_git/SPI/db/spi_master.sim.
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "acceleration[7]";
+		SIGNAL = "acceleration[14]";
 		INDEX = 14;
 		FORMAT = E;
 		SCALE = 1;
@@ -660,7 +660,7 @@ VECTOR("C:/Users/Максим/Desktop/Quartus_Projects/labs_git/SPI/db/spi_master.sim.
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "acceleration[6]";
+		SIGNAL = "acceleration[13]";
 		INDEX = 15;
 		FORMAT = E;
 		SCALE = 1;
@@ -668,7 +668,7 @@ VECTOR("C:/Users/Максим/Desktop/Quartus_Projects/labs_git/SPI/db/spi_master.sim.
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "acceleration[5]";
+		SIGNAL = "acceleration[12]";
 		INDEX = 16;
 		FORMAT = E;
 		SCALE = 1;
@@ -676,7 +676,7 @@ VECTOR("C:/Users/Максим/Desktop/Quartus_Projects/labs_git/SPI/db/spi_master.sim.
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "acceleration[4]";
+		SIGNAL = "acceleration[11]";
 		INDEX = 17;
 		FORMAT = E;
 		SCALE = 1;
@@ -684,7 +684,7 @@ VECTOR("C:/Users/Максим/Desktop/Quartus_Projects/labs_git/SPI/db/spi_master.sim.
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "acceleration[3]";
+		SIGNAL = "acceleration[10]";
 		INDEX = 18;
 		FORMAT = E;
 		SCALE = 1;
@@ -692,7 +692,7 @@ VECTOR("C:/Users/Максим/Desktop/Quartus_Projects/labs_git/SPI/db/spi_master.sim.
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "acceleration[2]";
+		SIGNAL = "acceleration[9]";
 		INDEX = 19;
 		FORMAT = E;
 		SCALE = 1;
@@ -700,7 +700,7 @@ VECTOR("C:/Users/Максим/Desktop/Quartus_Projects/labs_git/SPI/db/spi_master.sim.
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "acceleration[1]";
+		SIGNAL = "acceleration[8]";
 		INDEX = 20;
 		FORMAT = E;
 		SCALE = 1;
@@ -708,7 +708,7 @@ VECTOR("C:/Users/Максим/Desktop/Quartus_Projects/labs_git/SPI/db/spi_master.sim.
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "acceleration[0]";
+		SIGNAL = "acceleration[7]";
 		INDEX = 21;
 		FORMAT = E;
 		SCALE = 1;
@@ -716,7 +716,7 @@ VECTOR("C:/Users/Максим/Desktop/Quartus_Projects/labs_git/SPI/db/spi_master.sim.
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "state";
+		SIGNAL = "acceleration[6]";
 		INDEX = 22;
 		FORMAT = E;
 		SCALE = 1;
@@ -724,15 +724,15 @@ VECTOR("C:/Users/Максим/Desktop/Quartus_Projects/labs_git/SPI/db/spi_master.sim.
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "n_bit";
+		SIGNAL = "acceleration[5]";
 		INDEX = 23;
-		FORMAT = T;
+		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "n_bit[4]";
+		SIGNAL = "acceleration[4]";
 		INDEX = 24;
 		FORMAT = E;
 		SCALE = 1;
@@ -740,7 +740,7 @@ VECTOR("C:/Users/Максим/Desktop/Quartus_Projects/labs_git/SPI/db/spi_master.sim.
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "n_bit[3]";
+		SIGNAL = "acceleration[3]";
 		INDEX = 25;
 		FORMAT = E;
 		SCALE = 1;
@@ -748,7 +748,7 @@ VECTOR("C:/Users/Максим/Desktop/Quartus_Projects/labs_git/SPI/db/spi_master.sim.
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "n_bit[2]";
+		SIGNAL = "acceleration[2]";
 		INDEX = 26;
 		FORMAT = E;
 		SCALE = 1;
@@ -756,7 +756,7 @@ VECTOR("C:/Users/Максим/Desktop/Quartus_Projects/labs_git/SPI/db/spi_master.sim.
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "n_bit[1]";
+		SIGNAL = "acceleration[1]";
 		INDEX = 27;
 		FORMAT = E;
 		SCALE = 1;
@@ -764,7 +764,258 @@ VECTOR("C:/Users/Максим/Desktop/Quartus_Projects/labs_git/SPI/db/spi_master.sim.
 		FLAG = N;
 	}
 	LINE{
+		SIGNAL = "acceleration[0]";
+		INDEX = 28;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+}
+
+VECTOR("C:/Users/Максим/Desktop/Quartus_Projects/3/SPI/spi_master.vwf")
+{
+	ZOOM{
+		ZBEGIN = 17081209;
+		ZEND = 20206209;
+		NUMERATOR = 1579;
+		DENOMINATOR = 3125000;
+		TOP_INDEX = 0;
+	}
+	CLOCK{
+		PERIOD = 10000;
+		OFFSET = 0;
+		DUTY_CYCLE = 50;
+	}
+	RANDOM_VALUE{
+		INTERVAL_TYPE = HALF_GRID;
+	}
+	LINE{
+		SIGNAL = "clock";
+		INDEX = 0;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "cs";
+		INDEX = 1;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "sclk";
+		INDEX = 2;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "sdi";
+		INDEX = 3;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "sdo";
+		INDEX = 4;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "n_bit";
+		INDEX = 5;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "n_bit[4]";
+		INDEX = 6;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "n_bit[3]";
+		INDEX = 7;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "n_bit[2]";
+		INDEX = 8;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "n_bit[1]";
+		INDEX = 9;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
 		SIGNAL = "n_bit[0]";
+		INDEX = 10;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "state";
+		INDEX = 11;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "acceleration";
+		INDEX = 12;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "acceleration[15]";
+		INDEX = 13;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "acceleration[14]";
+		INDEX = 14;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "acceleration[13]";
+		INDEX = 15;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "acceleration[12]";
+		INDEX = 16;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "acceleration[11]";
+		INDEX = 17;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "acceleration[10]";
+		INDEX = 18;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "acceleration[9]";
+		INDEX = 19;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "acceleration[8]";
+		INDEX = 20;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "acceleration[7]";
+		INDEX = 21;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "acceleration[6]";
+		INDEX = 22;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "acceleration[5]";
+		INDEX = 23;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "acceleration[4]";
+		INDEX = 24;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "acceleration[3]";
+		INDEX = 25;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "acceleration[2]";
+		INDEX = 26;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "acceleration[1]";
+		INDEX = 27;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "acceleration[0]";
 		INDEX = 28;
 		FORMAT = E;
 		SCALE = 1;
