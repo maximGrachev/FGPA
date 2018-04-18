@@ -53,3 +53,26 @@ set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
 set_global_assignment -name VHDL_FILE divider.vhd
 set_global_assignment -name VHDL_FILE spi_master.vhd
 set_global_assignment -name VECTOR_WAVEFORM_FILE spi_master.vwf
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_location_assignment PIN_R17 -to acceleration[15]
+set_location_assignment PIN_R18 -to acceleration[14]
+set_location_assignment PIN_U18 -to acceleration[13]
+set_location_assignment PIN_Y18 -to acceleration[12]
+set_location_assignment PIN_V19 -to acceleration[11]
+set_location_assignment PIN_T18 -to acceleration[10]
+set_location_assignment PIN_Y19 -to acceleration[9]
+set_location_assignment PIN_U19 -to acceleration[8]
+set_location_assignment PIN_R19 -to acceleration[7]
+set_location_assignment PIN_R20 -to acceleration[6]
+set_location_assignment PIN_Y21 -to acceleration[5]
+set_location_assignment PIN_Y22 -to acceleration[4]
+set_location_assignment PIN_W21 -to acceleration[3]
+set_location_assignment PIN_W22 -to acceleration[2]
+set_location_assignment PIN_V21 -to acceleration[1]
+set_location_assignment PIN_V22 -to acceleration[0]
+set_location_assignment PIN_D12 -to clock
+set_location_assignment PIN_K21 -to sclk
+set_location_assignment PIN_J22 -to sdo
+set_location_assignment PIN_J21 -to sdi
+set_location_assignment PIN_K22 -to cs
+set_global_assignment -name MISC_FILE "D:/711M/3/SPI/spi_master.dpf"

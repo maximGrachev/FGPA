@@ -27,9 +27,9 @@ begin
 		
 		if clc'event and clc='1' then
 			if cnt<N/2 then
-				dvd_out<='1';
-			else
 				dvd_out<='0';
+			else
+				dvd_out<='1';
 			end if;
 				
 			if cnt=N-1 then

@@ -1,5 +1,5 @@
 Simulator report for spi_master
-Tue Apr 17 11:00:32 2018
+Tue Apr 17 19:29:06 2018
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -45,9 +45,9 @@ applicable agreement for further details.
 +-----------------------------+--------------+
 ; Simulation Start Time       ; 0 ps         ;
 ; Simulation End Time         ; 100.0 us     ;
-; Simulation Netlist Size     ; 105 nodes    ;
-; Simulation Coverage         ;      80.00 % ;
-; Total Number of Transitions ; 59163        ;
+; Simulation Netlist Size     ; 197 nodes    ;
+; Simulation Coverage         ;      47.89 % ;
+; Total Number of Transitions ; 35942        ;
 ; Simulation Breakpoints      ; 0            ;
 ; Family                      ; Cyclone II   ;
 ; Device                      ; EP2C20F484C7 ;
@@ -94,13 +94,13 @@ Please use Quartus II to view the waveform report data.
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;      80.00 % ;
-; Total nodes checked                                 ; 105          ;
-; Total output ports checked                          ; 115          ;
-; Total output ports with complete 1/0-value coverage ; 92           ;
-; Total output ports with no 1/0-value coverage       ; 20           ;
-; Total output ports with no 1-value coverage         ; 20           ;
-; Total output ports with no 0-value coverage         ; 23           ;
+; Total coverage as a percentage                      ;      47.89 % ;
+; Total nodes checked                                 ; 197          ;
+; Total output ports checked                          ; 213          ;
+; Total output ports with complete 1/0-value coverage ; 102          ;
+; Total output ports with no 1/0-value coverage       ; 107          ;
+; Total output ports with no 1-value coverage         ; 107          ;
+; Total output ports with no 0-value coverage         ; 111          ;
 +-----------------------------------------------------+--------------+
 
 
@@ -136,6 +136,12 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |spi_master|Add1~12                           ; |spi_master|Add1~12                           ; combout          ;
 ; |spi_master|Add1~12                           ; |spi_master|Add1~13                           ; cout             ;
 ; |spi_master|Add1~14                           ; |spi_master|Add1~14                           ; combout          ;
+; |spi_master|Add1~14                           ; |spi_master|Add1~15                           ; cout             ;
+; |spi_master|Add1~16                           ; |spi_master|Add1~16                           ; combout          ;
+; |spi_master|Add1~16                           ; |spi_master|Add1~17                           ; cout             ;
+; |spi_master|Add1~18                           ; |spi_master|Add1~18                           ; combout          ;
+; |spi_master|Add1~18                           ; |spi_master|Add1~19                           ; cout             ;
+; |spi_master|Add1~20                           ; |spi_master|Add1~20                           ; combout          ;
 ; |spi_master|cs~reg0                           ; |spi_master|cs~reg0                           ; regout           ;
 ; |spi_master|divider:M_divider|dvd_out         ; |spi_master|divider:M_divider|dvd_out         ; regout           ;
 ; |spi_master|sclk_ena                          ; |spi_master|sclk_ena                          ; regout           ;
@@ -144,8 +150,6 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |spi_master|state.sleep                       ; |spi_master|state.sleep                       ; regout           ;
 ; |spi_master|divider:M_divider|cnt             ; |spi_master|divider:M_divider|cnt             ; regout           ;
 ; |spi_master|n_bit[0]                          ; |spi_master|n_bit[0]                          ; regout           ;
-; |spi_master|state.int_status                  ; |spi_master|state.int_status                  ; regout           ;
-; |spi_master|Selector4~1                       ; |spi_master|Selector4~1                       ; combout          ;
 ; |spi_master|state.init                        ; |spi_master|state.init                        ; regout           ;
 ; |spi_master|num_init[0]                       ; |spi_master|num_init[0]                       ; regout           ;
 ; |spi_master|Mux4~0                            ; |spi_master|Mux4~0                            ; combout          ;
@@ -154,42 +158,48 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |spi_master|Mux4~3                            ; |spi_master|Mux4~3                            ; combout          ;
 ; |spi_master|Mux4~4                            ; |spi_master|Mux4~4                            ; combout          ;
 ; |spi_master|Selector4~2                       ; |spi_master|Selector4~2                       ; combout          ;
-; |spi_master|Mux4~5                            ; |spi_master|Mux4~5                            ; combout          ;
-; |spi_master|Selector0~2                       ; |spi_master|Selector0~2                       ; combout          ;
-; |spi_master|Selector0~3                       ; |spi_master|Selector0~3                       ; combout          ;
-; |spi_master|Selector2~0                       ; |spi_master|Selector2~0                       ; combout          ;
 ; |spi_master|wd                                ; |spi_master|wd                                ; regout           ;
-; |spi_master|state.d_ready                     ; |spi_master|state.d_ready                     ; regout           ;
-; |spi_master|Equal1~0                          ; |spi_master|Equal1~0                          ; combout          ;
-; |spi_master|cnt                               ; |spi_master|cnt                               ; regout           ;
 ; |spi_master|Equal0~0                          ; |spi_master|Equal0~0                          ; combout          ;
-; |spi_master|Selector2~1                       ; |spi_master|Selector2~1                       ; combout          ;
-; |spi_master|Selector2~2                       ; |spi_master|Selector2~2                       ; combout          ;
+; |spi_master|Selector0~0                       ; |spi_master|Selector0~0                       ; combout          ;
+; |spi_master|Selector0~1                       ; |spi_master|Selector0~1                       ; combout          ;
+; |spi_master|Equal0~1                          ; |spi_master|Equal0~1                          ; combout          ;
+; |spi_master|Selector0~2                       ; |spi_master|Selector0~2                       ; combout          ;
+; |spi_master|cnt                               ; |spi_master|cnt                               ; regout           ;
+; |spi_master|Equal3~0                          ; |spi_master|Equal3~0                          ; combout          ;
 ; |spi_master|Selector1~0                       ; |spi_master|Selector1~0                       ; combout          ;
 ; |spi_master|num_init[1]~6                     ; |spi_master|num_init[1]~6                     ; combout          ;
 ; |spi_master|num_init[0]~7                     ; |spi_master|num_init[0]~7                     ; combout          ;
+; |spi_master|data[1][1]~51                     ; |spi_master|data[1][1]~51                     ; combout          ;
+; |spi_master|data[1][2]~53                     ; |spi_master|data[1][2]~53                     ; combout          ;
+; |spi_master|data[1][3]~55                     ; |spi_master|data[1][3]~55                     ; combout          ;
+; |spi_master|data[1][4]~57                     ; |spi_master|data[1][4]~57                     ; combout          ;
+; |spi_master|data[1][5]~59                     ; |spi_master|data[1][5]~59                     ; combout          ;
+; |spi_master|data[1][6]~61                     ; |spi_master|data[1][6]~61                     ; combout          ;
+; |spi_master|Equal5~0                          ; |spi_master|Equal5~0                          ; combout          ;
 ; |spi_master|init_ready~1                      ; |spi_master|init_ready~1                      ; combout          ;
-; |spi_master|cycle[5]                          ; |spi_master|cycle[5]                          ; regout           ;
+; |spi_master|init_ready~2                      ; |spi_master|init_ready~2                      ; combout          ;
 ; |spi_master|cycle[4]                          ; |spi_master|cycle[4]                          ; regout           ;
-; |spi_master|cycle[3]                          ; |spi_master|cycle[3]                          ; regout           ;
-; |spi_master|Equal2~0                          ; |spi_master|Equal2~0                          ; combout          ;
+; |spi_master|cycle[5]                          ; |spi_master|cycle[5]                          ; regout           ;
 ; |spi_master|cycle[6]                          ; |spi_master|cycle[6]                          ; regout           ;
-; |spi_master|cycle[2]                          ; |spi_master|cycle[2]                          ; regout           ;
-; |spi_master|cycle[1]                          ; |spi_master|cycle[1]                          ; regout           ;
-; |spi_master|cycle[0]                          ; |spi_master|cycle[0]                          ; regout           ;
-; |spi_master|Equal2~1                          ; |spi_master|Equal2~1                          ; combout          ;
 ; |spi_master|cycle[7]                          ; |spi_master|cycle[7]                          ; regout           ;
-; |spi_master|Equal2~2                          ; |spi_master|Equal2~2                          ; combout          ;
-; |spi_master|next_state.d_ready~0              ; |spi_master|next_state.d_ready~0              ; combout          ;
-; |spi_master|Selector5~1                       ; |spi_master|Selector5~1                       ; combout          ;
-; |spi_master|Selector5~2                       ; |spi_master|Selector5~2                       ; combout          ;
-; |spi_master|Selector5~3                       ; |spi_master|Selector5~3                       ; combout          ;
+; |spi_master|Equal1~0                          ; |spi_master|Equal1~0                          ; combout          ;
+; |spi_master|Equal1~1                          ; |spi_master|Equal1~1                          ; combout          ;
+; |spi_master|cycle[0]                          ; |spi_master|cycle[0]                          ; regout           ;
+; |spi_master|cycle[1]                          ; |spi_master|cycle[1]                          ; regout           ;
+; |spi_master|cycle[2]                          ; |spi_master|cycle[2]                          ; regout           ;
+; |spi_master|cycle[3]                          ; |spi_master|cycle[3]                          ; regout           ;
+; |spi_master|Equal1~2                          ; |spi_master|Equal1~2                          ; combout          ;
+; |spi_master|cycle[8]                          ; |spi_master|cycle[8]                          ; regout           ;
+; |spi_master|cycle[9]                          ; |spi_master|cycle[9]                          ; regout           ;
+; |spi_master|Equal1~3                          ; |spi_master|Equal1~3                          ; combout          ;
+; |spi_master|Equal1~4                          ; |spi_master|Equal1~4                          ; combout          ;
 ; |spi_master|sdi~0                             ; |spi_master|sdi~0                             ; combout          ;
-; |spi_master|Equal3~0                          ; |spi_master|Equal3~0                          ; combout          ;
-; |spi_master|cycle~8                           ; |spi_master|cycle~8                           ; combout          ;
-; |spi_master|cycle~9                           ; |spi_master|cycle~9                           ; combout          ;
-; |spi_master|cycle~10                          ; |spi_master|cycle~10                          ; combout          ;
-; |spi_master|Selector0~4                       ; |spi_master|Selector0~4                       ; combout          ;
+; |spi_master|Selector6~1                       ; |spi_master|Selector6~1                       ; combout          ;
+; |spi_master|Equal2~0                          ; |spi_master|Equal2~0                          ; combout          ;
+; |spi_master|cycle~14                          ; |spi_master|cycle~14                          ; combout          ;
+; |spi_master|cycle~15                          ; |spi_master|cycle~15                          ; combout          ;
+; |spi_master|cycle~16                          ; |spi_master|cycle~16                          ; combout          ;
+; |spi_master|cycle~17                          ; |spi_master|cycle~17                          ; combout          ;
 ; |spi_master|cs~1                              ; |spi_master|cs~1                              ; combout          ;
 ; |spi_master|divider:M_divider|cnt~1           ; |spi_master|divider:M_divider|cnt~1           ; combout          ;
 ; |spi_master|n_bit[0]~12                       ; |spi_master|n_bit[0]~12                       ; combout          ;
@@ -206,64 +216,239 @@ The following table displays output ports that toggle between 1 and 0 during sim
 
 
 The following table displays output ports that do not toggle to 1 during simulation.
-+--------------------------------------------------------------------------------+
-; Missing 1-Value Coverage                                                       ;
-+------------------------------+------------------------------+------------------+
-; Node Name                    ; Output Port Name             ; Output Port Type ;
-+------------------------------+------------------------------+------------------+
-; |spi_master|state.read_data  ; |spi_master|state.read_data  ; regout           ;
-; |spi_master|Selector4~0      ; |spi_master|Selector4~0      ; combout          ;
-; |spi_master|new_data         ; |spi_master|new_data         ; regout           ;
-; |spi_master|Selector3~0      ; |spi_master|Selector3~0      ; combout          ;
-; |spi_master|acceleration[0]  ; |spi_master|acceleration[0]  ; padio            ;
-; |spi_master|acceleration[1]  ; |spi_master|acceleration[1]  ; padio            ;
-; |spi_master|acceleration[2]  ; |spi_master|acceleration[2]  ; padio            ;
-; |spi_master|acceleration[3]  ; |spi_master|acceleration[3]  ; padio            ;
-; |spi_master|acceleration[4]  ; |spi_master|acceleration[4]  ; padio            ;
-; |spi_master|acceleration[5]  ; |spi_master|acceleration[5]  ; padio            ;
-; |spi_master|acceleration[6]  ; |spi_master|acceleration[6]  ; padio            ;
-; |spi_master|acceleration[7]  ; |spi_master|acceleration[7]  ; padio            ;
-; |spi_master|acceleration[8]  ; |spi_master|acceleration[8]  ; padio            ;
-; |spi_master|acceleration[9]  ; |spi_master|acceleration[9]  ; padio            ;
-; |spi_master|acceleration[10] ; |spi_master|acceleration[10] ; padio            ;
-; |spi_master|acceleration[11] ; |spi_master|acceleration[11] ; padio            ;
-; |spi_master|acceleration[12] ; |spi_master|acceleration[12] ; padio            ;
-; |spi_master|acceleration[13] ; |spi_master|acceleration[13] ; padio            ;
-; |spi_master|acceleration[14] ; |spi_master|acceleration[14] ; padio            ;
-; |spi_master|acceleration[15] ; |spi_master|acceleration[15] ; padio            ;
-+------------------------------+------------------------------+------------------+
++------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                             ;
++-----------------------------------------+-----------------------------------------+------------------+
+; Node Name                               ; Output Port Name                        ; Output Port Type ;
++-----------------------------------------+-----------------------------------------+------------------+
+; |spi_master|Add1~20                     ; |spi_master|Add1~21                     ; cout             ;
+; |spi_master|Add1~22                     ; |spi_master|Add1~22                     ; combout          ;
+; |spi_master|Add1~22                     ; |spi_master|Add1~23                     ; cout             ;
+; |spi_master|Add1~24                     ; |spi_master|Add1~24                     ; combout          ;
+; |spi_master|Add1~24                     ; |spi_master|Add1~25                     ; cout             ;
+; |spi_master|Add1~26                     ; |spi_master|Add1~26                     ; combout          ;
+; |spi_master|acceleration[0]~reg0        ; |spi_master|acceleration[0]~reg0        ; regout           ;
+; |spi_master|acceleration[1]~reg0        ; |spi_master|acceleration[1]~reg0        ; regout           ;
+; |spi_master|acceleration[2]~reg0        ; |spi_master|acceleration[2]~reg0        ; regout           ;
+; |spi_master|acceleration[3]~reg0        ; |spi_master|acceleration[3]~reg0        ; regout           ;
+; |spi_master|acceleration[4]~reg0        ; |spi_master|acceleration[4]~reg0        ; regout           ;
+; |spi_master|acceleration[5]~reg0        ; |spi_master|acceleration[5]~reg0        ; regout           ;
+; |spi_master|acceleration[6]~reg0        ; |spi_master|acceleration[6]~reg0        ; regout           ;
+; |spi_master|acceleration[7]~reg0        ; |spi_master|acceleration[7]~reg0        ; regout           ;
+; |spi_master|acceleration[8]~reg0        ; |spi_master|acceleration[8]~reg0        ; regout           ;
+; |spi_master|acceleration[9]~reg0        ; |spi_master|acceleration[9]~reg0        ; regout           ;
+; |spi_master|acceleration[10]~reg0       ; |spi_master|acceleration[10]~reg0       ; regout           ;
+; |spi_master|acceleration[11]~reg0       ; |spi_master|acceleration[11]~reg0       ; regout           ;
+; |spi_master|acceleration[12]~reg0       ; |spi_master|acceleration[12]~reg0       ; regout           ;
+; |spi_master|acceleration[13]~reg0       ; |spi_master|acceleration[13]~reg0       ; regout           ;
+; |spi_master|acceleration[14]~reg0       ; |spi_master|acceleration[14]~reg0       ; regout           ;
+; |spi_master|acceleration[15]~reg0       ; |spi_master|acceleration[15]~reg0       ; regout           ;
+; |spi_master|state.read_data             ; |spi_master|state.read_data             ; regout           ;
+; |spi_master|Selector4~0                 ; |spi_master|Selector4~0                 ; combout          ;
+; |spi_master|state.int_status            ; |spi_master|state.int_status            ; regout           ;
+; |spi_master|Selector4~1                 ; |spi_master|Selector4~1                 ; combout          ;
+; |spi_master|data[0][0]                  ; |spi_master|data[0][0]                  ; regout           ;
+; |spi_master|data[0][1]                  ; |spi_master|data[0][1]                  ; regout           ;
+; |spi_master|data[0][2]                  ; |spi_master|data[0][2]                  ; regout           ;
+; |spi_master|data[0][3]                  ; |spi_master|data[0][3]                  ; regout           ;
+; |spi_master|data[0][4]                  ; |spi_master|data[0][4]                  ; regout           ;
+; |spi_master|data[0][5]                  ; |spi_master|data[0][5]                  ; regout           ;
+; |spi_master|data[0][6]                  ; |spi_master|data[0][6]                  ; regout           ;
+; |spi_master|data[0][7]                  ; |spi_master|data[0][7]                  ; regout           ;
+; |spi_master|data[1][0]                  ; |spi_master|data[1][0]                  ; regout           ;
+; |spi_master|data[1][1]                  ; |spi_master|data[1][1]                  ; regout           ;
+; |spi_master|data[1][2]                  ; |spi_master|data[1][2]                  ; regout           ;
+; |spi_master|data[1][3]                  ; |spi_master|data[1][3]                  ; regout           ;
+; |spi_master|data[1][4]                  ; |spi_master|data[1][4]                  ; regout           ;
+; |spi_master|data[1][5]                  ; |spi_master|data[1][5]                  ; regout           ;
+; |spi_master|data[1][6]                  ; |spi_master|data[1][6]                  ; regout           ;
+; |spi_master|data[1][7]                  ; |spi_master|data[1][7]                  ; regout           ;
+; |spi_master|state.d_ready               ; |spi_master|state.d_ready               ; regout           ;
+; |spi_master|new_data                    ; |spi_master|new_data                    ; regout           ;
+; |spi_master|Selector3~0                 ; |spi_master|Selector3~0                 ; combout          ;
+; |spi_master|Selector2~1                 ; |spi_master|Selector2~1                 ; combout          ;
+; |spi_master|Selector2~2                 ; |spi_master|Selector2~2                 ; combout          ;
+; |spi_master|num_read[0]                 ; |spi_master|num_read[0]                 ; regout           ;
+; |spi_master|data[0][0]~48               ; |spi_master|data[0][0]~48               ; combout          ;
+; |spi_master|data[0][0]~49               ; |spi_master|data[0][0]~49               ; combout          ;
+; |spi_master|Selector6~0                 ; |spi_master|Selector6~0                 ; combout          ;
+; |spi_master|data[0][1]~50               ; |spi_master|data[0][1]~50               ; combout          ;
+; |spi_master|data[0][1]~52               ; |spi_master|data[0][1]~52               ; combout          ;
+; |spi_master|data[0][2]~54               ; |spi_master|data[0][2]~54               ; combout          ;
+; |spi_master|data[0][3]~56               ; |spi_master|data[0][3]~56               ; combout          ;
+; |spi_master|data[0][4]~58               ; |spi_master|data[0][4]~58               ; combout          ;
+; |spi_master|data[0][5]~60               ; |spi_master|data[0][5]~60               ; combout          ;
+; |spi_master|data[0][6]~62               ; |spi_master|data[0][6]~62               ; combout          ;
+; |spi_master|data[0][7]~63               ; |spi_master|data[0][7]~63               ; combout          ;
+; |spi_master|data[1][1]~64               ; |spi_master|data[1][1]~64               ; combout          ;
+; |spi_master|data[1][0]~65               ; |spi_master|data[1][0]~65               ; combout          ;
+; |spi_master|data[1][1]~66               ; |spi_master|data[1][1]~66               ; combout          ;
+; |spi_master|data[1][1]~67               ; |spi_master|data[1][1]~67               ; combout          ;
+; |spi_master|data[1][2]~68               ; |spi_master|data[1][2]~68               ; combout          ;
+; |spi_master|data[1][3]~69               ; |spi_master|data[1][3]~69               ; combout          ;
+; |spi_master|data[1][4]~70               ; |spi_master|data[1][4]~70               ; combout          ;
+; |spi_master|data[1][5]~71               ; |spi_master|data[1][5]~71               ; combout          ;
+; |spi_master|data[1][6]~72               ; |spi_master|data[1][6]~72               ; combout          ;
+; |spi_master|data[1][7]~73               ; |spi_master|data[1][7]~73               ; combout          ;
+; |spi_master|cycle[11]                   ; |spi_master|cycle[11]                   ; regout           ;
+; |spi_master|cycle[12]                   ; |spi_master|cycle[12]                   ; regout           ;
+; |spi_master|cycle[13]                   ; |spi_master|cycle[13]                   ; regout           ;
+; |spi_master|next_state.d_ready~0        ; |spi_master|next_state.d_ready~0        ; combout          ;
+; |spi_master|Selector7~1                 ; |spi_master|Selector7~1                 ; combout          ;
+; |spi_master|Selector7~2                 ; |spi_master|Selector7~2                 ; combout          ;
+; |spi_master|Selector7~3                 ; |spi_master|Selector7~3                 ; combout          ;
+; |spi_master|Selector6~2                 ; |spi_master|Selector6~2                 ; combout          ;
+; |spi_master|Equal2~1                    ; |spi_master|Equal2~1                    ; combout          ;
+; |spi_master|cycle~18                    ; |spi_master|cycle~18                    ; combout          ;
+; |spi_master|acceleration[0]             ; |spi_master|acceleration[0]             ; padio            ;
+; |spi_master|acceleration[1]             ; |spi_master|acceleration[1]             ; padio            ;
+; |spi_master|acceleration[2]             ; |spi_master|acceleration[2]             ; padio            ;
+; |spi_master|acceleration[3]             ; |spi_master|acceleration[3]             ; padio            ;
+; |spi_master|acceleration[4]             ; |spi_master|acceleration[4]             ; padio            ;
+; |spi_master|acceleration[5]             ; |spi_master|acceleration[5]             ; padio            ;
+; |spi_master|acceleration[6]             ; |spi_master|acceleration[6]             ; padio            ;
+; |spi_master|acceleration[7]             ; |spi_master|acceleration[7]             ; padio            ;
+; |spi_master|acceleration[8]             ; |spi_master|acceleration[8]             ; padio            ;
+; |spi_master|acceleration[9]             ; |spi_master|acceleration[9]             ; padio            ;
+; |spi_master|acceleration[10]            ; |spi_master|acceleration[10]            ; padio            ;
+; |spi_master|acceleration[11]            ; |spi_master|acceleration[11]            ; padio            ;
+; |spi_master|acceleration[12]            ; |spi_master|acceleration[12]            ; padio            ;
+; |spi_master|acceleration[13]            ; |spi_master|acceleration[13]            ; padio            ;
+; |spi_master|acceleration[14]            ; |spi_master|acceleration[14]            ; padio            ;
+; |spi_master|acceleration[15]            ; |spi_master|acceleration[15]            ; padio            ;
+; |spi_master|acceleration[1]~reg0feeder  ; |spi_master|acceleration[1]~reg0feeder  ; combout          ;
+; |spi_master|acceleration[2]~reg0feeder  ; |spi_master|acceleration[2]~reg0feeder  ; combout          ;
+; |spi_master|acceleration[3]~reg0feeder  ; |spi_master|acceleration[3]~reg0feeder  ; combout          ;
+; |spi_master|acceleration[4]~reg0feeder  ; |spi_master|acceleration[4]~reg0feeder  ; combout          ;
+; |spi_master|acceleration[6]~reg0feeder  ; |spi_master|acceleration[6]~reg0feeder  ; combout          ;
+; |spi_master|acceleration[7]~reg0feeder  ; |spi_master|acceleration[7]~reg0feeder  ; combout          ;
+; |spi_master|acceleration[8]~reg0feeder  ; |spi_master|acceleration[8]~reg0feeder  ; combout          ;
+; |spi_master|acceleration[9]~reg0feeder  ; |spi_master|acceleration[9]~reg0feeder  ; combout          ;
+; |spi_master|acceleration[10]~reg0feeder ; |spi_master|acceleration[10]~reg0feeder ; combout          ;
+; |spi_master|acceleration[11]~reg0feeder ; |spi_master|acceleration[11]~reg0feeder ; combout          ;
+; |spi_master|acceleration[12]~reg0feeder ; |spi_master|acceleration[12]~reg0feeder ; combout          ;
+; |spi_master|acceleration[15]~reg0feeder ; |spi_master|acceleration[15]~reg0feeder ; combout          ;
++-----------------------------------------+-----------------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 0 during simulation.
-+--------------------------------------------------------------------------------+
-; Missing 0-Value Coverage                                                       ;
-+------------------------------+------------------------------+------------------+
-; Node Name                    ; Output Port Name             ; Output Port Type ;
-+------------------------------+------------------------------+------------------+
-; |spi_master|state.read_data  ; |spi_master|state.read_data  ; regout           ;
-; |spi_master|Selector4~0      ; |spi_master|Selector4~0      ; combout          ;
-; |spi_master|num_init[1]      ; |spi_master|num_init[1]      ; regout           ;
-; |spi_master|init_ready       ; |spi_master|init_ready       ; regout           ;
-; |spi_master|new_data         ; |spi_master|new_data         ; regout           ;
-; |spi_master|Selector3~0      ; |spi_master|Selector3~0      ; combout          ;
-; |spi_master|init_ready~2     ; |spi_master|init_ready~2     ; combout          ;
-; |spi_master|acceleration[0]  ; |spi_master|acceleration[0]  ; padio            ;
-; |spi_master|acceleration[1]  ; |spi_master|acceleration[1]  ; padio            ;
-; |spi_master|acceleration[2]  ; |spi_master|acceleration[2]  ; padio            ;
-; |spi_master|acceleration[3]  ; |spi_master|acceleration[3]  ; padio            ;
-; |spi_master|acceleration[4]  ; |spi_master|acceleration[4]  ; padio            ;
-; |spi_master|acceleration[5]  ; |spi_master|acceleration[5]  ; padio            ;
-; |spi_master|acceleration[6]  ; |spi_master|acceleration[6]  ; padio            ;
-; |spi_master|acceleration[7]  ; |spi_master|acceleration[7]  ; padio            ;
-; |spi_master|acceleration[8]  ; |spi_master|acceleration[8]  ; padio            ;
-; |spi_master|acceleration[9]  ; |spi_master|acceleration[9]  ; padio            ;
-; |spi_master|acceleration[10] ; |spi_master|acceleration[10] ; padio            ;
-; |spi_master|acceleration[11] ; |spi_master|acceleration[11] ; padio            ;
-; |spi_master|acceleration[12] ; |spi_master|acceleration[12] ; padio            ;
-; |spi_master|acceleration[13] ; |spi_master|acceleration[13] ; padio            ;
-; |spi_master|acceleration[14] ; |spi_master|acceleration[14] ; padio            ;
-; |spi_master|acceleration[15] ; |spi_master|acceleration[15] ; padio            ;
-+------------------------------+------------------------------+------------------+
++------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                             ;
++-----------------------------------------+-----------------------------------------+------------------+
+; Node Name                               ; Output Port Name                        ; Output Port Type ;
++-----------------------------------------+-----------------------------------------+------------------+
+; |spi_master|Add1~20                     ; |spi_master|Add1~21                     ; cout             ;
+; |spi_master|Add1~22                     ; |spi_master|Add1~22                     ; combout          ;
+; |spi_master|Add1~22                     ; |spi_master|Add1~23                     ; cout             ;
+; |spi_master|Add1~24                     ; |spi_master|Add1~24                     ; combout          ;
+; |spi_master|Add1~24                     ; |spi_master|Add1~25                     ; cout             ;
+; |spi_master|Add1~26                     ; |spi_master|Add1~26                     ; combout          ;
+; |spi_master|acceleration[0]~reg0        ; |spi_master|acceleration[0]~reg0        ; regout           ;
+; |spi_master|acceleration[1]~reg0        ; |spi_master|acceleration[1]~reg0        ; regout           ;
+; |spi_master|acceleration[2]~reg0        ; |spi_master|acceleration[2]~reg0        ; regout           ;
+; |spi_master|acceleration[3]~reg0        ; |spi_master|acceleration[3]~reg0        ; regout           ;
+; |spi_master|acceleration[4]~reg0        ; |spi_master|acceleration[4]~reg0        ; regout           ;
+; |spi_master|acceleration[5]~reg0        ; |spi_master|acceleration[5]~reg0        ; regout           ;
+; |spi_master|acceleration[6]~reg0        ; |spi_master|acceleration[6]~reg0        ; regout           ;
+; |spi_master|acceleration[7]~reg0        ; |spi_master|acceleration[7]~reg0        ; regout           ;
+; |spi_master|acceleration[8]~reg0        ; |spi_master|acceleration[8]~reg0        ; regout           ;
+; |spi_master|acceleration[9]~reg0        ; |spi_master|acceleration[9]~reg0        ; regout           ;
+; |spi_master|acceleration[10]~reg0       ; |spi_master|acceleration[10]~reg0       ; regout           ;
+; |spi_master|acceleration[11]~reg0       ; |spi_master|acceleration[11]~reg0       ; regout           ;
+; |spi_master|acceleration[12]~reg0       ; |spi_master|acceleration[12]~reg0       ; regout           ;
+; |spi_master|acceleration[13]~reg0       ; |spi_master|acceleration[13]~reg0       ; regout           ;
+; |spi_master|acceleration[14]~reg0       ; |spi_master|acceleration[14]~reg0       ; regout           ;
+; |spi_master|acceleration[15]~reg0       ; |spi_master|acceleration[15]~reg0       ; regout           ;
+; |spi_master|state.read_data             ; |spi_master|state.read_data             ; regout           ;
+; |spi_master|Selector4~0                 ; |spi_master|Selector4~0                 ; combout          ;
+; |spi_master|state.int_status            ; |spi_master|state.int_status            ; regout           ;
+; |spi_master|Selector4~1                 ; |spi_master|Selector4~1                 ; combout          ;
+; |spi_master|num_init[1]                 ; |spi_master|num_init[1]                 ; regout           ;
+; |spi_master|data[0][0]                  ; |spi_master|data[0][0]                  ; regout           ;
+; |spi_master|data[0][1]                  ; |spi_master|data[0][1]                  ; regout           ;
+; |spi_master|data[0][2]                  ; |spi_master|data[0][2]                  ; regout           ;
+; |spi_master|data[0][3]                  ; |spi_master|data[0][3]                  ; regout           ;
+; |spi_master|data[0][4]                  ; |spi_master|data[0][4]                  ; regout           ;
+; |spi_master|data[0][5]                  ; |spi_master|data[0][5]                  ; regout           ;
+; |spi_master|data[0][6]                  ; |spi_master|data[0][6]                  ; regout           ;
+; |spi_master|data[0][7]                  ; |spi_master|data[0][7]                  ; regout           ;
+; |spi_master|data[1][0]                  ; |spi_master|data[1][0]                  ; regout           ;
+; |spi_master|data[1][1]                  ; |spi_master|data[1][1]                  ; regout           ;
+; |spi_master|data[1][2]                  ; |spi_master|data[1][2]                  ; regout           ;
+; |spi_master|data[1][3]                  ; |spi_master|data[1][3]                  ; regout           ;
+; |spi_master|data[1][4]                  ; |spi_master|data[1][4]                  ; regout           ;
+; |spi_master|data[1][5]                  ; |spi_master|data[1][5]                  ; regout           ;
+; |spi_master|data[1][6]                  ; |spi_master|data[1][6]                  ; regout           ;
+; |spi_master|data[1][7]                  ; |spi_master|data[1][7]                  ; regout           ;
+; |spi_master|init_ready                  ; |spi_master|init_ready                  ; regout           ;
+; |spi_master|Selector2~0                 ; |spi_master|Selector2~0                 ; combout          ;
+; |spi_master|state.d_ready               ; |spi_master|state.d_ready               ; regout           ;
+; |spi_master|new_data                    ; |spi_master|new_data                    ; regout           ;
+; |spi_master|Selector3~0                 ; |spi_master|Selector3~0                 ; combout          ;
+; |spi_master|Selector2~1                 ; |spi_master|Selector2~1                 ; combout          ;
+; |spi_master|Selector2~2                 ; |spi_master|Selector2~2                 ; combout          ;
+; |spi_master|num_read[0]                 ; |spi_master|num_read[0]                 ; regout           ;
+; |spi_master|data[0][0]~48               ; |spi_master|data[0][0]~48               ; combout          ;
+; |spi_master|data[0][0]~49               ; |spi_master|data[0][0]~49               ; combout          ;
+; |spi_master|Selector6~0                 ; |spi_master|Selector6~0                 ; combout          ;
+; |spi_master|data[0][1]~50               ; |spi_master|data[0][1]~50               ; combout          ;
+; |spi_master|data[0][1]~52               ; |spi_master|data[0][1]~52               ; combout          ;
+; |spi_master|data[0][2]~54               ; |spi_master|data[0][2]~54               ; combout          ;
+; |spi_master|data[0][3]~56               ; |spi_master|data[0][3]~56               ; combout          ;
+; |spi_master|data[0][4]~58               ; |spi_master|data[0][4]~58               ; combout          ;
+; |spi_master|data[0][5]~60               ; |spi_master|data[0][5]~60               ; combout          ;
+; |spi_master|data[0][6]~62               ; |spi_master|data[0][6]~62               ; combout          ;
+; |spi_master|data[0][7]~63               ; |spi_master|data[0][7]~63               ; combout          ;
+; |spi_master|data[1][1]~64               ; |spi_master|data[1][1]~64               ; combout          ;
+; |spi_master|data[1][0]~65               ; |spi_master|data[1][0]~65               ; combout          ;
+; |spi_master|data[1][1]~66               ; |spi_master|data[1][1]~66               ; combout          ;
+; |spi_master|data[1][1]~67               ; |spi_master|data[1][1]~67               ; combout          ;
+; |spi_master|data[1][2]~68               ; |spi_master|data[1][2]~68               ; combout          ;
+; |spi_master|data[1][3]~69               ; |spi_master|data[1][3]~69               ; combout          ;
+; |spi_master|data[1][4]~70               ; |spi_master|data[1][4]~70               ; combout          ;
+; |spi_master|data[1][5]~71               ; |spi_master|data[1][5]~71               ; combout          ;
+; |spi_master|data[1][6]~72               ; |spi_master|data[1][6]~72               ; combout          ;
+; |spi_master|data[1][7]~73               ; |spi_master|data[1][7]~73               ; combout          ;
+; |spi_master|cycle[11]                   ; |spi_master|cycle[11]                   ; regout           ;
+; |spi_master|cycle[12]                   ; |spi_master|cycle[12]                   ; regout           ;
+; |spi_master|cycle[10]                   ; |spi_master|cycle[10]                   ; regout           ;
+; |spi_master|cycle[13]                   ; |spi_master|cycle[13]                   ; regout           ;
+; |spi_master|next_state.d_ready~0        ; |spi_master|next_state.d_ready~0        ; combout          ;
+; |spi_master|Selector7~1                 ; |spi_master|Selector7~1                 ; combout          ;
+; |spi_master|Selector7~2                 ; |spi_master|Selector7~2                 ; combout          ;
+; |spi_master|Selector7~3                 ; |spi_master|Selector7~3                 ; combout          ;
+; |spi_master|Selector6~2                 ; |spi_master|Selector6~2                 ; combout          ;
+; |spi_master|Equal2~1                    ; |spi_master|Equal2~1                    ; combout          ;
+; |spi_master|cycle~18                    ; |spi_master|cycle~18                    ; combout          ;
+; |spi_master|acceleration[0]             ; |spi_master|acceleration[0]             ; padio            ;
+; |spi_master|acceleration[1]             ; |spi_master|acceleration[1]             ; padio            ;
+; |spi_master|acceleration[2]             ; |spi_master|acceleration[2]             ; padio            ;
+; |spi_master|acceleration[3]             ; |spi_master|acceleration[3]             ; padio            ;
+; |spi_master|acceleration[4]             ; |spi_master|acceleration[4]             ; padio            ;
+; |spi_master|acceleration[5]             ; |spi_master|acceleration[5]             ; padio            ;
+; |spi_master|acceleration[6]             ; |spi_master|acceleration[6]             ; padio            ;
+; |spi_master|acceleration[7]             ; |spi_master|acceleration[7]             ; padio            ;
+; |spi_master|acceleration[8]             ; |spi_master|acceleration[8]             ; padio            ;
+; |spi_master|acceleration[9]             ; |spi_master|acceleration[9]             ; padio            ;
+; |spi_master|acceleration[10]            ; |spi_master|acceleration[10]            ; padio            ;
+; |spi_master|acceleration[11]            ; |spi_master|acceleration[11]            ; padio            ;
+; |spi_master|acceleration[12]            ; |spi_master|acceleration[12]            ; padio            ;
+; |spi_master|acceleration[13]            ; |spi_master|acceleration[13]            ; padio            ;
+; |spi_master|acceleration[14]            ; |spi_master|acceleration[14]            ; padio            ;
+; |spi_master|acceleration[15]            ; |spi_master|acceleration[15]            ; padio            ;
+; |spi_master|acceleration[1]~reg0feeder  ; |spi_master|acceleration[1]~reg0feeder  ; combout          ;
+; |spi_master|acceleration[2]~reg0feeder  ; |spi_master|acceleration[2]~reg0feeder  ; combout          ;
+; |spi_master|acceleration[3]~reg0feeder  ; |spi_master|acceleration[3]~reg0feeder  ; combout          ;
+; |spi_master|acceleration[4]~reg0feeder  ; |spi_master|acceleration[4]~reg0feeder  ; combout          ;
+; |spi_master|acceleration[6]~reg0feeder  ; |spi_master|acceleration[6]~reg0feeder  ; combout          ;
+; |spi_master|acceleration[7]~reg0feeder  ; |spi_master|acceleration[7]~reg0feeder  ; combout          ;
+; |spi_master|acceleration[8]~reg0feeder  ; |spi_master|acceleration[8]~reg0feeder  ; combout          ;
+; |spi_master|acceleration[9]~reg0feeder  ; |spi_master|acceleration[9]~reg0feeder  ; combout          ;
+; |spi_master|acceleration[10]~reg0feeder ; |spi_master|acceleration[10]~reg0feeder ; combout          ;
+; |spi_master|acceleration[11]~reg0feeder ; |spi_master|acceleration[11]~reg0feeder ; combout          ;
+; |spi_master|acceleration[12]~reg0feeder ; |spi_master|acceleration[12]~reg0feeder ; combout          ;
+; |spi_master|acceleration[15]~reg0feeder ; |spi_master|acceleration[15]~reg0feeder ; combout          ;
++-----------------------------------------+-----------------------------------------+------------------+
 
 
 +---------------------+
@@ -279,18 +464,18 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II Simulator
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Tue Apr 17 11:00:32 2018
+    Info: Processing started: Tue Apr 17 19:29:06 2018
 Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off spi_master -c spi_master
-Info: Using vector source file "C:/Users/Максим/Desktop/Quartus_Projects/3/SPI/spi_master.vwf"
+Info: Using vector source file "D:/711M/3/SPI/spi_master.vwf"
 Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info: Simulation partitioned into 1 sub-simulations
-Info: Simulation coverage is      80.00 %
-Info: Number of transitions in simulation is 59163
+Info: Simulation coverage is      47.89 %
+Info: Number of transitions in simulation is 35942
 Info: Quartus II Simulator was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 215 megabytes
-    Info: Processing ended: Tue Apr 17 11:00:32 2018
+    Info: Peak virtual memory: 159 megabytes
+    Info: Processing ended: Tue Apr 17 19:29:06 2018
     Info: Elapsed time: 00:00:00
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
 
 

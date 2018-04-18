@@ -66,7 +66,7 @@ ON
 # case_insensitive
 # source_file
 divider.vhd
-e0c036de9a4d425b6c952d5c75d02c76
+cdb2fe4c5aaddc3bc9748ed7bae8ce9
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -81,6 +81,42 @@ ON
 # user_parameter {
 n
 2
+PARAMETER_SIGNED_DEC
+USR
+}
+# lmf
+c:|altera|90sp2|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+divider
+# storage
+db|spi_master.(3).cnf
+db|spi_master.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+divider.vhd
+cdb2fe4c5aaddc3bc9748ed7bae8ce9
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+n
+27
 PARAMETER_SIGNED_DEC
 USR
 }
@@ -105,7 +141,7 @@ ON
 # case_insensitive
 # source_file
 spi_master.vhd
-9ea1dc1049ac1a1e5dec4844c51e8a
+ea35792e1119898a2b162534193a66
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -121,7 +157,7 @@ ON
 |
 }
 # lmf
-..|..|..|..|..|..|altera|90sp2|quartus|lmf|maxplus2.lmf
+c:|altera|90sp2|quartus|lmf|maxplus2.lmf
 9a59d39b0706640b4b2718e8a1ff1f
 # macro_sequence
 

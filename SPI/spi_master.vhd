@@ -19,10 +19,10 @@ package SPI_params is
 	constant INT_SOURSE: byte:=48;	
 	
 	constant ALL_INIT_REGS: byte:=4;
-	constant ALL_READ_REGS: byte:=3;
-	constant DATA0: byte:=52;
+	constant ALL_READ_REGS: byte:=2;
+	constant DATA0: byte:=50;
 	
-	constant DISCRETE: natural:=200;
+	constant DISCRETE: natural:=10000;
 	
 end  SPI_params;
 	 
@@ -79,7 +79,7 @@ architecture behavior of spi_master is
 	begin	
 	
 	--делитель частоты
-	M_divider: divider generic map ( N => 2)
+	M_divider: divider generic map ( N => 27)
 			port map
 				(
 				clc => clock,
@@ -222,7 +222,7 @@ architecture behavior of spi_master is
 							when int_status =>
 								cs <= '0'; 
 								sclk_ena <= '1';
-								buf_8 := "10" &	conv_std_logic_vector(DATA0, 6);
+								buf_8 := "10" &	conv_std_logic_vector(INT_SOURSE, 6);
 								sdi <= buf_8(7 - n_bit);
 							
 							when read_data =>
@@ -233,8 +233,8 @@ architecture behavior of spi_master is
 								
 							when d_ready => 
 								sdi <= '0';
-								cs <= '0'; 
-								sclk_ena <= '1';
+								cs <= '1'; 
+								sclk_ena <= '0';
 								
 							when others => null;
 							
@@ -259,7 +259,7 @@ architecture behavior of spi_master is
 							when sleep => 
 								num_read <= 0;
 								new_data <= '0';
-								--acceleration <= <старший байт> & <младший байт>;
+								acceleration <= data(1) & data(0);
 							
 							when init => 
 								if (n_bit = 15) then
