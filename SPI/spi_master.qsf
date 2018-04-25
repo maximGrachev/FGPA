@@ -50,9 +50,6 @@ set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
 set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
-set_global_assignment -name VHDL_FILE divider.vhd
-set_global_assignment -name VHDL_FILE spi_master.vhd
-set_global_assignment -name VECTOR_WAVEFORM_FILE spi_master.vwf
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
 set_location_assignment PIN_R17 -to acceleration[15]
 set_location_assignment PIN_R18 -to acceleration[14]
@@ -76,3 +73,37 @@ set_location_assignment PIN_J22 -to sdo
 set_location_assignment PIN_J21 -to sdi
 set_location_assignment PIN_K22 -to cs
 set_global_assignment -name MISC_FILE "D:/711M/3/SPI/spi_master.dpf"
+set_global_assignment -name MISC_FILE "C:/Users/Максим/Desktop/Quartus_Projects/3/SPI/spi_master.dpf"
+set_global_assignment -name VHDL_FILE segment7.vhd
+set_global_assignment -name VHDL_FILE decoder.vhd
+set_global_assignment -name VHDL_FILE divider.vhd
+set_global_assignment -name VHDL_FILE spi_master.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE spi_master.vwf
+set_location_assignment PIN_E1 -to acceleration7seg_d[0]
+set_location_assignment PIN_H6 -to acceleration7seg_d[1]
+set_location_assignment PIN_H5 -to acceleration7seg_d[2]
+set_location_assignment PIN_H4 -to acceleration7seg_d[3]
+set_location_assignment PIN_G3 -to acceleration7seg_d[4]
+set_location_assignment PIN_D2 -to acceleration7seg_d[5]
+set_location_assignment PIN_D1 -to acceleration7seg_d[6]
+set_location_assignment PIN_G5 -to acceleration7seg_h[0]
+set_location_assignment PIN_G6 -to acceleration7seg_h[1]
+set_location_assignment PIN_C2 -to acceleration7seg_h[2]
+set_location_assignment PIN_C1 -to acceleration7seg_h[3]
+set_location_assignment PIN_E3 -to acceleration7seg_h[4]
+set_location_assignment PIN_E4 -to acceleration7seg_h[5]
+set_location_assignment PIN_D3 -to acceleration7seg_h[6]
+set_location_assignment PIN_F4 -to acceleration7seg_s[0]
+set_location_assignment PIN_D5 -to acceleration7seg_s[1]
+set_location_assignment PIN_D6 -to acceleration7seg_s[2]
+set_location_assignment PIN_J4 -to acceleration7seg_s[3]
+set_location_assignment PIN_L8 -to acceleration7seg_s[4]
+set_location_assignment PIN_F3 -to acceleration7seg_s[5]
+set_location_assignment PIN_D4 -to acceleration7seg_s[6]
+set_location_assignment PIN_J2 -to acceleration7seg_u[0]
+set_location_assignment PIN_J1 -to acceleration7seg_u[1]
+set_location_assignment PIN_H2 -to acceleration7seg_u[2]
+set_location_assignment PIN_H1 -to acceleration7seg_u[3]
+set_location_assignment PIN_F2 -to acceleration7seg_u[4]
+set_location_assignment PIN_F1 -to acceleration7seg_u[5]
+set_location_assignment PIN_E2 -to acceleration7seg_u[6]

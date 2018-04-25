@@ -1,5 +1,5 @@
 Analysis & Synthesis report for spi_master
-Tue Apr 17 20:14:07 2018
+Tue Apr 24 19:48:24 2018
 Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
 
 
@@ -16,7 +16,12 @@ Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
   8. Registers Removed During Synthesis
   9. General Register Statistics
  10. Parameter Settings for User Entity Instance: divider:M_divider
- 11. Analysis & Synthesis Messages
+ 11. Parameter Settings for User Entity Instance: divider:M_divider2
+ 12. Parameter Settings for Inferred Entity Instance: decoder:M_decoder|lpm_divide:Div0
+ 13. Parameter Settings for Inferred Entity Instance: decoder:M_decoder|lpm_divide:Div1
+ 14. Parameter Settings for Inferred Entity Instance: decoder:M_decoder|lpm_divide:Mod0
+ 15. Parameter Settings for Inferred Entity Instance: decoder:M_decoder|lpm_divide:Mod1
+ 16. Analysis & Synthesis Messages
 
 
 
@@ -42,16 +47,16 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +------------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Apr 17 20:14:07 2018        ;
+; Analysis & Synthesis Status        ; Successful - Tue Apr 24 19:48:24 2018        ;
 ; Quartus II Version                 ; 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition ;
 ; Revision Name                      ; spi_master                                   ;
 ; Top-level Entity Name              ; spi_master                                   ;
 ; Family                             ; Cyclone II                                   ;
-; Total logic elements               ; 121                                          ;
-;     Total combinational functions  ; 105                                          ;
-;     Dedicated logic registers      ; 72                                           ;
-; Total registers                    ; 72                                           ;
-; Total pins                         ; 21                                           ;
+; Total logic elements               ; 751                                          ;
+;     Total combinational functions  ; 719                                          ;
+;     Dedicated logic registers      ; 146                                          ;
+; Total registers                    ; 146                                          ;
+; Total pins                         ; 49                                           ;
 ; Total virtual pins                 ; 0                                            ;
 ; Total memory bits                  ; 0                                            ;
 ; Embedded Multiplier 9-bit elements ; 0                                            ;
@@ -134,14 +139,34 @@ applicable agreement for further details.
 +--------------------------------------------------------------+--------------------+--------------------+
 
 
-+-----------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                              ;
-+----------------------------------+-----------------+-----------------+------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path ;
-+----------------------------------+-----------------+-----------------+------------------------------+
-; divider.vhd                      ; yes             ; User VHDL File  ; D:/711M/3/SPI/divider.vhd    ;
-; spi_master.vhd                   ; yes             ; User VHDL File  ; D:/711M/3/SPI/spi_master.vhd ;
-+----------------------------------+-----------------+-----------------+------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                  ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                        ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------+
+; segment7.vhd                     ; yes             ; User VHDL File               ; D:/711M/3/SPI/segment7.vhd                                          ;
+; decoder.vhd                      ; yes             ; User VHDL File               ; D:/711M/3/SPI/decoder.vhd                                           ;
+; divider.vhd                      ; yes             ; User VHDL File               ; D:/711M/3/SPI/divider.vhd                                           ;
+; spi_master.vhd                   ; yes             ; User VHDL File               ; D:/711M/3/SPI/spi_master.vhd                                        ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/altera/90sp2/quartus/libraries/megafunctions/lpm_divide.tdf      ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/altera/90sp2/quartus/libraries/megafunctions/abs_divider.inc     ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/altera/90sp2/quartus/libraries/megafunctions/sign_div_unsign.inc ;
+; aglobal90.inc                    ; yes             ; Megafunction                 ; c:/altera/90sp2/quartus/libraries/megafunctions/aglobal90.inc       ;
+; db/lpm_divide_6so.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/711M/3/SPI/db/lpm_divide_6so.tdf                                 ;
+; db/abs_divider_jbg.tdf           ; yes             ; Auto-Generated Megafunction  ; D:/711M/3/SPI/db/abs_divider_jbg.tdf                                ;
+; db/alt_u_div_i2f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/711M/3/SPI/db/alt_u_div_i2f.tdf                                  ;
+; db/add_sub_lkc.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/711M/3/SPI/db/add_sub_lkc.tdf                                    ;
+; db/add_sub_mkc.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/711M/3/SPI/db/add_sub_mkc.tdf                                    ;
+; db/lpm_abs_jq9.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/711M/3/SPI/db/lpm_abs_jq9.tdf                                    ;
+; db/lpm_abs_sr9.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/711M/3/SPI/db/lpm_abs_sr9.tdf                                    ;
+; db/lpm_divide_3so.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/711M/3/SPI/db/lpm_divide_3so.tdf                                 ;
+; db/abs_divider_gbg.tdf           ; yes             ; Auto-Generated Megafunction  ; D:/711M/3/SPI/db/abs_divider_gbg.tdf                                ;
+; db/alt_u_div_c2f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/711M/3/SPI/db/alt_u_div_c2f.tdf                                  ;
+; db/lpm_abs_gq9.tdf               ; yes             ; Auto-Generated Megafunction  ; D:/711M/3/SPI/db/lpm_abs_gq9.tdf                                    ;
+; db/lpm_divide_r7m.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/711M/3/SPI/db/lpm_divide_r7m.tdf                                 ;
+; db/sign_div_unsign_2nh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/711M/3/SPI/db/sign_div_unsign_2nh.tdf                            ;
+; db/alt_u_div_65f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/711M/3/SPI/db/alt_u_div_65f.tdf                                  ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------+
@@ -149,38 +174,62 @@ applicable agreement for further details.
 +---------------------------------------------+---------------------------+
 ; Resource                                    ; Usage                     ;
 +---------------------------------------------+---------------------------+
-; Estimated Total logic elements              ; 121                       ;
+; Estimated Total logic elements              ; 751                       ;
 ;                                             ;                           ;
-; Total combinational functions               ; 105                       ;
+; Total combinational functions               ; 719                       ;
 ; Logic element usage by number of LUT inputs ;                           ;
-;     -- 4 input functions                    ; 50                        ;
-;     -- 3 input functions                    ; 21                        ;
-;     -- <=2 input functions                  ; 34                        ;
+;     -- 4 input functions                    ; 189                       ;
+;     -- 3 input functions                    ; 209                       ;
+;     -- <=2 input functions                  ; 321                       ;
 ;                                             ;                           ;
 ; Logic elements by mode                      ;                           ;
-;     -- normal mode                          ; 85                        ;
-;     -- arithmetic mode                      ; 20                        ;
+;     -- normal mode                          ; 469                       ;
+;     -- arithmetic mode                      ; 250                       ;
 ;                                             ;                           ;
-; Total registers                             ; 72                        ;
-;     -- Dedicated logic registers            ; 72                        ;
+; Total registers                             ; 146                       ;
+;     -- Dedicated logic registers            ; 146                       ;
 ;     -- I/O registers                        ; 0                         ;
 ;                                             ;                           ;
-; I/O pins                                    ; 21                        ;
+; I/O pins                                    ; 49                        ;
 ; Maximum fan-out node                        ; divider:M_divider|dvd_out ;
-; Maximum fan-out                             ; 64                        ;
-; Total fan-out                               ; 509                       ;
-; Average fan-out                             ; 2.57                      ;
+; Maximum fan-out                             ; 74                        ;
+; Total fan-out                               ; 2322                      ;
+; Average fan-out                             ; 2.54                      ;
 +---------------------------------------------+---------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                   ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name           ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+--------------+
-; |spi_master                ; 105 (93)          ; 72 (66)      ; 0           ; 0            ; 0       ; 0         ; 21   ; 0            ; |spi_master                   ; work         ;
-;    |divider:M_divider|     ; 12 (12)           ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |spi_master|divider:M_divider ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                  ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                           ; Library Name ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |spi_master                               ; 719 (93)          ; 146 (76)     ; 0           ; 0            ; 0       ; 0         ; 49   ; 0            ; |spi_master                                                                                                                   ; work         ;
+;    |decoder:M_decoder|                    ; 548 (51)          ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |spi_master|decoder:M_decoder                                                                                                 ; work         ;
+;       |lpm_divide:Div0|                   ; 92 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |spi_master|decoder:M_decoder|lpm_divide:Div0                                                                                 ; work         ;
+;          |lpm_divide_6so:auto_generated|  ; 92 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |spi_master|decoder:M_decoder|lpm_divide:Div0|lpm_divide_6so:auto_generated                                                   ; work         ;
+;             |abs_divider_jbg:divider|     ; 92 (8)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |spi_master|decoder:M_decoder|lpm_divide:Div0|lpm_divide_6so:auto_generated|abs_divider_jbg:divider                           ; work         ;
+;                |alt_u_div_i2f:divider|    ; 75 (75)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |spi_master|decoder:M_decoder|lpm_divide:Div0|lpm_divide_6so:auto_generated|abs_divider_jbg:divider|alt_u_div_i2f:divider     ; work         ;
+;                |lpm_abs_sr9:my_abs_num|   ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |spi_master|decoder:M_decoder|lpm_divide:Div0|lpm_divide_6so:auto_generated|abs_divider_jbg:divider|lpm_abs_sr9:my_abs_num    ; work         ;
+;       |lpm_divide:Div1|                   ; 125 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |spi_master|decoder:M_decoder|lpm_divide:Div1                                                                                 ; work         ;
+;          |lpm_divide_3so:auto_generated|  ; 125 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |spi_master|decoder:M_decoder|lpm_divide:Div1|lpm_divide_3so:auto_generated                                                   ; work         ;
+;             |abs_divider_gbg:divider|     ; 125 (17)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |spi_master|decoder:M_decoder|lpm_divide:Div1|lpm_divide_3so:auto_generated|abs_divider_gbg:divider                           ; work         ;
+;                |alt_u_div_c2f:divider|    ; 97 (97)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |spi_master|decoder:M_decoder|lpm_divide:Div1|lpm_divide_3so:auto_generated|abs_divider_gbg:divider|alt_u_div_c2f:divider     ; work         ;
+;                |lpm_abs_sr9:my_abs_num|   ; 11 (11)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |spi_master|decoder:M_decoder|lpm_divide:Div1|lpm_divide_3so:auto_generated|abs_divider_gbg:divider|lpm_abs_sr9:my_abs_num    ; work         ;
+;       |lpm_divide:Mod0|                   ; 132 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |spi_master|decoder:M_decoder|lpm_divide:Mod0                                                                                 ; work         ;
+;          |lpm_divide_r7m:auto_generated|  ; 132 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |spi_master|decoder:M_decoder|lpm_divide:Mod0|lpm_divide_r7m:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_2nh:divider| ; 132 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |spi_master|decoder:M_decoder|lpm_divide:Mod0|lpm_divide_r7m:auto_generated|sign_div_unsign_2nh:divider                       ; work         ;
+;                |alt_u_div_65f:divider|    ; 132 (132)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |spi_master|decoder:M_decoder|lpm_divide:Mod0|lpm_divide_r7m:auto_generated|sign_div_unsign_2nh:divider|alt_u_div_65f:divider ; work         ;
+;       |lpm_divide:Mod1|                   ; 148 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |spi_master|decoder:M_decoder|lpm_divide:Mod1                                                                                 ; work         ;
+;          |lpm_divide_r7m:auto_generated|  ; 148 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |spi_master|decoder:M_decoder|lpm_divide:Mod1|lpm_divide_r7m:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_2nh:divider| ; 148 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |spi_master|decoder:M_decoder|lpm_divide:Mod1|lpm_divide_r7m:auto_generated|sign_div_unsign_2nh:divider                       ; work         ;
+;                |alt_u_div_65f:divider|    ; 148 (148)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |spi_master|decoder:M_decoder|lpm_divide:Mod1|lpm_divide_r7m:auto_generated|sign_div_unsign_2nh:divider|alt_u_div_65f:divider ; work         ;
+;    |divider:M_divider2|                   ; 43 (43)           ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |spi_master|divider:M_divider2                                                                                                ; work         ;
+;    |divider:M_divider|                    ; 12 (12)           ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |spi_master|divider:M_divider                                                                                                 ; work         ;
+;    |segment7:d_seg7|                      ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |spi_master|segment7:d_seg7                                                                                                   ; work         ;
+;    |segment7:h_seg7|                      ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |spi_master|segment7:h_seg7                                                                                                   ; work         ;
+;    |segment7:s_seg7|                      ; 2 (2)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |spi_master|segment7:s_seg7                                                                                                   ; work         ;
+;    |segment7:u_seg7|                      ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |spi_master|segment7:u_seg7                                                                                                   ; work         ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -203,9 +252,11 @@ Encoding Type:  One-Hot
 +---------------------------------------+----------------------------------------+
 ; Register name                         ; Reason for Removal                     ;
 +---------------------------------------+----------------------------------------+
+; decoder:M_decoder|s[2]                ; Stuck at GND due to stuck port data_in ;
+; decoder:M_decoder|s[1]                ; Merged with decoder:M_decoder|s[3]     ;
 ; num_read[1]                           ; Lost fanout                            ;
 ; num_init[2]                           ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 2 ;                                        ;
+; Total Number of Removed Registers = 4 ;                                        ;
 +---------------------------------------+----------------------------------------+
 
 
@@ -214,12 +265,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 72    ;
+; Total registers                              ; 146   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 5     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 16    ;
+; Number of registers using Clock Enable       ; 26    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -234,14 +285,122 @@ Encoding Type:  One-Hot
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divider:M_divider2 ;
++----------------+---------+--------------------------------------+
+; Parameter Name ; Value   ; Type                                 ;
++----------------+---------+--------------------------------------+
+; n              ; 1800000 ; Signed Integer                       ;
++----------------+---------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: decoder:M_decoder|lpm_divide:Div0 ;
++------------------------+----------------+------------------------------------------+
+; Parameter Name         ; Value          ; Type                                     ;
++------------------------+----------------+------------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                                  ;
+; LPM_WIDTHD             ; 8              ; Untyped                                  ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                  ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                  ;
+; LPM_PIPELINE           ; 0              ; Untyped                                  ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                  ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                  ;
+; CBXI_PARAMETER         ; lpm_divide_6so ; Untyped                                  ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                  ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                  ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                             ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                           ;
++------------------------+----------------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: decoder:M_decoder|lpm_divide:Div1 ;
++------------------------+----------------+------------------------------------------+
+; Parameter Name         ; Value          ; Type                                     ;
++------------------------+----------------+------------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                                  ;
+; LPM_WIDTHD             ; 5              ; Untyped                                  ;
+; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                  ;
+; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                  ;
+; LPM_PIPELINE           ; 0              ; Untyped                                  ;
+; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                  ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                  ;
+; CBXI_PARAMETER         ; lpm_divide_3so ; Untyped                                  ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                  ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                  ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                             ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                           ;
++------------------------+----------------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: decoder:M_decoder|lpm_divide:Mod0 ;
++------------------------+----------------+------------------------------------------+
+; Parameter Name         ; Value          ; Type                                     ;
++------------------------+----------------+------------------------------------------+
+; LPM_WIDTHN             ; 11             ; Untyped                                  ;
+; LPM_WIDTHD             ; 10             ; Untyped                                  ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                  ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                  ;
+; LPM_PIPELINE           ; 0              ; Untyped                                  ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                  ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                  ;
+; CBXI_PARAMETER         ; lpm_divide_r7m ; Untyped                                  ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                  ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                  ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                             ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                           ;
++------------------------+----------------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: decoder:M_decoder|lpm_divide:Mod1 ;
++------------------------+----------------+------------------------------------------+
+; Parameter Name         ; Value          ; Type                                     ;
++------------------------+----------------+------------------------------------------+
+; LPM_WIDTHN             ; 11             ; Untyped                                  ;
+; LPM_WIDTHD             ; 10             ; Untyped                                  ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                  ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                  ;
+; LPM_PIPELINE           ; 0              ; Untyped                                  ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                  ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                  ;
+; CBXI_PARAMETER         ; lpm_divide_r7m ; Untyped                                  ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                  ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                  ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                             ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                           ;
++------------------------+----------------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
-    Info: Processing started: Tue Apr 17 20:14:06 2018
+    Info: Processing started: Tue Apr 24 19:48:21 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off spi_master -c spi_master
+Info: Found 2 design units, including 1 entities, in source file segment7.vhd
+    Info: Found design unit 1: segment7-behavior
+    Info: Found entity 1: segment7
+Info: Found 2 design units, including 1 entities, in source file decoder.vhd
+    Info: Found design unit 1: decoder-behavior
+    Info: Found entity 1: decoder
 Info: Found 2 design units, including 1 entities, in source file divider.vhd
     Info: Found design unit 1: divider-behavior
     Info: Found entity 1: divider
@@ -251,16 +410,72 @@ Info: Found 3 design units, including 1 entities, in source file spi_master.vhd
     Info: Found entity 1: spi_master
 Info: Elaborating entity "spi_master" for the top level hierarchy
 Info: Elaborating entity "divider" for hierarchy "divider:M_divider"
+Info: Elaborating entity "divider" for hierarchy "divider:M_divider2"
+Info: Elaborating entity "decoder" for hierarchy "decoder:M_decoder"
+Info: Elaborating entity "segment7" for hierarchy "segment7:s_seg7"
+Info: Inferred 4 megafunctions from design logic
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "decoder:M_decoder|Div0"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "decoder:M_decoder|Div1"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "decoder:M_decoder|Mod0"
+    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "decoder:M_decoder|Mod1"
+Info: Elaborated megafunction instantiation "decoder:M_decoder|lpm_divide:Div0"
+Info: Instantiated megafunction "decoder:M_decoder|lpm_divide:Div0" with the following parameter:
+    Info: Parameter "LPM_WIDTHN" = "10"
+    Info: Parameter "LPM_WIDTHD" = "8"
+    Info: Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info: Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info: Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info: Found 1 design units, including 1 entities, in source file db/lpm_divide_6so.tdf
+    Info: Found entity 1: lpm_divide_6so
+Info: Found 1 design units, including 1 entities, in source file db/abs_divider_jbg.tdf
+    Info: Found entity 1: abs_divider_jbg
+Info: Found 1 design units, including 1 entities, in source file db/alt_u_div_i2f.tdf
+    Info: Found entity 1: alt_u_div_i2f
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_lkc.tdf
+    Info: Found entity 1: add_sub_lkc
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_mkc.tdf
+    Info: Found entity 1: add_sub_mkc
+Info: Found 1 design units, including 1 entities, in source file db/lpm_abs_jq9.tdf
+    Info: Found entity 1: lpm_abs_jq9
+Info: Found 1 design units, including 1 entities, in source file db/lpm_abs_sr9.tdf
+    Info: Found entity 1: lpm_abs_sr9
+Info: Elaborated megafunction instantiation "decoder:M_decoder|lpm_divide:Div1"
+Info: Instantiated megafunction "decoder:M_decoder|lpm_divide:Div1" with the following parameter:
+    Info: Parameter "LPM_WIDTHN" = "10"
+    Info: Parameter "LPM_WIDTHD" = "5"
+    Info: Parameter "LPM_NREPRESENTATION" = "SIGNED"
+    Info: Parameter "LPM_DREPRESENTATION" = "SIGNED"
+    Info: Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
+Info: Found 1 design units, including 1 entities, in source file db/lpm_divide_3so.tdf
+    Info: Found entity 1: lpm_divide_3so
+Info: Found 1 design units, including 1 entities, in source file db/abs_divider_gbg.tdf
+    Info: Found entity 1: abs_divider_gbg
+Info: Found 1 design units, including 1 entities, in source file db/alt_u_div_c2f.tdf
+    Info: Found entity 1: alt_u_div_c2f
+Info: Found 1 design units, including 1 entities, in source file db/lpm_abs_gq9.tdf
+    Info: Found entity 1: lpm_abs_gq9
+Info: Elaborated megafunction instantiation "decoder:M_decoder|lpm_divide:Mod0"
+Info: Instantiated megafunction "decoder:M_decoder|lpm_divide:Mod0" with the following parameter:
+    Info: Parameter "LPM_WIDTHN" = "11"
+    Info: Parameter "LPM_WIDTHD" = "10"
+    Info: Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info: Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info: Found 1 design units, including 1 entities, in source file db/lpm_divide_r7m.tdf
+    Info: Found entity 1: lpm_divide_r7m
+Info: Found 1 design units, including 1 entities, in source file db/sign_div_unsign_2nh.tdf
+    Info: Found entity 1: sign_div_unsign_2nh
+Info: Found 1 design units, including 1 entities, in source file db/alt_u_div_65f.tdf
+    Info: Found entity 1: alt_u_div_65f
 Info: 1 registers lost all their fanouts during netlist optimizations. The first 1 are displayed below.
     Info: Register "num_read[1]" lost all its fanouts during netlist optimizations.
-Info: Implemented 143 device resources after synthesis - the final resource count might be different
+Info: Implemented 802 device resources after synthesis - the final resource count might be different
     Info: Implemented 2 input pins
-    Info: Implemented 19 output pins
-    Info: Implemented 122 logic cells
+    Info: Implemented 47 output pins
+    Info: Implemented 753 logic cells
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 235 megabytes
-    Info: Processing ended: Tue Apr 17 20:14:07 2018
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Peak virtual memory: 238 megabytes
+    Info: Processing ended: Tue Apr 24 19:48:24 2018
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
 
 

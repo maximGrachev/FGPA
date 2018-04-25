@@ -20,7 +20,7 @@ package SPI_params is
 	
 	constant ALL_INIT_REGS: byte:=4;
 	constant ALL_READ_REGS: byte:=2;
-	constant DATA0: byte:=52;
+	constant DATA0: byte:=50;
 	
 	constant DISCRETE: natural:=10000;
 	
@@ -40,12 +40,21 @@ entity spi_master is
 		sclk: out std_logic;
 		sdi: out std_logic;
 		sdo: in std_logic;
-		acceleration: out std_logic_vector(15 downto 0)
+		acceleration7seg_s: out std_logic_vector(0 to 6);
+		acceleration7seg_h: out std_logic_vector(0 to 6);
+		acceleration7seg_d: out std_logic_vector(0 to 6);
+		acceleration7seg_u: out std_logic_vector(0 to 6);
+		acceleration: out std_logic_vector (15 downto 0)
 	);
 
 end spi_master;
 
 architecture behavior of spi_master is
+	
+	
+	
+	
+	
 	
 	component divider is
 	
@@ -59,6 +68,38 @@ architecture behavior of spi_master is
 	);
 
 	end component;
+	
+	
+	
+	
+	component decoder is
+	
+	port(
+		clock: in std_logic;
+		data_in: in std_logic_vector(15 downto 0);
+		s: out natural range 0 to 11;
+		val_2: out natural range 0 to 10;
+		val_1: out natural range 0 to 10;
+		val_0: out natural range 0 to 10
+	);
+
+	end component;
+	
+	
+	
+	
+	component segment7 is
+	
+	port(
+		clock: in std_logic;
+		data_in: in natural range 0 to 11;
+		data_out: out std_logic_vector(0 to 6)
+	);
+
+	end component;
+
+
+
 
 	type adxl_regs is array (0 to ALL_INIT_REGS-1) of byte;  
 	type data_regs is array (0 to ALL_READ_REGS-1) of std_logic_vector(7 downto 0);
@@ -75,6 +116,12 @@ architecture behavior of spi_master is
 	signal n_bit: natural range 0 to 8*(ALL_READ_REGS + 1) - 1; -- счетчик бит
 	signal num_init: natural range 0 to ALL_INIT_REGS; -- число проинициализарованных регистров
 	signal num_read: natural range 0 to ALL_READ_REGS; -- число прочитанных регистров
+	signal sig_s: natural range 0 to 11;
+	signal sig_val_2: natural range 0 to 10;
+	signal sig_val_1: natural range 0 to 10;
+	signal sig_val_0: natural range 0 to 10;
+	signal sig_acceleration: std_logic_vector (15 downto 0);
+	signal clock15: std_logic;
 	
 	begin	
 	
@@ -85,16 +132,64 @@ architecture behavior of spi_master is
 				clc => clock,
 				dvd_out => clk
 				);
+				
+	M_divider2: divider generic map ( N => 1800000)
+			port map
+				(
+				clc => clock,
+				dvd_out => clock15
+				);
+				
+--	M_decoder: decoder 
+--			port map
+--				(clock => clock,
+--				data_in => sig_acceleration,
+--				s => sig_s,
+--				val_2 => sig_val_2,
+--				val_1 => sig_val_1,
+--				val_0 => sig_val_0
+--				);
+				
+--	s_seg7: segment7
+--				port map
+--				(
+--				clock => clock15,
+--				data_in => sig_s,
+--				data_out => acceleration7seg_s
+--				);
+--				
+--	h_seg7: segment7
+--				port map
+--				(
+--				clock =>clock15,
+--				data_in => sig_val_2,
+--				data_out => acceleration7seg_h
+--				);
+--				
+--	d_seg7: segment7
+--				port map
+--				(
+--				clock => clock15,
+--				data_in => sig_val_1,
+--				data_out => acceleration7seg_d
+--				);
+--				
+--	u_seg7: segment7
+--				port map
+--				(
+--				clock => clock15,
+--				data_in => sig_val_0,
+--				data_out => acceleration7seg_u
+--				);
+
 			
 	-- формирование сигнала в линии SCLK
 	sclk <= '1' when sclk_ena = '0' else clk;
-	
+		
 	-- процесс определения следующего состояния ЦКА
 		process (state, wd, init_ready, n_bit, new_data, num_read)
 		
 		begin
-		
-			
 		
 			case (state) is
 			
@@ -259,6 +354,7 @@ architecture behavior of spi_master is
 							when sleep => 
 								num_read <= 0;
 								new_data <= '0';
+								sig_acceleration <= data(1) & data(0);
 								acceleration <= data(1) & data(0);
 							
 							when init => 
