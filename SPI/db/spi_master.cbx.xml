@@ -1,9 +1,0 @@
-<?xml version="1.0" ?>
-<LOG_ROOT>
-	<PROJECT NAME="spi_master">
-		<CBX_INST_ENTRY INSTANCE_NAME="|spi_master|decoder:M_decoder|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_6so.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|spi_master|decoder:M_decoder|lpm_divide:Div1" CBX_FILE_NAME="lpm_divide_3so.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|spi_master|decoder:M_decoder|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_r7m.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|spi_master|decoder:M_decoder|lpm_divide:Mod1" CBX_FILE_NAME="lpm_divide_r7m.tdf"/>
-	</PROJECT>
-</LOG_ROOT>

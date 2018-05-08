@@ -1,8 +1,0 @@
-
-State Machine - |spi_master|state
-Name state.read_data state.d_ready state.int_status state.init state.sleep 
-state.sleep 0 0 0 0 0 
-state.init 0 0 0 1 1 
-state.int_status 0 0 1 0 1 
-state.d_ready 0 1 0 0 1 
-state.read_data 1 0 0 0 1 

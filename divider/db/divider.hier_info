@@ -1,8 +1,0 @@
-|divider
-clc => cnt[2].CLK
-clc => cnt[1].CLK
-clc => cnt[0].CLK
-clc => dvd_out~reg0.CLK
-dvd_out <= dvd_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
