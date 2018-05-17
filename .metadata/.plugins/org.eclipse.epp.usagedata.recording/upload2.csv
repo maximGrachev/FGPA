@@ -1,0 +1,276 @@
+what,kind,bundleId,bundleVersion,description,time
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525792272613
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.OpenDebugConfigurations",1525792272613
+executed,command,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.project.buildAll",1525792278494
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525792278775
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525792283580
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525792288587
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525792292175
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.OpenRunConfigurations",1525792292191
+error,log,,,"{R,T}xThread terminated",1525792295876
+error,log,,,"{R,T}xThread terminated",1525792295876
+error,log,,,"No Byte Stream Services found for Nios II Console View",1525792298030
+error,log,,,"Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-1]', --device=1, --instance=0, --go, --accept-bad-sysid, --sidp=0x9048, --reset-target, /cygdrive/d/711M/4/software/nios_cpu/nios_cpu.elf] return code: 4, 'other error'",1525792309344
+error,log,,,"Downloading ELF Process failed",1525792309344
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525792309344
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525792310857
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525792315069
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525792317331
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.OpenDebugConfigurations",1525792317347
+error,log,,,"No Byte Stream Services found for Nios II Console View",1525792322043
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525792345088
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525792359128
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.StepOver",1525792361140
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525792384650
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525792456347
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525792458282
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525792469451
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525792471214
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525792475333
+executed,command,,,"AUTOGEN:::org.eclipse.cdt.debug.ui.CEditor.BreakpointRulerActions/org.eclipse.cdt.debug.ui.CEditor.RulerTobbleBreakpointAction",1525792495753
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.Resume",1525792497500
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.Resume",1525792503709
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.Resume",1525792504832
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.Resume",1525792505940
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.Resume",1525792507047
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.Resume",1525792508093
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.Resume",1525792509840
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.Resume",1525792510979
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1525792519871
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1525792524083
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1525792524363
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1525792524691
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1525792524847
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1525792524987
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1525792525128
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1525792525268
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1525792525346
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1525792525471
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1525792525596
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1525792527717
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1525792527842
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1525792529231
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1525792529543
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1525792533115
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1525792536656
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1525792536937
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1525792537389
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1525792537514
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1525792537655
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1525792537795
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1525792537889
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1525792537998
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1525792538138
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1525792538466
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1525792540572
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1525792543364
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1525792543629
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.file.save",1525792589041
+executed,command,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.project.buildAll",1525792590164
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525792590461
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525792597543
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525792610257
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525792615421
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.OpenDebugConfigurations",1525792615436
+error,log,,,"{R,T}xThread terminated",1525792618057
+error,log,,,"{R,T}xThread terminated",1525792618057
+error,log,,,"No Byte Stream Services found for Nios II Console View",1525792621671
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525792644529
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525792646151
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525792650129
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525792671829
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.StepOver",1525792674496
+activated,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.VariableView",1525792697304
+no handler,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1525792698068
+error,log,,,"Target is not suspended",1525792703201
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1525792838593
+executed,command,,,"AUTOGEN:::org.eclipse.cdt.debug.ui.CEditor.BreakpointRulerActions/org.eclipse.cdt.debug.ui.CEditor.RulerTobbleBreakpointAction",1525792986700
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.Resume",1525792988837
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.StepOver",1525792992955
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525792996575
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525793006637
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1525793006652
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525793027962
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525793044935
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1525793047852
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525793058569
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525793105525
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.Resume",1525793107740
+executed,command,,,"AUTOGEN:::org.eclipse.ui.texteditor.ruler.actions/org.eclipse.cdt.internal.ui.text.correction.CSelectRulerAction",1525793117381
+executed,command,,,"AUTOGEN:::org.eclipse.cdt.debug.ui.CEditor.BreakpointRulerActions/org.eclipse.cdt.debug.ui.CEditor.RulerTobbleBreakpointAction",1525793117958
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.Resume",1525793121063
+executed,command,,,"AUTOGEN:::org.eclipse.cdt.debug.ui.CEditor.BreakpointRulerActions/org.eclipse.cdt.debug.ui.CEditor.RulerTobbleBreakpointAction",1525793124152
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.Resume",1525793125618
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525793131593
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525793132357
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525793132654
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525793132763
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525793133933
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525793141249
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.Resume",1525793142341
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525793152356
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525793156615
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525793157910
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525793192669
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525793211244
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525793409603
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525793422317
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525793428385
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.OpenDebugConfigurations",1525793428385
+executed,command,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.project.buildAll",1525793430881
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525793431178
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525793437449
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1525793441801
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1525793446747
+executed,command,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.project.buildAll",1525793447979
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525793448244
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525793454281
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1525793456793
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525793462939
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525793467775
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.OpenDebugConfigurations",1525793467791
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525793471114
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525793472799
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1525793475872
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1525793560502
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.Terminate",1525793581344
+error,log,,,"Inferior terminated",1525793581382
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.file.saveAll",1525793584435
+executed,command,com.altera.sbtgui.project,11.0.0.208,"com.altera.sbtgui.project.commands.bspEditor",1525793592453
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525793592734
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525793629067
+executed,command,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.project.buildAll",1525793632452
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525793632748
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525793638021
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1525793638037
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525793651172
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525793655477
+activated,view,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.views.ProblemView",1525793655509
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.views.showView",1525793655509
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.views.showView",1525793655509
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1525793662404
+activated,perspective,com.altera.sbtgui.ui,11.0.0.208,"com.altera.sbtgui.ui.cPerspective",1525793671124
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.perspectives.showPerspective",1525793671140
+executed,command,,,"com.altera.sbtgui.ui.cPerspective",1525793671140
+activated,view,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.views.ProblemView",1525793672996
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1525793674556
+activated,view,org.eclipse.ui.navigator.resources,3.4.201.M20100707-0800,"org.eclipse.ui.navigator.ProjectExplorer",1525793676069
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525793685975
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525793699906
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.OpenDebugConfigurations",1525793699922
+error,log,,,"No Byte Stream Services found for Nios II Console View",1525793704836
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525793717133
+opened,editor,org.eclipse.cdt.debug.ui,7.0.0.201009141542,"org.eclipse.cdt.debug.ui.SourceNotFoundEditor",1525793717211
+closed,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.asm.AsmEditor",1525793717226
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525793720003
+activated,perspective,com.altera.sbtgui.ui,11.0.0.208,"com.altera.sbtgui.ui.debugPerspective",1525793720050
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1525793720050
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.StepOver",1525793725167
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525793726914
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525793838481
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1525793841367
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.cut",1525793847591
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1525793849682
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1525793902191
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1525793909960
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1525793942174
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1525793942892
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1525793984466
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1525793986291
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1525793990550
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1525793995916
+executed,command,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.project.buildAll",1525793998693
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525793998974
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525794003373
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525794010861
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525794014449
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.OpenDebugConfigurations",1525794014449
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525794014465
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525794016305
+error,log,,,"{R,T}xThread terminated",1525794021517
+closed,editor,org.eclipse.cdt.debug.ui,7.0.0.201009141542,"org.eclipse.cdt.debug.ui.SourceNotFoundEditor",1525794022547
+error,log,,,"No Byte Stream Services found for Nios II Console View",1525794025263
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525794045282
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525794056233
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.StepOver",1525794058495
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1525794063300
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1525794074142
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525794186836
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525794187460
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525794188053
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525794244707
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525794256984
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525794262725
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.OpenDebugConfigurations",1525794262741
+error,log,,,"{R,T}xThread terminated",1525794268393
+error,log,,,"No Byte Stream Services found for Nios II Console View",1525794270687
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.StepOver",1525794289988
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525794293202
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525794299068
+activated,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.VariableView",1525794310939
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1525794327818
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.delete",1525794373573
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.file.save",1525794567029
+executed,command,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.project.buildAll",1525794568948
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525794569244
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525794576342
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525794609586
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525794613720
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.OpenDebugConfigurations",1525794613720
+error,log,,,"{R,T}xThread terminated",1525794616450
+error,log,,,"No Byte Stream Services found for Nios II Console View",1525794619949
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.window.activateEditor",1525794639141
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525794640513
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525794661449
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.StepOver",1525794666441
+activated,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.VariableView",1525794669779
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525794671448
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525794675629
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1525794677641
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.StepOver",1525794679014
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.StepOver",1525794684115
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.StepOver",1525794685551
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.StepOver",1525794698077
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.StepOver",1525794702009
+activated,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.VariableView",1525794719949
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525794721197
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525794729184
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1525794732101
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.copy",1525794769775
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1525794771413
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.edit.paste",1525794773348
+executed,command,org.eclipse.ui,3.6.1.M20100826-1330,"org.eclipse.ui.file.save",1525794774330
+executed,command,org.eclipse.ui.ide,3.6.1.M20100825-0800,"org.eclipse.ui.project.buildAll",1525794775422
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525794775703
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525794782645
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525794794314
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525794796498
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.OpenDebugConfigurations",1525794796514
+activated,view,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.DebugView",1525794805390
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.Terminate",1525794805515
+error,log,,,"Inferior terminated",1525794805546
+error,log,,,"Inferior terminated",1525794805546
+error,log,,,"Inferior terminated",1525794805547
+error,log,,,"Inferior terminated",1525794805547
+error,log,,,"Inferior terminated",1525794805547
+error,log,,,"Inferior terminated",1525794805548
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525794811443
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525794814688
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.OpenDebugConfigurations",1525794814688
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525794818962
+error,log,,,"No Byte Stream Services found for Nios II Console View",1525794819399
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525794821817
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1525794821817
+opened,editor,org.eclipse.cdt.debug.ui,7.0.0.201009141542,"org.eclipse.cdt.debug.ui.SourceNotFoundEditor",1525794832226
+activated,editor,org.eclipse.cdt.ui,5.2.1.201009141542,"org.eclipse.cdt.ui.editor.CEditor",1525794837062
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.StepOver",1525794839808
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525794843817
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525794849964
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.StepOver",1525794857436
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.StepOver",1525794864331
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.StepOver",1525794868746
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.StepOver",1525794899057
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.StepOver",1525794902489
+executed,command,org.eclipse.debug.ui,3.6.1.v20100901_r361,"org.eclipse.debug.ui.commands.StepOver",1525794906545
+deactivated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525794910663
+activated,workbench,org.eclipse.ui.workbench,3.6.1.M20100826-1330,"",1525794917793

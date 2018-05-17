@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="Nios_proc">
+		<CBX_INST_ENTRY INSTANCE_NAME="|Nios_proc|nios_cpu:u0|nios_cpu_on_chip_RAM:on_chip_ram|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_emb1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Nios_proc|nios_cpu:u0|nios_cpu_nios_cpu:nios_cpu|nios_cpu_nios_cpu_nios2_oci:the_nios_cpu_nios_cpu_nios2_oci|nios_cpu_nios_cpu_nios2_oci_im:the_nios_cpu_nios_cpu_nios2_oci_im|nios_cpu_nios_cpu_traceram_lpm_dram_bdp_component_module:nios_cpu_nios_cpu_traceram_lpm_dram_bdp_component|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_e502.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Nios_proc|nios_cpu:u0|nios_cpu_nios_cpu:nios_cpu|nios_cpu_nios_cpu_nios2_oci:the_nios_cpu_nios_cpu_nios2_oci|nios_cpu_nios_cpu_nios2_ocimem:the_nios_cpu_nios_cpu_nios2_ocimem|nios_cpu_nios_cpu_ociram_lpm_dram_bdp_component_module:nios_cpu_nios_cpu_ociram_lpm_dram_bdp_component|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_kf82.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Nios_proc|nios_cpu:u0|nios_cpu_nios_cpu:nios_cpu|nios_cpu_nios_cpu_register_bank_a_module:nios_cpu_nios_cpu_register_bank_a|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_7lg1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Nios_proc|nios_cpu:u0|nios_cpu_nios_cpu:nios_cpu|nios_cpu_nios_cpu_register_bank_b_module:nios_cpu_nios_cpu_register_bank_b|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_8lg1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

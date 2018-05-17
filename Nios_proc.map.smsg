@@ -1,0 +1,7 @@
+Info (10281): Verilog HDL Declaration information at altera_merlin_traffic_limiter.sv(53): object "ENFORCE_ORDER" differs only in case from object "enforce_order" in the same scope
+Info (10281): Verilog HDL Declaration information at nios_cpu_addr_router.sv(36): object "DEFAULT_DESTID" differs only in case from object "default_destid" in the same scope
+Info (10281): Verilog HDL Declaration information at nios_cpu_id_router.sv(36): object "DEFAULT_DESTID" differs only in case from object "default_destid" in the same scope
+Warning (10037): Verilog HDL or VHDL warning at nios_cpu_nios_cpu.v(1501): conditional expression evaluates to a constant
+Warning (10037): Verilog HDL or VHDL warning at nios_cpu_nios_cpu.v(1503): conditional expression evaluates to a constant
+Warning (10037): Verilog HDL or VHDL warning at nios_cpu_nios_cpu.v(1659): conditional expression evaluates to a constant
+Warning (10037): Verilog HDL or VHDL warning at nios_cpu_nios_cpu.v(2578): conditional expression evaluates to a constant

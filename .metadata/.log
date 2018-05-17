@@ -1,0 +1,650 @@
+!SESSION 2018-05-08 18:00:05.910 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=ru_RU
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-05-08 18:03:31.144
+!MESSAGE Indexed 'nios_cpu_bsp' (78 sources, 58 headers) in 1,23 sec: 930 declarations; 2 190 references; 98 unresolved inclusions; 5 syntax errors; 186 unresolved names (5,63 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-05-08 18:03:41.377
+!MESSAGE Indexed 'nios_cpu' (0 sources, 13 headers) in 0,02 sec: 0 declarations; 0 references; 13 unresolved inclusions; 0 syntax errors; 0 unresolved names (0,00 %)
+!SESSION 2018-05-08 18:08:11.726 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=ru_RU
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -data D:\711M\4 -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-05-08 18:40:16.443
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 18:40:16.443
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x9048 --id=0x70a --reset-target /cygdrive/d/711M/4/software/nios_cpu/nios_cpu.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 18:40:23.262
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x9048 --id=0x70a]
+
+!ENTRY org.eclipse.ui 4 4 2018-05-08 18:40:33.669
+!MESSAGE Exception in org.eclipse.ui.internal.PageLayout.stackView: org.eclipse.ui.PartInitException: Could not create view: org.eclipse.cdt.debug.ui.DisassemblyView
+
+!ENTRY org.eclipse.ui 4 4 2018-05-08 18:40:33.669
+!MESSAGE Exception in org.eclipse.ui.internal.PageLayout.stackView: org.eclipse.ui.PartInitException: Could not create view: org.eclipse.cdt.debug.ui.DisassemblyView
+!STACK 1
+org.eclipse.ui.PartInitException: Could not create view: org.eclipse.cdt.debug.ui.DisassemblyView
+	at org.eclipse.ui.internal.ViewFactory.createView(ViewFactory.java:158)
+	at org.eclipse.ui.internal.LayoutHelper.createView(LayoutHelper.java:162)
+	at org.eclipse.ui.internal.PageLayout.createView(PageLayout.java:543)
+	at org.eclipse.ui.internal.PageLayout.stackView(PageLayout.java:852)
+	at org.eclipse.ui.internal.registry.PerspectiveExtensionReader.processView(PerspectiveExtensionReader.java:270)
+	at org.eclipse.ui.internal.registry.PerspectiveExtensionReader.processExtension(PerspectiveExtensionReader.java:118)
+	at org.eclipse.ui.internal.registry.PerspectiveExtensionReader.readElement(PerspectiveExtensionReader.java:355)
+	at org.eclipse.ui.internal.registry.RegistryReader.readElements(RegistryReader.java:144)
+	at org.eclipse.ui.internal.registry.RegistryReader.readExtension(RegistryReader.java:155)
+	at org.eclipse.ui.internal.registry.RegistryReader.readRegistry(RegistryReader.java:176)
+	at org.eclipse.ui.internal.registry.PerspectiveExtensionReader.extendLayout(PerspectiveExtensionReader.java:82)
+	at org.eclipse.ui.internal.Perspective.loadPredefinedPersp(Perspective.java:818)
+	at org.eclipse.ui.internal.Perspective.createPresentation(Perspective.java:270)
+	at org.eclipse.ui.internal.Perspective.<init>(Perspective.java:156)
+	at org.eclipse.ui.internal.tweaklets.Workbench3xImplementation.createPerspective(Workbench3xImplementation.java:55)
+	at org.eclipse.ui.internal.WorkbenchPage.createPerspective(WorkbenchPage.java:1672)
+	at org.eclipse.ui.internal.WorkbenchPage.busySetPerspective(WorkbenchPage.java:1034)
+	at org.eclipse.ui.internal.WorkbenchPage.access$16(WorkbenchPage.java:1025)
+	at org.eclipse.ui.internal.WorkbenchPage$19.run(WorkbenchPage.java:3715)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchPage.setPerspective(WorkbenchPage.java:3713)
+	at org.eclipse.ui.internal.Workbench.showPerspective(Workbench.java:2814)
+	at org.eclipse.debug.internal.ui.launchConfigurations.PerspectiveManager.switchToPerspective(PerspectiveManager.java:351)
+	at org.eclipse.debug.internal.ui.launchConfigurations.PerspectiveManager$4.run(PerspectiveManager.java:439)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:134)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4041)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3660)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2640)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2604)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2438)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:671)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:664)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:115)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:369)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:619)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:574)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1407)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1383)
+!SUBENTRY 1 org.eclipse.ui 4 0 2018-05-08 18:40:33.669
+!MESSAGE Could not create view: org.eclipse.cdt.debug.ui.DisassemblyView
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 18:41:11.203
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-05-08 18:41:13.318
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 18:41:13.318
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --accept-bad-sysid --sidp=0x9048 --reset-target /cygdrive/d/711M/4/software/nios_cpu/nios_cpu.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-05-08 18:41:19.310
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --accept-bad-sysid, --sidp=0x9048, --reset-target, /cygdrive/d/711M/4/software/nios_cpu/nios_cpu.elf] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-05-08 18:41:19.310
+!MESSAGE Downloading ELF Process failed
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-05-08 18:50:33.723
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 18:50:33.723
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --accept-bad-sysid --sidp=0x9048 --reset-target /cygdrive/d/711M/4/software/nios_cpu/nios_cpu.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-05-08 18:50:39.622
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --accept-bad-sysid, --sidp=0x9048, --reset-target, /cygdrive/d/711M/4/software/nios_cpu/nios_cpu.elf] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-05-08 18:50:39.622
+!MESSAGE Downloading ELF Process failed
+
+!ENTRY org.eclipse.cdt.ui 4 4 2018-05-08 18:52:11.630
+!MESSAGE Error
+!STACK 0
+java.io.IOException: Cannot run program "objdump": Launching failed
+	at org.eclipse.cdt.utils.spawner.Spawner.exec(Spawner.java:297)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:88)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:116)
+	at org.eclipse.cdt.utils.spawner.Spawner.<init>(Spawner.java:108)
+	at org.eclipse.cdt.utils.spawner.ProcessFactory.exec(ProcessFactory.java:63)
+	at org.eclipse.cdt.utils.Objdump.getOutput(Objdump.java:64)
+	at org.eclipse.cdt.internal.ui.editor.DefaultBinaryFileEditor$BinaryFileEditorInput.getStorage(DefaultBinaryFileEditor.java:119)
+	at org.eclipse.ui.editors.text.StorageDocumentProvider.getPersistedEncoding(StorageDocumentProvider.java:495)
+	at org.eclipse.ui.editors.text.StorageDocumentProvider.getEncoding(StorageDocumentProvider.java:413)
+	at org.eclipse.ui.editors.text.StorageDocumentProvider.createDocument(StorageDocumentProvider.java:229)
+	at org.eclipse.cdt.internal.ui.editor.DefaultBinaryFileEditor$BinaryFileDocumentProvider.createDocument(DefaultBinaryFileEditor.java:157)
+	at org.eclipse.ui.editors.text.StorageDocumentProvider.createElementInfo(StorageDocumentProvider.java:261)
+	at org.eclipse.ui.texteditor.AbstractDocumentProvider.connect(AbstractDocumentProvider.java:400)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.doSetInput(AbstractTextEditor.java:4056)
+	at org.eclipse.ui.texteditor.AbstractTextEditor$19.run(AbstractTextEditor.java:3043)
+	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:464)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:372)
+	at org.eclipse.jface.window.ApplicationWindow$1.run(ApplicationWindow.java:759)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.jface.window.ApplicationWindow.run(ApplicationWindow.java:756)
+	at org.eclipse.ui.internal.WorkbenchWindow.run(WorkbenchWindow.java:2600)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.internalInit(AbstractTextEditor.java:3061)
+	at org.eclipse.ui.texteditor.AbstractTextEditor.init(AbstractTextEditor.java:3088)
+	at org.eclipse.ui.internal.EditorManager.createSite(EditorManager.java:798)
+	at org.eclipse.ui.internal.EditorReference.createPartHelper(EditorReference.java:647)
+	at org.eclipse.ui.internal.EditorReference.createPart(EditorReference.java:465)
+	at org.eclipse.ui.internal.WorkbenchPartReference.getPart(WorkbenchPartReference.java:595)
+	at org.eclipse.ui.internal.EditorReference.getEditor(EditorReference.java:289)
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditorBatched(WorkbenchPage.java:2863)
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditor(WorkbenchPage.java:2768)
+	at org.eclipse.ui.internal.WorkbenchPage.access$11(WorkbenchPage.java:2760)
+	at org.eclipse.ui.internal.WorkbenchPage$10.run(WorkbenchPage.java:2711)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:2707)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:2691)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:2682)
+	at org.eclipse.cdt.internal.ui.util.EditorUtility.openInEditor(EditorUtility.java:254)
+	at org.eclipse.cdt.internal.ui.util.EditorUtility.openInEditor(EditorUtility.java:157)
+	at org.eclipse.cdt.internal.ui.util.EditorUtility.openInEditor(EditorUtility.java:141)
+	at org.eclipse.cdt.internal.ui.navigator.OpenCElementAction.run(OpenCElementAction.java:52)
+	at org.eclipse.ui.actions.RetargetAction.run(RetargetAction.java:221)
+	at org.eclipse.ui.navigator.CommonNavigatorManager$3.open(CommonNavigatorManager.java:185)
+	at org.eclipse.ui.OpenAndLinkWithEditorHelper$InternalListener.open(OpenAndLinkWithEditorHelper.java:48)
+	at org.eclipse.jface.viewers.StructuredViewer$2.run(StructuredViewer.java:845)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:49)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:175)
+	at org.eclipse.jface.viewers.StructuredViewer.fireOpen(StructuredViewer.java:843)
+	at org.eclipse.jface.viewers.StructuredViewer.handleOpen(StructuredViewer.java:1131)
+	at org.eclipse.ui.navigator.CommonViewer.handleOpen(CommonViewer.java:462)
+	at org.eclipse.jface.viewers.StructuredViewer$6.handleOpen(StructuredViewer.java:1235)
+	at org.eclipse.jface.util.OpenStrategy.fireOpenEvent(OpenStrategy.java:264)
+	at org.eclipse.jface.util.OpenStrategy.access$2(OpenStrategy.java:258)
+	at org.eclipse.jface.util.OpenStrategy$1.handleEvent(OpenStrategy.java:298)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4066)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3657)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2640)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2604)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2438)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:671)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:664)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:115)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:369)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:619)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:574)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1407)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1383)
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-05-08 18:52:50.599
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 18:52:50.599
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --accept-bad-sysid --sidp=0x9048 --reset-target /cygdrive/d/711M/4/software/nios_cpu/nios_cpu.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 18:52:56.809
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --tcpport=auto --accept-bad-sysid --sidp=0x9048]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 18:56:22.072
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-05-08 18:56:24.300
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 18:56:24.300
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x9048]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 18:56:28.982
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x9048 --reset-target /cygdrive/d/711M/4/software/nios_cpu/nios_cpu.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-05-08 18:56:36.332
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-1]', --device=1, --instance=0, --go, --accept-bad-sysid, --sidp=0x9048, --reset-target, /cygdrive/d/711M/4/software/nios_cpu/nios_cpu.elf] return code: 4, 'other error'
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-05-08 18:56:36.332
+!MESSAGE Downloading ELF Process failed
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-05-08 18:57:20.324
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 18:57:20.324
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --accept-bad-sysid --sidp=0x9048 --reset-target /cygdrive/d/711M/4/software/nios_cpu/nios_cpu.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 18:57:26.925
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --tcpport=auto --accept-bad-sysid --sidp=0x9048]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 18:59:25.081
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-05-08 18:59:28.294
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 18:59:28.294
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --accept-bad-sysid --sidp=0x9048 --reset-target /cygdrive/d/711M/4/software/nios_cpu/nios_cpu.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 18:59:34.848
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --tcpport=auto --accept-bad-sysid --sidp=0x9048]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 19:00:30.215
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-1]
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-08 19:00:31.249
+!MESSAGE {R,T}xThread terminated
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-08 19:00:31.265
+!MESSAGE {R,T}xThread terminated
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-05-08 19:00:33.309
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 19:00:33.309
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x9048]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 19:00:37.819
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x9048 --reset-target /cygdrive/d/711M/4/software/nios_cpu/nios_cpu.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-05-08 19:00:44.295
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-1]', --device=1, --instance=0, --go, --accept-bad-sysid, --sidp=0x9048, --reset-target, /cygdrive/d/711M/4/software/nios_cpu/nios_cpu.elf] return code: 4, 'other error'
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-05-08 19:00:44.295
+!MESSAGE Downloading ELF Process failed
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-05-08 19:01:01.533
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 19:01:01.533
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x9048]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 19:01:06.074
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x9048 --reset-target /cygdrive/d/711M/4/software/nios_cpu/nios_cpu.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-05-08 19:01:12.675
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-1]', --device=1, --instance=0, --go, --accept-bad-sysid, --sidp=0x9048, --reset-target, /cygdrive/d/711M/4/software/nios_cpu/nios_cpu.elf] return code: 4, 'other error'
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-05-08 19:01:12.675
+!MESSAGE Downloading ELF Process failed
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-05-08 19:01:51.800
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 19:01:51.800
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --accept-bad-sysid --sidp=0x9048 --reset-target /cygdrive/d/711M/4/software/nios_cpu/nios_cpu.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 19:01:58.244
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --tcpport=auto --accept-bad-sysid --sidp=0x9048]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 19:06:00.540
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-1]
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-08 19:06:00.556
+!MESSAGE {R,T}xThread terminated
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-08 19:06:00.556
+!MESSAGE {R,T}xThread terminated
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-05-08 19:06:02.736
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 19:06:02.736
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --accept-bad-sysid --sidp=0x9048 --reset-target /cygdrive/d/711M/4/software/nios_cpu/nios_cpu.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 19:06:09.025
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --tcpport=auto --accept-bad-sysid --sidp=0x9048]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 19:09:40.891
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-1]
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-08 19:09:40.907
+!MESSAGE {R,T}xThread terminated
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-08 19:09:40.907
+!MESSAGE {R,T}xThread terminated
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-05-08 19:09:44.453
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 19:09:44.453
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --accept-bad-sysid --sidp=0x9048 --reset-target /cygdrive/d/711M/4/software/nios_cpu/nios_cpu.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 19:09:51.194
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --tcpport=auto --accept-bad-sysid --sidp=0x9048]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 19:11:34.843
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-1]
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-08 19:11:35.876
+!MESSAGE {R,T}xThread terminated
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-08 19:11:35.876
+!MESSAGE {R,T}xThread terminated
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-05-08 19:11:38.030
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 19:11:38.030
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=0x9048]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 19:11:42.806
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --go --accept-bad-sysid --sidp=0x9048 --reset-target /cygdrive/d/711M/4/software/nios_cpu/nios_cpu.elf]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-05-08 19:11:49.344
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-1]', --device=1, --instance=0, --go, --accept-bad-sysid, --sidp=0x9048, --reset-target, /cygdrive/d/711M/4/software/nios_cpu/nios_cpu.elf] return code: 4, 'other error'
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-05-08 19:11:49.344
+!MESSAGE Downloading ELF Process failed
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-05-08 19:12:02.043
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 19:12:02.043
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --accept-bad-sysid --sidp=0x9048 --reset-target /cygdrive/d/711M/4/software/nios_cpu/nios_cpu.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 19:12:08.597
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --tcpport=auto --accept-bad-sysid --sidp=0x9048]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 19:16:58.042
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-1]
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-08 19:16:58.057
+!MESSAGE {R,T}xThread terminated
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-08 19:16:58.057
+!MESSAGE {R,T}xThread terminated
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-05-08 19:17:01.671
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 19:17:01.671
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --accept-bad-sysid --sidp=0x9048 --reset-target /cygdrive/d/711M/4/software/nios_cpu/nios_cpu.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 19:17:11.594
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --tcpport=auto --accept-bad-sysid --sidp=0x9048]
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-08 19:18:23.201
+!MESSAGE Target is not suspended
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-08 19:33:01.382
+!MESSAGE Inferior terminated
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-05-08 19:35:04.836
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 19:35:04.836
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --accept-bad-sysid --sidp=0x9048 --reset-target /cygdrive/d/711M/4/software/nios_cpu/nios_cpu.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 19:35:11.140
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --tcpport=auto --accept-bad-sysid --sidp=0x9048]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 19:40:21.501
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-1]
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-08 19:40:21.517
+!MESSAGE {R,T}xThread terminated
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-05-08 19:40:25.263
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 19:40:25.263
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --accept-bad-sysid --sidp=0x9048 --reset-target /cygdrive/d/711M/4/software/nios_cpu/nios_cpu.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 19:40:31.474
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --tcpport=auto --accept-bad-sysid --sidp=0x9048]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 19:44:25.361
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-1]
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-08 19:44:28.393
+!MESSAGE {R,T}xThread terminated
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-05-08 19:44:30.687
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 19:44:30.687
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --accept-bad-sysid --sidp=0x9048 --reset-target /cygdrive/d/711M/4/software/nios_cpu/nios_cpu.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 19:44:37.241
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --tcpport=auto --accept-bad-sysid --sidp=0x9048]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 19:50:16.435
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-1]
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-08 19:50:16.450
+!MESSAGE {R,T}xThread terminated
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-05-08 19:50:19.949
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 19:50:19.949
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --accept-bad-sysid --sidp=0x9048 --reset-target /cygdrive/d/711M/4/software/nios_cpu/nios_cpu.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 19:50:26.066
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --tcpport=auto --accept-bad-sysid --sidp=0x9048]
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-08 19:53:25.546
+!MESSAGE Inferior terminated
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-08 19:53:25.546
+!MESSAGE Inferior terminated
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-08 19:53:25.547
+!MESSAGE Inferior terminated
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-08 19:53:25.547
+!MESSAGE Inferior terminated
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-08 19:53:25.547
+!MESSAGE Inferior terminated
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-08 19:53:25.547
+!MESSAGE Inferior terminated
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-05-08 19:53:39.399
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 19:53:39.399
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --accept-bad-sysid --sidp=0x9048 --reset-target /cygdrive/d/711M/4/software/nios_cpu/nios_cpu.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-08 19:53:46.187
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --tcpport=auto --accept-bad-sysid --sidp=0x9048]
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-08 19:57:07.931
+!MESSAGE {R,T}xThread terminated
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-08 19:57:07.931
+!MESSAGE {R,T}xThread terminated
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-08 19:57:07.931
+!MESSAGE {R,T}xThread terminated
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-08 19:57:07.931
+!MESSAGE {R,T}xThread terminated
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-08 19:57:07.931
+!MESSAGE {R,T}xThread terminated
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-08 19:57:07.931
+!MESSAGE {R,T}xThread terminated
+!SESSION 2018-05-15 19:18:01.253 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=ru_RU
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-05-15 19:20:27.830
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-15 19:20:27.846
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --sidp=0x9048 --id=0x70a --reset-target]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-15 19:20:33.714
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --tcpport=auto --sidp=0x9048 --id=0x70a]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-15 19:26:57.804
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-1]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-05-15 19:27:00.008
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-15 19:27:00.008
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --accept-bad-sysid --sidp=0x9048 --reset-target /cygdrive/d/711M/4/software/nios_cpu/nios_cpu.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-15 19:27:06.983
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --tcpport=auto --accept-bad-sysid --sidp=0x9048]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-15 19:37:47.740
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-1]
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-15 19:37:47.756
+!MESSAGE Inferior terminated
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-15 19:37:47.756
+!MESSAGE Inferior terminated
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-15 19:37:47.756
+!MESSAGE Inferior terminated
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-15 19:37:47.756
+!MESSAGE Inferior terminated
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-15 19:37:47.756
+!MESSAGE Inferior terminated
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-15 19:37:47.756
+!MESSAGE Inferior terminated
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-05-15 19:37:49.949
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-15 19:37:49.949
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --accept-bad-sysid --sidp=0x9048 --reset-target /cygdrive/d/711M/4/software/nios_cpu/nios_cpu.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-15 19:37:56.066
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --tcpport=auto --accept-bad-sysid --sidp=0x9048]
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-15 19:43:44.073
+!MESSAGE {R,T}xThread terminated
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-15 19:43:44.073
+!MESSAGE {R,T}xThread terminated
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-15 19:43:44.073
+!MESSAGE {R,T}xThread terminated
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-15 19:43:44.073
+!MESSAGE {R,T}xThread terminated
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-15 19:43:44.073
+!MESSAGE {R,T}xThread terminated
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-15 19:43:44.073
+!MESSAGE {R,T}xThread terminated
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-05-15 19:44:43.827
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-15 19:44:43.827
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --accept-bad-sysid --sidp=0x9048 --reset-target /cygdrive/d/711M/4/software/nios_cpu/nios_cpu.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-15 19:44:50.037
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --tcpport=auto --accept-bad-sysid --sidp=0x9048]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-15 19:48:14.930
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-1]
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-15 19:48:14.930
+!MESSAGE {R,T}xThread terminated
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-15 19:48:14.930
+!MESSAGE {R,T}xThread terminated
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-15 19:48:14.930
+!MESSAGE {R,T}xThread terminated
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-15 19:48:14.946
+!MESSAGE {R,T}xThread terminated
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-15 19:48:14.946
+!MESSAGE {R,T}xThread terminated
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-15 19:48:14.946
+!MESSAGE {R,T}xThread terminated
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-05-15 19:48:18.573
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-15 19:48:18.573
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --accept-bad-sysid --sidp=0x9048 --reset-target /cygdrive/d/711M/4/software/nios_cpu/nios_cpu.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-15 19:48:24.737
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --tcpport=auto --accept-bad-sysid --sidp=0x9048]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-15 19:58:46.339
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-1]
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-15 19:58:46.339
+!MESSAGE Inferior terminated
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-15 19:58:46.339
+!MESSAGE Inferior terminated
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-15 19:58:46.339
+!MESSAGE Inferior terminated
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-15 19:58:46.339
+!MESSAGE Inferior terminated
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-15 19:58:46.339
+!MESSAGE Inferior terminated
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-15 19:58:46.339
+!MESSAGE Inferior terminated
+
+!ENTRY com.altera.sbtgui.launch 4 0 2018-05-15 19:58:48.402
+!MESSAGE No Byte Stream Services found for Nios II Console View
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-15 19:58:48.402
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --accept-bad-sysid --sidp=0x9048 --reset-target /cygdrive/d/711M/4/software/nios_cpu/nios_cpu.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2018-05-15 19:58:54.441
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-1]' --device=1 --instance=0 --tcpport=auto --accept-bad-sysid --sidp=0x9048]
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-15 20:10:27.896
+!MESSAGE Inferior terminated
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-15 20:10:27.896
+!MESSAGE Inferior terminated
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-15 20:10:27.896
+!MESSAGE Inferior terminated
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-15 20:10:27.896
+!MESSAGE Inferior terminated
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-15 20:10:27.896
+!MESSAGE Inferior terminated
+
+!ENTRY org.eclipse.debug.core 4 125 2018-05-15 20:10:27.896
+!MESSAGE Inferior terminated
