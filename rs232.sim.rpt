@@ -1,0 +1,696 @@
+Simulator report for rs232
+Tue May 17 13:02:25 2016
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 50.0 us      ;
+; Simulation Netlist Size     ; 227 nodes    ;
+; Simulation Coverage         ;      21.14 % ;
+; Total Number of Transitions ; 25561        ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C20F484C7 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      21.14 % ;
+; Total nodes checked                                 ; 227          ;
+; Total output ports checked                          ; 298          ;
+; Total output ports with complete 1/0-value coverage ; 63           ;
+; Total output ports with no 1/0-value coverage       ; 235          ;
+; Total output ports with no 1-value coverage         ; 235          ;
+; Total output ports with no 0-value coverage         ; 235          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                      ;
++-------------------------------+-------------------------------+------------------+
+; Node Name                     ; Output Port Name              ; Output Port Type ;
++-------------------------------+-------------------------------+------------------+
+; |rs232|Add1~0                 ; |rs232|Add1~0                 ; combout          ;
+; |rs232|Add1~0                 ; |rs232|Add1~1                 ; cout             ;
+; |rs232|Add1~2                 ; |rs232|Add1~2                 ; combout          ;
+; |rs232|Add1~2                 ; |rs232|Add1~3                 ; cout             ;
+; |rs232|Add1~4                 ; |rs232|Add1~4                 ; combout          ;
+; |rs232|Add1~4                 ; |rs232|Add1~5                 ; cout             ;
+; |rs232|divider:m1|Add0~0      ; |rs232|divider:m1|Add0~0      ; combout          ;
+; |rs232|divider:m1|Add0~0      ; |rs232|divider:m1|Add0~1      ; cout             ;
+; |rs232|divider:m1|Add0~2      ; |rs232|divider:m1|Add0~2      ; combout          ;
+; |rs232|Add1~6                 ; |rs232|Add1~6                 ; combout          ;
+; |rs232|cycle[3]               ; |rs232|cycle[3]               ; regout           ;
+; |rs232|cycle[2]               ; |rs232|cycle[2]               ; regout           ;
+; |rs232|cycle[0]               ; |rs232|cycle[0]               ; regout           ;
+; |rs232|cycle[1]               ; |rs232|cycle[1]               ; regout           ;
+; |rs232|cycle[0]~104           ; |rs232|cycle[0]~104           ; combout          ;
+; |rs232|cycle[0]~104           ; |rs232|cycle[0]~105           ; cout             ;
+; |rs232|cycle[1]~106           ; |rs232|cycle[1]~106           ; combout          ;
+; |rs232|cycle[1]~106           ; |rs232|cycle[1]~107           ; cout             ;
+; |rs232|cycle[2]~108           ; |rs232|cycle[2]~108           ; combout          ;
+; |rs232|cycle[2]~108           ; |rs232|cycle[2]~109           ; cout             ;
+; |rs232|cycle[3]~110           ; |rs232|cycle[3]~110           ; combout          ;
+; |rs232|cycle[3]~110           ; |rs232|cycle[3]~111           ; cout             ;
+; |rs232|cycle[4]~112           ; |rs232|cycle[4]~112           ; combout          ;
+; |rs232|divider:m1|clk         ; |rs232|divider:m1|clk         ; regout           ;
+; |rs232|state.stop             ; |rs232|state.stop             ; regout           ;
+; |rs232|n_bit[2]               ; |rs232|n_bit[2]               ; regout           ;
+; |rs232|state.drx              ; |rs232|state.drx              ; regout           ;
+; |rs232|n_bit[0]               ; |rs232|n_bit[0]               ; regout           ;
+; |rs232|n_bit[1]               ; |rs232|n_bit[1]               ; regout           ;
+; |rs232|Decoder1~1             ; |rs232|Decoder1~1             ; combout          ;
+; |rs232|divider:m1|cnt1[0]     ; |rs232|divider:m1|cnt1[0]     ; regout           ;
+; |rs232|divider:m1|LessThan0~0 ; |rs232|divider:m1|LessThan0~0 ; combout          ;
+; |rs232|divider:m1|LessThan0~1 ; |rs232|divider:m1|LessThan0~1 ; combout          ;
+; |rs232|go                     ; |rs232|go                     ; regout           ;
+; |rs232|Equal1~0               ; |rs232|Equal1~0               ; combout          ;
+; |rs232|Equal1~1               ; |rs232|Equal1~1               ; combout          ;
+; |rs232|next_state.stop~1      ; |rs232|next_state.stop~1      ; combout          ;
+; |rs232|n_byte[0]~6            ; |rs232|n_byte[0]~6            ; combout          ;
+; |rs232|sent                   ; |rs232|sent                   ; regout           ;
+; |rs232|period                 ; |rs232|period                 ; regout           ;
+; |rs232|Decoder1~2             ; |rs232|Decoder1~2             ; combout          ;
+; |rs232|Equal1~2               ; |rs232|Equal1~2               ; combout          ;
+; |rs232|state.start            ; |rs232|state.start            ; regout           ;
+; |rs232|Selector1~1            ; |rs232|Selector1~1            ; combout          ;
+; |rs232|divider:m1|cnt1~31     ; |rs232|divider:m1|cnt1~31     ; combout          ;
+; |rs232|divider:m1|cnt1~32     ; |rs232|divider:m1|cnt1~32     ; combout          ;
+; |rs232|state.sleep            ; |rs232|state.sleep            ; regout           ;
+; |rs232|process_0~1            ; |rs232|process_0~1            ; combout          ;
+; |rs232|n_bit~7                ; |rs232|n_bit~7                ; combout          ;
+; |rs232|cycle[30]~93           ; |rs232|cycle[30]~93           ; combout          ;
+; |rs232|cycle[30]~94           ; |rs232|cycle[30]~94           ; combout          ;
+; |rs232|cycle[30]~97           ; |rs232|cycle[30]~97           ; combout          ;
+; |rs232|cycle[30]~103          ; |rs232|cycle[30]~103          ; combout          ;
+; |rs232|period~0               ; |rs232|period~0               ; combout          ;
+; |rs232|state.sleep~1          ; |rs232|state.sleep~1          ; combout          ;
+; |rs232|rx                     ; |rs232|rx~corein              ; combout          ;
+; |rs232|clock                  ; |rs232|clock~corein           ; combout          ;
+; |rs232|clock~clkctrl          ; |rs232|clock~clkctrl          ; outclk           ;
+; |rs232|sent~clkctrl           ; |rs232|sent~clkctrl           ; outclk           ;
+; |rs232|divider:m1|clk~clkctrl ; |rs232|divider:m1|clk~clkctrl ; outclk           ;
+; |rs232|go~clkctrl             ; |rs232|go~clkctrl             ; outclk           ;
+; |rs232|period~clkctrl         ; |rs232|period~clkctrl         ; outclk           ;
+; |rs232|sent~feeder            ; |rs232|sent~feeder            ; combout          ;
++-------------------------------+-------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                   ;
++----------------------------+----------------------------+------------------+
+; Node Name                  ; Output Port Name           ; Output Port Type ;
++----------------------------+----------------------------+------------------+
+; |rs232|n_byte[1]           ; |rs232|n_byte[1]           ; regout           ;
+; |rs232|n_byte[3]           ; |rs232|n_byte[3]           ; regout           ;
+; |rs232|n_byte[4]           ; |rs232|n_byte[4]           ; regout           ;
+; |rs232|n_byte[5]           ; |rs232|n_byte[5]           ; regout           ;
+; |rs232|n_byte[6]           ; |rs232|n_byte[6]           ; regout           ;
+; |rs232|n_byte[2]           ; |rs232|n_byte[2]           ; regout           ;
+; |rs232|n_byte[1]~7         ; |rs232|n_byte[1]~7         ; combout          ;
+; |rs232|n_byte[1]~7         ; |rs232|n_byte[1]~8         ; cout             ;
+; |rs232|n_byte[2]~9         ; |rs232|n_byte[2]~9         ; combout          ;
+; |rs232|n_byte[2]~9         ; |rs232|n_byte[2]~10        ; cout             ;
+; |rs232|n_byte[3]~11        ; |rs232|n_byte[3]~11        ; combout          ;
+; |rs232|n_byte[3]~11        ; |rs232|n_byte[3]~12        ; cout             ;
+; |rs232|n_byte[4]~13        ; |rs232|n_byte[4]~13        ; combout          ;
+; |rs232|n_byte[4]~13        ; |rs232|n_byte[4]~14        ; cout             ;
+; |rs232|n_byte[5]~15        ; |rs232|n_byte[5]~15        ; combout          ;
+; |rs232|n_byte[5]~15        ; |rs232|n_byte[5]~16        ; cout             ;
+; |rs232|n_byte[6]~17        ; |rs232|n_byte[6]~17        ; combout          ;
+; |rs232|divider:m1|Add0~2   ; |rs232|divider:m1|Add0~3   ; cout             ;
+; |rs232|divider:m1|Add0~4   ; |rs232|divider:m1|Add0~4   ; combout          ;
+; |rs232|divider:m1|Add0~4   ; |rs232|divider:m1|Add0~5   ; cout             ;
+; |rs232|divider:m1|Add0~6   ; |rs232|divider:m1|Add0~6   ; combout          ;
+; |rs232|divider:m1|Add0~6   ; |rs232|divider:m1|Add0~7   ; cout             ;
+; |rs232|divider:m1|Add0~8   ; |rs232|divider:m1|Add0~8   ; combout          ;
+; |rs232|divider:m1|Add0~8   ; |rs232|divider:m1|Add0~9   ; cout             ;
+; |rs232|divider:m1|Add0~10  ; |rs232|divider:m1|Add0~10  ; combout          ;
+; |rs232|divider:m1|Add0~10  ; |rs232|divider:m1|Add0~11  ; cout             ;
+; |rs232|divider:m1|Add0~12  ; |rs232|divider:m1|Add0~12  ; combout          ;
+; |rs232|divider:m1|Add0~12  ; |rs232|divider:m1|Add0~13  ; cout             ;
+; |rs232|divider:m1|Add0~14  ; |rs232|divider:m1|Add0~14  ; combout          ;
+; |rs232|divider:m1|Add0~14  ; |rs232|divider:m1|Add0~15  ; cout             ;
+; |rs232|divider:m1|Add0~16  ; |rs232|divider:m1|Add0~16  ; combout          ;
+; |rs232|divider:m1|Add0~16  ; |rs232|divider:m1|Add0~17  ; cout             ;
+; |rs232|divider:m1|Add0~18  ; |rs232|divider:m1|Add0~18  ; combout          ;
+; |rs232|divider:m1|Add0~18  ; |rs232|divider:m1|Add0~19  ; cout             ;
+; |rs232|divider:m1|Add0~20  ; |rs232|divider:m1|Add0~20  ; combout          ;
+; |rs232|divider:m1|Add0~20  ; |rs232|divider:m1|Add0~21  ; cout             ;
+; |rs232|divider:m1|Add0~22  ; |rs232|divider:m1|Add0~22  ; combout          ;
+; |rs232|divider:m1|Add0~22  ; |rs232|divider:m1|Add0~23  ; cout             ;
+; |rs232|divider:m1|Add0~24  ; |rs232|divider:m1|Add0~24  ; combout          ;
+; |rs232|divider:m1|Add0~24  ; |rs232|divider:m1|Add0~25  ; cout             ;
+; |rs232|divider:m1|Add0~26  ; |rs232|divider:m1|Add0~26  ; combout          ;
+; |rs232|divider:m1|Add0~26  ; |rs232|divider:m1|Add0~27  ; cout             ;
+; |rs232|divider:m1|Add0~28  ; |rs232|divider:m1|Add0~28  ; combout          ;
+; |rs232|divider:m1|Add0~28  ; |rs232|divider:m1|Add0~29  ; cout             ;
+; |rs232|divider:m1|Add0~30  ; |rs232|divider:m1|Add0~30  ; combout          ;
+; |rs232|divider:m1|Add0~30  ; |rs232|divider:m1|Add0~31  ; cout             ;
+; |rs232|divider:m1|Add0~32  ; |rs232|divider:m1|Add0~32  ; combout          ;
+; |rs232|divider:m1|Add0~32  ; |rs232|divider:m1|Add0~33  ; cout             ;
+; |rs232|divider:m1|Add0~34  ; |rs232|divider:m1|Add0~34  ; combout          ;
+; |rs232|divider:m1|Add0~34  ; |rs232|divider:m1|Add0~35  ; cout             ;
+; |rs232|divider:m1|Add0~36  ; |rs232|divider:m1|Add0~36  ; combout          ;
+; |rs232|divider:m1|Add0~36  ; |rs232|divider:m1|Add0~37  ; cout             ;
+; |rs232|divider:m1|Add0~38  ; |rs232|divider:m1|Add0~38  ; combout          ;
+; |rs232|divider:m1|Add0~38  ; |rs232|divider:m1|Add0~39  ; cout             ;
+; |rs232|divider:m1|Add0~40  ; |rs232|divider:m1|Add0~40  ; combout          ;
+; |rs232|divider:m1|Add0~40  ; |rs232|divider:m1|Add0~41  ; cout             ;
+; |rs232|divider:m1|Add0~42  ; |rs232|divider:m1|Add0~42  ; combout          ;
+; |rs232|divider:m1|Add0~42  ; |rs232|divider:m1|Add0~43  ; cout             ;
+; |rs232|divider:m1|Add0~44  ; |rs232|divider:m1|Add0~44  ; combout          ;
+; |rs232|divider:m1|Add0~44  ; |rs232|divider:m1|Add0~45  ; cout             ;
+; |rs232|divider:m1|Add0~46  ; |rs232|divider:m1|Add0~46  ; combout          ;
+; |rs232|divider:m1|Add0~46  ; |rs232|divider:m1|Add0~47  ; cout             ;
+; |rs232|divider:m1|Add0~48  ; |rs232|divider:m1|Add0~48  ; combout          ;
+; |rs232|divider:m1|Add0~48  ; |rs232|divider:m1|Add0~49  ; cout             ;
+; |rs232|divider:m1|Add0~50  ; |rs232|divider:m1|Add0~50  ; combout          ;
+; |rs232|divider:m1|Add0~50  ; |rs232|divider:m1|Add0~51  ; cout             ;
+; |rs232|divider:m1|Add0~52  ; |rs232|divider:m1|Add0~52  ; combout          ;
+; |rs232|divider:m1|Add0~52  ; |rs232|divider:m1|Add0~53  ; cout             ;
+; |rs232|divider:m1|Add0~54  ; |rs232|divider:m1|Add0~54  ; combout          ;
+; |rs232|divider:m1|Add0~54  ; |rs232|divider:m1|Add0~55  ; cout             ;
+; |rs232|divider:m1|Add0~56  ; |rs232|divider:m1|Add0~56  ; combout          ;
+; |rs232|divider:m1|Add0~56  ; |rs232|divider:m1|Add0~57  ; cout             ;
+; |rs232|divider:m1|Add0~58  ; |rs232|divider:m1|Add0~58  ; combout          ;
+; |rs232|divider:m1|Add0~58  ; |rs232|divider:m1|Add0~59  ; cout             ;
+; |rs232|divider:m1|Add0~60  ; |rs232|divider:m1|Add0~60  ; combout          ;
+; |rs232|Add1~6              ; |rs232|Add1~7              ; cout             ;
+; |rs232|Add1~8              ; |rs232|Add1~8              ; combout          ;
+; |rs232|Add1~8              ; |rs232|Add1~9              ; cout             ;
+; |rs232|Add1~10             ; |rs232|Add1~10             ; combout          ;
+; |rs232|Add1~10             ; |rs232|Add1~11             ; cout             ;
+; |rs232|Add1~12             ; |rs232|Add1~12             ; combout          ;
+; |rs232|cycle[4]            ; |rs232|cycle[4]            ; regout           ;
+; |rs232|cycle[5]            ; |rs232|cycle[5]            ; regout           ;
+; |rs232|cycle[6]            ; |rs232|cycle[6]            ; regout           ;
+; |rs232|cycle[7]            ; |rs232|cycle[7]            ; regout           ;
+; |rs232|cycle[8]            ; |rs232|cycle[8]            ; regout           ;
+; |rs232|cycle[9]            ; |rs232|cycle[9]            ; regout           ;
+; |rs232|cycle[10]           ; |rs232|cycle[10]           ; regout           ;
+; |rs232|cycle[11]           ; |rs232|cycle[11]           ; regout           ;
+; |rs232|cycle[12]           ; |rs232|cycle[12]           ; regout           ;
+; |rs232|cycle[13]           ; |rs232|cycle[13]           ; regout           ;
+; |rs232|cycle[14]           ; |rs232|cycle[14]           ; regout           ;
+; |rs232|cycle[15]           ; |rs232|cycle[15]           ; regout           ;
+; |rs232|cycle[16]           ; |rs232|cycle[16]           ; regout           ;
+; |rs232|cycle[17]           ; |rs232|cycle[17]           ; regout           ;
+; |rs232|cycle[18]           ; |rs232|cycle[18]           ; regout           ;
+; |rs232|cycle[19]           ; |rs232|cycle[19]           ; regout           ;
+; |rs232|cycle[20]           ; |rs232|cycle[20]           ; regout           ;
+; |rs232|cycle[21]           ; |rs232|cycle[21]           ; regout           ;
+; |rs232|cycle[22]           ; |rs232|cycle[22]           ; regout           ;
+; |rs232|cycle[23]           ; |rs232|cycle[23]           ; regout           ;
+; |rs232|cycle[24]           ; |rs232|cycle[24]           ; regout           ;
+; |rs232|cycle[25]           ; |rs232|cycle[25]           ; regout           ;
+; |rs232|cycle[26]           ; |rs232|cycle[26]           ; regout           ;
+; |rs232|cycle[27]           ; |rs232|cycle[27]           ; regout           ;
+; |rs232|cycle[28]           ; |rs232|cycle[28]           ; regout           ;
+; |rs232|cycle[29]           ; |rs232|cycle[29]           ; regout           ;
+; |rs232|cycle[30]           ; |rs232|cycle[30]           ; regout           ;
+; |rs232|cycle[4]~112        ; |rs232|cycle[4]~113        ; cout             ;
+; |rs232|cycle[5]~114        ; |rs232|cycle[5]~114        ; combout          ;
+; |rs232|cycle[5]~114        ; |rs232|cycle[5]~115        ; cout             ;
+; |rs232|cycle[6]~116        ; |rs232|cycle[6]~116        ; combout          ;
+; |rs232|cycle[6]~116        ; |rs232|cycle[6]~117        ; cout             ;
+; |rs232|cycle[7]~118        ; |rs232|cycle[7]~118        ; combout          ;
+; |rs232|cycle[7]~118        ; |rs232|cycle[7]~119        ; cout             ;
+; |rs232|cycle[8]~120        ; |rs232|cycle[8]~120        ; combout          ;
+; |rs232|cycle[8]~120        ; |rs232|cycle[8]~121        ; cout             ;
+; |rs232|cycle[9]~122        ; |rs232|cycle[9]~122        ; combout          ;
+; |rs232|cycle[9]~122        ; |rs232|cycle[9]~123        ; cout             ;
+; |rs232|cycle[10]~124       ; |rs232|cycle[10]~124       ; combout          ;
+; |rs232|cycle[10]~124       ; |rs232|cycle[10]~125       ; cout             ;
+; |rs232|cycle[11]~126       ; |rs232|cycle[11]~126       ; combout          ;
+; |rs232|cycle[11]~126       ; |rs232|cycle[11]~127       ; cout             ;
+; |rs232|cycle[12]~128       ; |rs232|cycle[12]~128       ; combout          ;
+; |rs232|cycle[12]~128       ; |rs232|cycle[12]~129       ; cout             ;
+; |rs232|cycle[13]~130       ; |rs232|cycle[13]~130       ; combout          ;
+; |rs232|cycle[13]~130       ; |rs232|cycle[13]~131       ; cout             ;
+; |rs232|cycle[14]~132       ; |rs232|cycle[14]~132       ; combout          ;
+; |rs232|cycle[14]~132       ; |rs232|cycle[14]~133       ; cout             ;
+; |rs232|cycle[15]~134       ; |rs232|cycle[15]~134       ; combout          ;
+; |rs232|cycle[15]~134       ; |rs232|cycle[15]~135       ; cout             ;
+; |rs232|cycle[16]~136       ; |rs232|cycle[16]~136       ; combout          ;
+; |rs232|cycle[16]~136       ; |rs232|cycle[16]~137       ; cout             ;
+; |rs232|cycle[17]~138       ; |rs232|cycle[17]~138       ; combout          ;
+; |rs232|cycle[17]~138       ; |rs232|cycle[17]~139       ; cout             ;
+; |rs232|cycle[18]~140       ; |rs232|cycle[18]~140       ; combout          ;
+; |rs232|cycle[18]~140       ; |rs232|cycle[18]~141       ; cout             ;
+; |rs232|cycle[19]~142       ; |rs232|cycle[19]~142       ; combout          ;
+; |rs232|cycle[19]~142       ; |rs232|cycle[19]~143       ; cout             ;
+; |rs232|cycle[20]~144       ; |rs232|cycle[20]~144       ; combout          ;
+; |rs232|cycle[20]~144       ; |rs232|cycle[20]~145       ; cout             ;
+; |rs232|cycle[21]~146       ; |rs232|cycle[21]~146       ; combout          ;
+; |rs232|cycle[21]~146       ; |rs232|cycle[21]~147       ; cout             ;
+; |rs232|cycle[22]~148       ; |rs232|cycle[22]~148       ; combout          ;
+; |rs232|cycle[22]~148       ; |rs232|cycle[22]~149       ; cout             ;
+; |rs232|cycle[23]~150       ; |rs232|cycle[23]~150       ; combout          ;
+; |rs232|cycle[23]~150       ; |rs232|cycle[23]~151       ; cout             ;
+; |rs232|cycle[24]~152       ; |rs232|cycle[24]~152       ; combout          ;
+; |rs232|cycle[24]~152       ; |rs232|cycle[24]~153       ; cout             ;
+; |rs232|cycle[25]~154       ; |rs232|cycle[25]~154       ; combout          ;
+; |rs232|cycle[25]~154       ; |rs232|cycle[25]~155       ; cout             ;
+; |rs232|cycle[26]~156       ; |rs232|cycle[26]~156       ; combout          ;
+; |rs232|cycle[26]~156       ; |rs232|cycle[26]~157       ; cout             ;
+; |rs232|cycle[27]~158       ; |rs232|cycle[27]~158       ; combout          ;
+; |rs232|cycle[27]~158       ; |rs232|cycle[27]~159       ; cout             ;
+; |rs232|cycle[28]~160       ; |rs232|cycle[28]~160       ; combout          ;
+; |rs232|cycle[28]~160       ; |rs232|cycle[28]~161       ; cout             ;
+; |rs232|cycle[29]~162       ; |rs232|cycle[29]~162       ; combout          ;
+; |rs232|cycle[29]~162       ; |rs232|cycle[29]~163       ; cout             ;
+; |rs232|cycle[30]~164       ; |rs232|cycle[30]~164       ; combout          ;
+; |rs232|mode[0]~reg0        ; |rs232|mode[0]~reg0        ; regout           ;
+; |rs232|mode[1]~reg0        ; |rs232|mode[1]~reg0        ; regout           ;
+; |rs232|mode[2]~reg0        ; |rs232|mode[2]~reg0        ; regout           ;
+; |rs232|buf[2][5]           ; |rs232|buf[2][5]           ; regout           ;
+; |rs232|n_byte[0]           ; |rs232|n_byte[0]           ; regout           ;
+; |rs232|mode[0]~3           ; |rs232|mode[0]~3           ; combout          ;
+; |rs232|mode[0]~4           ; |rs232|mode[0]~4           ; combout          ;
+; |rs232|mode[0]~5           ; |rs232|mode[0]~5           ; combout          ;
+; |rs232|buf[2][6]           ; |rs232|buf[2][6]           ; regout           ;
+; |rs232|buf[2][7]           ; |rs232|buf[2][7]           ; regout           ;
+; |rs232|Decoder1~0          ; |rs232|Decoder1~0          ; combout          ;
+; |rs232|buf[2][5]~6         ; |rs232|buf[2][5]~6         ; combout          ;
+; |rs232|divider:m1|cnt1[30] ; |rs232|divider:m1|cnt1[30] ; regout           ;
+; |rs232|divider:m1|cnt1[29] ; |rs232|divider:m1|cnt1[29] ; regout           ;
+; |rs232|divider:m1|cnt1[28] ; |rs232|divider:m1|cnt1[28] ; regout           ;
+; |rs232|divider:m1|cnt1[27] ; |rs232|divider:m1|cnt1[27] ; regout           ;
+; |rs232|divider:m1|Equal0~0 ; |rs232|divider:m1|Equal0~0 ; combout          ;
+; |rs232|divider:m1|cnt1[26] ; |rs232|divider:m1|cnt1[26] ; regout           ;
+; |rs232|divider:m1|cnt1[25] ; |rs232|divider:m1|cnt1[25] ; regout           ;
+; |rs232|divider:m1|cnt1[24] ; |rs232|divider:m1|cnt1[24] ; regout           ;
+; |rs232|divider:m1|cnt1[23] ; |rs232|divider:m1|cnt1[23] ; regout           ;
+; |rs232|divider:m1|Equal0~1 ; |rs232|divider:m1|Equal0~1 ; combout          ;
+; |rs232|divider:m1|cnt1[22] ; |rs232|divider:m1|cnt1[22] ; regout           ;
+; |rs232|divider:m1|cnt1[21] ; |rs232|divider:m1|cnt1[21] ; regout           ;
+; |rs232|divider:m1|cnt1[20] ; |rs232|divider:m1|cnt1[20] ; regout           ;
+; |rs232|divider:m1|cnt1[19] ; |rs232|divider:m1|cnt1[19] ; regout           ;
+; |rs232|divider:m1|Equal0~2 ; |rs232|divider:m1|Equal0~2 ; combout          ;
+; |rs232|divider:m1|cnt1[18] ; |rs232|divider:m1|cnt1[18] ; regout           ;
+; |rs232|divider:m1|cnt1[17] ; |rs232|divider:m1|cnt1[17] ; regout           ;
+; |rs232|divider:m1|cnt1[16] ; |rs232|divider:m1|cnt1[16] ; regout           ;
+; |rs232|divider:m1|cnt1[15] ; |rs232|divider:m1|cnt1[15] ; regout           ;
+; |rs232|divider:m1|Equal0~3 ; |rs232|divider:m1|Equal0~3 ; combout          ;
+; |rs232|divider:m1|Equal0~4 ; |rs232|divider:m1|Equal0~4 ; combout          ;
+; |rs232|divider:m1|cnt1[14] ; |rs232|divider:m1|cnt1[14] ; regout           ;
+; |rs232|divider:m1|cnt1[13] ; |rs232|divider:m1|cnt1[13] ; regout           ;
+; |rs232|divider:m1|cnt1[12] ; |rs232|divider:m1|cnt1[12] ; regout           ;
+; |rs232|divider:m1|cnt1[11] ; |rs232|divider:m1|cnt1[11] ; regout           ;
+; |rs232|divider:m1|Equal0~5 ; |rs232|divider:m1|Equal0~5 ; combout          ;
+; |rs232|divider:m1|cnt1[6]  ; |rs232|divider:m1|cnt1[6]  ; regout           ;
+; |rs232|divider:m1|cnt1[5]  ; |rs232|divider:m1|cnt1[5]  ; regout           ;
+; |rs232|divider:m1|cnt1[4]  ; |rs232|divider:m1|cnt1[4]  ; regout           ;
+; |rs232|divider:m1|cnt1[3]  ; |rs232|divider:m1|cnt1[3]  ; regout           ;
+; |rs232|divider:m1|Equal0~6 ; |rs232|divider:m1|Equal0~6 ; combout          ;
+; |rs232|divider:m1|cnt1[2]  ; |rs232|divider:m1|cnt1[2]  ; regout           ;
+; |rs232|divider:m1|cnt1[1]  ; |rs232|divider:m1|cnt1[1]  ; regout           ;
+; |rs232|divider:m1|Equal0~7 ; |rs232|divider:m1|Equal0~7 ; combout          ;
+; |rs232|divider:m1|cnt1[10] ; |rs232|divider:m1|cnt1[10] ; regout           ;
+; |rs232|divider:m1|cnt1[9]  ; |rs232|divider:m1|cnt1[9]  ; regout           ;
+; |rs232|divider:m1|cnt1[8]  ; |rs232|divider:m1|cnt1[8]  ; regout           ;
+; |rs232|divider:m1|cnt1[7]  ; |rs232|divider:m1|cnt1[7]  ; regout           ;
+; |rs232|divider:m1|Equal0~8 ; |rs232|divider:m1|Equal0~8 ; combout          ;
+; |rs232|n_bit[6]            ; |rs232|n_bit[6]            ; regout           ;
+; |rs232|n_bit[5]            ; |rs232|n_bit[5]            ; regout           ;
+; |rs232|n_bit[4]            ; |rs232|n_bit[4]            ; regout           ;
+; |rs232|n_bit[3]            ; |rs232|n_bit[3]            ; regout           ;
+; |rs232|buf[2][6]~7         ; |rs232|buf[2][6]~7         ; combout          ;
+; |rs232|buf[2][7]~8         ; |rs232|buf[2][7]~8         ; combout          ;
+; |rs232|recieve             ; |rs232|recieve             ; regout           ;
+; |rs232|cycle[30]~95        ; |rs232|cycle[30]~95        ; combout          ;
+; |rs232|cycle[30]~96        ; |rs232|cycle[30]~96        ; combout          ;
+; |rs232|cycle[30]~98        ; |rs232|cycle[30]~98        ; combout          ;
+; |rs232|cycle[30]~99        ; |rs232|cycle[30]~99        ; combout          ;
+; |rs232|cycle[30]~100       ; |rs232|cycle[30]~100       ; combout          ;
+; |rs232|cycle[30]~101       ; |rs232|cycle[30]~101       ; combout          ;
+; |rs232|cycle[30]~102       ; |rs232|cycle[30]~102       ; combout          ;
+; |rs232|recieve~0           ; |rs232|recieve~0           ; combout          ;
+; |rs232|tx                  ; |rs232|tx                  ; padio            ;
+; |rs232|mode[0]             ; |rs232|mode[0]             ; padio            ;
+; |rs232|mode[1]             ; |rs232|mode[1]             ; padio            ;
+; |rs232|mode[2]             ; |rs232|mode[2]             ; padio            ;
+; |rs232|mode[0]~reg0feeder  ; |rs232|mode[0]~reg0feeder  ; combout          ;
+; |rs232|mode[1]~reg0feeder  ; |rs232|mode[1]~reg0feeder  ; combout          ;
+; |rs232|mode[2]~reg0feeder  ; |rs232|mode[2]~reg0feeder  ; combout          ;
+; |rs232|go~feeder           ; |rs232|go~feeder           ; combout          ;
+; |rs232|state.start~feeder  ; |rs232|state.start~feeder  ; combout          ;
++----------------------------+----------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                   ;
++----------------------------+----------------------------+------------------+
+; Node Name                  ; Output Port Name           ; Output Port Type ;
++----------------------------+----------------------------+------------------+
+; |rs232|n_byte[1]           ; |rs232|n_byte[1]           ; regout           ;
+; |rs232|n_byte[3]           ; |rs232|n_byte[3]           ; regout           ;
+; |rs232|n_byte[4]           ; |rs232|n_byte[4]           ; regout           ;
+; |rs232|n_byte[5]           ; |rs232|n_byte[5]           ; regout           ;
+; |rs232|n_byte[6]           ; |rs232|n_byte[6]           ; regout           ;
+; |rs232|n_byte[2]           ; |rs232|n_byte[2]           ; regout           ;
+; |rs232|n_byte[1]~7         ; |rs232|n_byte[1]~7         ; combout          ;
+; |rs232|n_byte[1]~7         ; |rs232|n_byte[1]~8         ; cout             ;
+; |rs232|n_byte[2]~9         ; |rs232|n_byte[2]~9         ; combout          ;
+; |rs232|n_byte[2]~9         ; |rs232|n_byte[2]~10        ; cout             ;
+; |rs232|n_byte[3]~11        ; |rs232|n_byte[3]~11        ; combout          ;
+; |rs232|n_byte[3]~11        ; |rs232|n_byte[3]~12        ; cout             ;
+; |rs232|n_byte[4]~13        ; |rs232|n_byte[4]~13        ; combout          ;
+; |rs232|n_byte[4]~13        ; |rs232|n_byte[4]~14        ; cout             ;
+; |rs232|n_byte[5]~15        ; |rs232|n_byte[5]~15        ; combout          ;
+; |rs232|n_byte[5]~15        ; |rs232|n_byte[5]~16        ; cout             ;
+; |rs232|n_byte[6]~17        ; |rs232|n_byte[6]~17        ; combout          ;
+; |rs232|divider:m1|Add0~2   ; |rs232|divider:m1|Add0~3   ; cout             ;
+; |rs232|divider:m1|Add0~4   ; |rs232|divider:m1|Add0~4   ; combout          ;
+; |rs232|divider:m1|Add0~4   ; |rs232|divider:m1|Add0~5   ; cout             ;
+; |rs232|divider:m1|Add0~6   ; |rs232|divider:m1|Add0~6   ; combout          ;
+; |rs232|divider:m1|Add0~6   ; |rs232|divider:m1|Add0~7   ; cout             ;
+; |rs232|divider:m1|Add0~8   ; |rs232|divider:m1|Add0~8   ; combout          ;
+; |rs232|divider:m1|Add0~8   ; |rs232|divider:m1|Add0~9   ; cout             ;
+; |rs232|divider:m1|Add0~10  ; |rs232|divider:m1|Add0~10  ; combout          ;
+; |rs232|divider:m1|Add0~10  ; |rs232|divider:m1|Add0~11  ; cout             ;
+; |rs232|divider:m1|Add0~12  ; |rs232|divider:m1|Add0~12  ; combout          ;
+; |rs232|divider:m1|Add0~12  ; |rs232|divider:m1|Add0~13  ; cout             ;
+; |rs232|divider:m1|Add0~14  ; |rs232|divider:m1|Add0~14  ; combout          ;
+; |rs232|divider:m1|Add0~14  ; |rs232|divider:m1|Add0~15  ; cout             ;
+; |rs232|divider:m1|Add0~16  ; |rs232|divider:m1|Add0~16  ; combout          ;
+; |rs232|divider:m1|Add0~16  ; |rs232|divider:m1|Add0~17  ; cout             ;
+; |rs232|divider:m1|Add0~18  ; |rs232|divider:m1|Add0~18  ; combout          ;
+; |rs232|divider:m1|Add0~18  ; |rs232|divider:m1|Add0~19  ; cout             ;
+; |rs232|divider:m1|Add0~20  ; |rs232|divider:m1|Add0~20  ; combout          ;
+; |rs232|divider:m1|Add0~20  ; |rs232|divider:m1|Add0~21  ; cout             ;
+; |rs232|divider:m1|Add0~22  ; |rs232|divider:m1|Add0~22  ; combout          ;
+; |rs232|divider:m1|Add0~22  ; |rs232|divider:m1|Add0~23  ; cout             ;
+; |rs232|divider:m1|Add0~24  ; |rs232|divider:m1|Add0~24  ; combout          ;
+; |rs232|divider:m1|Add0~24  ; |rs232|divider:m1|Add0~25  ; cout             ;
+; |rs232|divider:m1|Add0~26  ; |rs232|divider:m1|Add0~26  ; combout          ;
+; |rs232|divider:m1|Add0~26  ; |rs232|divider:m1|Add0~27  ; cout             ;
+; |rs232|divider:m1|Add0~28  ; |rs232|divider:m1|Add0~28  ; combout          ;
+; |rs232|divider:m1|Add0~28  ; |rs232|divider:m1|Add0~29  ; cout             ;
+; |rs232|divider:m1|Add0~30  ; |rs232|divider:m1|Add0~30  ; combout          ;
+; |rs232|divider:m1|Add0~30  ; |rs232|divider:m1|Add0~31  ; cout             ;
+; |rs232|divider:m1|Add0~32  ; |rs232|divider:m1|Add0~32  ; combout          ;
+; |rs232|divider:m1|Add0~32  ; |rs232|divider:m1|Add0~33  ; cout             ;
+; |rs232|divider:m1|Add0~34  ; |rs232|divider:m1|Add0~34  ; combout          ;
+; |rs232|divider:m1|Add0~34  ; |rs232|divider:m1|Add0~35  ; cout             ;
+; |rs232|divider:m1|Add0~36  ; |rs232|divider:m1|Add0~36  ; combout          ;
+; |rs232|divider:m1|Add0~36  ; |rs232|divider:m1|Add0~37  ; cout             ;
+; |rs232|divider:m1|Add0~38  ; |rs232|divider:m1|Add0~38  ; combout          ;
+; |rs232|divider:m1|Add0~38  ; |rs232|divider:m1|Add0~39  ; cout             ;
+; |rs232|divider:m1|Add0~40  ; |rs232|divider:m1|Add0~40  ; combout          ;
+; |rs232|divider:m1|Add0~40  ; |rs232|divider:m1|Add0~41  ; cout             ;
+; |rs232|divider:m1|Add0~42  ; |rs232|divider:m1|Add0~42  ; combout          ;
+; |rs232|divider:m1|Add0~42  ; |rs232|divider:m1|Add0~43  ; cout             ;
+; |rs232|divider:m1|Add0~44  ; |rs232|divider:m1|Add0~44  ; combout          ;
+; |rs232|divider:m1|Add0~44  ; |rs232|divider:m1|Add0~45  ; cout             ;
+; |rs232|divider:m1|Add0~46  ; |rs232|divider:m1|Add0~46  ; combout          ;
+; |rs232|divider:m1|Add0~46  ; |rs232|divider:m1|Add0~47  ; cout             ;
+; |rs232|divider:m1|Add0~48  ; |rs232|divider:m1|Add0~48  ; combout          ;
+; |rs232|divider:m1|Add0~48  ; |rs232|divider:m1|Add0~49  ; cout             ;
+; |rs232|divider:m1|Add0~50  ; |rs232|divider:m1|Add0~50  ; combout          ;
+; |rs232|divider:m1|Add0~50  ; |rs232|divider:m1|Add0~51  ; cout             ;
+; |rs232|divider:m1|Add0~52  ; |rs232|divider:m1|Add0~52  ; combout          ;
+; |rs232|divider:m1|Add0~52  ; |rs232|divider:m1|Add0~53  ; cout             ;
+; |rs232|divider:m1|Add0~54  ; |rs232|divider:m1|Add0~54  ; combout          ;
+; |rs232|divider:m1|Add0~54  ; |rs232|divider:m1|Add0~55  ; cout             ;
+; |rs232|divider:m1|Add0~56  ; |rs232|divider:m1|Add0~56  ; combout          ;
+; |rs232|divider:m1|Add0~56  ; |rs232|divider:m1|Add0~57  ; cout             ;
+; |rs232|divider:m1|Add0~58  ; |rs232|divider:m1|Add0~58  ; combout          ;
+; |rs232|divider:m1|Add0~58  ; |rs232|divider:m1|Add0~59  ; cout             ;
+; |rs232|divider:m1|Add0~60  ; |rs232|divider:m1|Add0~60  ; combout          ;
+; |rs232|Add1~6              ; |rs232|Add1~7              ; cout             ;
+; |rs232|Add1~8              ; |rs232|Add1~8              ; combout          ;
+; |rs232|Add1~8              ; |rs232|Add1~9              ; cout             ;
+; |rs232|Add1~10             ; |rs232|Add1~10             ; combout          ;
+; |rs232|Add1~10             ; |rs232|Add1~11             ; cout             ;
+; |rs232|Add1~12             ; |rs232|Add1~12             ; combout          ;
+; |rs232|cycle[4]            ; |rs232|cycle[4]            ; regout           ;
+; |rs232|cycle[5]            ; |rs232|cycle[5]            ; regout           ;
+; |rs232|cycle[6]            ; |rs232|cycle[6]            ; regout           ;
+; |rs232|cycle[7]            ; |rs232|cycle[7]            ; regout           ;
+; |rs232|cycle[8]            ; |rs232|cycle[8]            ; regout           ;
+; |rs232|cycle[9]            ; |rs232|cycle[9]            ; regout           ;
+; |rs232|cycle[10]           ; |rs232|cycle[10]           ; regout           ;
+; |rs232|cycle[11]           ; |rs232|cycle[11]           ; regout           ;
+; |rs232|cycle[12]           ; |rs232|cycle[12]           ; regout           ;
+; |rs232|cycle[13]           ; |rs232|cycle[13]           ; regout           ;
+; |rs232|cycle[14]           ; |rs232|cycle[14]           ; regout           ;
+; |rs232|cycle[15]           ; |rs232|cycle[15]           ; regout           ;
+; |rs232|cycle[16]           ; |rs232|cycle[16]           ; regout           ;
+; |rs232|cycle[17]           ; |rs232|cycle[17]           ; regout           ;
+; |rs232|cycle[18]           ; |rs232|cycle[18]           ; regout           ;
+; |rs232|cycle[19]           ; |rs232|cycle[19]           ; regout           ;
+; |rs232|cycle[20]           ; |rs232|cycle[20]           ; regout           ;
+; |rs232|cycle[21]           ; |rs232|cycle[21]           ; regout           ;
+; |rs232|cycle[22]           ; |rs232|cycle[22]           ; regout           ;
+; |rs232|cycle[23]           ; |rs232|cycle[23]           ; regout           ;
+; |rs232|cycle[24]           ; |rs232|cycle[24]           ; regout           ;
+; |rs232|cycle[25]           ; |rs232|cycle[25]           ; regout           ;
+; |rs232|cycle[26]           ; |rs232|cycle[26]           ; regout           ;
+; |rs232|cycle[27]           ; |rs232|cycle[27]           ; regout           ;
+; |rs232|cycle[28]           ; |rs232|cycle[28]           ; regout           ;
+; |rs232|cycle[29]           ; |rs232|cycle[29]           ; regout           ;
+; |rs232|cycle[30]           ; |rs232|cycle[30]           ; regout           ;
+; |rs232|cycle[4]~112        ; |rs232|cycle[4]~113        ; cout             ;
+; |rs232|cycle[5]~114        ; |rs232|cycle[5]~114        ; combout          ;
+; |rs232|cycle[5]~114        ; |rs232|cycle[5]~115        ; cout             ;
+; |rs232|cycle[6]~116        ; |rs232|cycle[6]~116        ; combout          ;
+; |rs232|cycle[6]~116        ; |rs232|cycle[6]~117        ; cout             ;
+; |rs232|cycle[7]~118        ; |rs232|cycle[7]~118        ; combout          ;
+; |rs232|cycle[7]~118        ; |rs232|cycle[7]~119        ; cout             ;
+; |rs232|cycle[8]~120        ; |rs232|cycle[8]~120        ; combout          ;
+; |rs232|cycle[8]~120        ; |rs232|cycle[8]~121        ; cout             ;
+; |rs232|cycle[9]~122        ; |rs232|cycle[9]~122        ; combout          ;
+; |rs232|cycle[9]~122        ; |rs232|cycle[9]~123        ; cout             ;
+; |rs232|cycle[10]~124       ; |rs232|cycle[10]~124       ; combout          ;
+; |rs232|cycle[10]~124       ; |rs232|cycle[10]~125       ; cout             ;
+; |rs232|cycle[11]~126       ; |rs232|cycle[11]~126       ; combout          ;
+; |rs232|cycle[11]~126       ; |rs232|cycle[11]~127       ; cout             ;
+; |rs232|cycle[12]~128       ; |rs232|cycle[12]~128       ; combout          ;
+; |rs232|cycle[12]~128       ; |rs232|cycle[12]~129       ; cout             ;
+; |rs232|cycle[13]~130       ; |rs232|cycle[13]~130       ; combout          ;
+; |rs232|cycle[13]~130       ; |rs232|cycle[13]~131       ; cout             ;
+; |rs232|cycle[14]~132       ; |rs232|cycle[14]~132       ; combout          ;
+; |rs232|cycle[14]~132       ; |rs232|cycle[14]~133       ; cout             ;
+; |rs232|cycle[15]~134       ; |rs232|cycle[15]~134       ; combout          ;
+; |rs232|cycle[15]~134       ; |rs232|cycle[15]~135       ; cout             ;
+; |rs232|cycle[16]~136       ; |rs232|cycle[16]~136       ; combout          ;
+; |rs232|cycle[16]~136       ; |rs232|cycle[16]~137       ; cout             ;
+; |rs232|cycle[17]~138       ; |rs232|cycle[17]~138       ; combout          ;
+; |rs232|cycle[17]~138       ; |rs232|cycle[17]~139       ; cout             ;
+; |rs232|cycle[18]~140       ; |rs232|cycle[18]~140       ; combout          ;
+; |rs232|cycle[18]~140       ; |rs232|cycle[18]~141       ; cout             ;
+; |rs232|cycle[19]~142       ; |rs232|cycle[19]~142       ; combout          ;
+; |rs232|cycle[19]~142       ; |rs232|cycle[19]~143       ; cout             ;
+; |rs232|cycle[20]~144       ; |rs232|cycle[20]~144       ; combout          ;
+; |rs232|cycle[20]~144       ; |rs232|cycle[20]~145       ; cout             ;
+; |rs232|cycle[21]~146       ; |rs232|cycle[21]~146       ; combout          ;
+; |rs232|cycle[21]~146       ; |rs232|cycle[21]~147       ; cout             ;
+; |rs232|cycle[22]~148       ; |rs232|cycle[22]~148       ; combout          ;
+; |rs232|cycle[22]~148       ; |rs232|cycle[22]~149       ; cout             ;
+; |rs232|cycle[23]~150       ; |rs232|cycle[23]~150       ; combout          ;
+; |rs232|cycle[23]~150       ; |rs232|cycle[23]~151       ; cout             ;
+; |rs232|cycle[24]~152       ; |rs232|cycle[24]~152       ; combout          ;
+; |rs232|cycle[24]~152       ; |rs232|cycle[24]~153       ; cout             ;
+; |rs232|cycle[25]~154       ; |rs232|cycle[25]~154       ; combout          ;
+; |rs232|cycle[25]~154       ; |rs232|cycle[25]~155       ; cout             ;
+; |rs232|cycle[26]~156       ; |rs232|cycle[26]~156       ; combout          ;
+; |rs232|cycle[26]~156       ; |rs232|cycle[26]~157       ; cout             ;
+; |rs232|cycle[27]~158       ; |rs232|cycle[27]~158       ; combout          ;
+; |rs232|cycle[27]~158       ; |rs232|cycle[27]~159       ; cout             ;
+; |rs232|cycle[28]~160       ; |rs232|cycle[28]~160       ; combout          ;
+; |rs232|cycle[28]~160       ; |rs232|cycle[28]~161       ; cout             ;
+; |rs232|cycle[29]~162       ; |rs232|cycle[29]~162       ; combout          ;
+; |rs232|cycle[29]~162       ; |rs232|cycle[29]~163       ; cout             ;
+; |rs232|cycle[30]~164       ; |rs232|cycle[30]~164       ; combout          ;
+; |rs232|mode[0]~reg0        ; |rs232|mode[0]~reg0        ; regout           ;
+; |rs232|mode[1]~reg0        ; |rs232|mode[1]~reg0        ; regout           ;
+; |rs232|mode[2]~reg0        ; |rs232|mode[2]~reg0        ; regout           ;
+; |rs232|buf[2][5]           ; |rs232|buf[2][5]           ; regout           ;
+; |rs232|n_byte[0]           ; |rs232|n_byte[0]           ; regout           ;
+; |rs232|mode[0]~3           ; |rs232|mode[0]~3           ; combout          ;
+; |rs232|mode[0]~4           ; |rs232|mode[0]~4           ; combout          ;
+; |rs232|mode[0]~5           ; |rs232|mode[0]~5           ; combout          ;
+; |rs232|buf[2][6]           ; |rs232|buf[2][6]           ; regout           ;
+; |rs232|buf[2][7]           ; |rs232|buf[2][7]           ; regout           ;
+; |rs232|Decoder1~0          ; |rs232|Decoder1~0          ; combout          ;
+; |rs232|buf[2][5]~6         ; |rs232|buf[2][5]~6         ; combout          ;
+; |rs232|divider:m1|cnt1[30] ; |rs232|divider:m1|cnt1[30] ; regout           ;
+; |rs232|divider:m1|cnt1[29] ; |rs232|divider:m1|cnt1[29] ; regout           ;
+; |rs232|divider:m1|cnt1[28] ; |rs232|divider:m1|cnt1[28] ; regout           ;
+; |rs232|divider:m1|cnt1[27] ; |rs232|divider:m1|cnt1[27] ; regout           ;
+; |rs232|divider:m1|Equal0~0 ; |rs232|divider:m1|Equal0~0 ; combout          ;
+; |rs232|divider:m1|cnt1[26] ; |rs232|divider:m1|cnt1[26] ; regout           ;
+; |rs232|divider:m1|cnt1[25] ; |rs232|divider:m1|cnt1[25] ; regout           ;
+; |rs232|divider:m1|cnt1[24] ; |rs232|divider:m1|cnt1[24] ; regout           ;
+; |rs232|divider:m1|cnt1[23] ; |rs232|divider:m1|cnt1[23] ; regout           ;
+; |rs232|divider:m1|Equal0~1 ; |rs232|divider:m1|Equal0~1 ; combout          ;
+; |rs232|divider:m1|cnt1[22] ; |rs232|divider:m1|cnt1[22] ; regout           ;
+; |rs232|divider:m1|cnt1[21] ; |rs232|divider:m1|cnt1[21] ; regout           ;
+; |rs232|divider:m1|cnt1[20] ; |rs232|divider:m1|cnt1[20] ; regout           ;
+; |rs232|divider:m1|cnt1[19] ; |rs232|divider:m1|cnt1[19] ; regout           ;
+; |rs232|divider:m1|Equal0~2 ; |rs232|divider:m1|Equal0~2 ; combout          ;
+; |rs232|divider:m1|cnt1[18] ; |rs232|divider:m1|cnt1[18] ; regout           ;
+; |rs232|divider:m1|cnt1[17] ; |rs232|divider:m1|cnt1[17] ; regout           ;
+; |rs232|divider:m1|cnt1[16] ; |rs232|divider:m1|cnt1[16] ; regout           ;
+; |rs232|divider:m1|cnt1[15] ; |rs232|divider:m1|cnt1[15] ; regout           ;
+; |rs232|divider:m1|Equal0~3 ; |rs232|divider:m1|Equal0~3 ; combout          ;
+; |rs232|divider:m1|Equal0~4 ; |rs232|divider:m1|Equal0~4 ; combout          ;
+; |rs232|divider:m1|cnt1[14] ; |rs232|divider:m1|cnt1[14] ; regout           ;
+; |rs232|divider:m1|cnt1[13] ; |rs232|divider:m1|cnt1[13] ; regout           ;
+; |rs232|divider:m1|cnt1[12] ; |rs232|divider:m1|cnt1[12] ; regout           ;
+; |rs232|divider:m1|cnt1[11] ; |rs232|divider:m1|cnt1[11] ; regout           ;
+; |rs232|divider:m1|Equal0~5 ; |rs232|divider:m1|Equal0~5 ; combout          ;
+; |rs232|divider:m1|cnt1[6]  ; |rs232|divider:m1|cnt1[6]  ; regout           ;
+; |rs232|divider:m1|cnt1[5]  ; |rs232|divider:m1|cnt1[5]  ; regout           ;
+; |rs232|divider:m1|cnt1[4]  ; |rs232|divider:m1|cnt1[4]  ; regout           ;
+; |rs232|divider:m1|cnt1[3]  ; |rs232|divider:m1|cnt1[3]  ; regout           ;
+; |rs232|divider:m1|Equal0~6 ; |rs232|divider:m1|Equal0~6 ; combout          ;
+; |rs232|divider:m1|cnt1[2]  ; |rs232|divider:m1|cnt1[2]  ; regout           ;
+; |rs232|divider:m1|cnt1[1]  ; |rs232|divider:m1|cnt1[1]  ; regout           ;
+; |rs232|divider:m1|Equal0~7 ; |rs232|divider:m1|Equal0~7 ; combout          ;
+; |rs232|divider:m1|cnt1[10] ; |rs232|divider:m1|cnt1[10] ; regout           ;
+; |rs232|divider:m1|cnt1[9]  ; |rs232|divider:m1|cnt1[9]  ; regout           ;
+; |rs232|divider:m1|cnt1[8]  ; |rs232|divider:m1|cnt1[8]  ; regout           ;
+; |rs232|divider:m1|cnt1[7]  ; |rs232|divider:m1|cnt1[7]  ; regout           ;
+; |rs232|divider:m1|Equal0~8 ; |rs232|divider:m1|Equal0~8 ; combout          ;
+; |rs232|n_bit[6]            ; |rs232|n_bit[6]            ; regout           ;
+; |rs232|n_bit[5]            ; |rs232|n_bit[5]            ; regout           ;
+; |rs232|n_bit[4]            ; |rs232|n_bit[4]            ; regout           ;
+; |rs232|n_bit[3]            ; |rs232|n_bit[3]            ; regout           ;
+; |rs232|buf[2][6]~7         ; |rs232|buf[2][6]~7         ; combout          ;
+; |rs232|buf[2][7]~8         ; |rs232|buf[2][7]~8         ; combout          ;
+; |rs232|recieve             ; |rs232|recieve             ; regout           ;
+; |rs232|cycle[30]~95        ; |rs232|cycle[30]~95        ; combout          ;
+; |rs232|cycle[30]~96        ; |rs232|cycle[30]~96        ; combout          ;
+; |rs232|cycle[30]~98        ; |rs232|cycle[30]~98        ; combout          ;
+; |rs232|cycle[30]~99        ; |rs232|cycle[30]~99        ; combout          ;
+; |rs232|cycle[30]~100       ; |rs232|cycle[30]~100       ; combout          ;
+; |rs232|cycle[30]~101       ; |rs232|cycle[30]~101       ; combout          ;
+; |rs232|cycle[30]~102       ; |rs232|cycle[30]~102       ; combout          ;
+; |rs232|recieve~0           ; |rs232|recieve~0           ; combout          ;
+; |rs232|tx                  ; |rs232|tx                  ; padio            ;
+; |rs232|mode[0]             ; |rs232|mode[0]             ; padio            ;
+; |rs232|mode[1]             ; |rs232|mode[1]             ; padio            ;
+; |rs232|mode[2]             ; |rs232|mode[2]             ; padio            ;
+; |rs232|mode[0]~reg0feeder  ; |rs232|mode[0]~reg0feeder  ; combout          ;
+; |rs232|mode[1]~reg0feeder  ; |rs232|mode[1]~reg0feeder  ; combout          ;
+; |rs232|mode[2]~reg0feeder  ; |rs232|mode[2]~reg0feeder  ; combout          ;
+; |rs232|go~feeder           ; |rs232|go~feeder           ; combout          ;
+; |rs232|state.start~feeder  ; |rs232|state.start~feeder  ; combout          ;
++----------------------------+----------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Tue May 17 13:02:25 2016
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off rs232 -c rs232
+Info: Using vector source file "C:/Users/CTT/Desktop/ – œÀ»—/rs232.vwf"
+Warning: Ignored node in vector source file. Can't find corresponding node name "cnt" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "clk" in design.
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      21.14 %
+Info: Number of transitions in simulation is 25561
+Info: Quartus II Simulator was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 158 megabytes
+    Info: Processing ended: Tue May 17 13:02:25 2016
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

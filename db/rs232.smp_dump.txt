@@ -1,0 +1,7 @@
+
+State Machine - |rs232|state
+Name state.stop state.drx state.sleep state.start 
+state.start 0 0 0 0 
+state.sleep 0 0 1 1 
+state.drx 0 1 0 1 
+state.stop 1 0 0 1 

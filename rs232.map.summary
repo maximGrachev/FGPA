@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue May 17 12:59:26 2016
+Quartus II Version : 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition
+Revision Name : rs232
+Top-level Entity Name : rs232
+Family : Cyclone II
+Total logic elements : 125
+    Total combinational functions : 119
+    Dedicated logic registers : 91
+Total registers : 91
+Total pins : 6
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
